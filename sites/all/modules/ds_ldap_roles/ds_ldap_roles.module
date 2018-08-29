@@ -1,0 +1,277 @@
+<?php
+/**
+ * @file
+ * Module file for dayscript filters.
+ */
+
+function ds_ldap_roles_form_alter( &$form, &$form_state, $form_id )  {
+
+	$form['account']['current_pass_required_values'] = array();
+	$form_state['values']['current_pass_required_values'] = array();
+
+	if( $form_id == 'user_register_form' )  {
+		//$form['#validate'][] = 'ds_ldap_roles_extra_user_validation';
+		//var_dump($form['#validate']);
+		return $form;
+	}
+	else if( $form_id == 'user_profile_form' )  {
+		$form['#validate'][] = 'ds_ldap_roles_extra_user_profile_validation';
+		drupal_add_js( drupal_get_path( 'theme', 'colfuturo_atsubtheme' ) . "/js/user-profile.js" );
+		return $form;
+	}
+}
+
+function ds_ldap_roles_extra_user_validation2( $form, &$form_state ) {
+	if(arg(0)=='system' && arg(1) =='ajax'){
+	    WriteLogValidation(' '.time().' 1. Validando Cedula :'.$form_state['values']['name'].' Intento entrar con ajax',$form_state['values']['name']);
+	    form_set_error('error', 'error');
+	    return;
+  	}
+	//foreach( $form_state['values'] as $index => $value )
+	//	var_dump( $index . " : " . print_r( $value, true ) );
+
+	// If previous validation didn't pass, return
+	if ( form_get_errors( ) )
+	    return;
+
+	$userArray = array();
+	$userArray['cedula'] = $form_state['values']['name'];
+	$userArray['firstname'] = $form_state['values']['field_nombres']['und'][0]['value'];
+	$userArray['lastname'] = $form_state['values']['field_apellidos']['und'][0]['value'];
+	$userArray['email'] = $form_state['values']['mail'];
+	$userArray['clave'] = $form_state['values']['pass'];
+	if( isset($form_state['values']['field_area_de_interes']['und'][0]['tid']) &&
+		$form_state['values']['field_area_de_interes']['und'][0]['tid'] > 0
+	){
+		$term = taxonomy_term_load( $form_state['values']['field_area_de_interes']['und'][0]['tid'] );
+		$userArray['comments'] = $term->name;
+	}else{
+		$userArray['comments'] = 'No definido';
+	}
+	
+	$userArray['gender'] = ( $form_state['values']['field_genero']['und'][0]['value'] == 'Masculino' ? 0 : 1 );
+
+	addModifyUser( $userArray );
+
+}
+
+function ds_ldap_roles_extra_user_profile_validation( $form, &$form_state ) {
+
+	global $user;
+
+	drupal_add_js( drupal_get_path( 'theme', 'colfuturo_atsubtheme' ) . "/js/user-profile.js" );
+
+	if( $form_state['values']['name'] != $user->name && !in_array( "administrator", $user->roles )  )  {
+		form_set_error( t('fail'), "Imposible realizar la actualización por un error de validación de usuario." );
+	}
+	/**
+	 * Que por qué uso $_REQUEST? Porque no se por qué Drupal no pone esos valores en el formulario.
+	 */
+	else if( isset( $_REQUEST['current_pass'] ) && !trim( $_REQUEST['current_pass'] ) ) {
+		form_set_error( t('fail'), "Debe ingresar su clave actual para autorizar la actualización de datos." . $_REQUEST['current_pass'] );
+	}
+	else if( !in_array( "administrator", $user->roles ) )    {
+		$ds = ldap_connect( "ns6.colfuturo.org" );
+
+		// Connection made
+		if ( $ds )  {
+			ldap_bind( $ds ); // binding read-only
+
+			$sr = ldap_search( $ds, "ou=portal,dc=colfuturo,dc=org", "(&(uid=" . $user->name . "))" );
+			$info = ldap_get_entries( $ds, $sr );
+			if( !empty( $info ) && $info["count"] > 0 ) {
+				// LDAP update
+				if( isset( $_REQUEST['current_pass'] ) && $info[0]["userpassword"][0] != $_REQUEST['current_pass'] )  {
+					form_set_error( t('fail'), "La contraseña actual no es correcta." );
+				}
+				else    {
+					$userArray = array();
+					$userArray['cedula'] = $user->name;
+					$userArray['firstname'] = $form_state['values']['field_nombres']['und'][0]['value'];
+					$userArray['lastname'] = $form_state['values']['field_apellidos']['und'][0]['value'];
+					$userArray['email'] = $form_state['values']['mail'];
+					$userArray['clave'] = ( isset( $_REQUEST['pass']['pass1'] ) && trim( $_REQUEST['pass']['pass1'] ) ? $_REQUEST['pass']['pass1'] : $_REQUEST['current_pass'] );
+					if( isset($form_state['values']['field_area_de_interes']['und'][0]['tid']) && 
+						$form_state['values']['field_area_de_interes']['und'][0]['tid'] > 0 ){
+						$term = taxonomy_term_load( $form_state['values']['field_area_de_interes']['und'][0]['tid'] );
+						$userArray['comments'] = $term->name;
+					}else{
+						$userArray['comments'] = 'No definido';
+					}
+					$userArray['gender'] = ( $form_state['values']['field_genero']['und'][0]['value'] == 'Masculino' ? 0 : 1 );
+
+					addModifyUser( $userArray );
+				}
+			}else{
+				form_set_error( t('fail'), "Imposible realizar el registro en este momento." );
+			}
+		}
+		else    {
+			form_set_error( t('fail'), "Imposible realizar la actualización en este momento." );
+		}
+		ldap_close( $ds );
+	}
+
+}
+
+//	hook_user_load
+
+function ads_ldap_roles_user_presave( &$edit, $account, $category )  {
+
+}
+
+function ads_ldap_roles_user_insert( &$edit, $account, $category )   {
+
+
+	// If admin ... nothing to do
+	if( in_array( "administrator", $account->roles ) )
+		return;
+
+}
+
+function ds_ldap_roles_user_login( &$edit, $account )    {
+
+	//error_reporting( -1 );
+	//ini_set( "display_errors", 1 );
+
+	// If admin ... nothing to do
+	if( in_array( "administrator", $account->roles ) )
+		return;
+
+	// Some roles that are required in Drupal but in LDAP
+	$staticRoles = array( "authenticated user" );
+
+	$roles = user_roles( );
+	$ds = ldap_connect( "ns6.colfuturo.org" );
+
+	// Connection made
+	if ( $ds )  {
+		ldap_bind( $ds ); // binding read-only
+
+		$sr = ldap_search( $ds, "ou=portal,dc=colfuturo,dc=org", "(&(uid=" . $account->name . "))" );
+		$info = ldap_get_entries( $ds, $sr );
+
+		if( !empty( $info ) && $info["count"] > 0 ) {
+
+			/*
+			 * Some user LDAP info { ... }
+			 */
+			$terms = taxonomy_get_term_by_name( $info[0]['description'][0], "_reas_de_inter_s_usuario" );
+			$objUser = entity_metadata_wrapper( 'user', $account );
+
+			/*if ( !empty( $terms ) ) {
+				foreach( $terms as $idterm => $term )
+					$objUser->field_area_de_interes = $idterm;
+			}*/
+
+			$objUser->field_genero = ( $info[0]['title'][0] != 1 ? 'Masculino' : 'Femenino' );
+			$objUser->save( );
+
+			$account->field_genero = $objUser->field_genero;
+			$account->field_area_de_interes = $objUser->field_area_de_interes;
+
+			$filter = "member=uid=" . $info[0]["uid"][0] . ",ou=portal,dc=colfuturo,dc=org";
+			foreach( $roles as $role )   {
+
+				// Some roles that are required in Drupal but in LDAP
+				if( in_array( strtolower ( $role ), $staticRoles ) )
+					continue;
+
+				// LDAP role search
+				$roleSearch = ldap_search( $ds, "cn=" . strtolower ( $role ) . ",ou=roles,dc=colfuturo,dc=org", $filter );
+				$roleResult = @ldap_get_entries( $ds, $roleSearch );
+
+				if( !empty( $roleResult ) && $roleResult["count"] > 0 ) {
+					// Found LDAP Role
+					if( !in_array( $role, $account->roles ) )   {
+						// User doesn't have it
+						$roleObj = user_role_load_by_name( $role );
+						if( $roleObj )  {
+							user_multiple_role_edit( array( $edit['uid'] ), 'add_role', $roleObj->rid );
+							$account->roles[$roleObj->rid] = $role;
+						}
+					}
+				}
+				else    {
+					// NOT Found LDAP Role
+					if( in_array( $role, $account->roles ) )   {
+						// User do have it
+						$roleObj = user_role_load_by_name( $role );
+						if( $roleObj )  {
+							user_multiple_role_edit( array( $edit['uid'] ), 'remove_role', $roleObj->rid );
+							unset( $account->roles[$roleObj->rid] );
+						}
+					}
+				}
+			}
+		}
+		else    {
+			form_set_error( t('fail'), "Usuario sin permisos, por favor intente ingresar en unos minutos." );
+		}
+		ldap_close( $ds );
+	}
+
+}
+
+
+function addModifyUser($user){
+
+	$ds = ldap_connect("ns6.colfuturo.org");
+	ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
+
+	if ($ds) {
+
+		$userLdap = "cn=root,dc=colfuturo,dc=org";
+		$passLdap = "sharedsecret";
+		$r = ldap_bind($ds, $userLdap, $passLdap);
+
+		$filter = "uid=".$user['cedula'];
+		$sr = ldap_search($ds, "ou=portal,dc=colfuturo,dc=org", $filter );
+
+		$info = ldap_get_entries($ds, $sr);
+
+		$entry = array();
+		$entry['cn'] = /*strtr($user['firstname'], "ÁÉÍÓÚÑáéíóúñ","AEIOUNaeioun")*/html_entity_decode($user['firstname'], null, "ISO-8859-1");
+		$entry['mail'] = $user['email'];
+		$entry['sn'] = /*strtr($user['lastname'], "ÁÉÍÓÚÑáéíóúñ","AEIOUNaeioun")*/html_entity_decode($user['lastname'], null, "ISO-8859-1");
+		$entry['userPassword'] = $user['clave'];
+
+		$entry['description'] = /*strtr($user['comments'], "ÁÉÍÓÚÑáéíóúñ","AEIOUNaeioun")*/html_entity_decode($user['comments'], null, "ISO-8859-1");
+		$entry['title'] = $user['gender'];
+		$entry['objectClass'][0] = "inetOrgPerson";
+		$entry['objectClass'][1] = "organizationalPerson";
+		$entry['objectClass'][2] = "uidObject";
+		$entry['objectClass'][3] = "person";
+		$entry['objectClass'][4] = "top";
+		$entry['uid'] = $user['cedula'];
+
+		//echo "<div style='display: none'>" . print_r ($entry, true) . "</div>";
+
+		if(!empty($info) and $info["count"] > 0){
+			ldap_modify($ds, "uid=".$user['cedula'].",ou=portal,dc=colfuturo,dc=org", $entry);
+		}else{
+			ldap_add( $ds, "uid=".$user['cedula'].",ou=portal,dc=colfuturo,dc=org", $entry);
+
+			$rol = array();
+			$rol['member'] = "uid=".$user['cedula'].",ou=portal,dc=colfuturo,dc=org";
+			//ldap_mod_add( $ds, "cn=candidato,ou=roles,dc=colfuturo,dc=org", $rol );
+			ldap_mod_add( $ds, "cn=potencial,ou=roles,dc=colfuturo,dc=org", $rol );
+
+		}
+
+		if( ldap_errno($ds) != 0 )  {
+			form_set_error( t('fail'), check_plain( ldap_errno($ds) . ": " . ldap_error($ds) ) );
+			ldap_close($ds);
+			return false;
+		}
+
+		ldap_close($ds);
+		return true;
+
+	} else {
+		return false;
+	}
+}
+function validate_user_exists($user) {
+
+}

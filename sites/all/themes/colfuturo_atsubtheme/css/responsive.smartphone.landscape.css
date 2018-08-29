@@ -1,0 +1,1440 @@
+@charset "UTF-8";
+/*@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
+@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
+@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
+@import 'compass/css3';     */
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the default font size on small devices */
+.eventos_fixed {
+  display: none !important; }
+
+html {
+  font-size: 112.5%; }
+
+body.admin-menu.page-costos-del-programa-de-ingles-0 {
+  margin-top: 0px !important; }
+
+.logged-in #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-75 {
+  top: 2px !important; }
+  .logged-in #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-75 .block-inner .block-content {
+    width: 130px !important;
+    margin: 0 auto; }
+    .logged-in #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-75 .block-inner .block-content .link_login_edit {
+      font-size: 10px !important;
+      background: none;
+      padding-left: 30px; }
+    .logged-in #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-75 .block-inner .block-content .link_login_out {
+      font-size: 10px !important;
+      margin: 0;
+      padding-left: 30px;
+      background: none; }
+.logged-in #admin-menu {
+  display: none; }
+
+.eventos_fixed {
+  display: none; }
+
+#page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner {
+  height: auto; }
+  #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-74 {
+    height: 43px;
+    border-right: 1px solid #A1A1A1;
+    width: auto;
+    padding: 4px; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-74 .responsive-display {
+      position: absolute;
+      top: 50px; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-74 .content_rs {
+      display: inline-block; }
+      #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-74 .content_rs .tw {
+        margin-left: 0px !important; }
+  #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user {
+    width: 100% !important;
+    width: 100% !important;
+    margin: 0px 0 0 0;
+    padding: 80px 0 0 0;
+    border-top: 1px solid #A1A1A1; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-views-7d0f89e2689cee454835feeeb81dc62e {
+      width: 100% !important; }
+      #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-views-7d0f89e2689cee454835feeeb81dc62e .block-inner .block-content #views-exposed-form-b-squedas-generales-del-sitio-page .form-type-textfield {
+        margin: 0; }
+        #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-views-7d0f89e2689cee454835feeeb81dc62e .block-inner .block-content #views-exposed-form-b-squedas-generales-del-sitio-page .form-type-textfield input {
+          margin: 0 auto; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-block-75 {
+      width: 32% !important;
+      position: absolute;
+      top: 16px;
+      display: block;
+      margin: 0 auto;
+      left: 34%; }
+      #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-block-75 .block-inner .block-content {
+        width: 55px;
+        margin: 0 auto; }
+        #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner .region-blockgroup-new-header-search-data-user .region-inner #block-block-75 .block-inner .block-content a {
+          font-size: 18px;
+          background: none;
+          padding-left: 10px; }
+  #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-76 {
+    position: absolute;
+    right: 0;
+    border-left: 1px solid #A1A1A1;
+    height: 43px;
+    padding: 4px; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-76 .block-inner .block-content p {
+      margin: 0; }
+    #page-wrapper #page #nav-wrapper .container #menu-bar .region-blockgroup-nuevo-encabezado .region-inner #block-block-76 .block-inner .block-content .btn_rebeca {
+      background: url("../images/Rebeca_logo.png") no-repeat;
+      width: 85px;
+      height: 45px; }
+#page-wrapper #page #nav-wrapper .container #menu-bar .responsive-menus .toggler {
+  background: #6A6A6A !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin: 0px 2px; }
+#page-wrapper #page #nav-wrapper .container #menu-bar .responsive-menus #rm-removed ul a.active {
+  background: #DA291C; }
+#page-wrapper #page #nav-wrapper .container #menu-bar .responsive-menus #rm-removed ul .menu-depth-1 {
+  background: #6A6A6A !important; }
+#page-wrapper #page #breadcrumb-wrapper {
+  display: none; }
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 {
+  margin: 7px 0;
+  width: 100%; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div a img {
+    display: none; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.informacion {
+    background-image: url("/sites/default/files/pcb_miinfo_min.png");
+    background-repeat: no-repeat;
+    background-size: 100% 35px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-family: 'myriad pro', sans-serif; }
+   /* #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.informacion a:after {
+      content: "Mi Informaci\00f3 n";
+      color: white;
+      font-size: 24px;
+      letter-spacing: -1px; }*/
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.contacto-rapido {
+    background-image: url("/sites/default/files/pcb_contacto_1_min.png");
+    background-repeat: no-repeat;
+    background-size: 100% 35px;
+    width: 100%;
+    height: 37px;
+    text-align: center;
+    font-family: 'myriad pro', sans-serif; }
+   /* #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.contacto-rapido a:after {
+      content: "Contacto R\00e1pido";
+      color: white;
+      font-size: 24px; 
+      letter-spacing: -1px;
+      color: #DA291D; }*/
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.mi-credito {
+    background-image: url("/sites/default/files/pcb_micredito_min.png");
+    background-repeat: no-repeat;
+    background-size: 100% 35px;
+    width: 100%;
+    height: 37px;
+    text-align: center; }
+    /*#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner .region-blockgroup-pcb-slides-y-bloques .region-inner #block-block-72 .block-inner .block-content div.mi-credito a:after {
+      content: "Mi Cr├®dito";
+      color: white;
+      font-size: 24px;
+      letter-spacing: -1px; }*/
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 {
+  width: 100%;
+  float: none;
+  margin: 0; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner {
+    display: inline-block;
+    width: 100%; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb {
+      float: none;
+      width: 100%;
+      height: auto;
+      display: inline-block; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 {
+        width: 100%;
+        background: #d4c9d4;
+        background: -moz-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, #d4c9d4), color-stop(50%, rgba(247, 247, 247, 0.94)), color-stop(51%, rgba(247, 247, 247, 0.94)), color-stop(100%, rgba(212, 201, 212, 0.88)));
+        background: -webkit-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+        background: -o-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+        background: -ms-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+        background: linear-gradient(to right, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4c9d4', endColorstr='#d4c9d4', GradientType=1 ); }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 h3 {
+          color: #fff;
+          background-color: #DA291C;
+          padding: 10px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li {
+          width: 100%; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 {
+            width: 100%; }
+            #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li {
+              width: 80%; }
+              #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li .icon_img img {
+                width: 70px !important;
+                height: auto !important; }
+              #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li .content {
+                text-align: left;
+                margin: 0 0 0 25%;
+                width: 58%; }
+                #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li .content p {
+                  display: none; }
+                #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li .content h4 {
+                  font-size: 13px; }
+                #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner .bloque_perfiles_pcb .level1 li .level2 li .content a {
+                  font-size: 11px; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb {
+      float: none;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      margin: 3px 0; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .cnt_titulo {
+        margin: 0 auto;
+        float: none;
+        display: table;
+        height: auto;
+        top: 14px;
+        position: relative;
+        border-bottom: solid 1px #C4C4C4;
+        margin-bottom: 20px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .cnt_titulo img {
+          width: 70px;
+          margin: 0px;
+          float: left;
+          display: inline-block; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .cnt_titulo h4 {
+          font-size: 14px;
+          text-align: center;
+          margin: 0 0 0 15px;
+          display: inline-block;
+          position: relative;
+          top: 23px; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .cnt_titulo h4 span {
+            font-size: 14px; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .row_year {
+        width: 36%;
+        display: block;
+        margin: 0 auto;
+        float: none;
+        height: 180px;
+        overflow-y: auto;
+        border: solid #D5D5D5 1px;
+        background-color: #EBE9E8;
+        margin-bottom: 5px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-61 .block-inner #cnt_reglamento_pcb .row_year a {
+          float: none;
+          padding: 1px 5px;
+          margin: 6px;
+          border-right: 0 !important; }
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 {
+  width: 100%; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content {
+    margin: 4px 22px; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray {
+      margin: 25px 15px 0px 15px; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray li {
+        text-align: center;
+        margin-bottom: 0; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray li p.hide-responsive {
+          display: none; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray li p {
+          text-align: center; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray li p a {
+            margin: 0; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-51 .block-inner .block-content .list-border-bottom-gray li img {
+          width: 70px !important;
+          height: auto !important;
+          float: none !important; }
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b {
+  width: 100%;
+  background: none; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-title {
+    font-size: 15px;
+    height: auto;
+    background: url("../images/bg_programas.png") no-repeat scroll 0 0 transparent;
+    margin: 0; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul {
+    padding: 0; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-header .field-name-title {
+      margin-bottom: 5px; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-header .field-name-title .field-items .field-item h2 {
+        margin: 0;
+        line-height: 0px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-header .field-name-title .field-items .field-item h2 a {
+          font-size: 11px; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-header .field-name-post-date {
+      margin: 0; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-left, #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-9d8660ba51396bc4e2ea6c2e8b628b1b .block-inner .block-content .view-bloques-resumen-articulos .view-content .item-list ul li div .group-right {
+      display: none; }
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 {
+  width: 100%; }
+  #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content {
+    width: 100%;
+    display: inline-block; }
+    #block-block-52{
+      float:none;
+    }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb {
+      display: inline-block;
+      height: auto;
+      margin: 1px;
+      background: #d4c9d4;
+      background: -moz-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, #d4c9d4), color-stop(50%, rgba(247, 247, 247, 0.94)), color-stop(51%, rgba(247, 247, 247, 0.94)), color-stop(100%, rgba(212, 201, 212, 0.88)));
+      background: -webkit-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+      background: -o-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+      background: -ms-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+      background: linear-gradient(to right, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4c9d4', endColorstr='#d4c9d4', GradientType=1 ); }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo {
+        width: 260px;
+        float: none;
+        display: block;
+        height: auto;
+        margin-bottom: 0px;
+        border-bottom: solid 1px #C2C2C2; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo img {
+          width: 50px !important;
+          height: auto !important;
+          float: left;
+          margin-left: 20px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo div h4 {
+          margin-top: 10px;
+          height: 70px; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo div h4 .uno {
+            font-size: 20px;
+            float: left; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo div h4 .dos {
+            font-size: 20px;
+            float: left;
+            margin-left: 6px; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo div h4 .tres {
+            font-size: 14px;
+            color: #000;
+            right: 64px;
+            position: relative;
+            float: left; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .cnt_titulo div h4 strong {
+            float: left;
+            font-size: 14px; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .persona {
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 6px;
+        border-bottom: 2px solid #FFF;
+        padding: 3px 0; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-52 .block-inner .block-content #cnt_equipo_trabajo_pcb .persona p {
+          text-align: center; }
+    #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb {
+      display: inline-block;
+      height: auto;
+      margin: 0; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_titulo {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 95%;
+        border-bottom: solid 1px #DA291C;
+        padding-bottom: 15px; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_titulo img {
+          width: 60px !important;
+          height: auto !important;
+          float: left; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_titulo h4 {
+          text-align: left;
+          font-size: 15px; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_titulo h4 span {
+            font-size: 13px; }
+          #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_titulo h4 strong {
+            font-size: 13px; }
+      #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_pais {
+        float: none;
+        border-bottom: solid 2px #D3C6C6;
+        display: block;
+        width: 80% !important;
+        margin-left: 25px;
+        border-left: none; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_pais p {
+          text-align: left; }
+        #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-block-132 .block-inner .block-content #cnt_telefonos_pcb .cnt_pais h4 {
+          text-align: left; }
+#page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-slide-principal-block-2 {
+  display: none; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-block-1 {
+  width: 100%; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-block-1 .block-inner .block-title {
+    margin: 0 auto;
+    position: initial; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-block-1 .block-inner .block-content {
+    display: inline-block;
+    width: 100%; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-block-1 .block-inner .block-content .view-destacados-home {
+      margin: 0 auto;
+      float: none; }
+      #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-block-1 .block-inner .block-content .view-destacados-home .view-content {
+        display: inline-block; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-slide-principal-block-3 {
+  display: none; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-introducciones-destacadas-block .view-content .views-view-grid .col-2 {
+  display: none; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-3 {
+  display: block!important;
+  width: 100%!important; 
+   }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-3 .view-destacados-eventos-home{
+
+ width: 100%!important;
+}   
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 {
+  width: 100% !important;
+  display: inline-table;
+  margin: 0 auto !important; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner {
+    margin: 0 auto; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris {
+      display: inline-block;
+      background: none;
+      height: auto; }
+      #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content {
+        /*Para Que Funcione Con JS*/
+        /*Para Que Funcione Con JS*/
+        display: inline-table; }
+        #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .contrac .ds-2col-stacked-fluid {
+          background: none !important; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .contrac .ds-2col-stacked-fluid .group-header .field-name-body {
+            display: none !important; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .contrac .ds-2col-stacked-fluid .group-header .field-name-title .field-items .field-item h2:after {
+            content: "\25bc";
+            float: right;
+            margin-right: 15px; }
+        #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 {
+          background: url("../images/headerhomedestacados.jpg") no-repeat scroll 0 0;
+          background-size: 100% 36px;
+          margin: 3px 0;
+          width: 100%;
+          height: auto; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 .view-mode-personalizada_2_columnas_v2 .group-header {
+            display: block; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 .view-mode-personalizada_2_columnas_v2 .group-header .field-name-body {
+              float: right;
+              width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 .view-mode-personalizada_2_columnas_v2 .group-right {
+            width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 .ds-2col-stacked-fluid {
+            background: url("../images/Grafico_01.png") no-repeat scroll 0 0 transparent;
+            background-position: 30px 60px;
+            background-size: 80px; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-1 .ds-2col-stacked-fluid .group-header .field-name-title .field-items .field-item h2 {
+              text-align: left;
+              text-transform: uppercase;
+              margin-left: 8px; }
+        #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 {
+          background: url("../images/headerhomedestacados.jpg") no-repeat scroll 0 0;
+          background-size: 100% 36px;
+          margin: 3px 0;
+          width: 100%;
+          height: auto; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 .view-mode-personalizada_2_columnas_v2 .group-header {
+            display: block; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 .view-mode-personalizada_2_columnas_v2 .group-header .field-name-body {
+              float: right;
+              width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 .view-mode-personalizada_2_columnas_v2 .group-right {
+            width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 .ds-2col-stacked-fluid {
+            background: url("../images/Grafico_02.png") no-repeat scroll 0 0 transparent;
+            background-position: 30px 60px;
+            background-size: 80px; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-2 .ds-2col-stacked-fluid .group-header .field-name-title .field-items .field-item h2 {
+              text-align: left;
+              text-transform: uppercase;
+              margin-left: 8px; }
+        #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 {
+          background: url("../images/headerhomedestacados.jpg") no-repeat scroll 0 0;
+          background-size: 100% 36px;
+          margin: 3px 0;
+          width: 100%;
+          height: auto; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 .view-mode-personalizada_2_columnas_v2 .group-header {
+            display: block; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 .view-mode-personalizada_2_columnas_v2 .group-header .field-name-body {
+              float: right;
+              width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 .view-mode-personalizada_2_columnas_v2 .group-right {
+            width: 60%; }
+          #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 .ds-2col-stacked-fluid {
+            background: url("../images/Grafico_03.png") no-repeat scroll 0 0 transparent;
+            background-position: 30px 60px;
+            background-size: 80px; }
+            #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-home-gris-block-1 .block-inner .block-content .view-destacados-home-gris .view-content .views-row-3 .ds-2col-stacked-fluid .group-header .field-name-title .field-items .field-item h2 {
+              text-align: left;
+              text-transform: uppercase;
+              margin-left: 8px; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 {
+  width: 100% !important; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-1 .node-personalizada-2-columnas-v3 .group-left {
+    width: 100%; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-1 .node-personalizada-2-columnas-v3 .group-left .field-name-field-fecha2 {
+      float: left;
+      margin: 0 11px 0 0; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-1 .node-personalizada-2-columnas-v3 .group-left .field-name-fecha-hora {
+      float: left; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-1 .node-personalizada-2-columnas-v3 .group-right {
+    float: left; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-1 .node-personalizada-2-columnas-v3 .group-right .field-name-body {
+      display: none; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-2 .node-personalizada-2-columnas-v3 .group-left {
+    width: 100%; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-2 .node-personalizada-2-columnas-v3 .group-left .field-name-field-fecha2 {
+      float: left;
+      margin: 0 11px 0 0; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-2 .node-personalizada-2-columnas-v3 .group-left .field-name-fecha-hora {
+      float: left; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-2 .node-personalizada-2-columnas-v3 .group-right {
+    float: left; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-2 .node-personalizada-2-columnas-v3 .group-right .field-name-body {
+      display: none; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-3 .node-personalizada-2-columnas-v3 .group-left {
+    width: 100%; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-3 .node-personalizada-2-columnas-v3 .group-left .field-name-field-fecha2 {
+      float: left;
+      margin: 0 11px 0 0; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-3 .node-personalizada-2-columnas-v3 .group-left .field-name-fecha-hora {
+      float: left; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-3 .node-personalizada-2-columnas-v3 .group-right {
+    float: left; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-destacados-eventos-home-block-4 .block-inner .block-content .view-destacados-eventos-home .view-content .views-row-3 .node-personalizada-2-columnas-v3 .group-right .field-name-body {
+      display: none; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-block-99 {
+  display: none; }
+#page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 {
+  width: 98%;
+  margin: 6px !important; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 .block-inner .block-content .view-programas-que-ofrece-colfuturo .view-header {
+    display: none; }
+  #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 .block-inner .block-content .view-programas-que-ofrece-colfuturo .view-content {
+    display: inline-block; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 .block-inner .block-content .view-programas-que-ofrece-colfuturo .view-content .views-row-1 .views-field-field-image {
+      display: none; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 .block-inner .block-content .view-programas-que-ofrece-colfuturo .view-content .views-row-2 .views-field-field-image {
+      display: none; }
+    #page-wrapper #page #tertiary-content-wrapper .container .region-tertiary-content .region-inner #block-views-d847f7c17f0d57623eca9702b3c14e23 .block-inner .block-content .view-programas-que-ofrece-colfuturo .view-content .views-row-3 .views-field-field-image {
+      display: none; }
+#page-wrapper #page #footer-wrapper {
+  background: #333;
+  margin-top: 0; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-menu-block-2 {
+    display: none; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-menu-block-3 {
+    display: none; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-menu-block-4 {
+    display: none; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-menu-block-10 {
+    display: none; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa {
+    position: relative;
+    width: 100%;
+    top: 50px;
+    height: auto; }
+    #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa .region-inner #block-block-6 {
+      width: 90%;
+      margin: 0 auto;
+      float: none; }
+      #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa .region-inner #block-block-6 .block-inner .block-content {
+        display: inline-block;
+        width: 100%; }
+        #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa .region-inner #block-block-6 .block-inner .block-content .col_footer_06 {
+          text-align: center;
+          width: 100%; }
+          #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa .region-inner #block-block-6 .block-inner .block-content .col_footer_06 p span {
+            font-size: 11px; }
+    #page-wrapper #page #footer-wrapper .container #footer .region .region-inner .region-blockgroup-footer-direcci-n-y-mapa .region-inner #block-simple-gmap-simple-gmap {
+      display: none; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-40 {
+    position: relative;
+    top: 40px;
+    width: 100%;
+    margin: 0; }
+    #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-40 .block-inner .block-content .col_footer_07 {
+      text-align: center; }
+      #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-40 .block-inner .block-content .col_footer_07 .lista_footer_inferior {
+        margin: 0;
+        display: inline-block; }
+        #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-40 .block-inner .block-content .col_footer_07 .lista_footer_inferior li {
+          margin: 9px 3px 0;
+          padding: 0;
+          text-align: center;
+          float: left; }
+          #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-40 .block-inner .block-content .col_footer_07 .lista_footer_inferior li a {
+            font-size: 11px; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 {
+    width: 100%;
+    position: absolute; }
+    #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 .block-inner .block-content {
+      margin: 0 auto;
+      width: 99%;
+      display: table; }
+      #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 .block-inner .block-content p {
+        display: table;
+        margin: 0 auto;
+        margin: 0px 24px; }
+        #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 .block-inner .block-content p .telefono {
+          float: left;
+          font-size: 16px;
+          margin-left: 1px; }
+          #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 .block-inner .block-content p .telefono span {
+            font-size: 16px; }
+        #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-5 .block-inner .block-content p .comentarios {
+          margin-left: 8px;
+          float: right;
+          font-size: 16px; }
+  #page-wrapper #page #footer-wrapper .container #footer .region .region-inner #block-block-97 {
+    display: none; }
+
+.responsive-menus-simple li a {
+  font-size: 12px; }
+.responsive-menus-simple .menu-depth-1 .menu-depth-2 {
+  background-color: #B3B3B3; }
+
+/*Estilos especiales para el front*/
+.front #content-wrapper {
+  display: none; }
+
+/*Estilos especiales para el front*/
+/*Estilos especiales para convocatoria*/
+.section-convocatoria #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .field-item .titulo-general-negro {
+  font-size: 100%; }
+.section-convocatoria #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .field-item p {
+  margin: 7px 0 0 0;
+  font-size: 0px !important; }
+  .section-convocatoria #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .field-item p span {
+    font-size: 11px !important; }
+.section-convocatoria #content-wrapper .container #columns .columns-inner #content-column {
+  float: none; }
+  .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner {
+    margin: 0; }
+    .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content {
+      width: 100%; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-88 p a img {
+        width: 100% !important;
+        height: auto !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-90 {
+        width: 100%;
+        height: auto;
+        line-height: inherit;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+        display: inline-block;
+        height: auto;
+        background: none; }
+        .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-90 h2 {
+          background-color: #FDE3BF;
+          float: none;
+          width: 100%;
+          height: auto;
+          line-height: inherit;
+          font-size: 18px;
+          margin-bottom: 18px; }
+        .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-90 ul {
+          width: 100%;
+          list-style: circle; }
+          .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-90 ul li {
+            width: 80%;
+            list-style: circle;
+            margin: 0 auto;
+            text-transform: initial; }
+            .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-90 ul li a {
+              font-size: 95% !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-91 {
+        width: 100%;
+        display: inline-block;
+        height: auto;
+        background: url("../images/conv_2014_bg_enlaces.png") top left repeat; }
+        .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-91 p {
+          width: 80%;
+          margin: 0 auto; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item .titulo-general-rojo {
+        font-size: 1.25em;
+        margin: 1px 0 0 14px;
+        text-transform: uppercase; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item .day-accordion h3 {
+        font-size: 14px; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item #day-accordion-0 div img {
+        height: 710px !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item #day-accordion-1 div img {
+        height: auto !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item #day-accordion-2 div img {
+        height: auto !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item #day-accordion-3 .content-day-accordion span.text-subtitle {
+        font-size: 18px !important;
+        line-height: 15px !important; }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item #day-accordion-4 {
+        /*@include resize-image-acordion(341px);*/ }
+      .section-convocatoria #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .node-page .field-name-body .field-items .field-item .text-footer p {
+        width: 80%;
+        margin: 0 auto; }
+.section-convocatoria #content-wrapper .container #columns .region-sidebar-second {
+  display: none !important; }
+
+/*Estilos especiales para convocatoria*/
+/*Estilos para user*/
+.page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner {
+  margin: 0px !important; }
+  .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content {
+    display: inline-block;
+    width: 100%; }
+    .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #main-content-header #page-title {
+      text-align: center; }
+    .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content {
+      width: 100%;
+      display: inline-block; }
+      .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main {
+        display: inline-block;
+        width: 100%; }
+        .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login {
+          float: none;
+          width: 90%;
+          margin: 0 auto; }
+          .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div {
+            width: 100%;
+            display: inline-block; }
+            .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div div {
+              width: 100%;
+              margin: 0; }
+              .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div div #edit-name, .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div div #edit-pass {
+                width: 100%;
+                position: relative;
+                padding: 0; }
+            .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div .form-actions {
+              margin: 0px; }
+              .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main #user-login div .form-actions input {
+                margin: 0px; }
+      .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-48 {
+        display: inline-block; }
+        .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-48 p {
+          position: relative;
+          right: 0px;
+          top: 0px;
+          margin: 0; }
+        .page-user #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-48 .cnt_btn_guardar_cancelar .content_inner a {
+          margin: 0;
+          margin-left: 15px;
+          float: left; }
+
+/*Estilos para user*/
+.page-financiacion-para-posgrados-en-el-exterior #page-wrapper #page #nav-wrapper .container #menu-bar #block-menu-block-12 {
+  display: none; }
+.page-financiacion-para-posgrados-en-el-exterior #page-wrapper #page #content-wrapper .container #block-system-main .field-item p img {
+  width: 100% !important;
+  height: auto !important; }
+.page-financiacion-para-posgrados-en-el-exterior #page-wrapper #page #content-wrapper .container .region-sidebar-second .region-inner {
+  /*#block-views-pasos-1234-convocatoria-block-5{
+    .block-inner{
+      .block-content{
+        .view-pasos-1234-convocatoria{
+          .view-content{
+            display: inline-block;
+            width: 100%;
+            .item-list{
+              display: inline-block;
+              width: 100%;
+              ul{
+                width: 100%;
+                margin-left: 1px;
+                li{
+                  padding-left: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }*/ }
+  .page-financiacion-para-posgrados-en-el-exterior #page-wrapper #page #content-wrapper .container .region-sidebar-second .region-inner #block-block-23 {
+    display: none; }
+  .page-financiacion-para-posgrados-en-el-exterior #page-wrapper #page #content-wrapper .container .region-sidebar-second .region-inner #block-block-71 {
+    display: none; }
+
+.page-contenido-financiacion-de-posgrados-proceso-de-seleccion #page-wrapper #page #nav-wrapper .container #menu-bar #block-menu-block-12 {
+  display: none; }
+.page-contenido-financiacion-de-posgrados-proceso-de-seleccion #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-system-main .ds-1col .field-name-body img {
+  width: 100% !important;
+  height: auto !important; }
+.page-contenido-financiacion-de-posgrados-proceso-de-seleccion #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-print-print-links {
+  display: none; }
+.page-contenido-financiacion-de-posgrados-proceso-de-seleccion #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-multiblock-3 {
+  display: none; }
+.page-contenido-financiacion-de-posgrados-proceso-de-seleccion #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-block-10 {
+  display: none; }
+
+.page-convenios-establecidos-0 #content-wrapper .container #columns .columns-inner .region-sidebar-second {
+  display: none !important; }
+
+/*  estilos nuestros beneficiarios*/
+.page-nuestros-beneficiarios #page-wrapper #page #secondary-content-wrapper .slide-nuestros-beneficiarios .views-field-field-imagen-slide-home img {
+  height: auto !important;
+  width: 100% !important; }
+.page-nuestros-beneficiarios #page-wrapper #page #secondary-content-wrapper .slide-nuestros-beneficiarios .views-field-nothing {
+  display: none; }
+.page-nuestros-beneficiarios #page-wrapper #page #content-wrapper {
+  width: 100%; }
+  .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner {
+    width: 100%; }
+    .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content {
+      width: 100%; }
+      .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content {
+        width: 100%; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-block-50 .wrapper-content-personalized iframe {
+          width: 100%;
+          height: auto; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-views-bloques-resumen-articulos-block .view-bloques-resumen-articulos .view-content .item-list ul li div.ds-2col-stacked-fluid {
+          width: 90%;
+          margin: 0 auto; }
+          .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-views-bloques-resumen-articulos-block .view-bloques-resumen-articulos .view-content .item-list ul li div.ds-2col-stacked-fluid .group-right .field-name-field-image .field-items figure {
+            display: none; }
+          .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-views-bloques-resumen-articulos-block .view-bloques-resumen-articulos .view-content .item-list ul li div.ds-2col-stacked-fluid .group-left {
+            display: inline-block;
+            width: 100%; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-views-bloques-testimonios-block .view-bloques-testimonios .view-content .views-row .ds-2col-stacked-fluid .group-left {
+          width: 100%; }
+          .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #main-content #content #block-views-bloques-testimonios-block .view-bloques-testimonios .view-content .views-row .ds-2col-stacked-fluid .group-left .field-name-field-image figure img {
+            width: 100%;
+            height: auto; }
+    .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second {
+      margin: 0 auto;
+      display: inline-block;
+      float: none;
+      width: 100%; }
+      .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 15px; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner .block-region-sidebar-second {
+          width: 100%;
+          float: none;
+          margin: 0; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-31 {
+          display: none; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-sharethis-sharethis-block {
+          display: none; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner .block-block-23 {
+          display: none; }
+        .page-nuestros-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner .block-block-71 {
+          display: none; }
+
+/*  estilos nuestros beneficiarios*/
+/*estilos page-node-article*/
+.node-type-article #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #page-title {
+  font-size: 15px;
+  font-weight: 600 !important;
+  text-transform: uppercase; }
+.node-type-article #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-45 {
+  display: none; }
+.node-type-article #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-block-46 {
+  display: none; }
+
+/*estilos page-node-article*/
+/*ESTILOS TESIS Y ARTICULOS*/
+/*ESTILOS TESIS Y ARTICULOS*/
+.page-tesis-y-articulos #page-wrapper #page .modalmask .modalbox {
+  width: 90%; }
+.page-tesis-y-articulos #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content #block-block-129 .block-inner .block-content {
+  width: 90%;
+  margin: 0 auto; }
+  .page-tesis-y-articulos #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content #block-block-129 .block-inner .block-content h2 {
+    font-size: 21px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    line-height: normal !important;
+    margin-top: 15px !important; }
+.page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos .lupaimage {
+    display: none; }
+  .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form {
+    margin: 0px;
+    padding: 0px;
+    display: block; }
+    .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form label {
+      font-size: 8px; }
+    .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div.form-item-busqueda {
+      width: 100% !important; }
+    .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div {
+      width: 100%; }
+      .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div div {
+        margin: 0 0 5px 0 !important;
+        width: 48% !important;
+        float: left;
+        padding-right: 6px; }
+        .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div div label {
+          width: 100%; }
+        .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div div select {
+          width: 100%; }
+      .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div #edit-submit, .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form div #edit-reset {
+        top: 0;
+        width: 48%; }
+    .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form .form-type-textfield {
+      width: 100% !important;
+      display: block; }
+      .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form .form-type-textfield #gsearch {
+        width: 100% !important;
+        display: block;
+        margin: 0;
+        padding: 0; }
+    .page-tesis-y-articulos #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col #block-b-colfuturo-buscador-tesis-articulos .block-inner .block-content .publicaciones-tesis-articulos form#formulario-search-filtro-tesis-articulos-form .form-item-beneficiario-promocion {
+      width: 45%; }
+
+/*ESTUDIE UN POSFRADO EN EL EXTERIOR*/
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body {
+  width: 90%;
+  margin: 20px auto; }
+  .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .titulo-general-negro {
+    font-size: 17px !important;
+    text-align: left;
+    margin-top: 8px;
+    text-transform: uppercase;
+    color: #DA291C;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 500; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .titulo-general-negro strong {
+      font-size: 17px !important;
+      text-transform: uppercase; }
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 {
+  background: #d4c9d4;
+  background: -moz-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #d4c9d4), color-stop(50%, rgba(247, 247, 247, 0.94)), color-stop(51%, rgba(247, 247, 247, 0.94)), color-stop(100%, rgba(212, 201, 212, 0.88)));
+  background: -webkit-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -o-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -ms-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: linear-gradient(to right, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4c9d4', endColorstr='#d4c9d4', GradientType=1 ); }
+  .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria {
+    background: none;
+    width: 100%;
+    display: inline-block;
+    height: auto; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row-1 {
+      background-image: url("../images/Numerales1.png");
+      background-repeat: no-repeat;
+      background-position: 15px 8px; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row-2 {
+      background-image: url("../images/Numerales2.png");
+      background-repeat: no-repeat;
+      background-position: 15px 8px; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row-3 {
+      background-image: url("../images/Numerales3.png");
+      background-repeat: no-repeat;
+      background-position: 15px 8px; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row-4 {
+      background-image: url("../images/Numerales4.png");
+      background-repeat: no-repeat;
+      background-position: 15px 8px; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row {
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+      height: auto; }
+      .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid {
+        margin-bottom: 0px; }
+        .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-header {
+          float: right;
+          width: 200px;
+          margin-left: 120px;
+          margin-top: 0px;
+          height: auto; }
+          .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-header .field-name-title h2 {
+            font-size: 20px;
+            text-align: left;
+            margin: 5px 0 10px 0 !important; }
+        .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left {
+          float: right;
+          height: auto; }
+          .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left .group-contenedor1 {
+            text-align: left; }
+            .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left .group-contenedor1 .field-name-field-link {
+              position: inherit; }
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item .titulo-general-negro {
+  color: #DA291C;
+  font-size: 15px;
+  background-color: #FDE3BF;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  font-weight: 500;
+  text-transform: uppercase; }
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item p iframe {
+  width: 100%;
+  height: auto; }
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item p img {
+  width: 100% !important;
+  height: auto !important; }
+.page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second {
+  margin: 0 auto;
+  display: inline-block;
+  float: none;
+  width: 100%; }
+  .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 15px; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner .block-region-sidebar-second {
+      width: 100%;
+      float: none;
+      margin: 0; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-32 {
+      border: none; }
+      .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-32 .block-inner {
+        margin: 16px 0; }
+        .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-32 .block-inner .block-content .titulo-general-columna-derecha {
+          color: #DA291C;
+          font-size: 15px;
+          background-color: #FDE3BF;
+          text-align: left;
+          display: inline-block;
+          width: 100%;
+          padding: 5px 0;
+          font-weight: 500;
+          margin-bottom: 5px; }
+          .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-32 .block-inner .block-content .titulo-general-columna-derecha strong {
+            font-size: 15px;
+            text-transform: uppercase; }
+        .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-32 .block-inner .block-content ul li div {
+          width: 70%; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-31 {
+      display: none; }
+    .page-estudie-un-posgrado-en-el-exterior #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-sharethis-sharethis-block {
+      display: none; }
+
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main a {
+  margin: 1px 0px;
+  display: block; }
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .titulo-general-rojo {
+  font-size: 22px !important; }
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .img-none {
+  display: none; }
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main h3 {
+  font-size: 20px; }
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .dis-none {
+  display: none; }
+.page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria {
+  height: auto;
+  background: none; }
+  .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-header {
+    background-color: #FDE3BF; }
+  .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content {
+    width: 100%;
+    display: inline-block; }
+    .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list {
+      display: inline-block;
+      width: 100%;
+      margin-top: 2px; }
+      .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul {
+        width: 100%;
+        height: auto;
+        margin-left: 0; }
+        .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li {
+          margin-left: 0;
+          width: 100%;
+          float: none;
+          background-color: #FDE3BF; }
+          .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li div span a {
+            padding-top: 0;
+            background: none; }
+          .page-busqueda-de-informacion #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li:after {
+            padding-left: 20px; }
+
+/*ESTUDIE UN POSFRADO EN EL EXTERIOR*/
+.page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body {
+  width: 90%;
+  margin: 20px auto; }
+  .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .titulo-general-negro {
+    font-size: 17px;
+    text-align: left;
+    margin-top: 8px;
+    text-transform: uppercase; }
+    .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-ds-extras-pre-body .block-inner .block-content .field-name-field-prebody .field-items .titulo-general-negro strong {
+      font-size: 17px;
+      text-transform: uppercase; }
+.page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 {
+  background: #d4c9d4;
+  background: -moz-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #d4c9d4), color-stop(50%, rgba(247, 247, 247, 0.94)), color-stop(51%, rgba(247, 247, 247, 0.94)), color-stop(100%, rgba(212, 201, 212, 0.88)));
+  background: -webkit-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -o-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: -ms-linear-gradient(left, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  background: linear-gradient(to right, #d4c9d4 0%, rgba(247, 247, 247, 0.94) 50%, rgba(247, 247, 247, 0.94) 51%, rgba(212, 201, 212, 0.88) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4c9d4', endColorstr='#d4c9d4', GradientType=1 ); }
+  .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria {
+    background: none;
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    margin-bottom: 15px; }
+    .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row {
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+      height: auto; }
+      .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid {
+        margin-bottom: 0px; }
+        .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-header {
+          float: right;
+          width: 200px;
+          margin-left: 120px;
+          margin-top: 0px;
+          height: auto; }
+          .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-header .field-name-title h2 {
+            font-size: 20px;
+            text-align: left;
+            margin: 5px 0 10px 0 !important; }
+        .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left {
+          float: right;
+          height: auto; }
+          .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left .group-contenedor1 {
+            text-align: left; }
+            .page-node #page-wrapper #page #secondary-content-wrapper .container .region-secondary-content .region-inner #block-views-pasos-1234-convocatoria-block-6 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .views-row .ds-2col-stacked-fluid .group-left .group-contenedor1 .field-name-field-link {
+              position: inherit; }
+.page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item p iframe {
+  width: 100%;
+  height: auto; }
+.page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item p img {
+  width: 100% !important;
+  height: auto !important; }
+.page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second {
+  margin: 0 auto;
+  display: inline-block;
+  float: none;
+  width: 100%; }
+  .page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 15px; }
+    .page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner .block-region-sidebar-second {
+      width: 100%;
+      float: none;
+      margin: 0; }
+    .page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-31 {
+      display: none; }
+    .page-node #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-sharethis-sharethis-block {
+      display: none; }
+
+/*ESTUDIE UN POSFRADO EN EL EXTERIOR*/
+/*COMO FINACEAR SU POSGRADO*/
+.page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-views-89059a536ea4facd4d9a09a8cb464b5b .view-bloques-resumen-articulos .view-content .item-list ul li {
+  margin: 0 0 0.25em 0; }
+  .page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-views-89059a536ea4facd4d9a09a8cb464b5b .view-bloques-resumen-articulos .view-content .item-list ul li .node-article .group-header .field-name-title .field-items .field-item h2 a {
+    font-size: 13px;
+    display: inline-block;
+    line-height: 15px;
+    font-weight: 600; }
+  .page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-views-89059a536ea4facd4d9a09a8cb464b5b .view-bloques-resumen-articulos .view-content .item-list ul li .node-article .group-left {
+    width: 100%; }
+    .page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-views-89059a536ea4facd4d9a09a8cb464b5b .view-bloques-resumen-articulos .view-content .item-list ul li .node-article .group-left .field-name-body .field-items .field-item {
+      font-size: 12px; }
+  .page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-views-89059a536ea4facd4d9a09a8cb464b5b .view-bloques-resumen-articulos .view-content .item-list ul li .node-article .group-right div {
+    display: none; }
+.page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-36 {
+  padding: 16px 0px 5px 0px; }
+  .page-como-financiar-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-36 .block-content ul li {
+    font-size: 12px;
+    width: 90%;
+    margin: 0 auto; }
+
+/*COMO FINACEAR SU POSGRADO*/
+/*PREPARATIVOS DE VIAJE*/
+/*PREPARATIVOS DE VIAJE*/
+/*SEMILLERO*/
+.page-asesoria-y-apoyo-semillero #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main table {
+  width: 100%;
+  font-size: 11px; }
+.page-asesoria-y-apoyo-semillero #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-2 {
+  padding: 0; }
+  .page-asesoria-y-apoyo-semillero #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-2 .block-inner .block-content .view-bloques-testimonios .view-content .views-row-1 .views-field {
+    display: inline-block; }
+    .page-asesoria-y-apoyo-semillero #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-2 .block-inner .block-content .view-bloques-testimonios .view-content .views-row-1 .views-field span {
+      display: inline-block; }
+      .page-asesoria-y-apoyo-semillero #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-2 .block-inner .block-content .view-bloques-testimonios .view-content .views-row-1 .views-field span img {
+        margin: 0; }
+
+/*SEMILLERO*/
+/*QUE ES COLFUTURO*/
+.page-que-es-colfuturo #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item .title_xl iframe {
+  width: 100%;
+  height: auto; }
+.page-que-es-colfuturo #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-16 {
+  margin-bottom: 15px; }
+.page-que-es-colfuturo #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-15 {
+  margin-bottom: 15px; }
+  .page-que-es-colfuturo #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-15 .block-inner .block-content .cnt_grafico_390 p img {
+    width: 100% !important;
+    height: auto !important; }
+.page-que-es-colfuturo #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-sharethis-sharethis-block {
+  display: inline-block !important;
+  margin-top: 10px; }
+
+/*QUE ES COLFUTURO*/
+/*PAGINA DONANTES*/
+.page-donantes #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item .titulo-general-rojo {
+  font-size: 25px; }
+
+/*PAGINA DONANTES*/
+/*NUESTRA GESTION*/
+#page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item .titulo-general-rojo {
+  font-size: 25px; }
+#page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-16 {
+  margin-bottom: 15px; }
+#page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-15 {
+  margin-bottom: 15px; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-15 .block-inner .block-content .cnt_grafico_390 p img {
+    width: 100%;
+    height: auto; }
+
+/*NUESTRA GESTION*/
+/* EQUIPO DE TRABAJO*/
+.page-equipo-de-trabajo #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-16 {
+  display: none; }
+
+/*EQUIPO DE TRABAJO*/
+/*ASESORIA PARA PLANEAR SU POSGRADO*/
+.page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .ds-1col .field-name-body .field-items .field-item ul {
+  padding: 0 0 0 21px;
+  width: 90%;
+  margin: 0 !important; }
+.page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-22 iframe {
+  width: 100%;
+  height: auto; }
+.page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-21 {
+  margin-bottom: 15px; }
+  .page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-21 .block-inner {
+    margin: 16px 17px 5px 8px; }
+    .page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-block-21 .block-inner .block-content ul li p img {
+      display: none; }
+.page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-4 {
+  padding: 0; }
+  .page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-4 .view-content .views-row .views-field {
+    display: inline-block; }
+    .page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-4 .view-content .views-row .views-field .field-content img {
+      margin: 20px 0px 16px 0px; }
+  .page-asesoria-para-planear-su-posgrado #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second .region-inner #block-views-bloques-testimonios-block-4 .view-content .views-row .views-field-field-introduccion .field-content {
+    width: 90%;
+    margin: 0 auto; }
+
+/*ASESORIA PARA PLANEAR SU POSGRADO*/
+/**/
+/*Estilos generales en nodos */
+#page-wrapper #page #nav-wrapper .container #menu-bar #block-menu-block-12 {
+  display: none; }
+#page-wrapper #page #content-wrapper .container #columns .columns-inner {
+  width: 90%;
+  margin: 0 auto; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner {
+    margin: 0; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #block-print-print-links {
+    display: none; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column #block-block-10 {
+    display: none; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second {
+    display: none; }
+
+/*Estilos generales en nodos */
+#block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria {
+  height: auto;
+  background: none; }
+  #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-header, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-header {
+    background-color: #FDE3BF; }
+    #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-header p, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-header p {
+      font-size: 14px;
+      padding: 5px 0 0 0; }
+  #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content {
+    width: 100%;
+    display: inline-block; }
+    #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list {
+      display: inline-block;
+      width: 100%;
+      margin-top: 2px; }
+      #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul {
+        width: 100%;
+        height: auto;
+        margin-left: 0; }
+        #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li {
+          margin-left: 0;
+          width: 100%;
+          float: none;
+          background-color: #FDE3BF;
+          height: 26px;
+          margin: 1px 0 0 0; }
+          #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li div, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li div {
+            display: inline-block;
+            padding-left: 36px !important;
+            padding-top: 2px; }
+            #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li div span a, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul li div span a {
+              padding-top: 0;
+              background: none; }
+        #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-1 div, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-1 div {
+          background: url("../images/N1.png");
+          background-repeat: no-repeat; }
+        #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-2 div, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-2 div {
+          background: url("../images/N2.png");
+          background-repeat: no-repeat; }
+        #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-3 div, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-3 div {
+          background: url("../images/N3.png");
+          background-repeat: no-repeat; }
+        #block-views-pasos-1234-convocatoria-block-7 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-4 div, #block-views-pasos-1234-convocatoria-block-5 .block-inner .block-content .view-pasos-1234-convocatoria .view-content .item-list ul .views-row-4 div {
+          background: url("../images/N4.png");
+          background-repeat: no-repeat; }
+
+#block-block-32 {
+  border: none; }
+  #block-block-32 .block-inner {
+    margin: 16px 0; }
+    #block-block-32 .block-inner .block-content .titulo-general-columna-derecha {
+      color: #DA291C;
+      font-size: 15px;
+      background-color: #FDE3BF;
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      padding: 5px 0;
+      font-weight: 500;
+      margin-bottom: 5px; }
+      #block-block-32 .block-inner .block-content .titulo-general-columna-derecha strong {
+        font-size: 15px;
+        text-transform: uppercase; }
+    #block-block-32 .block-inner .block-content ul li div {
+      width: 70%; }
+
+/*PAGINAS BENEFICIARIO*/
+.page-categorias-articulos-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-taxonomias .view-content .views-row .ds-2col-stacked-fluid .group-left, .page-categorias-articulos-convocatorias #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-taxonomias .view-content .views-row .ds-2col-stacked-fluid .group-left {
+  float: none;
+  width: 100%; }
+.page-categorias-articulos-beneficiarios #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-taxonomias .view-content .views-row .ds-2col-stacked-fluid .group-right, .page-categorias-articulos-convocatorias #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-taxonomias .view-content .views-row .ds-2col-stacked-fluid .group-right {
+  float: none;
+  width: 100%;
+  display: none; }
+
+/*PAGINAS BENEFICIARIO*/
+/*PAGINA COSTOS INGLES*/
+.page-costos-del-programa-de-ingles-0 table {
+  zoom: 0.5; }
+.page-costos-del-programa-de-ingles-0 #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .content-day-accordion {
+  overflow: inherit !important; }
+.page-costos-del-programa-de-ingles-0 #page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second #block-views-bloques-testimonios-block-1 {
+  width: 90%;
+  padding: 13px;
+  margin-top: 5px; }
+
+/*PAGINA COSTOS INGLES*/
+/*CONVENIOS ESTABLECIDOS*/
+.page-convenios-establecidos-ingles #page-wrapper #page #content-wrapper iframe {
+  width: 100%;
+  height: auto; }
+.page-convenios-establecidos-ingles #page-wrapper #page #content-wrapper p {
+  font-size: 11px; }
+.page-convenios-establecidos-ingles #page-wrapper #page #content-wrapper .container #columns .columns-inner #block-system-main h3 {
+  margin-left: 0px !important; }
+.page-convenios-establecidos-ingles #page-wrapper #page #content-wrapper .container #columns .columns-inner #block-system-main h3.title-day-accordion {
+  font-size: 77%; }
+.page-convenios-establecidos-ingles #page-wrapper #page #content-wrapper .container #columns .columns-inner #block-system-main img {
+  width: 100% !important;
+  height: auto !important; }
+
+/*Page Empleos*/
+/*Page Empleos*/
+#page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .titulo-general-rojo {
+  font-size: 19px !important; }
+#page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-banner-basic-page .footerimage {
+  display: none;
+  top: 92px; }
+  #page-wrapper #page #content-wrapper .container #columns .columns-inner #content-column .content-inner #main-content #content #block-system-main .view-banner-basic-page .footerimage p {
+    font-size: 7px; }
+#page-wrapper #page #content-wrapper .container #columns .columns-inner .region-sidebar-second iframe {
+  width: 100%;
+  height: auto;
+  margin-top: 10px; }
+
+/*Page Empleos*/
+.page-donantes .col_izq_tabla_donantes td span {
+  font-size: 7px !important; }
+.page-donantes table {
+  zoom: 0.1; }
+.page-donantes #block-sharethis-sharethis-block {
+  display: inline-block !important;
+  margin-top: 10px; }
+
+/* estuctura pagina basica*/
+/*
+#page-wrapper{
+  #page{
+    #header-wrapper{}
+    #nav-wrapper{}
+    #breadcrumb-wrapper{}
+    #secondary-content-wrapper{}
+    #content-wrapper{
+      .container{
+        #columns{
+          .columns-inner{
+            #content-column{
+              .content-inner{
+                #main-content{
+                  #content{
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #footer-wrapper{}
+  }
+}
+}
+*/
+/*estuctura pagina basica*/
+
+/*# sourceMappingURL=responsive.smartphone.portrait.css.map */
+
+
+.barra-de-banners table.views-view-grid {
+    background-color: #fff;
+}
+.barra-de-banners table.views-view-grid .views-field-body .field-content p a img{
+    height: auto!important;
+}
+.region-blockgroup-nuevo-encabezado .region-blockgroup-new-header-search-data-user .new_header_search{
+      width: 100% !important;
+}
+
+#block-block-72 .informacion a,#block-block-72 .contacto-rapido a,#block-block-72 .mi-credito a{
+    width: 100%!important;
+    height: 90px!important;
+    background-size: 100%!important;
+  }
+

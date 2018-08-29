@@ -1,0 +1,1110 @@
+<?php
+/**
+* @file
+* Module file for dayscript_extras.
+* Este módulo aplica para las configuraciones de versionamiento de archivos y carga automatica de contenidos
+*/
+
+/**
+* Implements hook_form_alter
+* El hook aplica para el módulo de versionamiento de archivos
+*/
+
+function dayscript_extras_form_alter(&$form, &$form_state, $form_id){
+	global $user;
+	
+	$actives_content_type_field = array(); $actives_content_type = array();
+	//carga la variable de la configuracion del módulo (variable_get), en donde se definen que tipos de contenido y campos serán afectados
+	// Esta variable se establece con (variable_set()), en ajax_update_versioning_submit_driven_callback()
+	$actives_content_type_field = unserialize(variable_get('day_version_files_checks_default'));
+	if(is_array($actives_content_type_field)){
+		foreach($actives_content_type_field as $key_type_content => $value_name_field){
+			$actives_content_type[] = array($value_name_field, $key_type_content . '_node_form');
+		}
+	}
+
+	foreach($actives_content_type as $form_ids_and_field_name){
+		if(in_array($form_id, $form_ids_and_field_name)){
+			$field_name = $form_ids_and_field_name[0]; // Obtiene el nombre del campo, cada campo es tratado de forma independiente
+			$node_lang = $form[$field_name]['#language']; //obtiene el lenguaje del nombre de campo que involucra archivo(file)
+			if($form['changed']['#default_value'] != ''){ // Si hay un valor en $form['changed']['#default_value'] es porque se edita el nodo
+				// Si el nodo se está editando hay que comprobar que tenga el campo específico, entonces se actúa sobre el
+				$node_mode = 'edit'; // Indica que el nodo se está editando
+				$node_id = $form['nid']['#value']; // Obtiene el id del nodo en edición
+				$current_node = $form['#node']; // Carga el nodo actual
+				$elements_files = count(preg_grep("/^\d$/",array_keys($form[$field_name][$node_lang])));
+				$max_key = max(preg_grep("/^\d$/",array_keys($form[$field_name][$node_lang])));
+				//agrega una función de validación al campo
+				$form[$field_name][$node_lang][$max_key]['#upload_validators']['valide_files_that_same_name'] = array($node_id, $field_name);
+			}else{ // indica que el nodo se está creando, solo es necesario evaluar si algún archivo existe en el directorio
+				$form[$field_name][$node_lang][0]['#upload_validators']['valide_files_that_same_name'] = array(false);
+			}
+		}
+	}
+
+}//end function
+// La función valida la carga de un archivo, módulo de versionamiento de archivos
+function valide_files_that_same_name($field, $node_id, $field_name = ''){
+	// field es el parámetro por defecto pasado a la función de validación
+	// $node_id, es un parámetro pasado a la función y contiene el nodo en edicion
+	// $field_name, es el nombre del campo que hace el llamado a la función
+	$errors = array(); //inicializa el manejador de errores
+	// Obtiene el nombre del campo actual, del campo del nodo en edición, del campo que viene definido por $field
+	// $field es el parámetro por defecto al hacer llamado de una función de validación, $field es el campo sobre el que se realiza la validación
+	// $new_file_name corresponde al archivo que se carga a través del campo
+	$new_file_name = $field->filename;
+	$destination_file = get_destination_original_filename($field->destination, $new_file_name);
+	// Si node_id =  false, indica que no se hace edición de un nodo el nodo se crea, solo es necesaria la primera validación
+	if($node_id){
+		// Obtiene los valores de configuración guardados en la base de datos
+		$actives_content_type_field = unserialize(variable_get('day_version_files_checks_default'));
+		// Carga el nodo existente de acuerdo con el parámetro que llega $node_id
+		$current_node = node_load($node_id);
+		// $field_name contiene el nombre del campo que se está evaluando en el momento, así que en el nodo se captura el array 
+		// correspondiente, y obtiene el key correspondiente al lenguaje del campo en este caso debe ser 'es'
+		$current_files_lang_array = array_keys($current_node->$field_name);
+		$current_file_array = $current_node->$field_name;
+		// obtenemos el primer elemento que debe estar establecido a es, para futuras incluciones de lenguaje, esta variable
+		// se puede tomar y procesar
+		$current_files_lang = $current_files_lang_array[0];
+		// $old_files contiene un array con los archivos ya existentes sobre el nodo
+		$old_files = $current_file_array[$current_files_lang];
+		// Si efectivamente tenemos un array entonces lo recorremos para tener un array independiente con la información de cada archivo del nodo
+		if(is_array($old_files)){
+			foreach($old_files as $file_array){
+				// $file_array[filename] contiene el nombre de c/archivo lo comparamos con el nuevo nombre para saber si alguno es igual
+				// si es así procede a realizar el cambio y el renombramiento de lo contrario, verifica que no este el archivo ya en el directorio
+				$found_same_file = false;
+				if($file_array['filename'] == $new_file_name){
+					//$file_array['display'] = '0';
+					$found_same_file = true;
+					// Calcula la fecha en que se cargo/cargaron los archivos
+					$date_upload = date("Y-m-d_H:i", $file_array['timestamp']);
+					// descompone el nombre del archivo que se va a modificar para agregar la fecha
+					$new_filename_array = explode(".", $file_array['filename']);
+					$new_filename = $new_filename_array[0].'_'.$date_upload.'.'.$new_filename_array[1];
+					// Reemplaza la nueva ubicación del tipo public://ruta/nombrearchivo.ext
+					$new_destination = str_replace($file_array['filename'], $new_filename, $file_array['uri']);
+					// Pasa un objeto con el array del archivo, que sea objeto es necesario para la funcion file_move
+					$file_to_move = (object)$file_array;
+					// Renombra el archivo, si encuentra uno igual... vuelve y lo renombra a través del parámetro FILE_EXISTS_RENAME
+					if(!file_move($file_to_move, $new_destination, FILE_EXISTS_RENAME)){
+						$errors[] = t('No, se cargó el archivo, el archivo existente no se puede renombrar.');
+					}else{
+						drupal_set_message(t('El archivo fué cargado, el archivo existente con el mismo nombre fué cambiado a: ').$new_filename);
+					}
+					// Obtiene el public://ruta/archivo.ext, original sin modificación previa a esta validación
+					$field->destination = get_destination_original_filename($field->destination, $new_file_name);
+				}
+			}
+		}
+		if(!$found_same_file){
+			// obtenemos la ruta absoluta al archivo y verificamos si ya existe
+			if(file_exists(drupal_realpath($destination_file))){
+				$errors[] = t('El archivo ya existe en el directorio, por favor use "reference existing", para cargarlo.');
+			}
+		}
+	}else{
+		// obtenemos la ruta absoluta al archivo y verificamos si ya existe
+		if(file_exists(drupal_realpath($destination_file))){
+			$errors[] = t('El archivo ya existe en el directorio, por favor use "reference existing", para cargarlo.');
+		}
+	}
+	//$errors[] = 'error de control';
+	return $errors;
+}
+// debido a una validación anterior, drupal inmediatamente cambia el nombre de un archivo que ya existe
+// de tal manera que public://ruta/archivo.ext es renombrado a public://ruta/archivo_numero.ext
+// la función se encarga de construir la ruta original para realizar validación de existencia de un archivo previo y retornar 
+// mensaje de referenciar archivo existente
+function get_destination_original_filename($destination_uri = '', $original_name){
+	if($destination_uri != ''){
+		$destination_array = explode("/",$destination_uri);
+		$destination_new_array = array_pop($destination_array);
+		$destination_string = '';
+		foreach ($destination_array as $key => $value) {
+			$destination_string .= $value.'/';
+		}
+		$destination_string .= $original_name;
+		return $destination_string;
+	}
+}
+/**
+* La funcion se encarga de construir un formulario de configuración que se muestra en admin/config/dayscript/dayscript_extras
+* Path de configuración establecido en dayscript_extras_menu implementacion de hook_menu
+* Funciona para los dos módulos, versionamiento y carga automática
+*/
+function dayscript_extras_admin_files(){
+		
+	//Declara el array que contendrá el formulario
+	$form = array();
+
+	// Crea la consulta que trae los nombres de tipos de contenido existentes y el nombre de estos campos,
+	// que tengan campos de tipo file o image, que el tipo de contenido esté activo.
+	// que sea entidad nodo, que el campo esté activo y que este campo pertenezca al tipo de contenido.
+
+	$sql = db_select('node_type', 'nt'); // Selecciona la tabla node_type alias nt
+	$sql->join('field_config_instance', 'fci', 'nt.type = fci.bundle'); // JOIN a la tabla field_config_instance, determina los campos borrados
+	$sql->join('field_config', 'fc', 'fc.id = fci.field_id'); // JOIN a la tabla field_config, determina el tipo de campo, si está activo o no
+	$sql->fields('nt', array('type', 'name')) // los campos que se obtienen de la consulta
+			->condition('nt.module','node','=') // la instancia debe ser de tipo node (tipo de contenido)
+			->condition('nt.disabled','0','=') // el node no debe estar desabilitado, disabled=0
+			->condition('fc.active','1','=') // el campo debe estar activo
+			->condition('fc.type', array('file', 'image'),'IN') // el campo de tipo fie o image
+			->condition('fci.deleted','0','='); // El compo no debe estar marcado como borrado deleted=0
+	$sql->addField('fc','field_name'); // obtiene el nombre del campo
+	$sql->addField('fc','type', 'ftype'); // obtiene el tipo del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+	// Inicia el array con las opciones de tipos de contenido para la carga automática
+	$select_options_content_type = array(0=>t('Ninguno'));
+	// preparamos elementos que construirán checkboxes
+	foreach($rows as $row){
+		// array con opciones para el checkbox (versionamiento)
+		$checks_options_array[$row->type.'/'.$row->field_name] = $row->name . '<br><span class="version_description_checks">(Nombre del campo para este tipo de contenido: <strong>' . $row->field_name . '</strong>)</span>';
+		$checks_default_values_array[] = $row->type.'/'.$row->field_name;
+		// array con las opciones del select ( carga automática )
+		if( $row->ftype == 'file' ){
+			$select_options_content_type[$row->type] = $row->name;
+		}
+	}
+
+
+
+
+	/*******************************************************************************/
+	/* Formulario de configuracion asignado a versionamiento de archivos */
+	/*******************************************************************************/
+	// Crea un elemento de formulario de tipo callapsible, este elemento tendrá las opciones de configuración de versionamiento
+	$form['versioning_files_settings'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('Control de versiones de archivos'),
+		'#collapsible' => TRUE,
+		'#collapsed' => FALSE
+	);
+	// Crea los elementos de tipo chekbox para el formulario de versionamiento
+	$form['versioning_files_settings']['types_content'] = array(
+		'#type' => 'checkboxes',
+		'#options' => $checks_options_array, // Array que contiene cada checkbox
+		'#default_value' => check_defaults_checkboxes($checks_default_values_array), 	// Los elementos de este array que coincidan con
+																						// $checks_options_array estarán en checked=checked
+		'#description' => t('Seleccione los tipos de contenido sobre los cuales desea aplicar la funcionalidad de versionamiento de archivos'),
+		'#title' => t('Tipos de contenido disponibles:'),
+		'#multicolumn' => array('width' => 3), //Coloca los checkboxes en 3 columnas (necesita modulo multicolumncheckboxesradios)
+	);
+	// Muestra un texto de ayuda en el formulario
+	$form['versioning_files_settings']['help_types_content'] = array(
+		'#type' => 'item',
+		'#markup' => '<p>Los tipos de contenido que se muestran, son los tipos de contenido que están relacionados con una entidad <strong>nodo</strong> y que están activos, además se hace un previa comprobación, como requisito el tipo de contenido mostrado debe tener un campo que involucra archivos</p>'
+	);
+	// Crea un div adicional, contenedor de la respuesta ajax
+	$form['versioning_files_settings']['update_response'] = array(
+		'#type' => 'markup', 
+		'#prefix' => '<div id="update_response">', 
+		'#suffix' => '</div>', 
+		'#markup' => 'Presione actualizar para realizar cambios',
+	);
+	// Crea un elemento de tipo submit que hace un llamado ajax a la funcion "ajax_update_versioning_submit_driven_callback"
+	$form['versioning_files_settings']['submit'] = array(
+		'#type' => 'submit', 
+		'#ajax' => array(
+			'callback' => 'ajax_update_versioning_submit_driven_callback', 
+			'wrapper' => 'update_response', 
+			'name' => 'submit_update_versioning',
+			'effect' => 'fade',
+		), 
+		'#value' => t('Actualizar'),
+	);
+
+
+	
+
+	return system_settings_form($form);
+}
+function dayscript_extras_admin_load(){
+
+	//Declara el array que contendrá el formulario
+	$form = array();
+
+	// Crea la consulta que trae los nombres de tipos de contenido existentes y el nombre de estos campos,
+	// que tengan campos de tipo file o image, que el tipo de contenido esté activo.
+	// que sea entidad nodo, que el campo esté activo y que este campo pertenezca al tipo de contenido.
+
+	$sql = db_select('node_type', 'nt'); // Selecciona la tabla node_type alias nt
+	$sql->join('field_config_instance', 'fci', 'nt.type = fci.bundle'); // JOIN a la tabla field_config_instance, determina los campos borrados
+	$sql->join('field_config', 'fc', 'fc.id = fci.field_id'); // JOIN a la tabla field_config, determina el tipo de campo, si está activo o no
+	$sql->fields('nt', array('type', 'name')) // los campos que se obtienen de la consulta
+			->condition('nt.module','node','=') // la instancia debe ser de tipo node (tipo de contenido)
+			->condition('nt.disabled','0','=') // el node no debe estar desabilitado, disabled=0
+			->condition('fc.active','1','=') // el campo debe estar activo
+			->condition('fc.type', array('file', 'image'),'IN') // el campo de tipo fie o image
+			->condition('fci.deleted','0','='); // El compo no debe estar marcado como borrado deleted=0
+	$sql->addField('fc','field_name'); // obtiene el nombre del campo
+	$sql->addField('fc','type', 'ftype'); // obtiene el tipo del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+	// Inicia el array con las opciones de tipos de contenido para la carga automática
+	$select_options_content_type = array(0=>t('Ninguno'));
+	// preparamos elementos que construirán checkboxes
+	foreach($rows as $row){
+		// array con opciones para el checkbox (versionamiento)
+		$checks_options_array[$row->type.'/'.$row->field_name] = $row->name . '<br><span class="version_description_checks">(Nombre del campo para este tipo de contenido: <strong>' . $row->field_name . '</strong>)</span>';
+		$checks_default_values_array[] = $row->type.'/'.$row->field_name;
+		// array con las opciones del select ( carga automática )
+		if( $row->ftype == 'file' ){
+			$select_options_content_type[$row->type] = $row->name;
+		}
+	}
+
+
+
+	/*******************************************************************************/
+	/* Formulario de configuracion asignado a carga automática de archivos */
+	/*******************************************************************************/
+	// Crea un elemento de formulario de tipo callapsible, este elemento tendrá las opciones de configuración de versionamiento
+	$form['automatical_load_contents'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('Carga automática de contenidos'),
+		'#collapsible' => TRUE,
+		'#collapsed' => false
+	);
+	// Muestra un texto de ayuda en el formulario
+	$form['automatical_load_contents']['add_element_wraper_to_help'] = array(
+		'#type' => 'markup', 
+		'#prefix' => '<div id="add_element_wraper">',
+		'#suffix' => '</div>', 
+		'#markup' => '<div class="add_element_wraper-label" style="font-size: 80%; margin-bottom: 10px;">* Debe agregar las opciones para cada carga automática que desee definir, Se debe especificar el <strong>directorio</strong> fuente donde se leerán los archivos que harán parte de la carga automática de contenidos, el mismo nombre de directorio con terminación _complete <em> si su nombre de directorio es <strong>finanzas</strong>, debe existir un directorio que se llame <strong>finanzas_complete</strong>, en donde se ubicarán los archivos que ya se han procesado</em>, a su vez debe especificar <strong>la estructura del archivo</strong> que se encuentra en el directorio, <strong>nombre</strong> y <strong>formato de fecha</strong> <em>ej. <strong>boletin_finanzas_</strong> y el formato de fecha <strong>dd-mm-YYYY</strong> que se manejará. De forma tal que el archivo debe ser nombrado boletin_finanzas_22_085_2012.pdf</em>, tenga en cuenta que solo son permitidos los formatos de archivo PDF, DOC y XLS, Una vez definidos estos parámetros se deberá especificar sobre el tipo de contenido <strong>ej. "página básica"</strong>.</div>',
+	);
+	$voc = 'contenidos';
+	$vocabulary = taxonomy_vocabulary_machine_name_load($voc);
+
+	$form['automatical_load_contents']['categories'] =  array(
+		'#type' => 'hierarchical_select',
+		'#title' => t('Categoría.'),
+		'#config' => array(
+			'module' => 'hs_taxonomy',
+			'params' => array(
+				'vid'                        => $vocabulary->vid,
+				'exclude_tid'                => NULL,
+				'root_term'                  => NULL,
+				'entity_count_for_node_type' => NULL,
+			),
+		'#required' => true,
+		),
+		//'#default_value' => $tids,
+	);
+	// Elemento de tipo select para escoger la funcionalidad, crea contenidos a partir de un archivo pdf, xls, etc..
+	// html parsea el elemento html y lo coloca en el body de un tipo de contenido
+	$form['automatical_load_contents']['file_type'] = array(
+		'#type' => 'select',
+		'#title' => t('Tipo de funcionalidad'),
+		'#options' => array(
+			'Pdf/Doc/Xls' => t('Pdf/Doc/Xls'),
+			'html' => t('Html (Parser HTML file)'),
+		),
+		//'#default_value' => $category['selected'], //valor por defecto
+		'#description' => t('Seleccione el tipo de funcionalidad a usar en el <em> directorio de actualizacion,</ em> recuerde que, el tipo de funcionalidad html requiere que el tipo de contenido que elija en opciones <strong>debe tener</strong> un campo de tipo <em>body </em>, en el cual se cargará el contenido html, el tipo de funcionalidad en pdf, doc o xls. requiere un tipo de contenido que contenga un campo de tipo <em>file </em>.'),
+	);
+	// Elemento de tipo texto, se usa para definir el directorio que contiene los archivos
+	$form['automatical_load_contents']['file_name'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Nombre del archivo'),
+		'#description' => t('El nombre que especifique en este campo se concatenará con el formato de fecha que seleccione, <em>Si deja vacio este campo el sistema tomará como nombre del archivo, únicamente la fecha.</em>'),
+	);
+	$form['automatical_load_contents']['source_dir'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Nombre del directorio'),
+		'#description' => t('Directorio donde estarán los archivos de carga automática'),
+		'#required' => true,
+	);
+
+	// Elemento de tipo select, se usa para elegir el formato de fecha que está implicito en el archivo
+	$form['automatical_load_contents']['selected'] = array(
+		'#type' => 'select',
+		'#title' => t('Selecione un formato de fecha del archivo'),
+		'#options' => array(
+			'yyyy-mm-dd' => t('yyyy-mm-dd'),
+			'yyyy-dd-mm' => t('yyyy-dd-mm'),
+			'dd-mm-yyyy' => t('dd-mm-yyyy'),
+			'mm-dd-yyyy' => t('mm-dd-yyyy'),
+			'yyyy_mm_dd' => t('yyyy_mm_dd'),
+			'yyyy_dd_mm' => t('yyyy_dd_mm'),
+			'dd_mm_yyyy' => t('dd_mm_yyyy'),
+			'mm_dd_yyyy' => t('mm_dd_yyyy'),
+		),
+		'#default_value' => 'dd-mm-yyyy',
+		'#description' => t('Seleccione el formato de fecha con que se nombraran los archivos, tenga en cuenta que todos los archivos dben tener este formato de fecha o serán igorados.'),
+	);
+
+	$form['automatical_load_contents']['options'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('Opciones'),
+		'#collapsible' => TRUE,
+		'#collapsed' => FALSE
+	);
+
+	// Lenguaje del tipo de contenido a crear
+	$sql = db_select('languages', 'l'); // Selecciona la tabla language alias l
+	$sql->fields('l', array('language', 'native')); // los campos que se obtienen de la consulta, language y native, language contiene el prefijo del lenguaje, es, en, etc, native, su nombre nativo, English, Español, etc.
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+
+	$language_array = array();
+	foreach($rows as $row){
+		$language_array[$row->language] = $row->native;
+	}
+	
+	//array_reverse($language_array);
+	
+	$form['automatical_load_contents']['options']['language'] = array(
+		'#type' => 'select',
+		'#title' => t('Selecione el idioma'),
+		'#options' => $language_array,
+		'#default_value' => 'es',
+		'#description' => t('Seleccione El idioma.'),
+	);
+
+	$form['automatical_load_contents']['options']['content_type'] = array(
+		'#type' => 'select',
+		'#title' => t('Tipo de contenido'),
+		'#options' => $select_options_content_type, // array que contiene los nombres de los tipos de contenidos que contienen campo "file"
+		'#description' => t('Tipo de contenido en el que aplica la carga automática'),
+	);
+
+	// Elemento de tipo texto, se usa para definir el título de los contenidos
+	$form['automatical_load_contents']['options']['node_title'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Título del nodo'),
+		'#description' => t('El título del nodo.  Si deja este campo vacio no puede elegir como complemento del título la opción "Usar solo el título configurado"'),
+	);
+
+	// Elemento de tipo select, se usa para elegir si el nombre del archivo o la fecha serán incluidas en el título
+	$form['automatical_load_contents']['options']['include_title'] = array(
+		'#type' => 'select',
+		'#title' => t('Seleccione complemento del título'),
+		'#options' => array(
+			'0' => t('Usar solo el título configurado'),
+			'name' => t('Incluir nombre del archivo'),
+			'date' => t('Incluir fecha'),
+		),
+		//'#default_value' => $category['selected'],
+		'#description' => t('Seleccione si el título configurado se complementa con úno de los elementos que conforman la estructura del archivo.'),
+	);
+	// Elemento de tipo texto, se usa para definir el título de los contenidos
+	$form['automatical_load_contents']['options']['subject'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Tema'),
+		'#description' => t('El campo tema se usa para tipos de contenido "Página Básica".'),
+	);
+
+	$form['automatical_load_contents']['options']['active'] = array(
+		'#type' => 'radios',
+		'#title' => t('Estado'),
+		'#default_value' => 1,
+		'#options' => array('0'=>'Inactivo','1'=>'Activo'),
+		'#description' => t(''),
+		//'#access' => $admin,
+	);
+	$form['automatical_load_contents']['options']['compatibility_mode'] = array(
+		'#type' => 'radios',
+		'#title' => t('Compatibilidad con versionamiento de archivos'),
+		'#default_value' => 1,
+		'#options' => array('0'=>'No','1'=>'Si'),
+		'#description' => t(''),
+		//'#access' => $admin,
+	);
+
+
+	// Elemento contenedor que recibirá la respuesta de la funcion de validación "ajax_add_automatical_load_content_item"
+	
+	$form['automatical_load_contents']['update_response_aa'] = array(
+		'#type' => 'markup', 
+		'#prefix' => '<div id="update_response_aa">', 
+		'#suffix' => '</div>',
+		'#markup' => get_configured_elements(),
+	);
+
+
+	// Elemento de tipo boton que envia las opciones esogidas a una funcion "ajax_add_automatical_load_content_item"
+	// que se encarga de realizar las validaciones y cargar la configuración en la base de datos
+	$form['automatical_load_contents']['add_element_btn'] = array(
+		'#type' => 'submit', 
+		'#ajax' => array(
+			'callback' => 'ajax_add_automatical_load_content_item', 
+			'wrapper' => 'update_response_aa', 
+			'name' => 'load_automatical_content',
+			'effect' => 'fade',
+			'method' => 'replace'
+		), 
+		'#value' => t('Agregar carga automatica')
+	);
+
+	return system_settings_form($form);
+}
+
+// función para el admin, donde se establecen y guardan los valores de configuración seleccionados
+// en el módulo de versionamiento de archivos
+function ajax_update_versioning_submit_driven_callback($form, $form_state) {
+	global $user;
+	// $element carga un array con los valores del elemento de formulario, update-response que es el botón que hace el llamado a la función de actualización
+	$element = $form['versioning_files_settings']['update_response'];
+	$process = $form_state['values']['types_content'];
+	// $process carga los valores del elemento del formulario types-content, checkboxes seleccionados
+	$string_response = 'Se han establecido los siguientes: <strong>tipo de contenido/campo</strong>, como activos para versionamiento de archivos:<br>';
+	$cont = 1;
+	// Inicia un contador para verificar que se ha seleccionado algún campo
+	// $process  contiene valores de la forma [page/field_file] => page/field_file, se evalua que mantenga esta condicion key = value
+	// si tiene key = 0 el campo no fue seleccionado
+	foreach($process as $key=>$value){
+		if(trim($key) == trim($value)){
+			// separa type-content - field_name, tipo de contenido -  nombre del campo
+			$data_array = explode("/",$value);
+			// inicia un array key=type_content value=field_name
+			$type_and_fielname[$data_array[0]] = $data_array[1];
+			// prepara la respuesta de retorno
+			$string_response .= '<br><strong>'. $cont . ') ' .$data_array[0] . '/' . $data_array[1] .'</strong> ';
+			// Incrementa contador, indica que por lo menos un campo fue seleccionado
+			$cont++;
+		}
+	}
+	if($cont == 1){
+		// Retorna respuesta de ningún seleccionado
+		$string_response = 'No se seleccionó ningún <strong>tipo de contenido/campo</strong>, ningún tipo de contenido tendrá la funcionalidad del módulo.';
+	}else{
+		$string_response .= '<br><br>';
+	}
+	// Establece la variable day_version_files_checks_default con las opciones de configuración
+	variable_set("day_version_files_checks_default",serialize($type_and_fielname));
+	$element['#markup'] = $string_response;
+	// retorna la respuesta
+	return $element;
+
+}
+
+// La función valida los valores en el formulario y retorna respuestas de error o satisfacción según sea el caso.
+function ajax_add_automatical_load_content_item(&$form, $form_state) {
+
+	$element = $form['automatical_load_contents']['update_response_aa'];
+	//Completamente necesaria estas 2 lineas para acomodar los elementos html, que en los estilos se salen del flujo debido a un float
+	$string_response .= '<div style="clear: both;"></div>';
+
+	$element['#markup'] = '';
+	// Inicia el array de errores
+	$errors_valide = array();
+	// inicia el array que contiene los valores, configurados como opciones
+	$options_array = array();
+	// Carga los valores enviados por el formulario, tipo de funcionamiento, nombre del archivo, formato de fecha y directorios
+	$file_type = $form_state['values']['file_type'];
+	$file_name = $form_state['values']['file_name'];
+	$date_format = $form_state['values']['selected'];
+	
+	$options_array['source_dir'] = $form_state['values']['source_dir'];
+	$source_dir = 'public://'.$options_array['source_dir'];
+	$source_complete = 'public://'.$options_array['source_dir'].'_complete';
+	
+	$options_array['content_type'] = $form_state['values']['content_type'];
+	$options_array['active'] = $form_state['values']['active'];
+	$options_array['mode'] = $form_state['values']['compatibility_mode'];
+	$options_array['category'] = $form_state['values']['categories'][0];
+	$options_array['language'] = $form_state['values']['language'];
+	$options_array['node_title'] = $form_state['values']['node_title'];
+	$options_array['include_title'] = $form_state['values']['include_title'];
+	$options_array['subject'] = $form_state['values']['subject'];
+
+	$options_serialize = serialize($options_array);
+	// validaciones de los campos enviados
+	
+	//if($file_name == '') $errors_valide[] = 'El nombre del archivo no puede estar vacio';
+
+	if($options_array['source_dir'] == '') $errors_valide[] = 'El directorio no puede estar vacio';
+	if( !file_prepare_directory( &$source_dir, FILE_MODIFY_PERMISSIONS) ) $errors_valide[] = 'El directorio fuente no existe o no tiene los permisos adecuados';
+	if( !file_prepare_directory( &$source_complete, FILE_MODIFY_PERMISSIONS) ) $errors_valide[] = 'El directorio complemento no existe o no tiene los permisos adecuados';
+	if($options_array['category'] == '') $errors_valide[] = 'Debe seleccionar una categoría de contenido';
+	if( $options_array['content_type'] == '0' ) $errors_valide[] = 'Debe seleccionar un tipo de contenido.';
+
+	if( $options_array['include_title'] == 0 &&  $options_array['node_title'] == '' ) $errors_valide[] = 'Si elije la opción "Usar solo el título configurado", deberá escribir un título, solo se puede dejar vacio si complementa con el nombre del archivo o la fecha';
+
+	if( empty($errors_valide) ){
+
+		//$string_response .= '<div class="messages status">Tal cosa se responde bien</div>'; 
+		//$string_response .= '<div class="messages warning">Tal cosa se Alerta</div>'; 
+		//$string_response .= '<div class="messages error">Tal cosa se Error grave</div>'; 
+		
+		
+		$nid = db_insert('auto_update') // Table name no longer needs {}
+					->fields(array(
+						'date_format' => $date_format,
+						'file_name' => $file_name,
+						'file_type' => $file_type,
+						'active' => $options_array['active'],
+						'options' => $options_serialize,
+					))
+			->execute();
+			//$string_response .= print_r($form_state['values'], true);
+		if( $nid ){
+			$string_response .= '<div class="messages status">Se ha añadido la carga automática</div>';
+		}else{
+			$string_response .= '<div class="messages warning">No se añadió la configración de carga automática, contacte con el administrador</div>';
+		}
+	}else{
+		$string_response .= '<div class="messages error">';
+		foreach( $errors_valide as $error_value ){
+			$string_response .= '*'.$error_value.'<br>';
+		}
+		$string_response .= '</div>';
+	}
+
+	$element['#markup'] .= $string_response;
+	$configured_elements = get_configured_elements();
+	$element['#markup'] .= $configured_elements;
+
+	return $element;
+}
+function dayscript_extras_cron() {
+	//intervalo de ejecución del cron
+	$userId = check_user_automatical();
+	$interval = variable_get('dayscript_extras_interval', 60 * 60);
+	// si ha pasado el tiempo para la ejecución
+	//if (time() >= variable_get('dayscript_extras_next_execution', 0)) {
+	if (time() >= 0) {
+
+		$sql = db_select('auto_update', 'au'); // Selecciona la tabla auto_update alias au
+		$sql->fields('au', array('aaid','date_format', 'file_name', 'file_type', 'active', 'options')); // los campos que se obtienen de la consulta
+		$sql->condition('au.active','1','='); // la instancia debe ser de tipo node (tipo de contenido)
+		$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+		$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+		foreach($rows as $row){
+			$id_load = $row->aaid;
+			$date_format = $row->date_format;
+			$file_name = $row->file_name;
+			$file_type = $row->file_type;
+			$active = $row->active;
+			$options = unserialize($row->options);
+			$rq = auto_load_content($id_load, $date_format, $file_name, $file_type, $active, $options, $userId);
+		}
+		// voy aca
+		watchdog('dayscript_extras', $rq.'dayscript_extras se ha  ejecutado');
+		if (!empty($GLOBALS['cron_example_show_status_message'])) {
+			drupal_set_message(t($rq.'dayscript_exptras executed at %time', array('%time' => date_iso8601(time(0)))));
+		}
+		variable_set('dayscript_extras_next_execution', time() + $interval);
+	}
+}
+
+function check_user_automatical(){
+
+	$userid = check_user_automatical_id_from_username('autoload');
+	if( !$userid ){
+	
+		$password = user_password(8);
+		$fields = array(
+			'name' => 'autoload',
+			'mail' => 'autoload@dayscript.com',
+			'pass' => $password,
+			'status' => 1,
+			'init' => 'email address',
+			'roles' => array(
+				DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+			),
+		);
+		$account = user_save('', $fields);
+		return $account->uid;	
+	}else{
+		return $userid;
+	}
+ 
+	
+}
+
+function check_user_automatical_id_from_username( $username ){
+	$sql = db_select('users', 'u'); // Selecciona la tabla auto_update alias au
+	$sql->fields('u', array('uid') ) // los campos que se obtienen de la consulta
+		->condition('u.name',$username,'='); // la instancia debe ser de tipo node (tipo de contenido)
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+	foreach($rows as $row){
+		$user_id = $row->uid;
+	}
+	if( $user_id != '' ){
+		return $user_id;
+	}else{
+		return false;
+	}
+}
+
+function auto_load_content($id_load, $date_format, $file_name, $file_type, $active, $options, $userId){
+	// ejemplo (dd-mm-yyy, archivo, pdf/xls/doc, 1, {.....}, x)
+	$source_dir = $options['source_dir'];
+	$complete_dir = $source_dir.'_complete';
+	$field_file_name = findFieldFileNameByContentType( $options['content_type'] );
+	$content_type = $options['content_type'];
+	$mode = $options['mode'];
+	$regexp = '';
+	// Inicia variable que contiene el carácter de division del formato fecha de esta manera se detecta el dia, mes y año
+	$character_explode = '';
+	if( preg_match("/-/", $date_format) ) $character_explode = '-';
+	if( preg_match("/_/", $date_format) ) $character_explode = '_';
+
+	//^archivo\d{2}-\d{2}-\d{4}\.(pdf|doc|xls)$
+	if( $date_format == 'dd-mm-yyyy' ){
+		$reg_exp_date = '\d{2}-\d{2}-\d{4}';
+		$dateType = '1';
+	}
+	if( $date_format == 'mm-dd-yyyy' ){
+		$reg_exp_date = '\d{2}-\d{2}-\d{4}';
+		$dateType = '2';
+	}
+	if( $date_format == 'yyyy-dd-mm' ){
+		$reg_exp_date = '\d{4}-\d{2}-\d{2}';
+		$dateType = '3';
+	}
+	if( $date_format == 'yyyy-mm-dd' ){
+		$reg_exp_date = '\d{4}-\d{2}-\d{2}';
+		$dateType = '4';
+	}
+
+	if( $date_format == 'yyyy_mm_dd' ){
+		$reg_exp_date = '\d{4}_\d{2}_\d{2}';
+		$dateType = '5';
+	}
+	if( $date_format == 'yyyy_dd_mm' ){
+		$reg_exp_date = '\d{4}_\d{2}_\d{2}';
+		$dateType = '6';
+	}
+	if( $date_format == 'dd_mm_yyyy' ){
+		$reg_exp_date = '\d{2}_\d{2}_\d{4}';
+		$dateType = '7';
+	}
+	if( $date_format == 'mm_dd_yyyy' ){
+		$reg_exp_date = '\d{2}_\d{2}_\d{4}';
+		$dateType = '8';
+	}
+
+	
+	if( $file_type == 'html' ) $extensions_regexp = 'html|htm';
+	if( $file_type == 'Pdf/Doc/Xls' ) $extensions_regexp = 'pdf|doc|xls';
+
+	$regexp .= '/^'.$file_name.$reg_exp_date.'\.('.$extensions_regexp.')$/';
+	$files = array();
+	$files = file_scan_directory('public://'.$source_dir, $regexp, array('uri'));
+	
+	if( !empty($files) ){
+
+		$output = '';		
+		$fields_active = findListFieldByContentType( $options['content_type'] );
+		// para cada archivo encontrado en el directorio que cumple con los criterios se ejecuta de forma individual la carga
+		foreach( $files as $file){
+			// Se obtiene la uri de la forma public://ruta/archivo
+			$current_uri = $file->uri;
+			// Obtiene el nombre del archivo completo
+			$current_file_name = $file->filename;
+			// Obtine solo el nombre del archivo
+			$current_name = $file->name;
+			// Establece el título del nodo configurado
+			$node_title = $options['node_title'];
+			// Si existe un complemento del titulo, se construye acá
+			if( $options['include_title'] == '0' ){
+				$title = $node_title;
+			}elseif( $options['include_title'] == 'name' ){
+				$name_title = preg_replace("/".$reg_exp_date."/", "", $current_name);
+				$title = $node_title.' '.$name_title;
+			}elseif( $options['include_title'] == 'date' ){
+				$date_title = preg_replace("/".$file_name."/", "", $current_name);
+				$title = $node_title.' '.$date_title;
+			}else{
+				$title = $node_title.' ---- ';
+			}
+
+			
+			//****************************************************************************************************
+			// Arma el nodo nuevo y carga las opciones generales del nodo sin importar el tipo de funcionalidad
+			//****************************************************************************************************
+			$node_new = new stdClass();
+			$node_new->type = $options['content_type'];
+			node_object_prepare($node_new);
+			$node_new->title = $title;
+			$node_new->status = 1;
+			$node_new->language = $options['language'];
+			$node_new->uid = $userId;
+
+			// Añade la categorización, para publicaciones es diferente en relación a los demás tipos de contenido
+			if( $options['content_type'] == 'publicacion' ){
+				$node_new->field_tags['und'][0]['tid'] = $options['category'];
+				if( findIfIsTranslatable('field_dia') ) $field_day_lang = $options['language']; else $field_day_lang = 'und';
+				if( findIfIsTranslatable('field_month') ) $field_month_lang = $options['language']; else $field_month_lang = 'und';
+				if( findIfIsTranslatable('field_year') ) $field_year_lang = $options['language']; else $field_year_lang = 'und';
+
+				$dateArray = array();
+				$date_array = explode($character_explode, $date_title);
+				
+				if( $dateType == '1' || $dateType == '7' ) $dateArray = array($date_array[2], $date_array[1], $date_array[0]);
+				if( $dateType == '2' || $dateType == '8' ) $dateArray = array($date_array[2], $date_array[0], $date_array[1]);
+				if( $dateType == '3' || $dateType == '6' ) $dateArray = array($date_array[0], $date_array[2], $date_array[1]);
+				if( $dateType == '4' || $dateType == '5' ) $dateArray = array($date_array[0], $date_array[1], $date_array[2]);
+				
+				$node_new->field_dia[$field_day_lang][0]['value'] = $dateArray[2];
+				$node_new->field_month[$field_month_lang][0]['value'] = $dateArray[1];
+				$node_new->field_year[$field_year_lang][0]['value'] = $dateArray[0];
+				
+				if( findIfIsTranslatable('field_tags') ) $field_tags_lang = $options['language']; else $field_tags_lang = 'und';
+				$node_new->field_tags[$field_tags_lang][0]['tid'] = $options['category'];
+
+			}else{
+				$node_new->field_categoria[$options['language']][0]['tid'] = $options['category'];
+			}
+			// Si el tipo de contenido tiene el campo $subject, entonces carga en el campo el valor si éste fué definido
+			if ( in_array('field_subject', $fields_active) ){
+				if( $options['subject'] != '' ){
+					if( findIfIsTranslatable('field_subject') ) $field_subject_lang = $options['language']; else $field_subject_lang = 'und';
+					$node_new->field_subject[$field_subject_lang][0]['value'] = $options['subject'];
+				}
+			}
+			if ( in_array('field_date_format', $fields_active) ){
+				if( findIfIsTranslatable('field_date_format') ) $field_date_lang = $options['language']; else $field_date_lang = 'und';
+				$date_array = explode($character_explode, $date_title);
+				if( $dateType == '1' || $dateType == '7' ) $dateString = $date_array[2].'-'.$date_array[1].'-'.$date_array[0];
+				if( $dateType == '2' || $dateType == '8' ) $dateString = $date_array[2].'-'.$date_array[0].'-'.$date_array[1];
+				if( $dateType == '3' || $dateType == '6' ) $dateString = $date_array[0].'-'.$date_array[2].'-'.$date_array[1];
+				if( $dateType == '4' || $dateType == '5' ) $dateString = $date_array[0].'-'.$date_array[1].'-'.$date_array[2];
+
+				$node_new->field_date_format[$field_date_lang][0]['value'] = $dateString;
+			}
+			//****************************************************************************************************
+			// de acuerdo al tipo de funcionalidad el procedimiento que se debe efectuar es distinto
+			// para html, hay que leer el archivo, limpiarlo y cargarlo en el body del tipo de contenido
+			// si es pdf/doc/xls hay que cargar el archivo en un campo file
+			//****************************************************************************************************
+			if( $file_type == 'html' ){ // funcionalidad HTML
+				// Si existe y se puede, se lee el contenido del archivo html
+				if( $html_content = @file_get_contents( file_create_url($file->uri) ) ){
+					// Prepara el filtro para limpiar html
+					$filter = new stdClass();
+					// Define que tags html son permitidos
+					$filter->settings = array(
+						'allowed_html' => '<td> <table> <b> <span> <th> <tr> <tbody> <img> <li> <ul> <a> <div>', 
+						'filter_html_help' => 1, 
+						'filter_html_nofollow' => 0,
+					);
+					// Limpia el html cargado
+					$html_content = _filter_html($html_content, $filter);
+					// Asigna al body el contenido html limpio
+					$node_new->body[$options['language']][0]['value']   = utf8_encode($html_content);
+					$node_new->body[$options['language']][0]['format']  = 'full_html';
+					$output .= '<strong>Contenido cargado funcionalidad HTML :: </strong> Archivo: '.$file->uri.'<br>';
+				}else{
+					$output .= '<strong>Problema al leer un archivo tipo de funcionalidad HTML</strong> :: Archivo: '.$file->uri.' Por favor revise los permisos los permisos del archivo<br>';
+				}
+				
+				// Mueve los archivos que se van cargando al directorio de completado
+				// Captura el archivo que se está leyendo y crea la ruta absoluta
+				$file_move_source = drupal_realpath($file->uri);
+				// Crea la ruta destino con el nombre del archivo a ser movido
+				$file_move_destiny = drupal_realpath('public://'.$complete_dir).str_replace('public://'.$source_dir, "", $file->uri);
+				// Si el archivo fue movido pasa si no, lo notifica en "recent messages"
+				if(rename($file_move_source, $file_move_destiny)) $add_text = ''; else $add_text = 'Pero no pudo ser movido';
+				// confirma la actualización del nodo
+				$output .= 'Contenido cargado funcionalidad HTML : '.$file->uri.' '.$add_text.'<br>';
+
+			}else{ // Funcionalidad de Archivo
+				$field_file_name = findListFieldByContentType( $options['content_type'], 'file' );
+				$field_file_name = $field_file_name['file'];
+				
+				$folder_location_file = findFileLocationByFieldName( $options['content_type'], $field_file_name );
+
+				$new_location_file = 'public://'.$folder_location_file;
+				$new_location_misc = "misc/".$current_file_name;
+				
+				if( findIfIsTranslatable($field_file_name) ) $field_file_lang = $options['language']; else $field_file_lang = 'und';
+
+				if( $file_content = @file_get_contents( file_create_url($file->uri) ) ){
+					if(file_put_contents($new_location_misc, $file_content)){
+						$filepath = drupal_realpath('misc/'.$current_file_name);
+						$new_file = (object) array(
+							'uid' => 1,
+							'uri' => $filepath,
+							'filemime' => file_get_mimetype($filepath),
+							'status' => 1,
+							'display' => 1
+						);
+						$new_file = file_copy($new_file, $new_location_file, FILE_EXISTS_REPLACE);
+						$node_new->{$field_file_name}[$field_file_lang][0] = (array)$new_file;
+					}else{
+						$output .= 'Ocurrió un problema al intentar escribir el archivo: '.$new_location_misc.'<br>';
+					}
+				}
+				// Mueve los archivos que se van cargando al directorio de completado
+				// Captura el archivo que se está leyendo y crea la ruta absoluta
+				$file_move_source = drupal_realpath($file->uri);
+				// Crea la ruta destino con el nombre del archivo a ser movido
+				$file_move_destiny = drupal_realpath('public://'.$complete_dir).str_replace('public://'.$source_dir, "", $file->uri);
+				// Si el archivo fue movido pasa si no, lo notifica en "recent messages"
+				if(rename($file_move_source, $file_move_destiny)) $add_text = ''; else $add_text = 'Pero no pudo ser movido';
+				// confirma la actualización del nodo
+				$output .= 'Contenido cargado funcionalidad Pdf/doc/xls : '.$file->uri.' '.$add_text.'<br>';
+
+			}
+			node_save($node_new);
+		}
+		return $output;
+	}else{
+		return 'No se encontraron archivos en el directorio: '.$source_dir.'. <strong>Expresión regular usada: '.$regexp.'.</strong> Para el modo: '.(($mode == 'html') ? "HTML" : "Pdf/doc/xls") .'. Tipo de contenido: '.$content_type.'. <strong>Id de la carga automática: '.$id_load.'.</strong><br><br>';
+	}
+	
+}
+function findFileLocationByFieldName( $content_type, $field_name ){
+	$sql = db_select('field_config', 'fc'); // Selecciona la tabla field_config alias fc
+	$sql->join('field_config_instance', 'fci', 'fc.id = fci.field_id'); // JOIN a la tabla field_config_instance, determina los campos borrados
+	$sql->condition('fci.field_name', $field_name, '=') // la instancia debe ser de tipo node (tipo de contenido)
+		->condition('fc.active', '1', '=') // la instancia debe ser de tipo node (tipo de contenido)
+		->condition('fci.bundle', $content_type, '='); // Si el campo es traducible o no
+	$sql->addField('fci','data'); // obtiene el nombre del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+	foreach( $rows as $row ){
+		$data_file = $row->data;
+	}
+	$data_file_array = unserialize($data_file);
+	$locationFile = $data_file_array['settings']['file_directory'];
+	return $locationFile;
+}
+function moveFile( $current_file, $destination_file ){
+	// copy("/tmp/code.c","/usr/local/src/code.c"
+	if (copy( $current_file, $destination_file)) {
+		unlink( $current_file );
+		return true;
+	}else{
+		return false;
+	}
+}
+// Funcion que retorna el nombre de un campo de tipo archivo
+function findFieldFileNameByContentType( $field_name ){
+	/*
+	$sql = db_select('field_config', 'fc'); // Selecciona la tabla field_config alias fc
+	$sql->condition('fc.field_name', $field_name, '=') // la instancia debe ser de tipo node (tipo de contenido)
+		->condition('fc.translatable', '1', '='); // Si el campo es traducible o no
+	$sql->addField('fc','field_name'); // obtiene el nombre del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$num = $res->rowCount();
+//	if( $num > 0 ) return true; else return false;
+*/
+}
+function findIfIsTranslatable( $field_name ){
+	$sql = db_select('field_config', 'fc'); // Selecciona la tabla field_config alias fc
+	$sql->condition('fc.field_name', $field_name, '=') // la instancia debe ser de tipo node (tipo de contenido)
+		->condition('fc.translatable', '1', '='); // Si el campo es traducible o no
+	$sql->addField('fc','field_name'); // obtiene el nombre del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$num = $res->rowCount();
+	if( $num > 0 ) return true; else return false;
+}
+
+function findListFieldByContentType( $content_type, $field_type = '' ){
+	$sql = db_select('node_type', 'nt'); // Selecciona la tabla node_type alias nt
+	$sql->join('field_config_instance', 'fci', 'nt.type = fci.bundle'); // JOIN a la tabla field_config_instance, determina los campos borrados
+	$sql->join('field_config', 'fc', 'fc.id = fci.field_id'); // JOIN a la tabla field_config, determina el tipo de campo, si está activo o no
+	//$sql->fields('nt', array('type', 'name')) // los campos que se obtienen de la consulta
+	$sql->condition('nt.module','node','=') // la instancia debe ser de tipo node (tipo de contenido)
+			->condition('nt.type',$content_type,'=') // la instancia debe ser de tipo node (tipo de contenido)
+			->condition('nt.disabled','0','=') // el node no debe estar desabilitado, disabled=0
+			->condition('fc.active','1','=') // el campo debe estar activo
+			->condition('fci.deleted','0','='); // El compo no debe estar marcado como borrado deleted=0
+	// el tipo de campo debe ser igual al argumento $field_type enviado a la función, si $field_type no ha sido enviado, se obtiene una lista de todos los campos
+	if( $field_type !='' )	$sql->condition('fc.type', $field_type,'=');
+	$sql->addField('fc','field_name'); // obtiene el nombre del campo
+	$sql->addField('fc','type', 'ftype'); // obtiene el tipo del campo
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+		
+	// 
+	$active_fields = array();
+	foreach($rows as $row){
+		$active_fields[$row->ftype] = $row->field_name;
+	}
+	return $active_fields;
+}
+// Funcion que retorna una lista de elementos configurados para este módulo, esto se hace de la tabla auto_update en la Base de datos
+function get_configured_elements(){
+	global $base_url; // Se invoca la variable global de drupal que contiene la url del sitio.
+	$buffer = '';
+	// obtengo todos los registros de la tabla auto_update
+	$sql = db_select('auto_update', 'au');
+	$sql->fields('au', array('aaid', 'date_format', 'file_name', 'file_type', 'active', 'options'));
+	$res = $sql->execute();	// ejecuta la consulta y asigna la respuesta a $res
+	$rows = $res->fetchAll(); //cargamos a $rows todos los resultados de la consulta
+	// inicia el armado de la tabla que muestra las configuraciones para la carga automática
+	$buffer .= '<br><br>';
+	$buffer .= '<table class="configured_elements">';
+	$buffer .= '	<tr>';
+	$buffer .= '		<th>ID Elemento</th>';
+	$buffer .= '		<th>Funcionalidad</th>';
+	$buffer .= '		<th>Formato de fecha</th>';
+	$buffer .= '		<th>Nombre del archivo</th>';
+	$buffer .= '		<th>Activo</th>';
+	$buffer .= '		<th>Opciones</th>';
+	$buffer .= '		<th>Operaciones</th>';
+	$buffer .= '	</tr>';
+	// recorre los resultados de la consulta y carga las filas de la tabla
+	foreach($rows as $row){
+		$buffer .= '	<tr class="aaid-'.$row->aaid.'">';
+		$buffer .= '		<td>'.$row->aaid.'</td>';
+		$buffer .= '		<td>'.$row->file_type.'</td>';
+		$buffer .= '		<td>'.$row->date_format.'</td>';
+		$buffer .= '		<td>'.$row->file_name.'</td>';
+		if( $row->active == 1 ) $img = 'enabled.png'; else $img = 'disabled.png';
+		$img_module_path = $base_url.'/'.drupal_get_path('module', 'dayscript_extras').'/imgs/'.$img;
+
+		$buffer .= '		<td align="center"><img src="'.$img_module_path.'"></td>';
+		$options_array = array();
+		$options_array = unserialize($row->options);
+		$buffer_string = '';
+		foreach( $options_array as $key_option=>$value_option ){
+			$item_option = '';
+			if($key_option == 'source_dir') $item_option = 'Directorio:';
+			if($key_option == 'content_type') $item_option = 'Tipo de contenido:';
+			if($key_option == 'active') $item_option = '';
+			if($key_option == 'mode') $item_option = '';
+			if($key_option == 'category') $item_option = 'Categoría:';
+			if($key_option == 'language') $item_option = 'Lenguaje:';
+			if($key_option == 'node_title') $item_option = 'Título del nodo:';
+			if($key_option == 'include_title') $item_option = 'Complemento del titulo:';
+			if($key_option == 'subject') $item_option = 'Tema:';
+
+
+			if( $item_option != '' ){
+				if( $key_option == 'category' ){
+					$taxonomy_obj = taxonomy_term_load($value_option);
+					$category_name = $taxonomy_obj->name;
+					$buffer_string .= '<li><strong>'.$item_option.'</strong> '.$category_name.'</li>';
+				}else{
+					$buffer_string .= '<li><strong>'.$item_option.'</strong> '.$value_option.'</li>';
+				}
+				
+			}
+			
+		}
+		$buffer .= '		<td><ul>'.$buffer_string.'</ul></td>';
+
+		drupal_add_library('system', 'drupal.ajax');
+		// se prepara el link de borrado
+		$query_delete = array('tok' => drupal_get_token('delete_autoload_item' . $row->aaid),) + drupal_get_destination();
+		$link_delete = l(t('Delete'), 'admin/dayscript/carga_automatica/delete/nojs/' . $row->aaid, array('attributes' => array('class' => 'use-ajax'), 'query' => $query_delete));
+
+		$buffer .= 			'<td>'.$link_delete.'</td>';
+		$buffer .= '	</tr>';
+	}
+	$buffer .= '</table>';
+	return $buffer;
+
+
+}
+
+
+// la función se encarga de crear un enlace de configuración para el módulo
+function dayscript_extras_menu(){
+	$items = array();
+
+	$items['admin/config/dayscript'] = array(
+		'title' => t('Configuraciones módulos Dayscript'),
+		'description' => t('Configuraciones de los módulos creados por Dayscript SAS para el proyecto Optimus Banrep.'),
+		'position' => 'right',
+		'page callback' => 'system_admin_menu_block_page',
+		'access arguments' => array('administer site configuration'), //access administration pages
+		'file' => 'system.admin.inc',
+		'file path' => drupal_get_path('module', 'system'),
+	);
+
+	$items['admin/config/dayscript/versionamiento'] = array(
+		'title' => t('Versionamiento de archivos'),
+		'description' => t('Configuracion del versionamiento de archivo, defina acá, sobre qué campos actuará el módulo.'),
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('dayscript_extras_admin_files'),
+		'access arguments' => array('administer site configuration'),
+		'type' => MENU_NORMAL_ITEM,
+	);
+	$items['admin/config/dayscript/carga_automatica'] = array(
+		'title' => t('Carga automática'),
+		'description' => t('Configuracion de carga automática.'),
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('dayscript_extras_admin_load'),
+		'access arguments' => array('administer site configuration'),
+		'type' => MENU_NORMAL_ITEM,
+	);
+
+
+	$items['admin/config/dayscript/carga_automatica/delete/nojs/%'] = array(
+		'page callback' => 'autoload_entry_delete',
+		'page arguments' => array(3, 4),
+		'access arguments' => array('permission name'),
+		'type' => MENU_CALLBACK,
+	);
+	$items['admin/config/dayscript/carga_automatica/delete/ajax/%'] = array(
+		'delivery callback' => 'ajax_deliver',
+	) + $items['admin/config/dayscript/carga_automatica/delete/nojs/%'];
+
+	/*
+	$items['admin/dayscript/carga_automatica/delete/%'] = array(
+		'page callback' => 'autoload_entry_delete',
+		'page arguments' => array(3),
+		'access arguments' => array('administer site configuration'),
+		'type' => MENU_CALLBACK,
+	);*/
+
+
+	return $items;
+}
+function autoload_entry_delete($ajax, $flid){
+
+	$is_ajax = $ajax === 'ajax';
+
+	if (empty($_GET['tok']) || !drupal_valid_token($_GET['tok'], 'delete_autoload_item' . $flid)) {
+		return MENU_ACCESS_DENIED;
+	}
+	db_delete('auto_update')
+		->condition('aaid', $flid)
+		->execute();
+	
+	if ($is_ajax) {
+		$commands = array();
+    	// Perhaps we could remove the table row we just deleted?
+		$commands[] = ajax_command_remove('.configured_elements tr.aaid-' . $flid);
+    
+		return array(
+			'#type' => 'ajax',
+			'#commands' => $commands,
+		);
+	}else{
+		drupal_set_message(t('Item borrado'));
+		drupal_goto();
+	}
+
+	/*
+	drupal_set_message(t('Item borrado'));
+	drupal_goto();*/
+}
+// Función que define los valores de checkboxes seleccionados previamente para mostrarlos como configurados
+function check_defaults_checkboxes($checks_options_array = array()){
+	$checkboxes = unserialize(variable_get('day_version_files_checks_default'));
+	$checkboxes_aux = $checkboxes;
+	unset($checkboxes);
+	if(is_array($checkboxes_aux)){
+		foreach($checkboxes_aux as $key=>$value){
+			$checkboxes[] = $key.'/'.$value;
+		}
+	}
+	$valid_checkboxes = array();
+	if(!empty($checkboxes)){
+		if(!empty($checks_options_array)){
+			$valid_checkboxes = array_intersect($checks_options_array, $checkboxes);
+			if(!empty($valid_checkboxes)){
+				return $valid_checkboxes;
+			}else{
+				return array(); // retorna un array vacio, es lo que espera form.inc
+			}
+		}else{
+			return array(); // retorna un array vacio, es lo que espera form.inc
+		}
+	}else{
+		return array(); // retorna un array vacio, es lo que espera form.inc
+	}
+}
+?>

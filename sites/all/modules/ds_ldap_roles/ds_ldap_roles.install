@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the econom_indicator module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup econom_indicator
+ */
+function ds_ldap_roles_uninstall() {
+  //variable_del('block_example_string');
+}

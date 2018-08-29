@@ -1,0 +1,1098 @@
+09:04:50 190.146.146.181 desde:user/register preparando para almacenar usuario : 1019088159
+
+09:04:50 190.146.146.181  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:04:50 190.146.146.181  enviando datos : {"numeroDocumento":"1019088159",
+            "nombre":"María Camila ",
+            "apellido":"Pulido Rivera",
+            "email":"mariacamilapulidor@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño","Artes","Ciencias Sociales"],
+            "listaInteresIdioma":["ingles","frances"]}
+
+09:04:52 190.146.146.181  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=ZgFGV1A8Nu1FDSx9O944q--6.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 14:12:24 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+09:04:42 201.220.30.33 desde:user/register preparando para almacenar usuario : 1026152147
+
+09:04:42 201.220.30.33  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:04:42 201.220.30.33  enviando datos : {"numeroDocumento":"1026152147",
+            "nombre":"sebastian ",
+            "apellido":"correa cardona",
+            "email":"elsebs9@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Envigado, Antioquia, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":[""]}
+
+09:04:44 201.220.30.33  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=mIygRVTD7Apluwf0SAQuH4ne.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 14:52:16 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:38 186.155.199.38 desde:user/register preparando para almacenar usuario : 1014245697
+
+10:04:38 186.155.199.38  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:38 186.155.199.38  enviando datos : {"numeroDocumento":"1014245697",
+            "nombre":"Katherin Paola",
+            "apellido":"Ruiz Duran",
+            "email":"kpaola9368@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+10:04:40 186.155.199.38  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Sy7q3ciojNqQpBsni4coRXx9.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 15:05:13 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:17 190.242.126.82 desde:user/193301 preparando para almacenar usuario : 1075678191
+
+10:04:17 190.242.126.82  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:17 190.242.126.82  enviando datos : {"numeroDocumento":"1075678191",
+            "nombre":"Luz Dayana",
+            "apellido":"Quintero Peraza",
+            "email":"luzquintero.ft@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Zipaquirá, Cundinamarca, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias de la Salud"],
+            "listaInteresIdioma":["ingles"]}
+
+10:04:18 190.242.126.82  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=aDpVDrbTvYTzul48vWFhsn-6.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 15:11:50 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:34 186.31.188.75 desde:user/register preparando para almacenar usuario : 31714608
+
+10:04:34 186.31.188.75  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:34 186.31.188.75  enviando datos : {"numeroDocumento":"31714608",
+            "nombre":"Melissa",
+            "apellido":"Ruiz Herrera",
+            "email":"melissa.ruizh@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Artes","Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+10:04:36 186.31.188.75  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=37bqrEllXEg8-cIl4C9543eB.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 15:17:08 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:21 186.31.191.221 desde:user/register preparando para almacenar usuario : 1016076665
+
+10:04:21 186.31.191.221  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:21 186.31.191.221  enviando datos : {"numeroDocumento":"1016076665",
+            "nombre":"LINA MARIA",
+            "apellido":"VELASQUEZ BARACALDO",
+            "email":"limayovb@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente","Ciencias Básicas","Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+10:04:23 186.31.191.221  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=dKMJayTADWnEvZolXM-XV9Z4.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 15:26:56 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:52 190.144.118.155 desde:user/register preparando para almacenar usuario : 1015464879
+
+10:04:52 190.144.118.155  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:52 190.144.118.155  enviando datos : {"numeroDocumento":"1015464879",
+            "nombre":"JUAN DAVID",
+            "apellido":"ZORRILLA HERRERA",
+            "email":"juandavidherrera@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+10:04:54 190.144.118.155  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=hSc+8aaqP85Nmk8BFCfuqlBI.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 15:32:27 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+10:04:13 181.49.95.211 desde:user/register preparando para almacenar usuario : 1140863853
+
+10:04:13 181.49.95.211  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:04:13 181.49.95.211  enviando datos : {"numeroDocumento":"1140863853",
+            "nombre":"María Teresa",
+            "apellido":"García Salgado",
+            "email":"mariatere729@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Barranquilla, Atlántico, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ingeniería"],
+            "listaInteresIdioma":["ingles"]}
+
+10:04:15 181.49.95.211  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=mP6ZfOcDDkFmv5N4E3GAnp8j.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 15:39:48 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:26 186.155.82.153 desde:user/register preparando para almacenar usuario : 1052389808
+
+11:04:26 186.155.82.153  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:26 186.155.82.153  enviando datos : {"numeroDocumento":"1052389808",
+            "nombre":"YESSICA ELIANA",
+            "apellido":"ARAQUE SANABRIA",
+            "email":"eliana.araque2015@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente","Ciencias Básicas","Ingeniería"],
+            "listaInteresIdioma":["ingles"]}
+
+11:04:28 186.155.82.153  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=yRs1gGGUlwJLeVVQg5hUtggD.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 16:10:00 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:43 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:43 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:43 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:44 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=OKrNQVI56IgsKL9-Ek+sbo1w.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:10:16 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:20 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:20 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:20 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:21 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=v-I9zCV05YmFNGo-fXHhNqsd.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:26:53 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:39 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:39 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:39 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:40 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=ViH3nUQOCrpfi1DdOeoKDuxK.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:27:12 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:00 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:00 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:00 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:01 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=eu1dKZRltyE-7umMZAumsXZL.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:30:33 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:05 181.55.107.119 desde:node/44 preparando para almacenar usuario : 1085314722
+
+11:04:05 181.55.107.119  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:05 181.55.107.119  enviando datos : {"numeroDocumento":"1085314722",
+            "nombre":"Alvaro Daniel",
+            "apellido":"Bolaños Ortiz",
+            "email":"alvbolanos@umariana.edu.co",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Pasto, Nariño, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":[""]}
+
+11:04:07 181.55.107.119  client->fault: 
+
+11:04:07 181.55.107.119  respuesta HTTP/1.1 500 Internal Server Error
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=z5jg3OmN3pS3C-nFFyMmN4w5.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 225
+Date: Mon, 16 Apr 2018 16:31:39 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;java.lang.NullPointerException&lt;/faultstring&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:44 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:44 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:44 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:45 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=lMh1KydCmFs+i1AaLrjMfHnS.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:48:17 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:14 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:14 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:14 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:15 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=axdo2l080UT-OmDyuZ9e+jKa.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:50:47 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:50 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+11:04:50 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:50 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+11:04:51 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Q8ACQQf43RFIEra6ft7Ey0W8.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 16:51:23 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:46 181.68.6.81 desde:user/register preparando para almacenar usuario : 1102799951
+
+12:04:46 181.68.6.81  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:46 181.68.6.81  enviando datos : {"numeroDocumento":"1102799951",
+            "nombre":"Emma ",
+            "apellido":"Arraez Herazo",
+            "email":"emmaarraez1986@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Cartagena, Bolívar, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Políticas y Relaciones Internacionales"],
+            "listaInteresIdioma":["ingles"]}
+
+12:04:48 181.68.6.81  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=8+w6-JRnX3+F01Msxt7JfJiN.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 17:11:20 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:53 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:53 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:53 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:53 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=4OHL5Bzro+hsHbWxE28JszL-.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:11:25 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:11 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:11 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:11 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:12 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=QJBejzbt+p5Rd4A9VaTwgROj.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:12:44 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:21 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:21 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:21 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:22 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=MwzwZYCgH7C2Anuv5ASv3qsP.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:14:54 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:43 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:43 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:43 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:44 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=OIR1OaC5Y4xmMC1hzIHPq328.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:15:16 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:06 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:06 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:06 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:06 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=FCl2UtAz3JnIAUa4RW0IuK4+.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:15:38 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:25 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:25 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:25 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"cristiandavid199@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:26 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=ZEnOTxXWwOpA1luKvnSs0Wcm.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:15:58 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:10 186.155.225.98 desde:user/197038 preparando para almacenar usuario : 10324512356
+
+12:04:10 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:10 186.155.225.98  enviando datos : {"numeroDocumento":"10324512356",
+            "nombre":"test colciencias",
+            "apellido":"Scolciencias",
+            "email":"geraldine.montoya@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:04:11 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=nqdaN8OCOgH0Bq6NNzsMnpAb.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 17:16:43 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+12:04:22 186.85.9.202 desde:user/register preparando para almacenar usuario : 52169232
+
+12:04:22 186.85.9.202  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:04:22 186.85.9.202  enviando datos : {"numeroDocumento":"52169232",
+            "nombre":"Angela",
+            "apellido":"Cruz",
+            "email":"angiecruzc@yahoo.com.mx",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+12:04:24 186.85.9.202  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=6Q7Pt-PLLLQabCnDr1Xizhe5.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 17:19:57 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+01:04:50 190.13.43.103 desde:user/register preparando para almacenar usuario : 1098697974
+
+01:04:50 190.13.43.103  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:04:50 190.13.43.103  enviando datos : {"numeroDocumento":"1098697974",
+            "nombre":"JOHN",
+            "apellido":"VELASCO VALBUENA",
+            "email":"johnveval@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"bucaramanga",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+01:04:52 190.13.43.103  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=1QIp0lwiAE33bJehfEj1P86I.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 18:06:24 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+01:04:56 201.233.135.252 desde:user/register preparando para almacenar usuario : 1037583577
+
+01:04:56 201.233.135.252  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:04:56 201.233.135.252  enviando datos : {"numeroDocumento":"1037583577",
+            "nombre":"Juan Felipe",
+            "apellido":"Ossa Echavarria",
+            "email":"juanfpe1111@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Medellín, Antioquia, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":[""]}
+
+01:04:57 201.233.135.252  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=u1OBoU5zfnbsP+0kvL4mTGq2.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 18:16:30 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+01:04:43 190.127.232.118 desde:user/register preparando para almacenar usuario : 1053784711
+
+01:04:43 190.127.232.118  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:04:43 190.127.232.118  enviando datos : {"numeroDocumento":"1053784711",
+            "nombre":"Giovany Mauricio",
+            "apellido":"Osorio Monsalve",
+            "email":"Jhonmonsalve092@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Ibagué, Tolima, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Agropecuarias y del Medio Ambiente","Economía"],
+            "listaInteresIdioma":[""]}
+
+01:04:45 190.127.232.118  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=lTue5SLoDHONTUh3QRV2AMB-.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 18:43:17 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+01:04:15 181.48.174.213 desde:user/register preparando para almacenar usuario : 1024532133
+
+01:04:15 181.48.174.213  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:04:15 181.48.174.213  enviando datos : {"numeroDocumento":"1024532133",
+            "nombre":"jeimmy liliana",
+            "apellido":"barbosa cifuentes",
+            "email":"lilis_2551@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+01:04:16 181.48.174.213  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=dO2DvFM0-NXBr83CqqZJ5FIg.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 18:59:49 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+02:04:55 190.143.105.53 desde:user/register preparando para almacenar usuario : 1140848717
+
+02:04:55 190.143.105.53  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:04:55 190.143.105.53  enviando datos : {"numeroDocumento":"1140848717",
+            "nombre":"KATHERIN",
+            "apellido":"VIZCAINO BRICEÑO",
+            "email":"katherinvizcainob@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Barranquilla, Atlántico, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Derecho"],
+            "listaInteresIdioma":[""]}
+
+02:04:56 190.143.105.53  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=+tjNQ39YlNN9kZt+N-NaYpC0.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 19:15:29 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+02:04:22 190.24.215.142 desde:user/register preparando para almacenar usuario : 63550469
+
+02:04:22 190.24.215.142  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:04:22 190.24.215.142  enviando datos : {"numeroDocumento":"63550469",
+            "nombre":"Lizette",
+            "apellido":"Juliana",
+            "email":"julianadavilag@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño","Ciencias Sociales"],
+            "listaInteresIdioma":["ingles"]}
+
+02:04:27 190.24.215.142  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Ii0nuzBsgE1ipNdzXmmbvQz5.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 19:34:59 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+02:04:42 191.102.118.226 desde:user/register preparando para almacenar usuario : 53103411
+
+02:04:42 191.102.118.226  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:04:42 191.102.118.226  enviando datos : {"numeroDocumento":"53103411",
+            "nombre":"janette",
+            "apellido":"Molina",
+            "email":"jamolis@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+02:04:44 191.102.118.226  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=-2b1VFUBWUppQz0cxrOLLsLS.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 19:55:17 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+03:04:02 181.53.125.166 desde:user/190327 preparando para almacenar usuario : 71312614
+
+03:04:02 181.53.125.166  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+03:04:02 181.53.125.166  enviando datos : {"numeroDocumento":"71312614",
+            "nombre":"Juan Fernando",
+            "apellido":"Molina Toro",
+            "email":"juan.molinat@udea.edu.co",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Medellín, Antioquia, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Educación"],
+            "listaInteresIdioma":["ingles"]}
+
+03:04:03 181.53.125.166  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=WDiOqxElkQ8QpDBehjMX3vy0.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 20:02:35 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+03:04:59 200.122.244.101 desde:user/register preparando para almacenar usuario : 1030631527
+
+03:04:59 200.122.244.101  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+03:04:59 200.122.244.101  enviando datos : {"numeroDocumento":"1030631527",
+            "nombre":"Nicole ",
+            "apellido":"Diaz Vargas",
+            "email":"nicol.diaz.vargas@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+03:04:00 200.122.244.101  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=e911zbB2qsYJs7dCK67sbiHB.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 20:47:33 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+04:04:53 186.86.143.9 desde:user/register preparando para almacenar usuario : 1152207251
+
+04:04:53 186.86.143.9  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:04:53 186.86.143.9  enviando datos : {"numeroDocumento":"1152207251",
+            "nombre":"Laura Alejandra",
+            "apellido":"Sánchez Guarnizo",
+            "email":"laura_01-12@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bello, Antioquia, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente","Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+04:04:55 186.86.143.9  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=5wxEro7yPcAflATQAfg3BSFN.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 21:28:27 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+04:04:02 190.242.116.58 desde:node/44 preparando para almacenar usuario : 1212121212
+
+04:04:02 190.242.116.58  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:04:02 190.242.116.58  enviando datos : {"numeroDocumento":"1212121212",
+            "nombre":"Prueba",
+            "apellido":"Nacional",
+            "email":"girosgbe@colfuturo.org",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Nuquí, Chocó, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":[""]}
+
+04:04:04 190.242.116.58  client->fault: 
+
+04:04:04 190.242.116.58  respuesta HTTP/1.1 500 Internal Server Error
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=+IR-tladjg-7i4IoGQ6bkfcq.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 225
+Date: Mon, 16 Apr 2018 21:28:36 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;java.lang.NullPointerException&lt;/faultstring&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+04:04:16 181.49.76.245 desde:user/125761 preparando para almacenar usuario : 1019095489
+
+04:04:16 181.49.76.245  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:04:16 181.49.76.245  enviando datos : {"numeroDocumento":"1019095489",
+            "nombre":"Jorge",
+            "apellido":"Pinedo",
+            "email":"jorgekpinedo@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Vancouver, Columbia Británica, Canadá",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Artes"],
+            "listaInteresIdioma":[""]}
+
+04:04:17 181.49.76.245  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Xg5Z9bsbpdDgzFpWwqJDas+h.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Apr 2018 21:34:49 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+04:04:08 190.145.161.114 desde:user/register preparando para almacenar usuario : 1015429757
+
+04:04:08 190.145.161.114  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:04:08 190.145.161.114  enviando datos : {"numeroDocumento":"1015429757",
+            "nombre":"maria paula",
+            "apellido":"salebe rico",
+            "email":"mariapaulasalebe@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":["ingles"]}
+
+04:04:12 190.145.161.114  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=cJzUZS69pD7rAxntp23ATGuJ.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 21:37:44 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+05:04:33 181.54.164.113 desde:user/register preparando para almacenar usuario : 1018451644
+
+05:04:33 181.54.164.113  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+05:04:33 181.54.164.113  enviando datos : {"numeroDocumento":"1018451644",
+            "nombre":"Luisa ",
+            "apellido":"Pizarro",
+            "email":"luisa.21.piz@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+05:04:35 181.54.164.113  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=BIDAKbqeMINi21lOILYhQ6oR.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 22:28:08 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+06:04:07 181.58.51.254 desde:user/register preparando para almacenar usuario : 1110569551
+
+06:04:07 181.58.51.254  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+06:04:07 181.58.51.254  enviando datos : {"numeroDocumento":"1110569551",
+            "nombre":"Nicolas Andrés",
+            "apellido":"Murillo Manjarres",
+            "email":"nicolasm363@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Ibagué, Tolima, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Políticas y Relaciones Internacionales","Economía"],
+            "listaInteresIdioma":[""]}
+
+06:04:09 181.58.51.254  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=5Jg-nvUFqWfFqYAcOZbSlcDY.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Apr 2018 23:06:42 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+06:04:26 181.58.51.254 desde:user/202117 preparando para almacenar usuario : 1110569551
+
+06:04:26 181.58.51.254  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+06:04:26 181.58.51.254  enviando datos : {"numeroDocumento":"1110569551",
+            "nombre":"Nicolas Andrés",
+            "apellido":"Murillo Manjarres",
+            "email":"nicolasm363@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Ibagué, Tolima, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Políticas y Relaciones Internacionales","Economía"],
+            "listaInteresIdioma":[""]}
+
+06:04:29 181.58.51.254  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 404 Not Found (soapclient->response has contents of the response)
+
+06:04:29 181.58.51.254  respuesta 
+
+09:04:02 190.146.1.68 desde:user/register preparando para almacenar usuario : 1010054524
+
+09:04:02 190.146.1.68  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:04:02 190.146.1.68  enviando datos : {"numeroDocumento":"1010054524",
+            "nombre":"Nicolas",
+            "apellido":"Nieto",
+            "email":"niconieto29@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Melgar, Tolima, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Políticas y Relaciones Internacionales","Economía"],
+            "listaInteresIdioma":[""]}
+
+09:04:06 190.146.1.68  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=C961AUlvEPZrMrtjZ0MQ5Y7I.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Tue, 17 Apr 2018 02:49:39 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:04:43 191.102.99.130 desde:user/register preparando para almacenar usuario : 12568473
+
+11:04:43 191.102.99.130  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:04:43 191.102.99.130  enviando datos : {"numeroDocumento":"12568473",
+            "nombre":"JUAN MANUEL",
+            "apellido":"PIZARRO BARRETO",
+            "email":"juanpi8011@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Becerril, Cesar, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Sociales"],
+            "listaInteresIdioma":["ingles"]}
+
+11:04:46 191.102.99.130  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=t1ADPaQPIOCUIPh4VIRO9sAl.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Tue, 17 Apr 2018 04:10:19 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+

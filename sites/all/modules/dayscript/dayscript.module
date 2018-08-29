@@ -1,0 +1,17 @@
+<?
+
+function dayscript_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == "user_register_form"){
+    $form['field_ciudad_de_residencia']['#attributes']['class'][] = 'GoogleMaps';
+  }
+   
+  
+}
+
+function dayscript_submit($form,&$form_state){
+  /*$entity = entity_metadata_wrapper( 'node', $form_state['nid'] );
+  $newTitle = $entity->field_copa->value()->name . ' ' . $entity->field_categor_a->value()->name . ' ' .  $entity->field_nivel->value()->name . ' ' . Date('Y', $entity->field_a_o->value());
+  $entity->title = $newTitle;
+  $entity->save();*/
+}
+  

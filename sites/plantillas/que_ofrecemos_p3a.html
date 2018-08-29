@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Qué ofrecemos en COLFUTURO :: Convenios establecidos</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+<!-- inicio JAVA Popup-->
+<script type="text/javascript">
+$(document).ready(function() {
+	//When you click on a link with class of poplight and the href starts with a # 
+$('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+    $('#' + popID).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+    return false;
+});
+
+//Close Popups and Fade Layer
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+    $('#fade , .popup_block').fadeOut(function() {
+        $('#fade, a.close').remove();  //fade them both out
+    });
+    return false;
+});
+});
+
+</script>
+<!-- fin JAVA Popup -->
+
+<!-- inicio JAVA TOOLTIP -->
+<script type="text/javascript">
+$(document).ready(function() {
+    //Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coodrinates
+        var mousey = e.pageY + 20; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+            mousex = e.pageX - tipWidth - 20;
+        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+            mousey = e.pageY - tipHeight - 20;
+        }
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+<!-- fin JAVA TOOLTIP -->
+
+<!-- inicio JAVA - Accordion -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//Set default open/close settings
+	$('.acc_container_small').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger_small').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger_small').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});		
+	
+});	
+</script>
+<!-- fin JAVA - Accordion  --> 
+
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+    
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a href="que_ofrecemos.html">Qué ofrecemos en COLFUTURO</a>
+            <span></span>
+            <a href="que_ofrecemos_p3.html">Perfeccione su inglés</a>
+            <span></span>
+            <a class="current" href="#">Convenios establecidos</a>
+
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+        
+            <h2 class="titulo_general_rojo"><strong>Convenios</strong> establecidos</h2>
+            <p class="texto_corrido">Tenemos convenios con destacadas universidades e instituciones de Estados Unidos, Reino Unido y Australia, que permite a los estudiantes y profesionales mejorar su inglés académico y laboral.</p>
+
+         	<h3 class="subtitulo_seccion_rojo">Estados Unidos</h3>
+            <p class="texto_corrido"><img style="float:right;" src="images/bandera_convenios_01.jpg" width="150" height="70" alt="Estados Unidos">Hemos firmado seis convenios con universidades en los Estados Unidos, hemos firmado seis convenios con universidades en los Estados Unidos convenidos hemos firmado seis convenios con universidades.</p>
+            
+            <article class="cnt_accordion">
+            
+                <h2 class="acc_trigger_small"><a href="#">University of Pennsylvania, Philadelphia- PENN</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/5Hst8KwPFUM" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.sas.upenn.edu/elp">www.sas.upenn.edu/elp</a><br><br>Esta Universidad ocupa el puesto doce de 600 según QS World University Rankings y hace el parte del prestigioso grupo de universidades Ivy league. Cuenta con los siguientes programas:<br><br><strong>Intensive Program</strong>: Cuenta con 8 niveles desde elemental hasta avanzado en donde los niveles 1 a 5 establecen y fortalecen sus conocimientos en las habilidades del idioma. De los niveles 6 a 8 los estudiantes tienen la oportunidad de tomar electivas como complemento a las clases requisito del idioma.<br><br><strong>Business Intensive Program</strong>: El enfoque del programa es el aprendizaje del inglés en el ámbito de los negocios. Los estudiantes deben haber superado el nivel 6 o clasificar en nivel 7 para tomar esta opción.<br><br><strong>Super- Intensive Program</strong>: Tiene la misma estructura del “Intensive Program” y cuenta con más clases en las tardes para aquellos estudiantes que desean tener mayor número de horas de instrucción y oportunidades para la práctica del idioma.<br><br>
+                <strong>University Connection Program</strong>: Tiene un enfoque académico y es ideal para aquellos estudiantes con nivel intermedio que deseen ingresar a un programa de pregrado, posgrado o que deseen prepararse en un examen oficial de conocimientos de inglés.<br><br><strong>International Business Communication Program</strong>: El programa de 4 semanas es ideal para ejecutivos que deseen mejorar sus habilidades comunicativas en los negocios. Incluye actividades sociales y culturales y proyectos académicos con casos simulados que los fortalecen para enfrentar los retos corporativos actuales. Los estudiantes deben haber superado el nivel 6 o clasificar en nivel 7 para tomar el programa.<br><br><strong>Summer Institute for International Business Students</strong>: El programa de 4 semanas es ideal para ejecutivos que deseen mejorar sus habilidades comunicativas en los negocios. Incluye visitas corporativas y un intenso entrenamiento en habilidades analíticas de lectura y escritura. El estudiante debe haber terminado todos los niveles, tener un Toefl iBT de 84 puntos o clasificar en el nivel 8. Adicionalmente la experiencia laboral o académica en al área de los negocios es sugerida.</p>
+                </div></div>                  
+                
+                
+                <h2 class="acc_trigger_small"><a href="#">University of Massachusetts, Boston- UMASS</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/5Hst8KwPFUM" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="www.umb.edu/academics/uc/esl">www.umb.edu</a><br><br>Los programas de UMASS van desde el nivel básico hasta el avanzado. Los estudiantes deben cumplir con mínimo de 21 horas por semana. <br><br><strong>Preparación para la Universidad</strong>: Estas clases se ofrecen a los estudiantes que buscan admisión en programas de pre o posgrado en Umass u otras universidades de Estados Unidos. El programa incluye instrucción en habilidades académicas. Durante el tiempo de estudios cada estudiante compila ensayos de tipo académico. Como opción adicional, los estudiantes pueden seleccionar el curso de preparación para el TOEFL. <br><br><strong>Inglés Intensivo</strong>: El programa busca que los estudiantes adquieran una metodología para incrementar su vocabulario. Para los niveles más avanzados los estudiantes deberán presentar proyecto de lecturas asignadas, presentaciones y ensayos. También podrán seleccionar como electiva la preparación para el TOEFL.</p>
+                </div></div>                  
+                
+                
+                <h2 class="acc_trigger_small"><a href="#">University of Alabama, Tuscaloosa</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/S7IzDAYBdTo" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.eli.ua.edu"></a><br><br>La Universidad de Alabama ofrece el Programa de Inglés Intensivo, diseñado especialmente para estudiantes extranjeros que desean aprender el idioma como segunda lengua.<br><br><strong>Inglés intensivo en seis niveles</strong>: Cada nivel de este programa se completa en ocho semanas. El plan de estudios se divide en un módulo de clases básicas y otro de clases opcionales. En las clases básicas se tiene como objetivo desarrollar habilidades de lectura, escritura, comprensión y expresión oral. Las clases opcionales pueden ser: preparación para el TOEFL, pronunciación, conversación, vocabulario, inglés comercial, la vida en los Estados Unidos, el humor en los Estados Unidos, noticias actuales, entre otros.</p>
+                </div></div>                  
+                
+                
+                <h2 class="acc_trigger_small"><a href="#">University of California, Davis, Estados Unidos</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/HMNueMIe3Ys" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://extension.ucdavis.edu/unit/international_english">www.extension.ucdavis.edu</a>Estos son cursos intensivos diez semanas de duración por nivel, donde los estudiantes logran desarrollar su habilidad para comunicarse en inglés americano. También se ofrecen cursos diseñados especialmente para grupos y para profesionales en medicina y derecho. Dentro de los cursos de inglés, California Davis ofrece: <br><br><strong>Inglés intensivo</strong>: Un curso enfocado en profundizar conocimientos de gramática, vocabulario, comprensión auditiva, expresión oral, lectura y escritura. Diez semanas de tiempo completo.<br><br><strong>Comunicación y cultura</strong>: Este curso se propone estudiar la cultura americana y la fluidez conversacional, haciendo hincapié en la construcción de vocabulario, expresión oral y comprensión auditiva.<br><br><strong>Inglés para profesionales de la medicina y las leyes</strong>: Cursos dirigidos a ampliar el vocabulario técnico propio de estas profesiones.<br><br>
+                <strong>Cursos de medio tiempo</strong>: Estos cursos han sido pensados para desarrollar los conocimientos de estudiantes foráneos en el manejo del idioma inglés. <br><br>
+                <strong>Programas personalizados</strong>: Aquí cada persona tiene la posibilidad de crear su propio curso haciendo énfasis en las habilidades que necesita ampliar.<br>
+                <br>
+                <strong>Programa Puente</strong>: Este es un programa que permite a estudiantes internacionales en cursos regulares de cualquier campo en la Universidad California Davis. Allí son preparados para iniciar cualquier programa de la universidad a partir de dos módulos: el primero de inglés intensivo combinado con asignaturas regulares, y el segundo les da la oportunidad de inscribirse en cursos de trabajo regulares sin necesidad de tomar clases de inglés.</p>
+                </div></div>                  
+                
+                
+                <h2 class="acc_trigger_small"><a href="#">University of Delaware, Newark</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/0zmbtmfDqAU" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://sites.udel.edu/eli">www.sites.udel.edu/eli</a><br><br>El Instituto de Inglés de la Universidad de Delaware es uno de los 24 centros universitarios de inglés (de los más de 1.000 que existen en todos los Estados Unidos) acreditados por la Commission on English Language Program Accreditation. Estos son sus programas:<br><br><strong>Programa de Inglés Intensivo</strong>: Este programa, el  más popular del instituto, consiste en cursos de 8 semanas con una intensidad de 30 horas semanales, además de tutorías y prácticas de laboratorio. Tiene seis niveles de instrucción que van de principiante a avanzado. A partir del nivel 4, los estudiantes pueden elegir entre los siguientes cursos de aplicación específica: inglés general, inglés con propósitos académicos, inglés comercial e inglés de la cultura estadounidense.</p>
+                </div></div>                  
+                
+                
+                <h2 class="acc_trigger_small"><a href="#">University of Texas, Arlington, Estados Unidos </a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/_SuEuMzEjDA" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.eli.uta.edu/defaultcont.html">www.eli.uta.edu</a><br><br>El programa de inglés intensivo (Intensive English) tiene una amplia trayectoria desde 1980. A través del programa los estudiantes estudian gramática, lectura, escritura, comprensión auditiva y conversación por 20 horas cada semana adicional a las horas de práctica en los laboratorios. Los programas son:<br><br><strong>Undergraduate Bridge Program</strong>: Los estudiantes pueden tomar hasta 8 horas de crédito cada semestre de cursos de nivel de pregrado mientras cursan en el programa Intensive English si han cumplido con todos los requisitos para entrar en el Bridge Program.<br>
+                <br><strong>The Graduate English Skills Program (GESP)</strong>: GESP es un programa de inglés intensivo para estudiantes internacionales que han sido aceptados en un programa de nivel posgrado de UTA o tienen estatus provisional o incondicional.  Los estudiantes utilizan materiales de sus programas de posgrado mientras aprenden a escribir ensayos académicos, leer material académico, escuchar y tomar apuntes en conferencias y hacer presentaciones orales y grabadas en video.</p>
+                </div></div>                  
+            
+            <div class="clear"></div>
+            </article><!-- article#cnt_accordion -->
+            
+            
+            
+         	<h3 class="subtitulo_seccion_rojo">Reino Unido</h3>
+            <p class="texto_corrido"><img style="float:right;" src="images/bandera_convenios_02.jpg" width="150" height="70" alt="Reino Unido">Hemos firmado seis convenios con universidades en los Estados Unidos, hemos firmado seis convenios con universidades en los Estados Unidos convenidos hemos firmado seis convenios con universidades.</p>
+            
+            <p class="texto_corrido"><strong>Convenio INTO para Estados Unidos o Reino Unido</strong><br><br>
+
+INTO ofrece cursos de inglés en dos reconocidas universidades del Reino Unido y una en los Estados Unidos. Los cursos tienen como objetivo principal preparar a estudiantes internacionales para su ingreso a estudios de pregrado y posgrado en el Reino Unido y en Oregon State University, en Estados Unidos. <br><br>
+
+Los cursos tienen un número reducido de estudiantes con el fin de garantizar la calidad del aprendizaje. Docentes experimentados y altamente calificados inducen al estudiante a través de clases intensivas a escoger los programas de pregrado y posgrado que más les apasionan. <br><br>
+
+Para los estudiantes internacionales que no tienen conocimientos académicos ni dominan la lengua inglesa, el programa INTO ofrece el programa de inglés intensivo (General English) que ayuda al estudiante a desarrollar las habilidades necesarias para alcanzar los más altos estándares académicos.<br><br>
+
+Las universidades del programa INTO combinan la preparación académica intensiva con una metodología novedosa en la enseñanza con la cual el estudiante aprovechará al máximo los recursos académicos y las instalaciones del campus. Los programas académicos se realizan en las ciudades de Glasgow y Norwich, al este de Inglaterra, que ofrecen un estilo de vida cómodo, seguro y lleno de cultura para darle al estudiante el mejor ambiente en sus proyectos.<br><br>
+
+Los cursos van desde programas de mejoramiento del inglés hasta programas orientados a la preparación de estudiantes internacionales que desean ingresar a pregrados y posgrados en universidades del Reino Unido; su duración varia según las necesidades del estudiante<br><br>
+
+Los estudiantes que deseen realizar un plan de estudios hasta de 6 meses, no requieren de un nivel mínimo de inglés para ingresar a los programas. Para cursos con una mayor duración, Los estudiantes deben demostrar su conocimiento del idioma inglés con una prueba de IELTS cuyo puntaje mínimo debe ser de 3,0 puntos. </p>
+
+
+
+			<article class="cnt_accordion">
+            
+                <h2 class="acc_trigger_small"><a href="#">University of East Anglia </a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/KsW8Gw8DJLg" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.into.uk.com/uea">www.into.uk.com/uea</a></p>
+                </div></div>               
+                
+    
+                <h2 class="acc_trigger_small"><a href="#">Glasgow Caledonian University </a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/mKelJWNok1E" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.into.uk.com/scotland">www.into.uk.com/scotland</a></p> 
+                </div></div>    
+                            
+    
+                <h2 class="acc_trigger_small"><a href="#">Oregon State University </a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/_SuEuMzEjDA" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://into.uk.com/osu/index.php">http://into.uk.com</a></p>
+                </div></div>   
+
+			<div class="clear"></div>
+            </article><!-- article#cnt_accordion -->
+
+
+           
+         	<h3 class="subtitulo_seccion_rojo">Australia</h3>
+            <p class="texto_corrido"><img style="float:right;" src="images/bandera_convenios_03.jpg" width="150" height="70" alt="Australia">Hemos firmado seis convenios con universidades en los Estados Unidos, hemos firmado seis convenios con universidades en los Estados 
+            Unidos convenidos hemos firmado seis convenios con universidades.</p>
+            
+
+			<article class="cnt_accordion">
+            
+                <h2 class="acc_trigger_small"><a href="#">University of Adelaide, Adelaide</a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/0uvi4poC31g" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="http://www.adelaide.edu.au/elc">www.adelaide.edu.au/elc</a><br>
+<br>
+Fundada en 1874, The University of Adelaide es una de las más antiguas y prestigiosas universidades de Australia, hace parte del “Group of Eight” y es reconocida como el centro académico por excelencia en el sur del país. <br><br><strong>General English for Academic Purposes (GEAP)</strong>: para estudiantes que buscan mejorar su nivel de inglés en el ambiente académico de una universidad australiana. <br><br><strong>Pre-Enrolment English Program (PEP)</strong>: para estudiantes que planean realizar sus estudios en la Universidad de Adelaide o que hayan recibido aceptación condicional sujeta al nivel de inglés.<br><br><strong>Certificate IV in TESOL</strong>: para profesionales que quieran adquirir una certificación en la enseñanza del inglés como segunda lengua. <br><br><strong>Group Study Tour Program</strong>: para grupos de estudiantes o profesionales cuyo diseño se realiza para áreas de conocimiento específicas.</p>
+                </div></div>               
+    
+    
+                <h2 class="acc_trigger_small"><a href="#">University of Queensland, Brisbane </a></h2><div class="acc_container_small"><div class="block"><br>
+                <iframe width="528" height="297" src="http://www.youtube-nocookie.com/embed/JeMy_PU8Sc4" frameborder="0" allowfullscreen></iframe>
+                <p class="texto_corrido"><a href="www.icte.uq.edu.au">www.icte.uq.edu.au</a><br><br>Desde 1981 el Institute of Continuing and Tesol Education, ubicado en la Universidad de Queensland, Australia se dedica al entrenamiento de personas interesadas en mejorar su nivel de inglés para fines personales, académicos y de negocios. <br><br>Acreditado a nivel nacional, miembro de la Asociación ELICOS (English Language Intensive Courses for Overseas Students) y registrado ante el gobierno de Australia, el Instituto ofrece clases a cerca de 450 estudiantes por semestre provenientes de más de 45 países de Asia, Europa, Latinoamérica, Oriente Medio y África. <br><br>El ICTE-UQ organiza actividades de apoyo como conferencias, excursiones y películas, entre otras. Adicionalmente programa algunas actividades sociales extracurriculares, con el fin de generar nuevos aprendizajes sobre la cultura australiana.<br><br>El cuerpo docente cuenta con profesores calificados y con amplia experiencia en el área educativa. El ICTE-UQ, está ubicado en el campus de Santa Lucia dentro de la Universidad de Queensland. El programa tiene 7 niveles y cuenta con diversos enfoques para los niveles más avanzados (6 y 7)dentro de los cuales los estudiantes pueden profundizar en áreas como:</p>
+
+				<ol>
+                    <li>Inglés General.</li>
+                    <li>Inglés con propósitos académicos.</li>
+                    <li>Programa puente para pre y posgrado.</li>
+                    <li>Inglés de negocios.</li>
+                    <li>Inglés para la hospitalidad y el turismo.</li>
+                    <li>Inglés para profesores de inglés (Tesol).</li>
+                    <li>Pasantías en diversas áreas de estudio para estudiantes entre los 18 y 30 años.</li>
+                </ol>
+                
+                </div></div>    
+
+			<div class="clear"></div>
+            </article><!-- article#cnt_accordion -->
+
+            
+        <div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+            
+            
+            
+            
+            
+            
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        
+     		<article id="columna_390_pasos" style="margin-top:0;">
+                <div id="titulo_columna_390"><h2>QUÉ OFRECE COLFUTURO</h2></div><!-- titulo_columna_320 -->
+                <a class="cnt_paso_01" href="que_ofrecemos_p1.html">Apoyo</a>
+                <a class="cnt_paso_02" href="que_ofrecemos_p2.html">Financiación</a>
+                <a class="cnt_paso_03_active" href="que_ofrecemos_p3.html">Inglés</a>
+                <a class="cnt_paso_04" href="que_ofrecemos_p4.html">Talento</a>
+			</article><!-- columna_390_pasos -->                
+        
+        
+          <article id="columna_320_linea">
+            <h2 class="subtitulo_general_negro_columna">Trámite de <strong>visas</strong></h2>
+            <p>El trámite de la visa varia dependiendo del país al que vaya a estudiar y los requisitos que pide cada embajada.</p>
+                
+			<h3>Estados Unidos</h3>
+                
+            <p>El proceso solo puede iniciarlo cuando COLFUTURO le entregue el formulario de aceptación de la universidad (I-20) de la siguiente manera:</p>
+                
+                <ul class="lista_disc_small">
+               	  <li><strong>Compre un PIN</strong> en el <a href="#">Banco Colpatria</a> para solicitar la cita de visa de estudiante. Este se activa a las 36 horas, por ello se recomienda comprarlo con anticipación ya que tiene vigencia.</li>
+				  <li><strong>Pagar US $200 por el SEVIS</strong> (impuesto por el gobierno a partir de septiembre de 2004). Este valor debe cancelarse con una tarjeta de crédito o cheque con una carga adicional y demora en el tiempo de envío a través de courier. Una vez realizado este pago imprima el comprobante para presentarlo a la embajada el día de la cita. Para realizar el pago debe tener el I-20 ya que requiere del número del SEVIS que aparece en la parte superior derecha y código de la universidad que aparece como School code.</li>
+                  <li><strong>Pagar el costo de la visa</strong> en el <a href="#">Banco de Crédito</a> de acuerdo a las instrucciones que ellos indican en su <a href="#">página web</a>.</li>
+                </ul>
+                
+                <p><span class="rojo">Tiempo de respuesta:</span><br>La citas para visa de estudiante tienen prioridad y pueden ser asignadas de un día para otro o máximo en diez días.
+                <br><br><a href="#">Consulte el proceso completo de la Embajada...</a></p>
+                
+            <div class="linea_col_derecha"></div>
+            <h3>Reino Unido</h3>   
+            
+            <p>El proceso solo puede iniciarlo cuando COLFUTURO le entregue el CAS o Visa Letter expedidos por la universidad. La solicitud de cita y pago de la misma se hace directamente a través de la página web de la Embajada. <br><br>Evite problemas en la obtención de la visa demostrando que tiene un objetivo claro para su viaje y solvencia económica para financiar el viaje y la estadía en el país anfitrión.</p>
+            
+            <p><span class="rojo">Tiempo de respuesta:</span><br>
+La citas para visa de estudiante tienen prioridad y pueden ser asignadas de un día para otro o máximo en diez días.
+            <br><br><a href="#">Consulte el proceso completo de la Embajada...</a></p>
+         
+            <div class="linea_col_derecha"></div>
+            <h3>Australia</h3>  
+            <p>Este trámite se hace a través de la embajada de Australia en Santiago de Chile. Los candidatos pueden entregar los documentos a COLFUTURO y nosotros hacemos el envío de los documentos y el seguimiento. El costo de la visa es de US 515 y debe ser cancelado en dólares americanos con un cheque de un banco con oficinas en Estados Unidos, a nombre de la Embajada de Australia. Adicionalmente debe presentar unos exámenes físicos realizados por médicos autorizados por la embajada, los cuales serán enviados directamente por el médico a la embajada.
+</p> 
+            <p><span class="rojo">Tiempo de respuesta:</span><br>La respuesta demora entre 20 y 30 días, después de la entrega de los documentos.
+            <br><br><a href="#">Consulte el proceso completo de la Embajada...</a></p>
+                
+                
+                                
+            </article><!-- article#columna_320_linea -->        
+        
+        
+        
+        
+        
+            <article id="columna_390_icono">
+                <div id="titulo_columna_390">
+           	 	  <h2 class="center">LO AYUDAMOS</h2>
+              </div><!-- titulo_columna_320 -->
+                <div class="cnt_columna_390_icono">
+                
+                  <div class="cnt_grafico_390">
+                  
+                  <h2 class="subtitulo_general_negro_columna"><strong>Charlas</strong> informativas</h2>
+                  <p>Ofrecemos conferencias informativas sobre el Programa de Inglés, el último jueves del mes a las 6:00 p.m. y durante las charlas generales del segundo sábado de cada mes a las 11:00 a.m en la ciudad de Bogotá.<br><br><a href="#">Revise el calendario de eventos del 2013...</a></p>
+                  
+                  
+                  <div class="linea_col_derecha"></div>
+                  
+                  <h2 class="subtitulo_general_negro_columna">ReBeca consejera virtual</h2>
+                  <p>Usted puede utilizar el servicio de asesoría virtual <strong>ReBeca</strong> y hacer las preguntas a los temas sobre los que tenga dudas.<br><br>
+                  <a href="#">Consulte a ReBeca...</a></p>
+
+                    <div class="clear"></div>
+                  </div><!-- cnt_evento_calendario_390 -->
+                
+                </div><!-- cnt_columna_390_icono -->
+            </article><!-- article#columna_390_icono -->  
+            
+            
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+            
+            
+		</section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>

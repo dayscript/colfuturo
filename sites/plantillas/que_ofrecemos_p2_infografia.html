@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Qué ofrecemos en COLFUTURO :: Financiación de posgrados</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+<!-- inicio JAVA Popup-->
+<script type="text/javascript">
+$(document).ready(function() {
+	//When you click on a link with class of poplight and the href starts with a # 
+$('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+    $('#' + popID).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+    return false;
+});
+
+//Close Popups and Fade Layer
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+    $('#fade , .popup_block').fadeOut(function() {
+        $('#fade, a.close').remove();  //fade them both out
+    });
+    return false;
+});
+});
+
+</script>
+<!-- fin JAVA Popup -->
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+    
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a href="que_ofrecemos.html">Qué ofrecemos en COLFUTURO</a>
+            <span></span>
+            <a class="current" href="#">Financiación de posgrados</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    <section id="bloque_general">
+    
+    <img src="images/colfuturo_Infografia_ProcesoSeleccion.jpg" width="960" height="2180" alt="COLFUTURO Infografia Proceso de Selección">
+<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>

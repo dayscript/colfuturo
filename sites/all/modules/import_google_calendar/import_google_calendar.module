@@ -1,0 +1,241 @@
+<?php
+/**
+ * @file
+ * 
+ */
+
+/*
+ * ejecucion automatica del proceso
+ */
+function import_google_calendar_cron(){
+    $time_cron = 60 * 60;
+    $interval = variable_get('import_google_calendar_interval', $time_cron);
+    if ( time() >= variable_set('import_google_calendar_next_execution',0) ) {
+        $rep = import_google_calendar_request_calendar( 'auto' );
+        watchdog('import_google_calendar', 'Respuesta: '.$rep );
+        variable_set('import_google_calendar_next_execution', time() + $interval);
+    }
+}
+
+function import_google_calendar_menu() {
+   $items['admin/config/content/import-google-calendar'] = array(
+    'title' => 'Import Google Calendar',
+    'description' => 'Importar Eventos de google calendar.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('import_google_calendar_configuracion'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'import_google_calendar.admin.inc',
+  );
+  return $items;
+}
+
+/* FUNCIONES */
+
+function import_google_calendar_request_calendar( $execution_type = 'auto'){
+
+  set_include_path(  get_include_path() .":". dirname(libraries_get_path('Zend'))  );
+  require_once("Zend/Gdata/Calendar.php");
+  require_once("Zend/Gdata/ClientLogin.php");
+  require_once("Zend/Http/Client/Adapter/Socket.php");
+  
+  $user = "eventos@colfuturo.org";
+  $pass = "Consejeria1010";
+//  $user = "colfuturo@dayscript.com";
+//  $pass = "%qQ5FaTy.";
+  $service = Zend_Gdata_Calendar::AUTH_SERVICE_NAME;
+  $client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+  $service = new Zend_Gdata_Calendar($client);
+   
+  try {
+      $query = $service->newEventQuery();
+      $query->setUser('default');
+      $query->setVisibility('private');
+      $query->setProjection('full');
+      $query->setOrderby('starttime');
+      $query->setMaxResults(1000);
+      $query->setStartMin('2012-01-01');
+      //$query->setFutureevents('true'); //Para limitar a comentarios futuros descomentar esta linea y comentar la anterior setStartMin
+      
+      try {
+          $eventFeed = $service->getCalendarEventFeed($query);
+      } catch (Zend_Gdata_App_Exception $e) {
+          echo "Error: " . $e->getMessage();
+      }
+       
+      $event_collection = array();
+      foreach ($eventFeed as $event) {
+          $event_item = array();
+          //if( $event->id->text == 'http://www.google.com/calendar/feeds/default/private/full/d1oenn4et5qtnr74n3pgt76f1k'){
+              $event_item['title'] =  $event->title->text;
+              $event_item['startTime'] = $event->when[0]->startTime;
+              $event_item['endTime'] = $event->when[0]->endTime;
+              $event_item += import_google_calendar_search_where( $event->where[0]->valueString );
+              $event_item += import_google_calendar_search_description( $event->content->text );
+          //}
+          $event_collection[] = $event_item;
+      }
+      //dpm( $event_collection );
+      return import_google_calendar_save_event(  $event_collection , $execution_type );
+      //dvm( count($event_collection) );
+      //dpm( $event_collection );
+  } catch (Zend_Gdata_App_Exception $e) {
+      echo "Error: " . $e->getMessage();
+  }
+}
+
+/* Guarda los eventos en tipos de contenido evento.
+ */
+function import_google_calendar_save_event( $event_collection, $execution_type = 'auto' ){
+    $cont_operation = array(
+        'add' => 0,
+        'edit' => 0,
+        'err' => 0,
+        'ignore' => 0
+    );
+    foreach ($event_collection as $event) {
+        if( isset($event['idEvento']) && $event['idEvento'] > 0 && import_google_calendar_valide_data($event) ){
+            $query =  new EntityFieldQuery();
+            $result = $query
+                    ->entityCondition('entity_type', 'node')
+                    ->propertyCondition('status', 1)
+                    ->propertyCondition('type', 'evento', '=')
+                    ->fieldCondition('field_idevento','value', $event['idEvento'] , '=')
+                    ->execute();
+            if (isset($result['node'])) {
+                $keys = array_keys($result['node']);
+		$node_new = node_load($keys[0]);
+                
+                if(  $node_new->field_modificado_gcalendar['und'][0]['value'] != $event['date_update'] ){
+                    import_google_calendar_process_save_event( $node_new, $event );
+                    //dpm( $event['idEvento'].' --> El Evento ha sido actualizado' );
+                    $cont_operation['edit']++;
+                }else{
+                    //dpm( $event['idEvento'].' --> El Evento no a cambiado' );
+                    $cont_operation['ignore']++;
+                }
+            }else{
+                $node_new = new stdClass();
+                $node_new->type = 'evento';
+                node_object_prepare($node_new);
+                import_google_calendar_process_save_event( $node_new, $event );
+                //dpm( $event['idEvento'].' --> El Evento ha sido creado' );
+                $cont_operation['add']++;
+            }
+        }else{
+            $cont_operation['err']++;
+            //dpm( 'El evento no tiene id no puedo resolver esto.' );
+        }
+    }
+    
+    if($execution_type == 'manual'){
+        dpm( "Total eventos encontrados:". count($event_collection) );
+        dpm( "Total eventos creados: ". $cont_operation['add'] );
+        dpm( "Total eventos actualizados: ". $cont_operation['edit'] );
+        dpm( "Total eventos con estructura erronea: ". $cont_operation['err'] );
+        dpm( "Total eventos ignorados, no se detectaron cambios: ". $cont_operation['ignore'] );
+    }elseif($execution_type == 'auto'){
+        $resp_watchdog = "Total eventos encontrados:". count($event_collection) .
+        " Total eventos creados: ". $cont_operation['add'] .
+        " Total eventos actualizados: ". $cont_operation['edit'] .
+        " Total eventos con estructura erronea: ". $cont_operation['err'] .
+        " Total eventos ignorados, no se detectaron cambios: ". $cont_operation['ignore'];
+       return $resp_watchdog;
+    }
+    
+}
+
+function  import_google_calendar_process_save_event( $node_new , $event ){
+    
+    $node_new->language = 'es';
+    $node_new->title = $event['title'];
+
+    //fecha del evento
+    $startTime_time = strtotime( $event['startTime'] );
+    $endTime_time = strtotime( $event['endTime'] );
+    
+    $node_new->field_fecha2['und'][0]['value'] = date('Y-m-d H:i:s', $startTime_time + (60 * 60 * 5) );
+    $node_new->field_fecha2['und'][0]['value2'] = date('Y-m-d H:i:s', $endTime_time + (60 * 60 * 5) );
+    $node_new->field_fecha2['und'][0]['timezone'] = date('e', $endTime_time);
+    $node_new->field_fecha2['und'][0]['timezone_db'] = 'UTC';
+    $node_new->field_fecha2['und'][0]['date_type'] = 'datetime';
+
+    //ubicacion
+    $node_new->field_pais['und'][0]['value'] = $event['contry'];
+    $node_new->field_ciudad['und'][0]['value'] = $event['city'];
+    $node_new->field_direccion['und'][0]['value'] = $event['address'];
+
+    //descripcion
+    $node_new->body['und'][0]['value'] = $event['full_description'];
+    $node_new->body['und'][0]['summary'] = $event['small_description'];
+    $node_new->body['und'][0]['format'] = 'filtered_html';
+
+    //otros datos
+    //campo borrado $node_new->field_clase['und'][0]['value'] = $event['class_event'];
+    $node_new->field_expositores['und'][0]['value'] = $event['exhibitors'];
+    $node_new->field_cancelado['und'][0]['value'] = $event['cancel'];
+    $node_new->field_idevento['und'][0]['value'] = $event['idEvento'];
+    
+    $node_new->field_modificado_gcalendar['und'][0]['value'] =  $event['date_update'];
+    
+    //taxonomia tipo de evento
+    $term_taxonomy = $event['class_event']; 
+    $query2 =  new EntityFieldQuery();
+    $result2 = $query2->entityCondition('entity_type', 'taxonomy_term')
+                                    ->propertyCondition('vid', 4)
+                                    ->propertyCondition('name', $term_taxonomy)
+                                    ->execute();
+    if(count($result2)>0){
+        $keys = array_keys($result2['taxonomy_term']);
+	$term_node = taxonomy_term_load($keys[0]);
+    }else{
+        $term_node = new stdClass();
+        $term_node->vid = 4;
+        $term_node->name = $term_taxonomy;
+        taxonomy_term_save($term_node);
+    }
+    $node_new->field_tipo_evento['und'][0]['tid'] = $term_node->tid;
+    //dpm($node_new);
+    node_save( $node_new ); 
+}
+
+function import_google_calendar_valide_data( $event_item ){
+    
+    if( preg_match("/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/",$event_item['date_update']) == false ){
+        return false;
+    }
+    
+    return true;
+}
+
+
+/* parsea asigna pais, ciudad y direcci?n */
+function import_google_calendar_search_where( $text ){
+    $result = array();
+    $data = explode('|',  $text);
+    $result['contry'] = isset($data[0]) ? $data[0] : '';
+    $result['city'] = isset($data[1]) ? $data[1] : '';
+    $result['address'] = isset($data[2]) ? $data[2] : '';
+    return $result;
+}
+
+/* parsea la descripcion se sacan los datos: descripcion corta, tipo de evento, 
+ * expositores, fecha modificaci?n, cancelado, full descripci?n 
+*/
+function import_google_calendar_search_description( $text ){
+    $result = array();
+    $data = explode('|', $text);
+    $result['small_description'] = isset($data[0]) ? $data[0] : '';
+    $data2 = isset($data[1]) ? explode("\n", $data[1] ) : array();
+    $result['class_event'] = isset($data2[0]) ? trim( substr($data2[0],8) ):'';
+    $result['exhibitors'] = isset($data2[1]) ? trim( substr($data2[1],15) ):'';
+    $result['idEvento'] = isset($data2[2]) ? trim( substr($data2[2],11) ):'';
+    $result['date_update'] = isset($data2[3]) ? trim( substr($data2[3],21) ):'';
+    $result['cancel'] = isset($data2[4]) ? (trim( substr($data2[4],12) ) == 'SI' ? 1 : 0) :'';
+    unset( $data2[0] );
+    unset( $data2[1] );
+    unset( $data2[2] );
+    unset( $data2[3] );
+    unset( $data2[4] );
+    $result['full_description'] = implode("<br />", $data2);
+    return $result;
+}

@@ -1,0 +1,176 @@
+{ margin:0; padding:0; border:none; outline:none;}
+  
+body {
+  margin:0px;
+  background-color:#F4F0EC;
+  top: -15px;
+  position: relative;
+}
+#main {
+  background-color: #F4F0EC;
+  position: relative;
+  height: auto;
+  max-width: 1170px;
+  margin-left: -585px;
+  overflow: visible;
+  border: none;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.departamentos-header{
+
+  height: 335px;
+  background-image: url(../images/BHD.jpg);
+  background-size: 1170px;
+  background-repeat: no-repeat;
+}
+.hr-head {
+  height: 11px;
+  margin: 2px 0;
+
+}
+
+.columnas{
+  width: 330px;
+  float: left;
+  margin: 14px 17px;
+  padding: 13px;
+}
+.fondo-columnas{
+  background-color: #F3F7DB;
+
+}
+.titulohr{
+  border-bottom: 1px solid #D8CB8B;
+  font-size: 23px;
+  font-weight: 600;
+
+}
+h4 {
+
+  margin-bottom: 1px;
+  font-weight:100;
+}
+div.departamentos-fechas p {
+
+  margin-top: 0;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #D8CB8B;
+
+}
+.pie-departamentos{
+
+ text-align: center;
+ width: auto;
+ clear: both;
+
+ }
+ .departamentos-content{
+  display: inline-block;
+  background-color: #fff;
+}
+
+.departamentos-contacto header.node-header {
+  display: none;
+}
+
+.departamentos-contacto h3{
+ text-align: center;
+}
+.departamentos-contacto input#edit-submitted-asunto {
+  width: 300px;
+  border:1px solid #E0D6CC;
+  background-color: #FFFBEE;
+}
+.departamentos-contacto textarea#edit-submitted-mensaje {
+  width: 315px;
+  border:1px solid #E0D6CC;
+  background-color: #FFFBEE;
+}
+.departamentos-contacto div#webform-component-asunto {
+  float: inherit;
+}
+
+.departamentos-contacto  .webform-client-form #edit-actions input[type='submit'] {
+  background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #ADC80B;
+  border: 1px solid #ADC80B;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
+  height: 35px;
+  text-transform: uppercase;
+  box-shadow:none!important;
+  padding: 0 52px 0 52px;
+}
+.departamentos-contacto .webform-client-form #edit-actions{
+ border: 0px ;
+ background:none;
+}
+.departamentos-contacto .webform-client-form label{
+  color: #B39980;
+  font-family: 'Puritan', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+.logo-departamento{
+  width: 380px;
+  height: 150px;
+  background-color: #fff;
+  border-bottom: 4px solid;
+  float:left;
+}
+.text-departamento{
+  max-width: 412px;
+  height: 150px;
+  color:#F7E9B7;
+  position: relative;
+  top: 40px;
+  width: 100%
+}
+.text-departamento p{
+  color: #F7E9B7;
+  font-size: 17px;
+  text-shadow: 0.1em 0.1em #333;
+  padding: 14px;
+}
+.header-login{
+  position: relative;
+  color: #FFF;
+  max-width: 790px;
+  float: right;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.61);
+  border-bottom: 3px solid;
+  line-height: 36px;
+  width: 100%;
+
+}
+.header-login a{
+text-decoration: none;
+color:#F9CA6B;
+
+}
+.departamento-footer{
+
+  background: url(../images/titulo_gbe.png);
+width: 340px;
+height: 55px;
+float: right;
+top: 130px;
+position: relative;
+
+}
+
+@media (max-width: 800px) { 
+  .departamento-footer{
+    display:none
+  }
+  .text-departamento{
+    top:0;
+  }
+  .text-departamento p{
+    font-size: 15px;
+  }
+}

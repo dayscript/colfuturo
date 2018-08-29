@@ -1,0 +1,1261 @@
+/*
+    Document   : global-colfuturo.css
+    Created on : 18/01/2013, 11:51:12 AM
+    Author     : fredy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.node-type-page{
+
+}
+.node-type-page ul.list-border-bottom-gray{
+    padding: 0;
+}
+.node-type-page ul.list-border-bottom-gray li{
+    list-style: none;
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 20px;
+}
+
+/**********************
+ PAGINA DE COLCIENCIAS
+***********************/
+.page-node-44 #header-wrapper{
+    position: static;
+    background: none;
+    height: 110px;
+}
+.page-node-44 header#header {
+border-bottom: 3px solid;
+height: 107px;
+border-bottom-color: #467b80;
+}
+
+.page-node-44 table, .page-node-44 thead,
+.page-node-44 tbody, .page-node-44 tr,
+.page-node-44 th,
+.page-node-44 td{
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+.page-node-44 #branding{
+    display: none;
+}
+
+.page-node-44 #nav-wrapper{
+    padding-top: 0px;
+}
+.page-node-44 #header{
+    background: url("../images/colciencias2/colciencias_cabezote_logoff.jpg") no-repeat scroll 0 0;
+    height: 96px;
+}
+
+.page-node-44 .role-candidato #header{
+	background: url("../images/colciencias2/colciencias_cabezote_candidatos.jpg") no-repeat scroll 0 0;
+    background-size: 691px 100px;
+}
+.page-node-44 .role-pcbcolci #header{
+    background: url("../images/colciencias2/colciencias_cabezote_candidatos.jpg") no-repeat scroll 0 0;
+    background-size: 691px 100px;
+}
+
+.page-node-44 .role-colcienciasbeneficiario #header{
+	background: url("../images/colciencias2/colciencias_cabezote_becariosnew.png") no-repeat scroll 0 0;
+    background-size: 691px 100px;
+}
+
+.page-node-44 .region-header{
+    width: 100%;
+}
+
+.page-node-44 #menu-bar #block-menu-menu-menu-colfuturo {
+    background: url("../images/colciencias/bg_nav_menu_col.fw.png") repeat-x scroll 0 0 transparent;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-node-44 #menu-bar #block-menu-menu-menu-colfuturo ul li a{
+    background: url("../images/colciencias/bg_nav_menu_col.fw.png") repeat-x scroll 0 0 transparent;
+    width: 150px;
+}
+
+.page-node-44 #menu-bar #block-menu-menu-menu-colfuturo ul li a:hover {
+    background-position: 0 -50px;
+}
+
+.page-node-44 #menu-bar #block-menu-menu-menu-colfuturo ul li.first a{
+    background: none;
+    font-size: 16.8px;
+    width: 150px;
+    padding: 0 10px 8px;
+}
+
+.page-node-44 #menu-bar #block-menu-menu-menu-colfuturo ul li a.active {
+   color:#000000;
+}
+
+.page-node-44 .usuario-autenticado{
+    /*float:right;*/
+    background: none;
+    /*margin-top: 50px;
+    margin-right: 30px;*/
+    margin: 70px 0 70px 46%;
+    width: 230px;
+}
+
+.page-node-44 .usuario-autenticado .informacion-usuario-autenticado{
+    display: none;
+}
+
+.page-node-44 .usuario-autenticado a.cerrar-sesion{
+    margin-top: 0;
+    background: none;
+    height: auto;
+    width: auto;
+    float:left;
+}
+
+.page-node-44 .usuario-autenticado a.editar-datos{
+    float:left;
+    margin-right: 22px;
+    display: block;
+}
+
+.page-node-44 .usuario-autenticado a.cerrar-sesion:hover{
+    color:#CA291C;
+}
+
+/* LOGIN COLCIENCIAS */
+.page-node-44 #block-user-login{
+  background: none;
+  cursor: pointer;
+  font-family: 'Droid Sans',sans-serif;
+  height: 80px;
+  width: 420px;
+  /*background-color: #137992;*/
+  margin-top: 10px;
+  float:right;
+  /*margin-right: 40px;*/
+}
+
+/*.page-node-44 #user-login-form{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.page-node-44 #block-user-login .form-item{
+    float:left;
+    width: 155px;
+    margin: 0;
+}
+.page-node-44 #user-login-form label{
+	float:left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.page-node-44 #user-login-form input.form-text{
+	width: 80px;
+	border-radius: 6px;
+	border:1px solid #187E82;
+	font-size: 11px;
+}
+
+.page-node-44 #user-login-form .item-list{
+	float:left;
+	width: 400px;
+	margin-top: 10px;
+}
+.page-node-44 #user-login-form .item-list ul{
+	float:left;
+	margin-left: 50px;
+}
+.page-node-44 #user-login-form .item-list li{
+	float:left;
+	list-style: none;
+}
+.page-node-44 #user-login-form .item-list li.first{
+	margin-right: 20px;
+}
+.page-node-44 #user-login-form .item-list li a{
+	color: #B4D278;
+	font-size: 12px;
+}
+.page-node-44 #user-login-form .form-actions{
+	margin: 0;
+}
+/*.page-node-44 #user-login-form input.form-submit{
+	background-color: #EE6B27;
+	border-radius: 4px;
+	border:1px solid #FFFFFF;
+	color:#FFFFFF;
+	font-size: 11px;
+}*/
+
+
+.page-node-44 a.editar-datos{
+  color: #B4D278;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+.page-node-44 .usuario-autenticado a.cerrar-sesion{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 0px 5px 5px 0px;
+    width: 50px;
+    float:right;
+    /*margin-top: -40px;*/
+}
+
+.page-node-44 .usuario-autenticado a.cerrar-sesion span{
+    background: url("../images/colciencias/icon_close.png") no-repeat scroll 0 0 transparent;
+    color: #FE0000;
+    float: left;
+    font-size: 13px;
+    font-weight: 300;
+    height: 18px;
+    margin-left: -10px;
+    padding: 0 0 0 15px;
+    text-align: center;
+    width: 42px;
+}
+.page-node-44 .usuario-autenticado .block-content{
+	float:left;
+    width: 225px;
+
+}
+.page-node-44 .usuario-autenticado .block-content a.editar-datos {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1lapiz.png") no-repeat;
+background-size: 10px 18px;
+width: 120px;
+}
+/************************************************************/
+/*  Pagina Colciencias rol candidato                        */
+/************************************************************/
+
+.page-node-44 #block-block-102 {
+float: right;
+width: 250px;
+height: 110px;
+background: url('../images/colciencias/Colciencias_Portal_2_2014_asistente_virtual-1.png') no-repeat;
+background-size: 216px 107px;
+background-position-x: 30px;
+}
+.page-node-44 #block-block-103 a {
+font-family: 'open sans',sans-serif;
+font-size: 24px;
+text-decoration: none;
+color:#fff;
+font-weight: 100;
+}
+.page-node-44 #block-block-111 a {
+font-family: 'open sans',sans-serif;
+font-size: 24px;
+text-decoration: none;
+color: #fff;
+font-weight: 100;
+}
+.page-node-44 #block-block-112 a {
+font-family: 'open sans',sans-serif;
+font-size: 24px;
+text-decoration: none;
+color: #fff;
+font-weight: 100;
+}
+.page-node-44 .role-colcienciasbeneficiario div#block-block-106 {
+display: none;
+}
+.page-node-44 .role-colcienciasbeneficiario div#block-block-104 {
+display: none;
+}
+.page-node-44 div#block-block-103 {
+background: rgb(70,123,128);
+background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}
+.page-node-44 div#block-block-111 {
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(left,  #1e5799 0%, #ef772e 0%, #edb493 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(0%,#ef772e), color-stop(100%,#edb493)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* IE10+ */
+background: linear-gradient(to right,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#edb493',GradientType=1 ); /* IE6-9 */
+
+}
+.page-node-44 div#block-block-112 {
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(left,  #1e5799 0%, #ef772e 0%, #edb493 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(0%,#ef772e), color-stop(100%,#edb493)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* IE10+ */
+background: linear-gradient(to right,  #1e5799 0%,#ef772e 0%,#edb493 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#edb493',GradientType=1 ); /* IE6-9 */
+
+}
+.page-node-44 div#block-block-104 {
+border: 2px solid;
+border-color: #cccccc;
+}
+.page-node-44 div#block-block-105{
+border: 2px solid;
+border-color: #cccccc;
+}
+.page-node-44 div#block-block-104 p#titulo_contactenos{
+color: #467b80;
+font-size: 24px;
+font-weight: 400;
+text-align: center!important;
+}
+.page-node-44 div#block-block-105 p#titulo_contactenos{
+color: #467b80;
+font-size: 24px;
+font-weight: 400;
+text-align: center!important;
+}
+.page-node-44 div#block-block-106 p#titulo_contactenos{
+color: #467b80;
+font-size: 24px;
+font-weight: 400;
+text-align: inherit;
+}
+.page-node-44 div#block-block-104 p {
+text-align: initial;
+color: #4d4d4d;
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+margin-bottom: 15px;
+}
+.page-node-44 div#block-block-105 p,ul {
+text-align: initial;
+color: #989898;
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+}
+.page-node-44 div#block-block-104 .block-inner.clearfix {
+padding-left: 16px;
+padding-right: 16px;
+}
+.page-node-44 div#block-block-105 .block-inner.clearfix {
+padding-left: 16px;
+padding-right: 16px;
+}
+.page-node-44 div#block-block-104 h4{
+text-align: left;
+margin: 6px 0;
+font-weight: 600;
+color: #000;
+letter-spacing: -1px;
+}
+.page-node-44 div#block-block-105 h4{
+text-align: left;
+margin: 6px 0;
+font-weight: 600;
+color: #000;
+letter-spacing: -1px;
+}
+
+.page-node-44 p#contacto_bottom {
+margin-bottom: 15px;
+}
+.page-node-44 div#block-block-104 div#envol{
+border-bottom: 1px solid;
+border-color: #cccccc;
+
+}
+.page-node-44 div#block-block-106 .day-accordion h3.title-day-accordion {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion.png") no-repeat scroll 0 0 #FFFFFF;
+color: #000000;
+font-family: 'Open Sans',sans-serif;
+font-style: normal;
+padding: 0 0 0 22px;
+text-decoration: none;
+font-size: 18px;
+border: none;
+margin-top: 5px;
+line-height: 35px;
+background-size: 600px 30px;
+background-position-x: 0px;
+-ms-background-position-x:0px;;
+-ms-background-size: 600px 30px;
+color: #000;
+font-weight: 500;
+}
+.page-node-44 div#block-block-104 .day-accordion h3.title-day-accordion:focus {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion2.png") no-repeat scroll 0 0 #FFFFFF;
+background-size: 334px 21px;
+color:#fff;
+}
+
+.page-node-44 div#block-block-104 .day-accordion h3.title-day-accordion {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion.png") no-repeat scroll 0 0 #FFFFFF;
+color: #000000;
+font-family: 'Open Sans',sans-serif;
+font-style: normal;
+padding: 0 0 0 22px;
+text-decoration: none;
+font-size: 13px;
+border: none;
+margin-top: 5px;
+line-height: 20px;
+background-size: 334px 21px;
+background-position-x: 0px;
+color: #000;
+font-weight: 500;
+}
+.page-node-44 div#block-block-104 div#day-accordion-2 {
+margin-bottom: 7px;
+text-align: left;
+}
+.page-node-44 div#block-block-104 strong {
+font-weight: 800;
+}
+
+.page-node-44 div#block-block-107 .day-accordion h3.title-day-accordion:focus {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion2.png") no-repeat scroll 0 0 #FFFFFF;
+background-size: 334px 21px;
+color:#fff;
+}
+
+.page-node-44 div#block-block-107 .day-accordion h3.title-day-accordion {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion.png") no-repeat scroll 0 0 #FFFFFF;
+color: #000000;
+font-family: 'Open Sans',sans-serif;
+font-style: normal;
+padding: 0 0 0 22px;
+text-decoration: none;
+font-size: 13px;
+border: none;
+margin-top: 5px;
+line-height: 20px;
+background-size: 334px 21px;
+background-position-x: 0px;
+color: #000;
+font-weight: 500;
+}
+.page-node-44 div#block-block-107 div#day-accordion-4 {
+margin-bottom: 7px;
+text-align: left;
+}
+.page-node-44 div#block-block-107 strong {
+font-weight: 800;
+}
+
+
+.page-node-44 div#block-block-106 div#boton_tutorial{
+margin: 0 auto;
+width: 125px;
+color: #fff;
+background: #0AABEA;
+height: 25px;
+line-height: 25px;
+font-weight: 200;
+text-align: center;
+font-size: 13px;
+}
+/*.page-node-44 div#block-block-106 div#boton_tutorial span {
+margin-left: 19px;
+}*/
+.page-node-44 div#block-block-106 ul{
+    font-weight: 300!important;
+    font-size: 13px;
+    list-style-type: disc;
+}
+.page-node-44 div#block-block-106 ol li strong {
+font-size: 13px;
+}
+.page-node-44 strong.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all {
+display: none;
+}
+.page-node-44 div#block-block-104 span#play {
+margin-left: 4px;
+}
+.page-node-44 div#block-block-106 div#content {
+font-size: 12px;
+}
+
+/************************************************************/
+/*  FIN Pagina Colciencias rol candidato                    */
+/************************************************************/
+
+/*.page-node-44 .role-administrator #header {
+    background: url("../images/colciencias2/colciencias_cabezote_candidatos___OLD") no-repeat scroll 0px 0px / 691px 100px transparent;
+}
+/************************************************************/
+/*  Pagina Colciencias rol becario                          */
+/************************************************************/
+
+.page-node-44 .role-beneficiario #header {
+    background: url("../images/colciencias2/colciencias_cabezote_becariosnew.png") no-repeat scroll 0px 0px / 691px 100px transparent;
+}
+.page-node-44 div#block-block-107 {
+    border: 2px solid #CCC;
+}
+.page-node-44 div#block-block-107 p {
+    text-align: initial;
+    color: #4D4D4D;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.page-node-44 div#block-block-107 span#play {
+margin-left: 4px;
+}
+.page-node-44 div#block-block-107 div#envol{
+border-bottom: 1px solid;
+border-color: #cccccc;
+
+}
+.page-node-44 div#block-block-107 h4{
+text-align: left;
+margin: 6px 0;
+font-weight: 600;
+color: #000;
+letter-spacing: -1px;
+}
+.page-node-44 div#block-block-107 p#titulo_contactenos{
+color: #467b80;
+font-size: 24px;
+font-weight: 400;
+text-align: center!important;
+}
+.page-node-44 div#block-block-107 .block-inner.clearfix {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.page-node-44 div#block-block-108 p#titulo_contactenos{
+color: #467b80;
+font-size: 24px;
+font-weight: 400;
+text-align: inherit;
+}
+.page-node-44 div#block-block-108 .day-accordion h3.title-day-accordion {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion.png") no-repeat scroll 0 0 #FFFFFF;
+color: #000000;
+font-family: 'Open Sans',sans-serif;
+font-style: normal;
+padding: 0 0 0 22px;
+text-decoration: none;
+font-size: 18px;
+border: none;
+margin-top: 5px;
+line-height: 35px;
+background-size: 600px 30px;
+background-position-x: 0px;
+color: #000;
+font-weight: 500;
+}
+.page-node-44 div#block-block-108 .day-accordion h3.title-day-accordion:focus {
+background: url("../images/colciencias/Colciencias_Portal_2_2014-1titulo_acordion2.png") no-repeat scroll 0 0 #FFFFFF;
+background-size: 600px 30px;
+color:#fff;
+}
+.page-node-44 div#block-block-108 div#boton_tutorial{
+margin: 0 3px;
+width: auto;
+color: #fff;
+background: #0AABEA;
+height: 25px;
+line-height: 25px;
+font-weight: 200;
+text-align: center;
+font-size: 11px;
+float: left;
+}
+.page-node-44 div#block-block-108 div#boton_tutorial span {
+margin-left: 19px;
+}
+.page-node-44 div#block-block-108 div#content {
+font-size: 12px;
+}
+.page-node-44 div#block-block-108  div#content_botom{
+height: 30px;
+width: 496px;
+position: relative;
+}
+.page-node-44 div#block-block-108 ul li span {
+/* text-decoration: underline; */
+font-weight: 600;
+}
+/*.page-node-44 div#block-block-109 {
+background: rgb(70,123,128);
+background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}
+.page-node-44 div#block-block-110 {
+background: rgb(70,123,128);
+background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}*/
+.page-node-44 #block-block-109 a {
+font-family: 'open sans',sans-serif;
+font-size: 24px;
+text-decoration: none;
+color: #fff;
+font-weight: 100;
+}
+.page-node-44 #block-block-110 a {
+font-family: 'open sans',sans-serif;
+font-size: 24px;
+text-decoration: none;
+color: #fff;
+font-weight: 100;
+
+}
+.page-node-44 span#play {
+float: right;
+margin-right: 14px;
+}
+/************************************************************/
+/*  FIN Pagina Colciencias rol becario                      */
+/************************************************************/
+
+/* Bloque beneficiario colciencias */
+#block-block-77{
+
+}
+#block-block-77 table, #block-block-77 td, #block-block-77 th{
+    vertical-align: top;
+}
+
+.colciencias_beneficiario_052013 .banner {
+    display: block;
+    height: 255px;
+    width: 550px;
+}
+.colciencias_beneficiario_052013 .wpp_reglamentos {
+    background: none repeat scroll 0 0 #E6E6E6;
+    height: auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 550px;
+}
+.colciencias_beneficiario_052013 .wpp_reglamentos h2, .wpp_contacto h2 {
+    color: #00799C;
+    display: block;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 10px 0 0;
+}
+.colciencias_beneficiario_052013 .wpp_reglamentos a {
+    display: inline-block;
+    margin: 18px 4px 11px;
+}
+.colciencias_beneficiario_052013 .wpp_contacto {
+    background: url("../images/colciencias/bg_contacto.jpg") repeat-y scroll center top transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    display: block;
+    height: auto;
+    min-height: 50px;
+    text-align: center;
+    width: 388px;
+}
+.colciencias_beneficiario_052013 .wpp_contacto h2 {
+    font-size: 21px;
+    padding: 10px 0 0;
+    margin: 0px 0px;
+}
+.colciencias_beneficiario_052013 .wpp_contacto a {
+    background: url("../images/colciencias/icon_mail.png") no-repeat scroll right top transparent;
+    color: #00799C;
+    display: block;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 120%;
+    margin: 10px 25px 8px;
+    min-height: 28px;
+    padding-right: 60px;
+    text-align: left;
+    width: 280px;
+}
+.colciencias_beneficiario_052013 .wpp_contacto a:hover {
+    background-position: right -100px;
+    color: #F1771E;
+    text-decoration: underline;
+}
+.colciencias_beneficiario_052013 a.btn_carta {
+    background: url("../images/colciencias/btn_carta.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 60px;
+    margin: 30px 0 0;
+    width: 390px;
+    font-size: 0px;
+}
+.colciencias_beneficiario_052013 a.btn_carta:hover {
+    background-position: 0 -60px;
+}
+.colciencias_beneficiario_052013 a.banner_convenios {
+    display: block;
+    margin: 30px 0 0;
+}
+
+
+/*
+* PAGINA PCB
+*/
+
+#block-block-61{
+    /*float:left;*/
+}
+
+.page-pcb table,
+.page-pcb tbody,
+.page-pcb tr,
+.page-pcb td{
+    border:0px solid #fff !important;
+}
+.page-pcb table td{
+    padding: 0;
+    vertical-align:top;
+}
+.page-pcb .node,
+.page-pcb #block-ds-extras-pre-body{
+    margin-bottom: 0;
+}
+.page-pcb .bloque-ticker{
+    margin-top:10px;
+}
+
+.page-pcb .bloque_perfiles_pcb{
+    float:left;
+    background: url("../images/bg_bloque_perfiles_pcb.jpg") no-repeat scroll 0 0 transparent;
+    height: auto;
+    background-position: 0px;
+    max-width: 960px;
+    width: 100%;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level1{
+    margin: 0;
+    padding: 0;
+    float:left;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level1 li{
+    list-style: none;
+    width: 478px;
+    float:left;
+}
+.page-pcb .bloque_perfiles_pcb ul.level1 li h3 {
+    color: #DA291C;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 11px;
+    margin-top: 10px;
+}
+
+
+.page-pcb .bloque_perfiles_pcb ul.level2{
+    margin: 0;
+    padding: 0;
+    margin:0 10px;
+    float:left;
+    width: 460px;
+}
+.page-pcb .bloque_perfiles_pcb ul.level2 li{
+    width: 460px;
+    border-bottom: 1px solid #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0 0 10px 5px;
+    padding-bottom: 10px;
+    width: 450px;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li.last{
+    border-bottom:none;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li h4{
+    color: #000000;
+    display: block;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin: 0;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li p{
+    color: #4D4D4D;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 130%;
+    margin: 10px 0 0;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li a{
+    color: #0AABEA;
+    display: inline;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li .icon_img{
+    float:left;
+}
+
+.page-pcb .bloque_perfiles_pcb ul.level2 li .content{
+}
+
+.page-pcb #cnt_reglamento_pcb {
+    background: none repeat scroll 0 0 #F4E8DF;
+    float: left;
+    height: 136px;
+    margin: 27px auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+.page-pcb #cnt_reglamento_pcb .cnt_titulo {
+    display: inline;
+    float: left;
+    height: 110px;
+    width: 280px;
+}
+
+.page-pcb #cnt_reglamento_pcb .row_year {
+    border-bottom: 1px solid #CCCCCC;
+    display: inline;
+    float: left;
+    height: 45px;
+    margin: 10px 0 0 10px;
+    padding: 0;
+    width: 650px;
+}
+.page-pcb #cnt_reglamento_pcb .cnt_titulo img {
+    float: right;
+    margin-left: 5px;
+}
+.page-pcb #cnt_reglamento_pcb .cnt_titulo h4 {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin: 29px 0 0;
+    padding: 0 !important;
+    text-align: right;
+}
+.page-pcb #cnt_reglamento_pcb .cnt_titulo h4 span {
+    color: #DA291C;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 80%;
+}
+
+.page-pcb #cnt_reglamento_pcb .row_year:last-child {
+    border: medium none;
+    margin: 0 0 0 10px;
+}
+.page-pcb #cnt_reglamento_pcb .row_year a {
+    border-right: 1px solid #CCCCCC;
+    display: inline;
+    float: left;
+    font-size: 14px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 13px;
+    text-align: center;
+    width: auto !important;
+}
+.page-pcb #cnt_reglamento_pcb .row_year a:last-child {
+    border: medium none;
+}
+/* Bloques PCB */
+section#cnt_equipo_trabajo_pcb {
+    background: url("../images/bg_bloque_equipo_trabajo_pcb.jpg") no-repeat scroll 0 0 #999999;
+    height: 300px;
+    margin: 15px auto 27px;
+    max-width: 960px;
+    width: 100%;
+    background-size: 960px 300px;
+    padding: 0px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo {
+    display: block;
+    float: left;
+    width: 24%;
+    margin: 8% 3% 0 0;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+    padding: 0 !important;
+    text-align: right;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 span {
+    color: #DA291C;
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30%;
+    margin-top: 27px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 span span {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 strong {
+    display: block;
+    font-size: 16px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo img {
+    float: right;
+    margin-left: 7px;
+}
+section#cnt_equipo_trabajo_pcb .area_pcb,
+section#cnt_equipo_trabajo_pcb .area_de_cartera{
+    width: 73%;
+    display: inline-block;
+}
+section#cnt_equipo_trabajo_pcb .area_pcb p,
+section#cnt_equipo_trabajo_pcb .area_de_cartera p{
+    margin: 5px 0 0 0;
+}
+section#cnt_equipo_trabajo_pcb .persona {
+    float: left;
+    width: 33%;
+    display: inline-block;
+    margin: 0px 0px 6px 0;
+}
+section#cnt_equipo_trabajo_pcb .persona p {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+    margin-top: 0;
+}
+section#cnt_equipo_trabajo_pcb .persona p strong {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+/*
+section#cnt_equipo_trabajo_pcb {
+    background: url("../images/bg_bloque_equipo_trabajo_pcb.jpg") no-repeat scroll 0 0 #999999;
+    height: 180px;
+    margin: 15px auto 27px;
+    max-width: 960px;
+    width: 100%;
+    background-size: 960px 190px;
+    padding: 10px 0 0 0;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo {
+    display: inline;
+    float: left;
+    height: 160px;
+    width: 230px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+    padding: 0 !important;
+    text-align: right;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 span {
+    color: #DA291C;
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30%;
+    margin-top: 27px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 span span {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo h4 strong {
+    display: block;
+    font-size: 16px;
+}
+section#cnt_equipo_trabajo_pcb .cnt_titulo img {
+    float: right;
+    margin-left: 7px;
+}
+section#cnt_equipo_trabajo_pcb .persona {
+    display: block;
+    float: left;
+    margin: 24px 0 0 30px;
+    width: 210px;
+}
+section#cnt_equipo_trabajo_pcb .persona p {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+    margin-top: 0;
+}
+section#cnt_equipo_trabajo_pcb .persona p strong {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+} */
+
+section#cnt_telefonos_pcb {
+    background: none repeat scroll 0 0 #F4E8DF;
+    height: 110px;
+    margin: 27px auto 0;
+    max-width: 960px;
+    width: 100%;
+}
+section#cnt_telefonos_pcb .cnt_titulo {
+    display: inline;
+    float: left;
+    height: 110px;
+    width: 280px;
+}
+section#cnt_telefonos_pcb .cnt_titulo h4 {
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 13px 0 0;
+    padding: 0 !important;
+    text-align: right;
+}
+section#cnt_telefonos_pcb .cnt_titulo h4 strong {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+}
+section#cnt_telefonos_pcb .cnt_titulo h4 span {
+    color: #DA291C;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 80%;
+}
+section#cnt_telefonos_pcb .cnt_titulo img {
+    float: right;
+    margin-left: 5px;
+}
+section#cnt_telefonos_pcb .cnt_pais {
+    border-left: 1px solid #CCCCCC;
+    display: inline;
+    float: left;
+    height: 60px;
+    margin: 10px 0 0;
+    padding: 10px 10px 20px;
+    width: auto !important;
+}
+section#cnt_telefonos_pcb .cnt_pais h4 {
+    color: #DA291C;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50%;
+    text-align: center;
+}
+section#cnt_telefonos_pcb .cnt_pais p {
+    color: #000000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 15px;
+    text-align: center;
+}
+section#cnt_telefonos_pcb {
+    background: none repeat scroll 0 0 #F4E8DF;
+    height: 110px;
+    margin: 27px auto;
+    max-width: 960px;
+    width: 100%;
+}
+#block-block-145 {
+    clear: both;
+}
+section#cnt_telefonos_pcb .cnt_pais h4{
+    margin-top:0;
+}
+/*Estilos second region scolcienciasprueba*/
+
+.page-node-44 .externo .region.region-sidebar-second.sidebar{
+  float: none!important;
+  clear: none!important;
+  margin-left: 0;
+  width: 100%;
+}
+
+.page-node-44 .externo div#block-block-103 {
+    margin-bottom: 5px;
+    width:auto;
+    float: none;
+}
+
+/*.page-node-44 div#block-block-103 {
+  background: rgb(70,123,128);
+  background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+  background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}    */
+.page-node-44 #block-block-103 a {
+  font-family: 'open sans',sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+.page-node-44 .externo div#block-block-110 {
+    margin-bottom: 5px;
+    width:auto;
+    float: none;
+}
+
+.page-node-44 div#block-block-110 {
+  background: rgb(70,123,128);
+  background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+  background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}
+.page-node-44 #block-block-110 a {
+  font-family: 'open sans',sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+
+.page-node-44 .externo div#block-block-112 {
+    margin-bottom: 5px;
+    width:auto;
+    float: none;
+}
+.page-node-44 div#block-block-112 {
+  background: #1e5799;
+  background: -moz-linear-gradient(left, #1e5799 0%, #ef772e 0%, #edb493 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(0%,#ef772e), color-stop(100%,#edb493));
+  background: -webkit-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: -o-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: -ms-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: linear-gradient(to right, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#edb493',GradientType=1 );
+}
+.page-node-44 #block-block-112 a {
+  font-family: 'open sans',sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+.page-node-44 .externo div#block-block-111 {
+    margin-bottom: 5px;
+    width:auto;
+    float: none;
+}
+.page-node-44 div#block-block-111 {
+  background: #1e5799;
+  background: -moz-linear-gradient(left, #1e5799 0%, #ef772e 0%, #edb493 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(0%,#ef772e), color-stop(100%,#edb493));
+  background: -webkit-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: -o-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: -ms-linear-gradient(left, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  background: linear-gradient(to right, #1e5799 0%,#ef772e 0%,#edb493 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#edb493',GradientType=1 );
+}
+.page-node-44 #block-block-111 a {
+  font-family: 'open sans',sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+.page-node-44 .externo div#block-block-109 {
+    margin-bottom: 5px;
+    width:auto;
+    float: none;
+}
+.page-node-44 div#block-block-109 {
+  background: rgb(70,123,128);
+  background: -moz-linear-gradient(left, rgba(70,123,128,1) 0%, rgba(97,172,196,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(70,123,128,1)), color-stop(100%,rgba(97,172,196,1)));
+  background: -webkit-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -o-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: -ms-linear-gradient(left, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  background: linear-gradient(to right, rgba(70,123,128,1) 0%,rgba(97,172,196,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467b80', endColorstr='#61acc4',GradientType=1 );
+}
+.page-node-44 #block-block-109 a {
+  font-family: 'open sans',sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+.page-node-44 .externo div#block-block-104{
+
+    display:none;
+}
+.page-node-44 .externo div#block-block-105{
+
+    display:none;
+}
+.page-node-44 .externo div#block-block-107{
+
+    display:none;
+}
+/*fin Estilos second region scolcienciasprueba*/

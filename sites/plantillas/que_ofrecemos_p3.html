@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Qué ofrecemos en COLFUTURO :: Perfeccione su inglés</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+<!-- inicio JAVA Popup-->
+<script type="text/javascript">
+$(document).ready(function() {
+	//When you click on a link with class of poplight and the href starts with a # 
+$('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+    $('#' + popID).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+    return false;
+});
+
+//Close Popups and Fade Layer
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+    $('#fade , .popup_block').fadeOut(function() {
+        $('#fade, a.close').remove();  //fade them both out
+    });
+    return false;
+});
+});
+
+</script>
+<!-- fin JAVA Popup -->
+
+<!-- inicio JAVA TOOLTIP -->
+<script type="text/javascript">
+$(document).ready(function() {
+    //Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip_texto_corrido');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coodrinates
+        var mousey = e.pageY + 20; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+            mousex = e.pageX - tipWidth - 20;
+        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+            mousey = e.pageY - tipHeight - 20;
+        }
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+<!-- fin JAVA TOOLTIP -->
+
+<!-- inicio JAVA - Accordion -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//Set default open/close settings
+	$('.acc_container_small').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger_small').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger_small').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});		
+	
+});	
+</script>
+<!-- fin JAVA - Accordion  --> 
+
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+    
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a href="que_ofrecemos.html">Qué ofrecemos en COLFUTURO</a>
+            <span></span>
+            <a class="current" href="#">Perfeccione su inglés</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+        
+            <h2 class="titulo_general_rojo">Perfeccione su <strong>inglés</strong></h2>
+            
+            <img src="images/img_pasos_que_ofrecemos_03.jpg" class="top_img" width="550" height="240" alt="Paso 2">
+            <p class="texto_corrido">Contamos con un Programa de Inglés que permite a los estudiantes y profesionales mejorar su inglés académico y laboral en destacadas universidades de Estados Unidos, Reino Unido y Australia. COLFUTURO extiende a quienes toman este programa los beneficios económicos acordados con las entidades, las universidades y con las agencias de viajes para los tiquetes aéreos. Además, según su nivel de inglés, pueden asistir a clases de su interés, y otros servicios adicionales que varian según la entidad de educación.</p>
+
+         	<h3 class="subtitulo_seccion">Ventajas del programa</h3>
+            
+         	<ul class="lista_disc_small">
+         	  <li><strong>Descuento del 10% al 40% en la matrícula</strong>, gracias a nuestros convenios.</li>
+         	  <li><strong>Los programas de inglés se desarrollan en un ambiente universitario</strong> con la posibilidad de asistir a clases magistrales y usar los beneficios del campus 
+              universitario (adiferencia de otros programas en institutos).</li>
+         	  <li><strong>Inmersión de tiempo completo</strong>, 20 horas mínimas de instrucción por semana.</li>
+         	  <li><strong>Grupos de estudio pequeños</strong>, de 15 a 18 estudiantes.</li>
+         	  <li><strong>Admisión preferencial</strong> en las universidades para los estudiantes que se presentan por medio de COLFUTURO. </li>
+         	  <li><strong>No cobramos por la administración</strong>, ni comisiones por participación.</li>
+         	  <li><strong>Lo asistimos en el diligenciamiento</strong> de los documentos de postulación a  la visa.</li>
+         	  <li><strong>No es un programa masivo</strong>, sino "selectivo, se debe pasar por un proceso de solcitud, no es automático para todo el que quiera comprarlo.</li>
+       	  	</ul>
+            
+			<h3 class="subtitulo_seccion">Requisitos</h3>
+<p class="texto_corrido">Para participar en este programa no se requiere ningún nivel de inglés, sin embargo es importante que usted tenga claro qué porcentaje del idioma maneja para que tome una decisión acertada sobre los niveles que requiere cursar. Los siguientes documentos puede enviarlos a <a href="mailto:claudia.palacios@colfuturo.org">claudia.palacios@colfuturo.org</a>.</p>
+
+			<ul class="lista_disc">
+              <li>Ser colombiano y mayor de edad.</li>
+              <li>Fotocopia de la cédula.</li>
+              <li>Copia del pago de la inscripción al programa por US$30, que deberá consignar en la cuenta corriente de Bancolombia Nº 039-145400-00 escribiendo en letra clara su nombre, 
+              apellidos y número de cédula.</li>
+              <li><a href="#" class="tip_trigger">Cartas de recomendación <span class="tip_texto_corrido">
+              
+              Dos recomendaciones expedidas por personas que puedan certificar su desempeño académico a nivel universitario o su capacidad profesional en su desempeño laboral. 
+              Quienes escriban estas recomendaciones preferiblemente deben haber sido profesores o directores de alguno de sus trabajos de investigación o tesis. Pueden haber sido 
+              también sus jefes en alguna de sus posiciones laborales anteriores. Las cartas de recomendación no son documentos de influencia política. Tampoco son certificados 
+              laborales o académicos. COLFUTURO no va a evaluar a quien escribe la recomendación sino a usted. Por ello es importante que las cartas establezcan con precisión la 
+              relación académica o laboral que se evalúa. Deben incluir comentarios sobre su desempeño en el curso o actividad realizada, sobre usted como persona, su proyección 
+              académica y profesional y la relevancia del programa que va a realizar. Deben contener la dirección, teléfono, fax y correo electrónico de quien las expide, so 
+              pena de verificación por parte de COLFUTURO.</span></a>
+              
+              expedidas por personas que puedan certificar su desempeño academico o laboral.</li>
+              
+              <li>Certificado(s) de notas originales o fotocopias de las calificaciones de los programas cursados a nivel universitario o si ya es graduado solo la fotocopia del 
+              título.</li>
+            </ul>
+
+            <h3 class="subtitulo_seccion">Dónde puede estudiar</h3>
+            <p class="texto_corrido">Tenemos convenios con destacadas universidades e instituciones de Estados Unidos, Reino Unido y Australia, que permite a los 
+            estudiantes y profesionales mejorar su inglés académico y laboral.<br><br><a href="que_ofrecemos_p3a.html">Conózca las universidades y los convenios establecidos...</a></p>
+
+
+
+
+			<h3 class="subtitulo_seccion">Calendario de inscripción y fechas de viaje</h3>
+			<p class="texto_corrido">Es importante que elabore su plan de estudios y revise las fechas estimadas de viaje para que se pueda organizar con tiempo.</p>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="col_izq_tabla_general">
+              <tr class="alt">
+                <td width="27%" valign="middle">ÉPOCA</td>
+                <td width="33%" valign="middle">CIERRE DE INSCRIPCIONES</td>
+                <td width="40%" valign="middle">FECHA ESTIMADA DE VIAJE</td>
+              </tr>
+              <tr>
+                <td valign="middle">Invierno (PI13-01)</td>
+                <td valign="middle">Octubre 12 de 2012</td>
+                <td valign="middle">Enero y febrero de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Primavera (PI13-02)</td>
+                <td valign="middle">Enero 18 de 2013</td>
+                <td valign="middle">Marzo y abril de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Verano I (PI13-03)</td>
+                <td valign="middle">Febrero 27 de 2013</td>
+                <td valign="middle">Mayo de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Verano II (PI13-04)</td>
+                <td valign="middle">Abril 5 de 2013</td>
+                <td valign="middle">Junio y julio de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Otoño I (PI13-05)</td>
+                <td valign="middle">Junio 12 de 2013</td>
+                <td valign="middle">Agosto y septiembre de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Otoño II (PI13-06)</td>
+                <td valign="middle">Agosto 19 de 2013</td>
+                <td valign="middle">Octubre y noviembre de 2013</td>
+              </tr>
+              <tr>
+                <td valign="middle">Invierno (PI14-01)</td>
+                <td valign="middle">Octubre 11 de 2013</td>
+                <td valign="middle">Enero y febrero de 2014</td>
+              </tr>
+              <tr>
+                <td valign="middle">Primavera (PI14-02)</td>
+                <td valign="middle">Enero 15 de 2014</td>
+                <td valign="middle">Marzo y abril de 2014</td>
+              </tr>
+              <tr>
+                <td valign="middle">Verano I (PI14-03)</td>
+                <td valign="middle">Febrero 28 de 2014</td>
+                <td valign="middle">Mayo de 2014</td>
+              </tr>
+              <tr>
+                <td valign="middle">Verano II (PI14-04)</td>
+                <td valign="middle">Abril 11 de 2014</td>
+                <td valign="middle">Junio y julio de 2014</td>
+              </tr>
+            </table>
+
+			<h3 class="subtitulo_seccion">Costos del programa</h3>
+			<p class="texto_corrido">El costo varía de acuerdo con la duración del programa, la institución de destino y la convocatoria en la cual participa. El valor del tiquete no está incluido y su costo depende de la época de viaje, la edad y el estatus (se ofrecen descuentos para estudiantes). El tiquete aéreo debe ser cancelado por el estudiante directamente en la agencia de viajes.<br><br>El costo del programa se establece en dólares americanos a la tasa representativa del día en el cual se realiza el depósito. El participante debe cancelar a COLFUTURO el valor del programa antes de la fecha del viaje por medio de una consignación en la cuenta corriente de Bancolombia No. 039-145400-00, en la que debe escribir en letra clara su nombre y su número de cédula. Para los pagos de los programas de Australia y el Reino Unido, los costos también deben ser convertidos a dólares americanos.</p>
+
+
+			<article class="cnt_accordion">
+              <h2 class="acc_trigger_small"><a href="#">Devolución por negación de la visa</a></h2><div class="acc_container_small"><div class="block">
+              <p class="texto_corrido">En caso de negación de visa, COLFUTURO devuelve el total cancelado, incluyendo inscripción y depósito de cumplimiento, menos US $ 50 a la TRM de la última consignación hecha por el participante. Este monto corresponde a los costos administrativos ocasionados hasta el momento. <br><br>El costo varía de acuerdo con la duración del programa, la institución de destino y la convocatoria en la cual participa. El dinero para gastos personales o gastos que el estudiante deba cancelar directamente en el país de destino, no está incluido en el costo total del programa así como los costos de trámite de visa a la embajada del país de destino.</p>
+           	  </div></div>                  
+			<div class="clear"></div>
+			</article><!-- article#cnt_accordion -->
+            
+            <p class="texto_corrido"><a href="#">Revise los costos detallados y comparativos por universidad...</a></p>
+            
+            
+            <h3 class="subtitulo_seccion">Formas de financiación</h3>
+            <p class="texto_corrido">COLFUTURO <strong class="rojo">no ofrece becas ni préstamos para el Programa de Inglés</strong>. No contamos con el servicio de pago con tarjeta de crédito, sin embargo si usted tiene cupo suficiente puede solicitar a la fundación una autorización para realizar el pago de matrícula directamente a la universidad a través de este medio, siempre y cuando la universidad lo acepte.<br><br>Le proponemos que evalúe las siguientes opciones de financiación:</p>
+            
+            <ul class="lista_disc_small">
+              <li>Fondo Nacional del Ahorro.</li>
+              <li>Cajas de compensación.</li>
+              <li>Bancos con las líneas de crédito educativo.</li>
+			  <li>Alianza COLFUTURO- Icetex.</li>
+            </ul>
+
+		<article class="cnt_accordion">
+              <h2 class="acc_trigger_small"><a href="#">Alianza COLFUTURO-Icetex</a></h2><div class="acc_container_small"><div class="block">
+              <p class="texto_corrido">Icetex prestará un máximo de USD 8.000, a una tasa establecida de acuerdo a las condiciones del momento, para financiar estudios de idioma en el exterior de  duración  mínima de 8 semanas.<br><br>Para solicitar este crédito el estudiante debe ingresar a la página web <a href="http://www.icetex.gov.co" target="_blank">www.icetex.gov.co</a> a la sección Crédito para perfeccionamiento en idiomas.En el campo Universidad, escribir COLFUTURO – “nombre de la entidad escogida”. Con este registro el Icetex procederá a revisar su solicitud y otorgar el preaprobado del crédito.<br><br>Las condiciones del crédito serán las que tenga vigentes el Icetex para programas de inglés en el momento de la solicitud.El estudiante tendrá que cumplir con los requisitos financieros que exige el Icetex para la obtención del crédito. El estudio, la solicitud y el otorgamiento de los créditos por parte del Icetex es continuo y quincenalmente se realizan comités de crédito. Sin embargo, para legalizar el crédito el estudiante debe tener visa. Después de este trámite el desembolso puede demorar 3 semanas. Si usted está interesado en la financiación con el Icetex se sugiere iniciar el trámite con anticipación al de COLFUTURO.<br><br>Cuando el estudiante obtenga la visa, deberá entregar al Icetex copia de la visa y del I-20 para el desembolso.El desembolso se hará por parte del Icetex directamente al estudiante y él se encargará de pagar a COLFUTURO, a la agencia de viajes y al hospedaje en el caso del homestay.<br><br>
+
+Más información: <a href="http://www.icetex.gov.co" target="_blank">www.icetex.gov.co</a></p>
+           	  </div></div>                  
+			<div class="clear"></div>
+			</article><!-- article#cnt_accordion -->
+            
+            
+            
+            
+            <h3 class="subtitulo_seccion">Cómo postularse</h3>
+            <p class="texto_corrido">Las personas interesadas en el programa deben diligenciar el formulario en línea digitando claramente sus nombres y números de identificación dado que más adelante se solicitan en los documentos para la visa y estos datos deben ser coherentes. El formulario debe ser diligenciado en su totalidad. Las solicitudes incompletas, que no cumplan con los requisitos establecidos por COLFUTURO, o no se entreguen dentro del plazo establecido, no serán consideradas. <br><br>COLFUTURO presume la buena fe de los candidatos solicitantes. Así mismo, supone que toda la información suministrada es verídica. En caso de que se detecte alguna omisión, falsedad o adulteración de la información, la solicitud será inmediatamente anulada sin reconsideración.<br><br><a href="#">Formulario de postulación...</a></p>
+            
+
+
+            
+        <div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+            
+            
+            
+            
+            
+            
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        
+     		<article id="columna_390_pasos" style="margin-top:0;">
+                <div id="titulo_columna_390"><h2>QUÉ OFRECE COLFUTURO</h2></div><!-- titulo_columna_320 -->
+                <a class="cnt_paso_01" href="que_ofrecemos_p1.html">Apoyo</a>
+                <a class="cnt_paso_02" href="que_ofrecemos_p2.html">Financiación</a>
+                <a class="cnt_paso_03_active" href="que_ofrecemos_p3.html">Inglés</a>
+                <a class="cnt_paso_04" href="que_ofrecemos_p4.html">Talento</a>
+			</article><!-- columna_390_pasos -->                
+        
+            <article id="columna_390_icono">
+                <div id="titulo_columna_390">
+           	 	  <h2 class="center">LO AYUDAMOS</h2>
+              </div><!-- titulo_columna_320 -->
+                <div class="cnt_columna_390_icono">
+                
+                  <div class="cnt_grafico_390">
+                  
+                  <h2 class="subtitulo_general_negro_columna"><strong>Charlas</strong> informativas</h2>
+                  <p>Ofrecemos conferencias informativas sobre el Programa de Inglés, el último jueves del mes a las 6:00 p.m. y durante las charlas generales del segundo sábado de cada mes a las 11:00 a.m en la ciudad de Bogotá.<br><br><a href="#">Revise el calendario de eventos del 2013...</a></p>
+                  
+                  
+                  <div class="linea_col_derecha"></div>
+                  
+                  <h2 class="subtitulo_general_negro_columna">ReBeca consejera virtual</h2>
+                  <p>Usted puede utilizar el servicio de asesoría virtual <strong>ReBeca</strong> y hacer las preguntas a los temas sobre los que tenga dudas.<br><br>
+                  <a href="#">Consulte a ReBeca...</a></p>
+
+                    <div class="clear"></div>
+                  </div><!-- cnt_evento_calendario_390 -->
+                
+                </div><!-- cnt_columna_390_icono -->
+            </article><!-- article#columna_390_icono -->  
+            
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla_btn">
+              <tr>
+                <td align="center" valign="middle"><a href="#" class="btn_principal_01">Inscríbase al programa de inglés</a></td>
+              </tr>
+            </table>
+            
+            
+            
+            
+            
+          <article id="columna_320_linea">
+            
+            <h2 class="subtitulo_general_negro_columna">Proceso de <br>
+            <strong>selección</strong> y <strong>participación</strong></h2>
+            <p>Una vez diligencie el formulario en línea y envíe los documentos requeridos en las fechas establecidas, cada candidato recibe notificación escrita, dentro de los diez días hábiles siguientes al cierre de la convocatoria, sobre su aceptación al programa y sobre las universidades ofrecidas para esa convocatoria, junto con los costos. </p>
+    
+            <p><strong>Confirmación de participación</strong>
+            Una vez recibida la carta de aceptación, el candidato debe responder confirmando, aplazando o cancelando su participación. Esta confirmación la puede hacer por fax, e-mail o entrega personal, en el plazo establecido en el instructivo No.1. La confirmación sólo es efectiva si a esta carta se anexa la consignación por concepto del pago del depósito de cumplimiento que corresponde a la administración de COLFUTURO. El valor del depósito es de US $ 1.170 a la TRM del día de consignación y hace parte del costo total del Programa. US$ 200 se toman como depósito de cumplimiento y no son reembolsables si el candidato no continua con el proceso por causas diferentes a la negación de visa. El depósito se mantiene únicamente por dos convocatorias. Sólo se aceptan aplazamientos del programa para la siguiente convocatoria a la que usted fue aceptado. Si aplaza por más de una convocatoria, deberá efectuar de nuevo el pago de la inscripción y del depósito. </p>
+            
+            <div class="linea_col_derecha"></div>
+            
+            <p><strong>Admisión en la universidad o escuela extranjera</strong>
+            Una vez COLFUTURO reciba el pago del depósito y la confirmación de su participación, procede a tramitar su inscripción en la universidad escogida, a realizar la reserva de alojamiento y tiquetes (podrá cancelarlos directamente a la agencia de viajes) y a enviarle al candidato el instructivo No.2. En esta comunicación se le confirma su aceptación a la universidad que seleccionó, el costo exacto del programa y las fechas de inicio y terminación del curso de acuerdo al número de semanas escogido por el participante. <br><br>Adicionalmente, se le recuerdan los pasos a seguir con respecto al pago del curso, información sobre clases, alojamiento y alimentación, así como los compromisos adquiridos con COLFUTURO.</p>
+            
+			<div class="linea_col_derecha"></div>
+            
+            <p><strong>Pago del saldo del programa, entrega de I-20</strong>
+            En el instructivo No. 2, se establece la fecha límite para el pago del programa. El participante debe restar el valor del depósito (que ya pagó) y el valor de la inscripción al costo total del programa y pagar el saldo en la fecha establecida. El pago se debe realizar a través de una consignación en pesos en la cuenta corriente de Bancolombia No. 039-145400-00 a nombre de COLFUTURO a la tasa representativa del mercado del día en que se realice la consignación. <br><br>COLFUTURO le hace entrega del I-20 para universidades en Estados Unidos, o carta de aceptación para las entidades de Australia y el Reino Unido y una carta de presentación ante la embajada para que la persona pueda presentarse y solicitar su visa de estudiante. Cuando el estudiante obtiene la visa, el participante le paga a COLFUTURO el saldo del programa y se le entregan las instrucciones del viaje. Adicionalmente el estudiante debe cancelar el tiquete de acuerdo con las fechas establecidas para viajar a realizar su curso de inglés. <br><br>En caso de que por alguna razón el participante no pueda viajar, se le descontarán del depósito USD 200, los USD 1.000 restantes le serán devueltos. En caso de negación de la visa se le devolverá el valor cancelado menos US $50.</p>
+
+
+          </article><!-- article#columna_320_linea -->
+            
+                  
+                    
+        
+            <article id="columna_320_linea">
+                <h2 class="subtitulo_general_negro_columna">Nuestros <strong>Semilleros</strong> hablan</h2>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_01.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania. 
+                Estuvieron conmigo incondicionalmente de comienzo a fin.” -  <span class="rojo">Nelson Cuevas Valderrama </span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_02.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania.” - <span class="rojo">Natalia Barón</span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_01.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania. 
+                Estuvieron conmigo incondicionalmente de comienzo a fin.” -  <span class="rojo">Nelson Cuevas Valderrama </span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                
+                
+                <p><a href="#">Testimonios de nuestros beneficiarios...</a></p>
+                                
+            </article><!-- article#columna_320_linea -->
+            
+            
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+        
+        
+        </section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>

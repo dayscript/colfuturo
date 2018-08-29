@@ -1,0 +1,1047 @@
+/*
+ * @file
+ * global.base
+ *
+ * - normalize with small modifications for Drupal and AT: http://necolas.github.com/normalize.css/
+ * - Gutter widths, see $gutter-width in _custom.scss
+ * - Default container alignment.
+ * - Flexible images and media declarations.
+ * - Copies of the SCSS mixins for reference, which includes an improved
+ *   element-invisible and focusable styles.
+ */
+/* =============================================================================
+    HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+    Base
+   ========================================================================== */
+/*
+ * If you are using the themes Responsive JS feature (media_queries.js) do not
+ * set a font-family on the html element, use body.
+ *
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/*
+ * 1 . Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility\9;
+  /* Only IE, can mess with Android */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* =============================================================================
+    Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+    Typography
+   ========================================================================== */
+/*
+ * Headings
+ *
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+b,
+strong {
+  font-weight: 700;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 0 0 1.5em;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+    Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+    Embedded content
+   ========================================================================== */
+/*
+ * 1. Remove border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  /* border: 0; */
+  /* Drupal core already does this, uncomment if you need it */
+  -ms-interpolation-mode: bicubic;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+    Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+    Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+ *    Known issue: excess padding remains in IE6
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* =============================================================================
+    Tables
+   ========================================================================== */
+/*
+ * 1. Remove most spacing between table cells
+ */
+table {
+  border: 1px solid;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  font: 100%;
+}
+
+/* =============================================================================
+    Gutters
+   ========================================================================== */
+/*
+ * If gutters are set in theme settings they will override these values,
+ * see Extensions > Modify Output > Design
+ * $gutter-width is set in _base.scss
+ */
+#main-content,
+.block-inner,
+.pane-inner,
+.menu-wrapper,
+.branding-elements,
+.breadcrumb-wrapper,
+.attribution,
+.at-panel .rounded-corner,
+.block-panels-mini > .block-title,
+div.messages {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*
+ * Panel pages need negative margin equal to the gutter width applied to #content,
+ * this is taken care of in theme settings as per above for normal gutters
+ */
+#content .panel-display,
+#content .panel-flexible {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* =============================================================================
+    Flexible Media and Cross browser improvements
+   ========================================================================== */
+/*
+ * - This can cause issues in table cells where no width is set on the column,
+ *   only in some versions of webkit and IE 7/8.
+ * - declaring the width attribute on image elements and using max-width causes
+ *   the "dissappering images" bug in IE8.
+ * - Mapping services such as Google Maps may break also, see below for fixes.
+ */
+img {
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Ethan Marcotte - http://front.ie/l8rJaA */
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Disable flexiblity for IE8 and below */
+.lt-ie9 img,
+.lt-ie9 object,
+.lt-ie9 embed,
+.lt-ie9 video {
+  max-width: none;
+}
+
+/* Override max-width 100% for map displays */
+#map img,
+.gmap img,
+.view-gmap img,
+.openlayers-map img,
+#getlocations_map_canvas img,
+#locationmap_map img,
+.geofieldMap img,
+.views_horizontal_slider img {
+  max-width: none !important;
+}
+
+/* =============================================================================
+    Misc helpers, Accessibility classes etc
+   ========================================================================== */
+/* Prevent overflowing content */
+header[role=banner],
+.content-inner,
+.nav,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-secondary-content,
+.region-tertiary-content,
+.region-footer {
+  overflow: visible;
+  word-wrap: break-word;
+}
+/* categorias articulos*/
+.section-categorias-articulos #block-system-main .field-name-title h2{
+  font-family: "Open Sans",sans-serif;
+font-style: normal;
+font-weight: 400;
+text-align: left;
+color: #000;
+cursor: pointer;
+font-size: 17px;
+line-height: 22px;
+}
+
+.field-name-post-date .field-item{
+  font-size: 11px;
+  color: #AAA5A5;
+}
+
+/**/
+
+/**
+ * General classes for hiding content. These are all included as SASS mixins.
+ * @SEE: sass/_custom.scss
+ */
+/**
+ * Image replacement
+ * Kellum Method: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+ * Additional helpers from http://html5boilerplate.com/docs/css/
+ */
+.ir {
+  /* Kellum Method */
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Remove the default border from elements like button */
+  border: 0;
+  /* Crush the text down to take up no space */
+  font: 0/0 a;
+  /* Remove any text shadows */
+  text-shadow: none;
+  /* Hide any residual text in Safari 4 and any mobile devices that may need it */
+  color: transparent;
+  /* Hide the default background color on elements like button */
+  background-color: transparent;
+}
+
+/* More robust element-invisible and element-focuable classes */
+.element-invisible {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Shift content offscreen, can be usefull when you reall need to do this */
+.offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
+
+/* Hide content from all users */
+.element-hidden {
+  display: none;
+}
+.page-node-1441 img.image-style-none {
+  margin: 0 auto;
+}
+
+
+.page-node-1568 #main-content #node-article-full-group-imagendetallepie figure img{
+      margin: 0 auto;
+}
+
+#jsonview{
+  display: none;
+}
+#jsonsubmit{
+
+  display: none;
+}
+
+#block-block-133 #jsonsubmit{
+  display: block;
+}
+
+.section-como-financiar-su-posgrado .view-id-bloques_resumen_articulos h2 {
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  color: #000;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+@font-face{
+  font-family:'Glyphicons Halflings';
+  src:url(fonts/glyphicons-halflings-regular.eot);
+  src:url(fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
+  url(fonts/glyphicons-halflings-regular.woff2) format('woff2'),
+  url(fonts/glyphicons-halflings-regular.woff) format('woff'),
+  url(fonts/glyphicons-halflings-regular.ttf) format('truetype'),
+  url(fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+
+
+.glyphicon-pencil:before {
+    content: "\270f";
+}
+
+.glyphicon-lock:before {
+    content: "\e033";
+}
+
+.glyphicon-off:before {
+    content: "\e017";
+}
+.glyphicon,.glyphicon-lock,.glyphicon-pencil,.glyphicon-off{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.progress {
+    overflow: hidden;
+    margin-bottom: 7px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    width: 70%;
+    display: inline-flex;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+.progress-bar{
+  background: green;
+}
+.prog{
+  width: 100%;
+  display: inline-block;
+}
+.usuario {
+    font-size: 19px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+.porcentajeProgress{
+  margin: 0px 15px;
+  display: inline-block;
+  padding-left: 6px;
+  color: #009800;
+  line-height: .7;
+  font-weight: 400;
+}
+.accionesUsuario a.closeSesion {
+    color: #D9281B;
+}
+.BarraProgreso a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #009800;
+}
+.accionesUsuario a.cambiarClave {
+    color: #009800;
+}
+.accionesUsuario a {
+    padding-right: 30px;
+}
+    
+a.ingresar{
+color:#000;
+
+}
+.progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+   // background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+#block-potentials-potentials-menu .BarraProgreso + .BarraProgreso {
+    display: none;
+}
+
+
+#block-potentials-potentials-menu .block-inner .block-content div+div+div.accionesUsuario{
+  display: none;
+}
+.BarraProgreso .accionesUsuario{
+  display: block!important;
+}
+.BarraProgreso{
+  margin-bottom: 20px;
+}
+
+.accionesUsuario{
+  text-align: center;
+}
+div.password-confirm {
+    float: right;
+    margin-top: 1.5em;
+    visibility: hidden; 
+    width: 17em;
+}
+
+.password-suggestions {
+  height: 1px;
+  visibility: hidden;
+  width: 1px;
+}
+
+.password-strength {
+  margin-top: 1.4em;
+  width: 17em;
+}
+
+.password-strength-title {
+  display: inline;
+}
+
+.password-strength-text {
+  float: right;
+  font-weight: bold;
+}
+
+.password-indicator {
+  background-color: #c4c4c4;
+  height: 0.3em;
+  width: 100%;
+}
+
+.password-indicator div {
+  background-color: #47c965;
+  height: 100%;
+  width: 0;
+}
+
+.password-weakness-clear {
+  background-color: #c4c4c4;
+}
+
+.password-weakness-weak {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f72500+0,f45d49+43,e7ef47+78,e7ef47+100 */
+  background: #f72500; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f72500 0%, #f45d49 43%, #e7ef47 78%, #e7ef47 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f72500), color-stop(43%,#f45d49), color-stop(78%,#e7ef47), color-stop(100%,#e7ef47)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #f72500 0%,#f45d49 43%,#e7ef47 78%,#e7ef47 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #f72500 0%,#f45d49 43%,#e7ef47 78%,#e7ef47 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #f72500 0%,#f45d49 43%,#e7ef47 78%,#e7ef47 100%); /* IE10+ */
+  background: linear-gradient(to right,  #f72500 0%,#f45d49 43%,#e7ef47 78%,#e7ef47 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f72500', endColorstr='#e7ef47',GradientType=1 ); /* IE6-9 */
+}
+
+.password-weakness-good {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4ff28+0,f4ff28+29,f9ff89+68,93ed5e+100 */
+  background: #f4ff28; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f4ff28 0%, #f4ff28 29%, #f9ff89 68%, #93ed5e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4ff28), color-stop(29%,#f4ff28), color-stop(68%,#f9ff89), color-stop(100%,#93ed5e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #f4ff28 0%,#f4ff28 29%,#f9ff89 68%,#93ed5e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #f4ff28 0%,#f4ff28 29%,#f9ff89 68%,#93ed5e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #f4ff28 0%,#f4ff28 29%,#f9ff89 68%,#93ed5e 100%); /* IE10+ */
+  background: linear-gradient(to right,  #f4ff28 0%,#f4ff28 29%,#f9ff89 68%,#93ed5e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4ff28', endColorstr='#93ed5e',GradientType=1 ); /* IE6-9 */
+}
+
+.password-weakness-strong {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9ff8c+0,bcef8d+15,bcef8d+15,b2ea8f+56,93ed5e+100 */
+  background: #f9ff8c; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f9ff8c 0%, #bcef8d 15%, #bcef8d 15%, #b2ea8f 56%, #93ed5e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f9ff8c), color-stop(15%,#bcef8d), color-stop(15%,#bcef8d), color-stop(56%,#b2ea8f), color-stop(100%,#93ed5e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #f9ff8c 0%,#bcef8d 15%,#bcef8d 15%,#b2ea8f 56%,#93ed5e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #f9ff8c 0%,#bcef8d 15%,#bcef8d 15%,#b2ea8f 56%,#93ed5e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #f9ff8c 0%,#bcef8d 15%,#bcef8d 15%,#b2ea8f 56%,#93ed5e 100%); /* IE10+ */
+  background: linear-gradient(to right,  #f9ff8c 0%,#bcef8d 15%,#bcef8d 15%,#b2ea8f 56%,#93ed5e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff8c', endColorstr='#93ed5e',GradientType=1 ); /* IE6-9 */
+}
+
+.cse .gsc-control-cse, .gsc-control-cse{
+  padding: 0!important;
+}
+#block-potentials-blockregistro{
+  height: 80px;
+}
+
+.msj .notificacion {
+    font-size: 10px;
+    font-weight: 700;
+    position: relative;
+    top: -5px;
+    right: 15px;
+    background: red;
+    padding: 2px 6px;
+    border-radius: 50%;
+    color: #fff;
+}
+.image-msj{
+
+}
+.notificacion{
+  display: none;
+}
+.msj{
+  display: inline-block;
+} 
+
+.box-notification{
+  display: inline-block; 
+  position: absolute;
+  z-index: 99999999;
+  width: 330px;
+  height: 154px;
+  background: #F5F5F5;
+  border-radius: 10px;
+  box-shadow: 4px 5px 9px rgba(136, 136, 136, 0.72);
+  padding: 10px;
+  border:solid 2px #FD0000;
+  overflow: auto;
+}
+.list-notification .event-name,.list-notification .event-url{
+  display: inline-block;
+  width: 100%;
+  color: #000;
+} 
+.list-notification .event-url a{
+  color:#FF0000;
+}
+
+.new-event {
+    //background: rgba(255, 0, 0, 0.58);
+    margin: 4px 0px;
+    border-bottom: 1px solid;
+}
+
+
+.old-event {
+    margin: 4px 0px;
+    border-bottom: 1px solid;
+}
+.box-notification{
+  display: none;
+}
+
+.not-logged-in a.cambiarClave.ingresar {
+    margin-top: 33px;
+    display: inline-block;
+}
+
+
+.page-tesis-y-articulos #autocomplete div {
+    font-size: 12px;
+    padding: 5px 5px;
+}
+.page-tesis-y-articulos #autocomplete {
+    font-size: 12px;
+}
+.page-tesis-y-articulos #autocomplete {
+  width: 500px!important
+}
+
+.page-tesis-y-articulos #load {
+  margin: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.page-tesis-y-articulos #load span{
+  color: #E0291C;
+  margin-right: 10px; 
+}
+
+.page-user-edit #field-nombres-add-more-wrapper{
+  display: none;
+}
+
+.page-user-edit .field-name-field-apellidos{
+  display: none;
+}
+.page-user-edit .field-name-field-genero{
+  display: none;
+}
+.page-user-edit .field-name-field-ciudad-de-residencia{
+  display: none
+}
+.page-user-edit .field-name-field-interes{
+  display: none;
+}
+.page-user-edit .field-name-field--rea-de-inter{
+  display: none
+}
+.page-user-edit .form-item-field--rea-de-inter-und{
+  display: none
+}
+.page-user-edit .field-name-field-idiomas-de-inter-s{
+  display: none;
+}
+.page-user-edit .field-name-field-terminos{
+  display: none
+}
+.page-user-edit .field-name-field-autorizacion{
+  display: none;
+}
+/*.page-user-edit .form-item-mail{
+  display: none;
+}*/
+
+.page-node-1766 #node-article-full-group-imagendetallepie .field-name-field-imagen-detallado img{
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 322px) and (max-width: 480px) {
+   .msj{
+      width: 100%;
+      text-align: center;
+    }
+    #block-potentials-blockregistro{
+      height: 120px;
+    }
+  }
+
+@media (min-width: 322px) and (max-width: 480px) {
+    .accionesUsuario a {
+      padding-right: 6px;
+    } 
+  }
+ 
+
+/* estilos para la descarga de tesis y articulos */
+ .table2excel{
+  width: 100%;
+  height:auto;
+ }
+ #table2excel{
+  display: none;
+ }
+ #descargar-info{
+    background: #EF772E;
+    color: #Fff;
+    border: 0;
+    padding: 7px;
+    box-shadow: 3px 6px 10px #888888;
+ }
+ .texto-informativo{
+    width: 50%;
+    float: left;
+    margin: 10px;
+ }

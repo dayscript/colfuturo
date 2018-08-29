@@ -1,0 +1,731 @@
+/******************************/
+/*Page tesis y articulos new*/
+/*****************************/
+.mostar{
+    display: none;
+    text-align: center;
+}
+.remove-item{
+    display: inline-block;
+    margin: 0 40px;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.box-content{
+    border-top: 1px solid #B9B9B9;
+    padding: 12px 0px;
+    width: 47%;
+    float: left;
+    margin: 0 12px;
+    min-height: 227px;
+
+}
+.respuesta{
+  display: inline-block;
+
+}
+.field-título{
+  color: #D53D28;
+  font-family: 'Droid Sans', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 12px 0;
+
+}
+.field-autores{} 
+.field-parte_de{}
+.field-tema{
+  margin:5px 0;   
+}
+.field-tipo_de_estudio{}
+.field-beneficiario_estudio{}
+.field-cuerpo{
+    max-height: 200px;
+    overflow: auto;
+}  
+.field-url_nodo{}
+.field-url_adjuntos{}
+.field-Nid{}
+.field-fecha_publicacion{}
+.field-url_adjuntos a {
+    margin: 14px;
+    display: inline-block;
+}
+
+
+.modalView{
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    display: none;
+
+}
+.ico-pdf{
+  display: inline-block;
+}
+.img-pdf-ico{
+  height:42px;
+  width:42px;
+   float: left;
+}
+#contenttotal{
+    max-width: 61%;
+    height: auto;
+    background: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    margin-top: 71px;
+}
+#contenttotal iframe{
+  border:0;
+}
+
+.field-url_adjuntos{
+  display: inline-block;
+}
+.page-user-iframe iframe{
+  border:0;
+}
+
+.page-registro-exitoso iframe{
+    border: 0!important;
+}
+/*****************************/
+/*End tesis y articulos new*/
+/*****************************/
+
+/**************************
+    TESIS Y ARTICULOS
+***************************/
+.publicaciones-tesis-articulos{
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+
+}
+
+
+
+.publicaciones-tesis-articulos form{
+    margin: 5px;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+
+.publicaciones-tesis-articulos #gsearch{
+    /*background: url("../images/lupa_buscador_tesis.png") no-repeat scroll right top #FFFFFF;*/
+    border: 1px solid #808080;
+    border-radius: 4px 4px 4px 4px;
+    color: #999999;
+    height: 24px;
+    line-height: 24px;
+    margin: 5px 0 5px 0;
+    padding: 0 6px;
+    width: 300px;
+    margin-right: 10px;
+    width: 96%;
+}
+
+.publicaciones-tesis-articulos html.js input.form-autocomplete {
+    background-image: url(../../misc/throbber-inactive.png);
+    background-position: 99% center;
+    background-repeat: no-repeat;
+}
+.publicaciones-tesis-articulos html.js input.throbbing{
+
+ background-position: 99% center;
+}
+
+.publicaciones-tesis-articulos #gsearch:focus {
+    background-position: right bottom;
+    border: 1px solid #DA291C;
+}
+
+.publicaciones-tesis-articulos .advanceSearch{
+    margin: 10px 0;
+}
+
+.publicaciones-tesis-articulos .advanceSearch a{
+    color: #DA291C;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.publicaciones-tesis-articulos #advanceSearchHolder{
+    float: left;
+}
+
+.publicaciones-tesis-articulos #advanceSearchHolder .holder #subholder > div{
+    color: #4D4D4D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    float: left;
+    line-height: 19px;
+    margin: 10px 20px 10px 0;
+}
+
+.publicaciones-tesis-articulos #advanceSearchHolder .holder #subholder > div label div{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.publicaciones-tesis-articulos #advanceSearchHolder .holder #subholder > div select{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #808080;
+    border-radius: 4px 0 0 4px;
+    color: #333333;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: normal;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 5px;
+    padding: 0 0 0 8px;
+    width: 158px;
+}
+
+.publicaciones-tesis-articulos .form-item.form-type-select {
+    width: 29%;
+    padding: 10px;
+}
+.publicaciones-tesis-articulos .form-item.form-type-select select{
+    width: 100%;
+
+}
+
+.publicaciones-tesis-articulos .buttons{
+    display: block;
+    width: 24%;
+    margin: 0 auto;
+}
+
+.publicaciones-tesis-articulos .buttons-options{
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.publicaciones-tesis-articulos .buttons-options .btn_principal{
+    background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #EF772E;
+    border: 1px solid #EB8232;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 0 1px #B46628;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    height: 35px;
+    line-height: 36px;
+    margin: 0 10px 0 0;
+    padding: 0 35px 0 10px;
+    text-transform: uppercase;
+}
+
+.publicaciones-tesis-articulos .buttons-options .btn_principal:hover{
+    background: url("../images/flecha_btn_principal.png") no-repeat scroll right -35px #D30000;
+    border: 1px solid #DB3E3E;
+    box-shadow: 0 2px 0 1px #7D0000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.publicaciones-tesis-articulos .buttons-options .button-reset{
+    background: url("../images/btn_cancelar.png") no-repeat scroll right 3px #B3B3B3;
+    border: 1px solid #BFBFBF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 0 1px #999999;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    height: 30px;
+    line-height: 31px;
+    margin: 0;
+    padding: 0 35px 0 10px;
+    text-transform: uppercase; 
+}
+
+.publicaciones-tesis-articulos .buttons-options .button-reset:hover{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right -30px #333333;
+    border: 1px solid #666666;
+    box-shadow: 0 2px 0 1px #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.publicaciones-tesis-articulos #bSearchResults{
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+}
+.publicaciones-tesis-articulos .button-submit,.publicaciones-tesis-articulos .button-reset{
+    width: auto;
+    float: left;
+}
+.publicaciones-tesis-articulos .advance-search {
+    display: inline-block;
+    padding: 16px;
+}
+.publicaciones-tesis-articulos .advance-search div{
+    float: left;
+    margin: 0 0 5px 0;
+    max-height: 45px; 
+}
+.items-busqueda div{
+    color: #fff;
+    padding: 0 0px 0 12px;
+    border-radius: 14px 0 0px 14px;
+    display: inline-block;
+    margin: 0 0 0 6px;
+}
+
+.items-busqueda{
+    margin: 9px 0 28px 0;
+}
+
+.items-busqueda div span {
+    margin: 0 0px 0 13px;
+    color: #fff;
+    border-left: #fff solid 3px;
+    height: 21px;
+    text-align: center;
+    padding: 2px 7px;
+}
+#basic-search,.select-advance{
+    color: #DA291C;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 17px 0 25px 0;
+    font-weight: 400;
+    text-align: center;
+    border-top: 1px solid #AEA0A0;
+    padding-top: 32px;
+    font-family: 'Open Sans',sans-serif;
+        
+}
+/*.drop-down{
+    
+    //font-family: 'Open Sans',sans-serif;
+    /*background: url("../images/btn_slide.png") no-repeat scroll 0 0 #FFFFFF;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}*/
+.publicaciones-tesis-articulos #bSearchResults .result h4{
+    margin-bottom: 0;
+}
+
+.publicaciones-tesis-articulos #bSearchResults .result h4 span em,
+.publicaciones-tesis-articulos #bSearchResults .result h4 a{
+    color: #000000;
+    font-size: 17px;
+    font-family: 'Open Sans',​sans-serif;
+    font-weight: 400;
+}
+
+.publicaciones-tesis-articulos #bSearchResults .result{
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 20px 0;
+}
+.publicaciones-tesis-articulos .form-item.form-type-textfield.form-item-busqueda {
+
+width: 100%;
+}
+.publicaciones-tesis-articulos select {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid #808080;
+border-radius: 4px 0 0 4px;
+color: #333333;
+font-family: 'Open Sans',sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+height: 24px;
+line-height: 24px;
+margin-top: 5px;
+padding: 0 0 0 8px;
+width: 158px;
+}
+
+.publicaciones-tesis-articulos label {
+text-transform: uppercase;
+font-weight: 300;
+font-size: 11px;
+}
+.publicaciones-tesis-articulos .form-item{
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.publicaciones-tesis-articulos input#edit-submit:hover {
+background: url("../images/flecha_btn_principal.png") no-repeat scroll right -35px #D30000;
+border: 1px solid #DB3E3E;
+box-shadow: 0 2px 0 1px #7D0000;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+
+.publicaciones-tesis-articulos input#edit-submit {
+background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #EF772E;
+border: 1px solid #EB8232;
+border-radius: 3px 3px 3px 3px;
+box-shadow: 0 2px 0 1px #B46628;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-family: 'Droid Sans',sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+height: 35px;
+line-height: 36px;
+margin: 0 10px 0 0;
+padding: 0 35px 0 10px;
+text-transform: uppercase;
+position: relative;
+}
+.publicaciones-tesis-articulos input#edit-reset:hover{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right -30px #333333;
+border: 1px solid #666666;
+box-shadow: 0 2px 0 1px #000000;
+color: #FFFFFF;
+text-decoration: none;
+
+
+}
+.publicaciones-tesis-articulos input#edit-reset{
+    background: url("../images/btn_cancelar.png") no-repeat scroll right 3px #B3B3B3;
+    border: 1px solid #BFBFBF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 0 1px #999999;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    height: 35px;
+    line-height: 31px;
+    margin: 0;
+    padding: 0 35px 0 10px;
+    text-transform: uppercase;
+    top: 17px;
+
+
+}
+.publicaciones-tesis-articulos select#edit-beneficiario-promocion {
+width: 100%;
+}
+.publicaciones-tesis-articulos .form-item.form-type-select.form-item-fecha-publicacion {
+  
+  //margin-right: 20px;
+}
+
+/***********************************/
+/*    Estilos Pagina Guia          */
+/*                                 */
+/***********************************/
+.section-guia-de-reglas-de-correo-electronico .day-accordion h3.title-day-accordion {
+background: url("../images/colciencias/Colfu_guia_reglas2.png") no-repeat scroll 0 0 #FFFFFF;
+color: #000000;
+font-family: 'Open Sans',sans-serif;
+font-style: normal;
+padding: 0 0 0 22px;
+text-decoration: none;
+font-size: 18px;
+border: none;
+margin-top: 5px;
+line-height: 35px;
+background-size: 600px 30px;
+background-position-x: 0px;
+color: #CD2020;
+font-weight: 500;
+}
+.section-guia-de-reglas-de-correo-electronico #red{
+color:red;
+
+}
+.section-guia-de-reglas-de-correo-electronico #black{
+color: #000;
+font-weight: 900;
+}
+.section-guia-de-reglas-de-correo-electronico #azul{
+color:blue;
+}
+/*Colciencias_Portal_2_2014-1titulo_acordion.png*/
+.section-guia-de-reglas-de-correo-electronico .day-accordion h3.title-day-accordion:focus {
+    background: url("../images/colciencias/Colfu_guia_reglas.png") no-repeat scroll 0 0 #FFFFFF;
+    background-size: 600px 30px;
+    color: #fff;
+    font-size: 22px;
+}
+.page-guia-de-reglas-de-correo-electronico .block-b-colfuturo .titletable{
+    font-size: 23px;
+    text-align: center;
+    color: #D90000;
+}
+.page-guia-de-reglas-de-correo-electronico .block-b-colfuturo .destino{
+
+    text-align: center;
+    color: rgb(74, 192, 240);
+    font-size: 18px;
+}
+.page-guia-de-reglas-de-correo-electronico .block-b-colfuturo .label{
+
+    text-align: center;
+    color:black;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.page-guia-de-reglas-de-correo-electronico .block-b-colfuturo .aster{
+
+    color:rgb(218, 41, 28);
+    font-size: 10px;
+ }
+/***********************************/
+/*   FIN Estilos Pagina Guia          */
+/*                                 */
+/***********************************/
+.lupaimage{
+
+    width: 64px;
+    height: 100px;
+    float: left;
+       /* position: relative;
+        width: 100px;
+        height: 115px;
+        float: left;
+        background-image: url(../images/lupa.jpg);
+        background-size: 100px 114px;
+        margin-top: 8px;*/
+          }
+
+.page-tesis-y-articulos .tabla_resultados{
+    border: none;
+    border-bottom: 0px solid;
+    border-top: 0px solid;
+
+}
+.page-tesis-y-articulos .tabla_resultados td{
+    border: none;
+    border-bottom: none !important ;
+    border-top: none !important;
+    border-color: rgba(204, 204, 204, 0);
+
+}
+.page-tesis-y-articulos .tabla_resultados1 td{
+    border: none;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-color: rgba(204, 204, 204, 0);
+
+}
+.page-tesis-y-articulos .tabla_resultados0 tr{
+    border: none;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-color: rgba(204, 204, 204, 0);
+
+}
+.page-tesis-y-articulos .tabla_resultados1 tr{
+    border: none;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-color: rgba(204, 204, 204, 0);
+
+}
+
+.page-tesis-y-articulos .tabla_resultados1{
+    border: none;
+    border-bottom: 0px solid;
+    border-top: 0px solid;
+
+}
+.page-tesis-y-articulos .tabla_resultados1 tbody tr
+{
+border-color: rgba(204, 204, 204, 0);
+
+}
+.page-tesis-y-articulos .tabla_resultados tbody tr
+{
+border-color: rgba(204, 204, 204, 0);
+}
+#textcontent{
+line-height: 16px;
+font-family: sans-serif;
+font-style: italic;
+color: #968C8C;
+font-size: 13px;
+}
+
+#textcontent span{
+color:#000;
+}
+.publicaciones-tesis-articulos #autocomplete{
+
+font-size: 13px;
+color : #968C8C;
+display: block;
+}
+
+.publicaciones-tesis-articulos .ajax-progress.ajax-progress-throbber{
+    position: absolute;
+}
+
+
+
+/********************************************************/
+
+/*ModalMasck
+/********************************************************/
+
+
+.page-tesis-y-articulos .modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.page-tesis-y-articulos .modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.page-tesis-y-articulos .modalbox{
+    width: 1100px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+
+}
+.page-tesis-y-articulos .modalbox p{
+
+ font-size: 12px;
+
+}
+.page-tesis-y-articulos .modalbox h2{
+
+ color:#D53D28;
+ font-size: 15px;
+
+}
+.page-tesis-y-articulos .modalbox h3{
+
+ font-size: 14px;
+
+}
+
+.page-tesis-y-articulos .movedown {
+    margin: 0 auto;
+}
+.page-tesis-y-articulos .rotate {
+    margin: 10% auto;
+    -webkit-transform: scale(-5,-5);
+    transform: scale(-5,-5);
+}
+.page-tesis-y-articulos .resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+
+}
+.page-tesis-y-articulos .modalmask:target .movedown{
+    margin:10% auto;
+}
+.page-tesis-y-articulos .modalmask:target .rotate{
+    transform: rotate(360deg) scale(1,1);
+    -webkit-transform: rotate(360deg) scale(1,1);
+}
+
+.page-tesis-y-articulos .modalmask:target .resize{
+    width:400px;
+    height:200px;
+}
+
+
+
+.page-tesis-y-articulos .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+    font-size:16px;
+}
+.page-tesis-y-articulos tr{
+
+background-color:white;
+
+}
+
+.page-tesis-y-articulos .close:hover {
+    background: #FAAC58;
+    color:#222;
+}
+
+
+.page-tesis-y-articulos .nsc{
+    position:absolute;
+    bottom:40%;
+    right:0;
+}
+span.footerimage {
+background-color: rgba(2, 1, 1, 0.74);
+position: absolute;
+top: 184px;
+color: #fff;
+text-align: right;
+width: 100%;
+font-size: 15px;
+font-weight: 500;
+}
+span.footerimage p {
+padding-right: 16px;
+color: #fff;
+font-size: 15px;
+font-weight: 500;
+margin:0;
+}

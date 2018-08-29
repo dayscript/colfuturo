@@ -1,0 +1,297 @@
+<?php
+/**
+ * @file
+ * 
+ */
+function colfuturo_functions_user_login(&$edit, $account){
+  
+  /*
+  *** CAMBIA EL PESO DEL MODULO PARA QUE SE EJECUTE DE ULTIMAS.*/
+  if(strpos( $_SERVER['HTTP_USER_AGENT'], "DayDevALL" ) !== false){
+  		
+      /*db_update('system')
+      ->fields(array('weight' => 99))
+      ->condition('name', 'logintoboggan_rules', '=')
+      ->execute();
+      db_update('system')
+      ->fields(array('weight' => 99))
+      ->condition('name', 'logintoboggan_variable', '=')
+      ->execute();
+      
+      $result = db_query('SELECT name, type, weight FROM {system}');
+      foreach ($result as $record) {
+        print_r($record);
+      }*/
+
+
+      /*$weight = db_select('system', 's')
+              ->fields('s', array('weight'))
+              ->condition('name', 'login-destination', '=')
+              ->execute()
+              ->fetchField();*/
+  		/*var_dump("fin consulta...");*/
+  		//var_dump($qq);
+  		/*exit();*/
+  }/**/
+
+  if( isset($_SESSION["redirect_app_colfuturo"])  ){
+    $redirection = $_SESSION["redirect_app_colfuturo"];
+    unset( $_SESSION["redirect_app_colfuturo"] );
+    $GLOBALS['destination'] = $redirection;
+    header("Location: ".$GLOBALS['destination']);
+    exit();
+  }
+}
+
+function colfuturo_functions_form_alter(&$form, &$form_state, $form_id){
+    //if(strpos( $_SERVER['HTTP_USER_AGENT'], "DayDevALL" ) !== false){
+        if( $form_id == 'user_login' ){
+          if( isset($_SESSION["cc_login"])  ){
+              $form['name']['#default_value'] = $_SESSION["cc_login"];
+              unset( $_SESSION["cc_login"] );
+          }
+        }
+    //}
+}
+
+function colfuturo_functions_block_info() {
+
+  $blocks = array();
+  $blocks['block_form_tesis_articulos'] = array(
+    'info' => t('Bloque Con el buscador'),
+    );
+  return $blocks;
+}
+
+function colfuturo_functions_block_view($delta = '') {
+
+  $block = array();
+  switch ($delta) {
+    case 'block_form_tesis_articulos':
+    $block['subject'] = '';
+    $block['content'] = body_tesis();
+    break;
+  }
+  return $block;
+}
+
+function formulario_filtro_tesis_articulos_form(){
+
+  $request = drupal_http_request('http://admin.banrepcultural.org/jsoncolfuturo');
+  $json = drupal_json_decode($request->data);
+  $autores_array['all'] = '-Todos-';
+  $tipo_estudio_array['all'] = '-Todos-';
+  $beneficiario_array['all'] = '-Todos-';
+  $fecha_de_publicacion_array['all'] = '-Todos-';
+
+  foreach($json['autores'] as $autor){
+    //dpm();
+    $autores_array[$autor['autor']['titulo']] = $autor['autor']['titulo'];
+  }
+
+ foreach($json['autores'] as $autor){
+  //dpm($autor['autor']['tipo_de_estudio']);
+  $tipo_estudio_array[$autor['autor']['tipo_de_estudio']] = $autor['autor']['tipo_de_estudio'];
+  }
+  $tipo_estudio_array = array_unique($tipo_estudio_array);
+
+  foreach($json['autores'] as $autor){
+  //dpm($autor['autor']['tipo_de_estudio']);
+  $beneficiario_array[$autor['autor']['beneficiario']] = $autor['autor']['beneficiario'];
+  }
+  $beneficiario_array = array_unique($beneficiario_array);
+
+  foreach($json['autores'] as $autor){
+  $ano = substr($autor['autor']['fecha_de_publicacion'],0,-6);
+  $fecha_de_publicacion_array[$autor['autor']['fecha_de_publicacion']] = $ano;
+  }
+  $fecha_de_publicacion_array = array_unique($fecha_de_publicacion_array);
+
+  $form['busqueda'] = array(
+    '#type' => 'textfield',
+    '#attributes' => array(
+                            'id' =>'gsearch',
+                            'class'=>'box'), 
+   
+    );
+
+
+ $form['#prefix'] = '<div id="advanceSearchHolder"> <div class="holder"><div id="subholder">';
+  
+
+  $form['autores'] = array(
+    '#type' => 'select',
+    '#options' => $autores_array,
+    '#title' => 'AUTOR:',
+    '#attributes' => array(
+                            'id' =>'Autor',
+                            'class'=>'sel'), 
+  );
+
+  $form['tipo_estudio'] = array(
+    '#type' => 'select',
+    '#options' => $tipo_estudio_array,
+    '#title' => 'TIPO DE ESTUDIO:',
+  );
+  $form['beneficiario_promocion'] = array(
+    '#type' => 'select',
+    '#options' => $beneficiario_array,
+    '#title' => 'BENEFICIARIO COLFUTURO PROMOCIÓN:',
+    '#default_value' => '-Todos-',
+  );
+  $form['ano_publicacion'] = array(
+    '#type' => 'select',
+    '#options' => $fecha_de_publicacion_array,
+    '#title' => 'AÑO DE PUBLICACIÓN:',
+  );
+  
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'BUSCAR',//Buscar
+    '#ajax' => array(
+              'callback' => 'mostrar_resultados',
+                ),
+  );
+  
+  $form['reset'] = array(
+    '#type' => 'button',
+    '#value' => 'CANCELAR',
+    '#button_type' => 'reset',
+    
+    );
+
+$form['#suffix'] = '</div></div></div>';
+
+  return $form;
+}
+
+function mostrar_resultados($form, &$form_state){
+
+   $autor = $form_state['values']['autores'];
+   $tipo_de_estudio = $form_state['values']['tipo_estudio'];
+   $beneficiario = $form_state['values']['beneficiario_promocion'];
+   $ano_publicacion = $form_state['values']['ano_publicacion'];
+   $busqueda =  $form_state['values']['busqueda'];
+  
+    $output = parse_json_blaa($busqueda,$autor,$tipo_de_estudio,$beneficiario,$ano_publicacion);
+    $commands[] = ajax_command_html(".respuesta",$output);
+
+    return  array('#type' => 'ajax', '#commands' => $commands);
+
+
+}
+
+function parse_json_blaa($busqueda,$titulo,$tipo_de_estudio,$beneficiario,$ano_publicacion){
+
+
+  $request = drupal_http_request('http://www.banrepcultural.org/respuestacolfuturo/'.$titulo.'/'.$tipo_de_estudio.'/'.$beneficiario.'/'.$ano_publicacion);
+
+  $json = drupal_json_decode($request->data);
+  $form_busqueda = $busqueda;
+  $indice = 1;
+  
+  
+if(!empty($form_busqueda )){
+
+foreach($json['autores'] as $autor){     
+    
+      $buffer = $autor['autor']['titulo_nodo'];    
+        if(strstr($buffer, $form_busqueda)) {
+            
+            $html.="<div class='result'>
+            <h4>
+            <span>
+            ".$indice.". en <em>".$autores_array[$autor['autor']['tipo_de_estudio']] = $autor['autor']['tipo_de_estudio']."</em>
+            </span>
+            <br>
+            <a href='#' onclick='elemDetails(
+            ".$autores_array[$autor['autor']['nodo_link']] = $autor['autor']['nodo_link']." ); return false;'>"
+             .$autores_array[$autor['autor']['titulo_nodo']] = $autor['autor']['titulo_nodo']."
+            </a>
+            </h4>
+            
+            <b>
+              Autor:</b>
+            ".$indice.". <em>".$autores_array[$autor['autor']['titulo']] = $autor['autor']['titulo']."<br>
+             <b>
+              Tipo de Estudio:</b>
+            ".$autores_array[$autor['autor']['tipo_de_estudio']] = $autor['autor']['tipo_de_estudio']." <br>
+             <b>
+             Título Obtenido:</b>
+             ".$autores_array[$autor['autor']['titulo_obtenido']] = $autor['autor']['titulo_obtenido']."<br>
+             <b>
+             Beneficiario Colfuturo Promoción:</b>
+            ".$autores_array[$autor['autor']['beneficiario']] = $autor['autor']['beneficiario']." <br>
+             <b>
+              Año de publicación:</b>
+            ".$autores_array[$autor['autor']['fecha_de_publicacion']] = $autor['autor']['fecha_de_publicacion']."
+            </div>"; 
+            $html.='<div>'.$indice.' resultado(s) de la búsqueda.</div>'; 
+            $indice ++;
+
+
+
+           }/*else{
+            $html='<div>'.$indice.' resultado(s) de la búsqueda.</div>'; 
+            break;
+           }*/
+    }
+}
+
+
+    else{
+        foreach($json['autores'] as $autor){     
+
+            $html .="<div class='result'>
+            <h4>
+            <span>
+            ".$indice.". en <em>".$autores_array[$autor['autor']['tipo_de_estudio']] = $autor['autor']['tipo_de_estudio']."</em>
+            </span>
+            <br>
+            <a href='#' onclick='elemDetails(
+            ".$autores_array[$autor['autor']['nodo_link']] = $autor['autor']['nodo_link']." ); return false;'>"
+             .$autores_array[$autor['autor']['titulo_nodo']] = $autor['autor']['titulo_nodo']."
+            </a>
+            </h4>
+            
+            <b>
+              Autor:</b>
+            ".$indice.". <em>".$autores_array[$autor['autor']['titulo']] = $autor['autor']['titulo']."<br>
+             <b>
+              Tipo de Estudio:</b>
+            ".$autores_array[$autor['autor']['tipo_de_estudio']] = $autor['autor']['tipo_de_estudio']." <br>
+             <b>
+             Título Obtenido:</b>
+             ".$autores_array[$autor['autor']['titulo_obtenido']] = $autor['autor']['titulo_obtenido']."<br>
+             <b>
+             Beneficiario Colfuturo Promoción:</b>
+            ".$autores_array[$autor['autor']['beneficiario']] = $autor['autor']['beneficiario']." <br>
+             <b>
+              Año de publicación:</b>
+            ".$autores_array[$autor['autor']['fecha_de_publicacion']] = $autor['autor']['fecha_de_publicacion']."
+            </div>"; 
+            $html.='<div>'.$indice.' resultado(s) de la búsqueda.</div>'; 
+          $indice ++;
+
+          }
+      }
+  
+          
+  return $html;
+}
+
+function body_tesis(){
+  $output.= '<h2 class="titulo-general-rojo" style="text-align: center;">Publicaciones de la <strong>red de beneficiarios</strong> COLFUTURO</h2><div>&nbsp;</div><div>Bienvenido a la sección de Tesis y Artículos.En este lugar podrá encontrar los trabajos de grado, artículos e investigaciones realizadas por beneficiarios de COLFUTURO que han realizado sus maestrías y doctorados en las mejores universidades del mundo y cuyos trabajos han sido desarrollados durante o después de su periodo de estudios en el exterior.</div><div>&nbsp;</div><div>Gracias al convenio de COLFUTURO con la Biblioteca Luis Ángel Arango -Blaa- las publicaciones están disponibles en este portal, en la <a href="http://www.banrepcultural.org/blaavirtual/colfuturo">Biblioteca Virtual de la Blaa</a> &nbsp;y pueden ser recuperadas por palabras clave &nbsp;en motores de búsqueda como Google.</div><div>&nbsp;</div><div>A continuación encuentra unos filtros por los que podrá realizar su búsqueda.</div>' ;
+  $output.= '<div class="publicaciones-tesis-articulos">';
+  $output.= drupal_render(drupal_get_form('formulario_filtro_tesis_articulos_form'));
+  $output.="<div id='bSearchResults'>
+                   <div>
+                        <h3 class='subtitulo-seccion-rojo'>Listando todas las publicaciones</h3>
+                   </div>
+                  <div class='respuesta'>
+                  </div>
+            </div></div>";
+
+  return $output;
+}
+

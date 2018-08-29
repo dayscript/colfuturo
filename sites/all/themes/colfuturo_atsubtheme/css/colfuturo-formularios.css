@@ -1,0 +1,3772 @@
+#user-pass,
+#user-register-form,
+#user-login,
+#user-profile-form{
+    float:left;
+    width: 100%;
+}
+.password-strength{
+    float:none;
+}
+.page-user-register form#user-register-form label {
+    text-transform: initial;
+}
+
+#user-pass label,
+#user-register-form label,
+#user-login label,
+#user-profile-form label,
+.webform-client-form label{
+    color: #999999;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 13px;
+    font-size: 15px;
+    text-transform: initial;
+}
+
+#user-register-form .form-type-checkboxes #edit-field-interes-und .form-type-checkbox{
+    width: 50%;
+
+}
+#user-register-form .form-item.form-type-checkboxes.form-item-field-interes-und {
+    width: 100%;
+
+}
+#user-register-form .form-item.form-type-checkbox.form-item-field-autorizacion-und{
+    width: 100%;
+}
+#user-register-form .form-item.form-type-password-confirm.form-item-pass{
+    width: 100%;
+}
+.confirm-parent{
+    clear: inherit;
+    margin-top: 16px;
+}
+
+.form-item-field-terminos-und .description{
+    display: inline-block!important;
+    margin-left:0;}
+#edit-field-terminos-und{
+    display: none;
+}
+.form-item-field-terminos-und{
+width: 100%!important;
+}
+.form-item-field-terminos-und .description div{
+    overflow: auto;
+    height: 129px;
+}
+#edit-field-idiomas-de-inter-s-und .form-item-field-idiomas-de-inter-s-und-ingles{
+    width: 100%!important;
+}
+
+#user-pass .description,
+#user-register-form .description,
+#user-login .description,
+#user-profile-form .description,
+.webform-client-form .description{
+    display: none;
+}
+
+#user-pass .form-item,
+#user-register-form .form-item,
+#user-login .form-item,
+#user-profile-form .form-item,
+.webform-client-form .form-item{
+  width: 100%
+}
+
+#user-register-form .form-item{
+    min-height: 0px;
+}
+
+#user-login .form-item{
+    min-height: 85px;
+}
+
+#user-pass .form-item:hover,
+#user-register-form .form-item:hover,
+#user-login .form-item:hover,
+#user-profile-form .form-item:hover,
+.webform-client-form .form-item:hover{
+  background: none repeat scroll 0 0 #E9E9E9;
+}
+
+.page-node-44 #user-register-form .form-item:hover{
+    background: none;
+}
+
+#user-pass .form-item .description,
+#user-register-form .form-item .description,
+#user-login .form-item .description,
+.webform-client-form .description{
+  float: left;
+  margin-top: 5px;
+}
+
+#user-pass .form-item input[type='text'],
+#user-register-form .form-item input[type='text'],
+#user-register-form .form-item input[type='password'],
+#user-login .form-item input[type='text'],
+#user-login .form-item input[type='password'],
+#user-profile-form .form-item input[type='text'],
+#user-profile-form .form-item input[type='password'],
+.webform-client-form .form-item input[type='text'],
+.webform-client-form .form-item input[type='email']{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333;
+    float: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    padding: 0 8px;
+    width: 230px;
+}
+
+#user-pass .form-item input[type='text']:focus,
+#user-register-form .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-profile-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='email']:focus{
+  border-color: #F1771E;
+}
+
+#user-pass #edit-actions,
+#user-register-form #edit-actions,
+#user-login #edit-actions,
+#user-profile-form #edit-actions--2,
+.webform-client-form #edit-actions{
+  float: left;
+  margin-top: 40px;
+}
+
+#user-login #edit-actions{
+    margin-top: 0;
+}
+
+#user-pass #edit-actions input[type='submit'],
+#user-register-form #edit-actions input[type='submit'],
+#user-login #edit-actions input[type='submit'],
+#user-pass-reset #edit-actions input[type='submit'],
+#user-profile-form #edit-actions--2 input[type='submit'],
+.webform-client-form #edit-actions input[type='submit']{
+  background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #EF772E;
+  border: 1px solid #EB8232;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 2px 0 1px #B46628;
+  color: #FFFFFF;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
+  height: 35px;
+  line-height: 36px;
+  padding: 0 35px 0 10px;
+  text-transform: uppercase;
+}
+
+#user-pass #edit-actions input[type='submit']:hover,
+#user-register-form #edit-actions input[type='submit']:hover,
+#user-login #edit-actions input[type='submit']:hover,
+#user-pass-reset #edit-actions input[type='submit']:hover,
+#user-profile-form #edit-actions--2 input[type='submit']:hover,
+.webform-client-form #edit-actions input[type='submit']:hover{
+    background: url("../images/flecha_btn_principal.png") no-repeat scroll right -35px #D30000;
+    border: 1px solid #DB3E3E;
+    box-shadow: 0 2px 0 1px #7D0000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#user-register-form #edit-field-interes{
+    width: 100%;
+    float:left;
+}
+
+
+#user-register-form #edit-actions{
+    float:left;
+    width: 500px;
+}
+
+#user-register-form #edit-field-autorizacion .description{
+    display: block;
+}
+
+
+#block-system-mainñ{
+  display: inline-block;
+  margin-bottom: 0
+}
+#block-block-48{
+  display: inline-block;
+
+}
+#block-block-48 p{
+  text-align: left;
+  right: 190px;
+  top: 65px;
+  position: initial;
+}
+
+
+#block-block-48 p a{
+    color: #F1771E;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#block-block-48 p a:hover{
+    color: #000000;
+}
+
+.cnt_btn_guardar_cancelar,
+.webform-client-form #edit-actions{
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #D6D6D6;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    margin: 20px 0 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.cnt_btn_guardar_cancelar{
+    padding: 13px 0;
+}
+
+.cnt_btn_guardar_cancelar .content_inner a.boton-principal{
+    margin: 0;
+    margin-right: 15px;
+}
+
+.cnt_btn_guardar_cancelar .content_inner  .cnt_01b{
+    font-size: 12px;
+    color: #4D4D4D;
+}
+
+.container-messages{
+    margin: 30px auto;
+    max-width: 960px;
+    height: auto;
+}
+#user-login .form-item-pass{
+    /*margin-left: 50px;*/
+}
+#user-login .form-item-name{
+    /*margin-left: 20px;*/
+}
+
+#user-pass .form-item,
+#user-register-form .form-item,
+#user-login .form-item,
+#user-profile-form .form-item,
+.webform-client-form .form-item{
+  width: 45%;
+  float:left;
+}
+
+.scolciencias-form-login #user-pass .form-item{
+  width: 90%;
+  margin: 15px auto 20px auto;
+  float: none;
+}
+.scolciencias-form-login #user-pass .form-item #edit-name--2{
+    width: 100%;
+}
+.scolciencias-form-login #user-pass label{
+    display: none;
+}
+
+.section-taller-de-hoja-de-vida #user-pass .form-item,
+.section-taller-de-hoja-de-vida #user-register-form .form-item,
+.section-taller-de-hoja-de-vida #user-login .form-item,
+.section-taller-de-hoja-de-vida #user-profile-form .form-item,
+.section-taller-de-hoja-de-vida .webform-client-form .form-item,
+.section-ofertas-laborales #user-pass .form-item,
+.section-ofertas-laborales #user-register-form .form-item,
+.section-ofertas-laborales #user-login .form-item,
+.section-ofertas-laborales #user-profile-form .form-item,
+.section-ofertas-laborales .webform-client-form .form-item{
+  float:none;
+}
+
+.section-ofertas-laborales #user-pass .form-item,
+.section-ofertas-laborales #user-register-form .form-item,
+.section-ofertas-laborales #user-login .form-item,
+.section-ofertas-laborales #user-profile-form .form-item,
+.section-ofertas-laborales .webform-client-form .form-item{
+    width: 95%;
+    float:left;
+}
+#user-login #edit-actions {
+    margin-left: 26px;
+}
+/**/
+
+.page-user-edit #user-login .form-item-pass{
+    /*margin-left: 50px;*/
+}
+.page-user-edit #user-login .form-item-name{
+    /*margin-left: 20px;*/
+}
+
+.page-user-edit #user-pass .form-item,
+.page-user-edit #user-register-form .form-item,
+.page-user-edit #user-login .form-item,
+.page-user-edit #user-profile-form .form-item,
+.page-user-edit .webform-client-form .form-item{
+  width: 90%;
+}
+
+.page-user-edit #user-login #edit-actions {
+    margin-left: 26px;
+}
+
+/**/
+#user-login #edit-submit{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right 0 #B3B3B3 !important;
+    border: 1px solid #BFBFBF  !important;
+    box-shadow: 0 2px 0 1px #999999 !important;
+    margin-left: 260px;
+}
+#user-login #edit-submit:hover{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right -30px #333333 !important;
+    border: 1px solid #666666 !important;
+    box-shadow: 0 2px 0 1px #000000 !important;
+}
+
+/* Pagina de registro */
+#user-register-form{
+
+}
+#user-register-form div .form-item-field-idiomas-de-inter-s-und{
+        float: right;
+    margin-right: 36px;
+}
+
+#user-register-form .form-type-password-confirm .description{
+    display: block;
+}
+#user-register-form .form-type-password-confirm .password-suggestions{
+    display: none !important;
+}
+
+#user-register-form  #edit-field-area-de-interes-und,
+#user-profile-form #edit-field-area-de-interes-und{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 0 0 5px;
+    color: #333333;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    width: 250px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#user-register-form .form-item-pass-pass1,
+#user-register-form .form-item-pass-pass2{
+    padding: 0;
+}
+
+#user-register-form .info_header_description p{
+    color: #000000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+#user-register-form .form-item-field-area-de-interes-und{
+    margin-left: 10px;
+}
+
+#user-register-form #edit-field-genero-und .form-item{
+    min-height: 0;
+}
+#user-register-form #edit-field-genero-und {
+    display: inline-block;
+}
+
+#user-register-form #edit-field-genero-und div{
+width: 100%;
+display: block;
+}
+
+
+/* ACTUALIZAR DATOS */
+#user-profile-form #edit-ldap-user-prov-entries,
+#user-profile-form #edit-timezone,
+#user-profile-form #edit-locale{
+    display: none;
+}
+
+div.form-item div.password-suggestions {
+    border: none;
+}
+
+#user-profile-form .form-item-field-area-de-interes-und{
+    margin-left: 50px;
+}
+
+/*****************************
+FORMULARIO DE CONTACTO
+*****************************/
+.webform-client-form select{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 0 0 5px;
+    color: #333333;
+    float: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    height: 27px;
+    margin-top: 5px;
+    padding: 0 0 0 8px;
+    width: 250px;
+}
+
+.webform-client-form #webform-component-categoria{
+    margin-left: 50px;
+}
+
+.webform-client-form .form-item input[type='text'],
+.webform-client-form .form-item input[type='email']
+{
+    width: 540px;
+}
+.webform-client-form textarea{
+    width: 560px;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.webform-client-form #edit-actions{
+    padding: 13px 0;
+}
+
+
+#user-register-form .form-type-password-confirm .description{
+   display:none;
+}
+
+/* FORMULARIOS PREGUNTAS BENEFICIARIOS */
+.page-node-350 .webform-client-form .form-item{
+}
+.page-node-350 .webform-client-form label{
+    color:#666666;
+}
+.page-node-350 .webform-client-form .webform-component-textfield{
+    width: 420px;
+    margin-right: 45px;
+}
+.page-node-350 .webform-client-form .webform-component-textfield input{
+    width: 95% !important;
+}
+.page-node-350 .webform-client-form .webform-component-textfield input.error{
+    border: 1px solid #CC0000;
+}
+.page-node-350 .webform-client-form #webform-component-persona-influye,
+.page-node-350 .webform-client-form #webform-component-se-destaco-siempre,
+.page-node-350 .webform-client-form .webform-component-textarea{
+    width: 950px;
+}
+
+.page-node-350 .webform-client-form .webform-component-textarea textarea{
+    width: 97%;
+}
+
+
+/* FORMULARIO de Solicitud de Programa de Idiomas */
+.webform-component-markup:hover{
+    background-color: transparent;
+}
+.webform-component-markup .terminos{
+    height: 120px;
+    overflow-y: auto;
+    width: 100%;
+    font-size: 12px;
+}
+
+
+#webform-client-form-424 .webform-layout-box{
+    width: 470px;
+    float:left;
+}
+#webform-client-form-424 .webform-layout-box .form-item input[type="text"],
+#webform-client-form-424 .webform-layout-box .form-item input[type="email"],
+#webform-client-form-424 .webform-layout-box .form-item input[type="password"]{
+    width: 90%;
+}
+
+#webform-client-form-424 .form-item,
+#webform-client-form-426 .form-item{
+    float:left;
+    margin: 0;
+    padding: 10px;
+    width: 90%;
+}
+
+#webform-client-form-424 #edit-actions > input{
+    margin: 0 10px;
+}
+
+#webform-component-col-der--estado-civil-grupo--estado-civil-otro,
+#webform-component-col-izq--como-se-entero-grupo--como-se-entero-otro{
+    margin-top: -20px;
+}
+#webform-component-col-der--estado-civil-grupo--estado-civil-otro label,
+#webform-component-col-izq--como-se-entero-grupo--como-se-entero-otro label{
+    display: none;
+}
+#webform-component-autorizacion .description{
+    display: block;
+}
+#webform-component-igual-que-direccion-de-residencia > label,
+#webform-component-autorizacion > label{
+    display: none;
+}
+#webform-client-form-424 .webform-datepicker .form-item{
+    width: 100px;
+}
+#webform-client-form-424 .webform-datepicker .form-item select{
+    width: 100px;
+}
+#webform-client-form-424 .webform-component-radios .form-item,
+#webform-client-form-426 .webform-component-radios .form-item{
+    min-height: 5px;
+    padding-bottom: 0;
+}
+#webform-client-form-424 fieldset{
+    border:0px solid #CCCCCC;
+    width: 465px;
+    float:left;
+}
+#webform-client-form-424 fieldset .form-item{
+    width: 455px;
+}
+#webform-client-form-424 legend{
+    display: none;
+}
+#webform-component-igual-que-direccion-de-residencia,
+#webform-component-igual-que-direccion-de-residencia .form-item{
+    min-height: 40px;
+}
+
+#webform-client-form-460 .webform-component-textfield,
+#webform-client-form-460 .webform-component-radios,
+#webform-client-form-460 .webform-component-email{
+    width: 100%;
+}
+
+#webform-client-form-460 .webform-component-radios,
+#webform-client-form-460 .webform-component-radios .form-item,
+#webform-client-form-460 .webform-component-checkboxes,
+#webform-client-form-460 .webform-component-checkboxes .form-item{
+    min-height: 0;
+}
+
+#webform-client-form-460 #webform-component-por-que{
+    margin-top: -30px;
+}
+
+#webform-client-form-460 #edit-submitted-no-estamos-interesados label{
+    display: none;
+}
+
+
+/* FORMULARIO AUSTRALIA */
+.page-node-514{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/australia-header.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.page-node-514 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-514 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-514 .eventos_fixed{
+    display: none;
+}
+
+.page-node-514 .form-item{
+    width: 230px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-514 #webform-component-cedula,
+.page-node-514 #webform-component-nivel-de-ingles,
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano,
+.page-node-514 #webform-component-otra-institucion{
+    margin-right: 0px;
+}
+.page-node-514 #webform-component-nivel-de-ingles,
+.page-node-514 #webform-component-email{
+    min-height: 100px;
+}
+
+.page-node-514 .form-item .form-text,
+.page-node-514 .form-item select{
+    width: 90% !important;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento{
+
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .form-item{
+    width: 65px;
+    margin-right: 1px;
+    height: 30px;
+    min-height: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding:0;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .form-item select{
+    width: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-node-514 #webform-component-otra-institucion{
+    width: 520px;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir,
+.page-node-514 #webform-component-terminos{
+    width: 800px;
+}
+
+.page-node-514 #webform-component-terminos .form-item,
+.page-node-514 #webform-component-texto-de-terminos{
+    width: 800px;
+}
+
+.page-node-514 #webform-component-terminos > label{
+    display: none;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+    width: 97%;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.page-node-514 #webform-component-terminos .form-item label{
+    text-transform: none;
+    color: #000;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir > label{
+    margin-bottom: 10px;
+}
+
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano label,
+.page-node-514 #page-title{
+    display: none;
+}
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano select{
+    margin-top: 35px;
+}
+.page-node-514 #webform-component-terminos .form-item{
+    padding: 0;
+}
+
+.page-node-514 .field-name-body h3{
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-514 .form-item input.error,
+.page-node-514 .form-item textarea.error,
+.page-node-514 .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.page-node-514 #messages p{
+    color:#007700;
+    font-size: 13px;
+    line-height: 135%;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.page-node-514 #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-514 #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-514 #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .webform-calendar{
+    margin-top: 20px;
+}
+
+.section-contacto-programa-de-ingles .form-item {
+    padding: 0 10px;
+    min-height: 0;
+}
+
+/*
+Formulario Taller de entrevista
+*/
+#node-695 .webform-client-form input[type="text"],
+#node-695 .webform-client-form input[type="email"]{
+    width: 90%;
+}
+.webform-client-form .form-item input[type='number'] {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid #B3B3B3;
+border-radius: 5px 5px 5px 5px;
+color: #333333;
+float: left;
+font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+font-size: 15px;
+font-weight: normal;
+height: 25px;
+line-height: 25px;
+margin-top: 5px;
+padding: 0 8px;
+width: 230px;
+}
+
+
+
+/*REGISTRO DE USUARIO COLFUTURO */
+    .group-interes-colfuturo .field-widget-options-buttons{
+        width: 100%;
+    }
+
+    .group-interes-colfuturo .fieldset-wrapper{
+        width: 100%!important;
+        display: inline-block;
+    }
+
+    .group-interes-colfuturo .form-type-checkboxes > label{display: none;}
+
+    .group-interes-colfuturo .form-type-checkboxes #edit-field-interes-und{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .form-item-field-area-de-interes-und #edit-field-area-de-interes-und .form-item-field-area-de-interes-und{
+         width: 100%;
+
+    }
+    .group-interes-colfuturo .form-item:hover{
+        background-color: #fff!important;
+    }
+    .group-interes-colfuturo{
+        width: 97%
+    }
+
+    #edit-field-area-de-interes-und div:hover{
+        background: none repeat scroll 0 0 #E9E9E9;
+    }
+
+    .group-interes-colfuturo .form-item-field-idiomas-de-inter-s-und{
+        float: right!important;
+    }
+    .group-interes-colfuturo #edit-field-area-de-interes-und .form-type-checkbox{
+        width: 100%;
+    }
+    .group-interes-colfuturo .form-item-field-area-de-interes-und{
+        width: 45%!important;
+    }
+    .group-interes-colfuturo .fieldset-wrapper .form-item.form-type-radios.form-item-field-idiomas-de-inter-s-und{
+
+        text-align: left;
+        position: relative;
+        float: left;
+    }
+    .form-type-checkboxes .form-checkboxes .form-item-field-idiomas-de-inter-s-und-Ingles{
+        width: 100%!important;
+    }
+
+    .group-interes-colfuturo .fieldset-wrapper .form-item.form-type-radios.form-item-field-idiomas-de-inter-s-und div#edit-field-idiomas-de-inter-s-und{
+        display: inline-block;
+    }
+    .group-interes-colfuturo .fieldset-wrapper .form-item.form-type-radios.form-item-field-idiomas-de-inter-s-und div#edit-field-idiomas-de-inter-s-und div{
+     float: left!important;
+     width: 100%;
+    }
+
+    .group-interes-colfuturo .fieldset-wrapper .form-radios div.form-item:first-child {
+        display: none;
+    }
+    .group-interes-colfuturo .fieldset-wrapper .form-item.form-type-radios.form-item-field-idiomas-de-inter-s-und div#edit-field-idiomas-de-inter-s-und div.form-item:first-child{
+        display: none!important;
+    }
+
+
+    #edit-field-rea-de-inter-s-und div {
+        width: 100%!important;
+    }
+
+/*REGISTRO DE USUARIO COLFUTURO */
+
+
+/* REGISTRO DE USUARIO SECCION AREAS DE INTERES*/
+    .form-item-field--rea-de-inter-und {
+        width: 100%;
+    }
+    #edit-field-rea-de-inter-und{
+        display: inline-block;
+    }
+    .form-item-field--rea-de-inter-und #edit-field-rea-de-inter-und .form-type-checkbox {
+        width: 100%!important;
+    }
+/* REGISTRO DE USUARIO SECCION AREAS DE INTERES*/
+/*AUSTRALIA EN TUS MANOS*/
+.page-node-514 #content #block-system-main input,.page-node-514 #content #block-system-main select{
+    border-radius: 50px;
+}
+.page-node-514 #content #block-system-main .form-item{
+    width:29%;
+    margin-right: 0;
+}
+
+.page-node-514 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir{
+    width: 100%;
+    float: none;
+    display: inline-block;
+}
+.page-node-514 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir #edit-submitted-a-cual-charla-le-gustaria-asistir div {
+    width: 100%;
+}
+#webform-component-nivel-de-ingles{
+    min-height: auto;
+}
+
+.page-node-514 #content #block-system-main .webform-client-form .webform-component-markup#webform-component-texto-de-terminos{
+    width: 100%;
+}
+.page-node-514 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos{
+ width:100%;
+}
+.page-node-514 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos .form-item-submitted-terminos-Si{
+  width: 100%;
+}
+/*AUSTRALIA EN TUS MANOS*/
+.webform-datepicker div,.webform-datepicker input{
+    margin: 0!important;
+}
+.webform-datepicker input{
+    height: 20px;
+    margin: 4px 0!important
+}
+#node-514 .field-name-body h3 span {
+    font-size: 29px!important;
+    color: rgba(158, 32, 32, 0.76)!important;
+}
+#webform-component-a-cual-charla-le-gustaria-asistir label{
+    text-transform: inherit;
+}
+
+.form-item-submitted-a-cual-charla-le-gustaria-asistir-Cómo-financiar-un-posgrado-en-el-exterior- label{
+        padding-left: 7px;
+}
+.form-item-submitted-a-cual-charla-le-gustaria-asistir-Panel-sistemas-educativos- label{
+        padding-left: 7px;
+}
+
+.form-item-submitted-a-cual-charla-le-gustaria-asistir-Panel-con-beneficiarios-Colfuturo- label{
+        padding-left: 7px;
+}
+
+#webform-component-cupo-limitado{
+    width: 100%!important;
+    height: 25px;
+    color: red;
+    margin: 0;
+    padding: 0px 0px 0 14px;
+}
+#webform-component-cupo-limitado label{
+    color: rgba(158, 32, 32, 0.76)!important;
+    text-transform: inherit;
+    font-size: 19px;
+}
+#webform-component-cupo-limitado #edit-submitted-cupo-limitado{
+    display: none;
+}
+/*====================================================*/
+/* FORMULARIO FERIA DE AUSTRALIA */
+/*====================================================*/
+.section-feria-de-australia{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/header_australia_2015.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.section-feria-de-australia #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.section-feria-de-australia #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.section-feria-de-australia .eventos_fixed{
+    display: none;
+}
+
+.section-feria-de-australia .form-item{
+    width: 230px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.section-feria-de-australia #edit-submitted-a-cual-charla-le-gustaria-asistir .form-item-submitted-a-cual-charla-le-gustaria-asistir-Queensland-University-of-Technology{
+       margin-top: 20px;
+}
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir > label:after{
+    content: ' (Cupo limitado) *';
+    color: red;
+}
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir > label > span {
+    display: none;
+    }
+.section-feria-de-australia #webform-component-cupo-limitado{
+    display: none;
+}
+.section-feria-de-australia #webform-component-cedula,
+.section-feria-de-australia #webform-component-nivel-de-ingles,
+.section-feria-de-australia #webform-component-inicio-de-estudio-en-australia-ano,
+.section-feria-de-australia #webform-component-otra-institucion{
+    margin-right: 0px;
+}
+.section-feria-de-australia #webform-component-nivel-de-ingles,
+.section-feria-de-australia #webform-component-email{
+    min-height: 100px;
+}
+
+.section-feria-de-australia .form-item .form-text,
+.section-feria-de-australia .form-item select{
+    width: 90% !important;
+}
+
+.section-feria-de-australia #webform-component-fecha-de-nacimiento{
+
+}
+
+.section-feria-de-australia #webform-component-fecha-de-nacimiento .form-item{
+    width: 65px;
+    margin-right: 1px;
+    height: 30px;
+    min-height: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding:0;
+}
+
+.section-feria-de-australia #webform-component-fecha-de-nacimiento .form-item select{
+    width: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-feria-de-australia #webform-component-otra-institucion{
+    width: 520px;
+}
+
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir,
+.section-feria-de-australia #webform-component-terminos{
+    width: 800px;
+}
+
+.section-feria-de-australia #webform-component-terminos .form-item,
+.section-feria-de-australia #webform-component-texto-de-terminos{
+    width: 800px;
+}
+
+.section-feria-de-australia #webform-component-terminos > label{
+    display: none;
+}
+
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+    width: 97%;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.section-feria-de-australia #webform-component-terminos .form-item label{
+    text-transform: none;
+    color: #000;
+}
+
+.section-feria-de-australia #webform-component-a-cual-charla-le-gustaria-asistir > label{
+    margin-bottom: 10px;
+}
+
+.section-feria-de-australia #webform-component-inicio-de-estudio-en-australia-ano label,
+.section-feria-de-australia #page-title{
+    display: none;
+}
+.section-feria-de-australia #webform-component-inicio-de-estudio-en-australia-ano select{
+    margin-top: 35px;
+}
+.section-feria-de-australia #webform-component-terminos .form-item{
+    padding: 0;
+}
+
+.section-feria-de-australia .field-name-body h3{
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.section-feria-de-australia .field-name-body h3 span {
+    font-size: 29px!important;
+    color: rgba(158, 32, 32, 0.76)!important;
+}
+
+.section-feria-de-australia .form-item input.error,
+.section-feria-de-australia .form-item textarea.error,
+.section-feria-de-australia .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.section-feria-de-australia #messages p{
+    color:#007700;
+    font-size: 13px;
+    line-height: 135%;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.section-feria-de-australia #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+    text-transform: inherit;
+}
+
+.section-feria-de-australia #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.section-feria-de-australia #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.section-feria-de-australia #webform-component-fecha-de-nacimiento .webform-calendar{
+    margin-top: 20px;
+}
+
+.section-feria-de-australia #content #block-system-main input,.page-node-514 #content #block-system-main select{
+    border-radius: 50px;
+}
+
+.section-feria-de-australia #footer-wrapper{
+    display: block!important;
+}
+.section-feria-de-australia #footer-wrapper .region-inner{
+    padding: 8px;
+}
+/* =============================================================================
+ *   Networking redes y empleo
+ * ========================================================================== */
+ .section-networking-redes-y-empleo{
+  border:1px solid #FBB900;
+  background-color: #C4C4C4;
+  background-image: url('../images/form-events/formulario_networking_1.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.section-networking-redes-y-empleo #page{
+  border:1px solid #FFFFFF;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  margin-top: 300px;
+}
+.section-networking-redes-y-empleo #page-title{
+  display: none;
+}
+
+.section-networking-redes-y-empleo .field-name-body h3{
+  color: #CC1718;
+  font-size: 24px;
+  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+#node-1714 .field-name-body h3 span {
+    font-size: 29px!important;
+    color: rgba(158, 32, 32, 0.76)!important;
+}
+
+.section-networking-redes-y-empleo #content #block-system-main .form-item{
+    width:29%;
+    margin-right: 0;
+}
+
+.section-networking-redes-y-empleo #page #content{
+  width: 840px;
+  margin: 0 auto;
+}
+
+.section-networking-redes-y-empleo .form-item{
+  width: 230px;
+  margin-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.section-networking-redes-y-empleo .form-item .form-text, .section-networking-redes-y-empleo .form-item select {
+    width: 90% !important;
+}
+
+.section-networking-redes-y-empleo #content #block-system-main .webform-client-form .webform-component-markup#webform-component-texto-de-terminos{
+    width: 100%;
+}
+
+.section-networking-redes-y-empleo #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos{
+ width:100%;
+}
+.section-networking-redes-y-empleo #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos .form-item-submitted-terminos-Si{
+  width: 100%;
+}
+
+.section-networking-redes-y-empleo #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.section-networking-redes-y-empleo #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.section-networking-redes-y-empleo #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.section-networking-redes-y-empleo #content #block-system-main input,.page-node-514 #content #block-system-main select{
+    border-radius: 50px;
+}
+
+.section-networking-redes-y-empleo #webform-component-durante-la-feria-se-realizaran-las-siguientes-charlas-informativas-a-cuales-le-gustaria-asistir{
+
+    width: 100%!important;
+}
+
+.section-networking-redes-y-empleo #webform-component-durante-la-feria-se-realizaran-las-siguientes-charlas-informativas-a-cuales-le-gustaria-asistir #edit-submitted-durante-la-feria-se-realizaran-las-siguientes-charlas-informativas-a-cuales-le-gustaria-asistir{
+    width: 100%!important;
+}
+.section-networking-redes-y-empleo #webform-component-durante-la-feria-se-realizaran-las-siguientes-charlas-informativas-a-cuales-le-gustaria-asistir div div{
+float: left;
+width: 40%!important;
+}
+
+
+
+
+
+
+/*Soy Colfuturo Cali 2016*/
+.page-node-1871{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/1871.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.page-node-1871 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-1871 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-1871 .eventos_fixed{
+    display: none;
+}
+
+.page-node-1871 .form-item{
+    width: 230px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-1871 #webform-component-cedula,
+.page-node-1871 #webform-component-nivel-de-ingles,
+.page-node-1871 #webform-component-inicio-de-estudio-en-australia-ano,
+.page-node-1871 #webform-component-otra-institucion{
+    margin-right: 0px;
+}
+.page-node-1871 #webform-component-nivel-de-ingles,
+.page-node-1871 #webform-component-email{
+    min-height: 100px;
+}
+
+.page-node-1871 .form-item .form-text,
+.page-node-1871 .form-item select{
+    width: 90% !important;
+}
+
+.page-node-1871 #webform-component-fecha-de-nacimiento{
+
+}
+
+.page-node-1871 #webform-component-fecha-de-nacimiento .form-item{
+    width: 65px;
+    margin-right: 1px;
+    height: 30px;
+    min-height: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding:0;
+}
+
+.page-node-1871 #webform-component-fecha-de-nacimiento .form-item select{
+    width: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-node-1871 #webform-component-otra-institucion{
+    width: 520px;
+}
+
+.page-node-1871 #webform-component-a-cual-charla-le-gustaria-asistir,
+.page-node-1871 #webform-component-terminos{
+    width: 800px;
+}
+
+.page-node-1871 #webform-component-terminos .form-item,
+.page-node-1871 #webform-component-texto-de-terminos{
+    width: 800px;
+}
+
+.page-node-1871 #webform-component-terminos > label{
+    display: none;
+}
+
+.page-node-1871 #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+    width: 97%;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-node-1871 #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.page-node-1871 #webform-component-terminos .form-item label{
+    text-transform: none;
+    color: #000;
+}
+
+.page-node-1871 #webform-component-a-cual-charla-le-gustaria-asistir > label{
+    margin-bottom: 10px;
+}
+
+.page-node-1871 #webform-component-inicio-de-estudio-en-australia-ano label,
+.page-node-1871 #page-title{
+    display: none;
+}
+.page-node-1871 #webform-component-inicio-de-estudio-en-australia-ano select{
+    margin-top: 35px;
+}
+.page-node-1871 #webform-component-terminos .form-item{
+    padding: 0;
+}
+
+.page-node-1871 .field-name-body h3{
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-1871 .form-item input.error,
+.page-node-1871 .form-item textarea.error,
+.page-node-1871 .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.page-node-1871 #messages p{
+    color:#007700;
+    font-size: 13px;
+    line-height: 135%;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.page-node-1871 #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1871 #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1871 #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.page-node-1871 #webform-component-fecha-de-nacimiento .webform-calendar{
+    margin-top: 20px;
+}
+
+.section-contacto-programa-de-ingles .form-item {
+    padding: 0 10px;
+    min-height: 0;
+}
+
+/*Soy Colfuturo Cali 2016*/
+.page-node-1871 #content #block-system-main input,.page-node-1871 #content #block-system-main select{
+    border-radius: 50px;
+}
+.page-node-1871 #content #block-system-main .form-item{
+    width:29%;
+    margin-right: 0;
+}
+
+.page-node-1871 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir{
+    width: 100%;
+    float: none;
+    display: inline-block;
+}
+.page-node-1871 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir #edit-submitted-a-cual-charla-le-gustaria-asistir div {
+    width: 100%;
+}
+#webform-component-nivel-de-ingles{
+    min-height: auto;
+}
+
+.page-node-1871 #content #block-system-main .webform-client-form .webform-component-markup#webform-component-texto-de-terminos{
+    width: 100%;
+}
+.page-node-1871 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos{
+ width:100%;
+}
+.page-node-1871 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos .form-item-submitted-terminos-Si{
+  width: 100%;
+}
+
+
+
+
+
+
+/*Soy Colfuturo Barranquilla 2016*/
+.page-node-1875{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/1875.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.page-node-1875 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-1875 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-1875 .eventos_fixed{
+    display: none;
+}
+
+.page-node-1875 .form-item{
+    width: 230px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-1875 #webform-component-cedula,
+.page-node-1875 #webform-component-nivel-de-ingles,
+.page-node-1875 #webform-component-inicio-de-estudio-en-australia-ano,
+.page-node-1875 #webform-component-otra-institucion{
+    margin-right: 0px;
+}
+.page-node-1875 #webform-component-nivel-de-ingles,
+.page-node-1875 #webform-component-email{
+    min-height: 100px;
+}
+
+.page-node-1875 .form-item .form-text,
+.page-node-1875 .form-item select{
+    width: 90% !important;
+}
+
+.page-node-1875 #webform-component-fecha-de-nacimiento{
+
+}
+
+.page-node-1875 #webform-component-fecha-de-nacimiento .form-item{
+    width: 65px;
+    margin-right: 1px;
+    height: 30px;
+    min-height: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding:0;
+}
+
+.page-node-1875 #webform-component-fecha-de-nacimiento .form-item select{
+    width: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-node-1875 #webform-component-otra-institucion{
+    width: 520px;
+}
+
+.page-node-1875 #webform-component-a-cual-charla-le-gustaria-asistir,
+.page-node-1875 #webform-component-terminos{
+    width: 800px;
+}
+
+.page-node-1875 #webform-component-terminos .form-item,
+.page-node-1875 #webform-component-texto-de-terminos{
+    width: 800px;
+}
+
+.page-node-1875 #webform-component-terminos > label{
+    display: none;
+}
+
+.page-node-1875 #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+    width: 97%;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-node-1875 #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.page-node-1875 #webform-component-terminos .form-item label{
+    text-transform: none;
+    color: #000;
+}
+
+.page-node-1875 #webform-component-a-cual-charla-le-gustaria-asistir > label{
+    margin-bottom: 10px;
+}
+
+.page-node-1875 #webform-component-inicio-de-estudio-en-australia-ano label,
+.page-node-1875 #page-title{
+    display: none;
+}
+.page-node-1875 #webform-component-inicio-de-estudio-en-australia-ano select{
+    margin-top: 35px;
+}
+.page-node-1875 #webform-component-terminos .form-item{
+    padding: 0;
+}
+
+.page-node-1875 .field-name-body h3{
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-1875 .form-item input.error,
+.page-node-1875 .form-item textarea.error,
+.page-node-1875 .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.page-node-1875 #messages p{
+    color:#007700;
+    font-size: 13px;
+    line-height: 135%;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.page-node-1875 #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1875 #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1875 #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.page-node-1875 #webform-component-fecha-de-nacimiento .webform-calendar{
+    margin-top: 20px;
+}
+
+.section-contacto-programa-de-ingles .form-item {
+    padding: 0 10px;
+    min-height: 0;
+}
+
+/*Soy Colfuturo Barranquilla 2016*/
+.page-node-1875 #content #block-system-main input,.page-node-1875 #content #block-system-main select{
+    border-radius: 50px;
+}
+.page-node-1875 #content #block-system-main .form-item{
+    width:29%;
+    margin-right: 0;
+}
+
+.page-node-1875 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir{
+    width: 100%;
+    float: none;
+    display: inline-block;
+}
+.page-node-1875 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir #edit-submitted-a-cual-charla-le-gustaria-asistir div {
+    width: 100%;
+}
+#webform-component-nivel-de-ingles{
+    min-height: auto;
+}
+
+.page-node-1875 #content #block-system-main .webform-client-form .webform-component-markup#webform-component-texto-de-terminos{
+    width: 100%;
+}
+.page-node-1875 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos{
+ width:100%;
+}
+.page-node-1875 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos .form-item-submitted-terminos-Si{
+  width: 100%;
+}
+
+
+
+/*Soy Colfuturo Bucaramanga 2016*/
+.page-node-1888{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/1888.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.page-node-1888 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-1888 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-1888 .eventos_fixed{
+    display: none;
+}
+
+.page-node-1888 .form-item{
+    width: 230px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-1888 #webform-component-cedula,
+.page-node-1888 #webform-component-nivel-de-ingles,
+.page-node-1888 #webform-component-inicio-de-estudio-en-australia-ano,
+.page-node-1888 #webform-component-otra-institucion{
+    margin-right: 0px;
+}
+.page-node-1888 #webform-component-nivel-de-ingles,
+.page-node-1888 #webform-component-email{
+    min-height: 100px;
+}
+
+.page-node-1888 .form-item .form-text,
+.page-node-1888 .form-item select{
+    width: 90% !important;
+}
+
+.page-node-1888 #webform-component-fecha-de-nacimiento{
+
+}
+
+.page-node-1888 #webform-component-fecha-de-nacimiento .form-item{
+    width: 65px;
+    margin-right: 1px;
+    height: 30px;
+    min-height: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding:0;
+}
+
+.page-node-1888 #webform-component-fecha-de-nacimiento .form-item select{
+    width: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-node-1888 #webform-component-otra-institucion{
+    width: 520px;
+}
+
+.page-node-1888 #webform-component-a-cual-charla-le-gustaria-asistir,
+.page-node-1888 #webform-component-terminos{
+    width: 800px;
+}
+
+.page-node-1888 #webform-component-terminos .form-item,
+.page-node-1888 #webform-component-texto-de-terminos{
+    width: 800px;
+}
+
+.page-node-1888 #webform-component-terminos > label{
+    display: none;
+}
+
+.page-node-1888 #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+    width: 97%;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-node-1888 #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.page-node-1888 #webform-component-terminos .form-item label{
+    text-transform: none;
+    color: #000;
+}
+
+.page-node-1888 #webform-component-a-cual-charla-le-gustaria-asistir > label{
+    margin-bottom: 10px;
+}
+
+.page-node-1888 #webform-component-inicio-de-estudio-en-australia-ano label,
+.page-node-1888 #page-title{
+    display: none;
+}
+.page-node-1888 #webform-component-inicio-de-estudio-en-australia-ano select{
+    margin-top: 35px;
+}
+.page-node-1888 #webform-component-terminos .form-item{
+    padding: 0;
+}
+
+.page-node-1888 .field-name-body h3{
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-1888 .form-item input.error,
+.page-node-1888 .form-item textarea.error,
+.page-node-1888 .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.page-node-1888 #messages p{
+    color:#007700;
+    font-size: 13px;
+    line-height: 135%;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.page-node-1888 #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1888 #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1888 #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+
+.page-node-1888 #webform-component-fecha-de-nacimiento .webform-calendar{
+    margin-top: 20px;
+}
+
+.section-contacto-programa-de-ingles .form-item {
+    padding: 0 10px;
+    min-height: 0;
+}
+
+/*Soy Colfuturo Bucaramanga 2016*/
+.page-node-1888 #content #block-system-main input,.page-node-1888 #content #block-system-main select{
+    border-radius: 50px;
+}
+.page-node-1888 #content #block-system-main .form-item{
+    width:29%;
+    margin-right: 0;
+}
+
+.page-node-1888 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir{
+    width: 100%;
+    float: none;
+    display: inline-block;
+}
+.page-node-1888 #content #block-system-main #webform-component-a-cual-charla-le-gustaria-asistir #edit-submitted-a-cual-charla-le-gustaria-asistir div {
+    width: 100%;
+}
+#webform-component-nivel-de-ingles{
+    min-height: auto;
+}
+
+.page-node-1888 #content #block-system-main .webform-client-form .webform-component-markup#webform-component-texto-de-terminos{
+    width: 100%;
+}
+.page-node-1888 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos{
+ width:100%;
+}
+.page-node-1888 #content #block-system-main .webform-client-form .webform-component-checkboxes#webform-component-terminos .form-item-submitted-terminos-Si{
+  width: 100%;
+}
+
+
+
+
+
+/*ADN del innovador*/
+
+.page-node-1993{
+    background-color: #c4c4c4;
+    background-image: url("../images/form-events/banner_adn_del_innovador.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    border: 1px solid #fbb900;
+}
+.page-node-1993 #page{
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    margin: 300px auto 0;
+    width: 960px;
+}
+.page-node-1993 #page-title{
+    display: none;
+}
+
+.page-node-1993 #page #content {
+    margin: 0 auto;
+    width: 840px;
+}
+.page-node-1993 .eventos_fixed{
+    display: none;
+}
+
+.page-node-1993 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-1993 .form-item{
+    width: 27%;
+    margin-right: 20px;
+    padding: 0 15px 20px;
+}
+
+.page-node-1993 #content #block-system-main .form-item > input{
+    width: 208px;
+    border-radius: 50px;
+}
+.page-node-1993 #content #block-system-main .form-item > select{
+    width: 227px;
+}
+
+.page-node-1993 #webform-component-texto-de-terminos{
+    width: 100%;
+}
+.page-node-1993 #webform-component-terminos{
+    width: 100%;
+}
+.page-node-1993 #webform-component-terminos .form-type-checkbox{
+    width: 100%;
+    padding: 0 15px 20px;
+}
+.page-node-1993 #content #block-system-main .form-item input#edit-submitted-terminos-1{
+    width: 0;
+}
+
+.page-node-1993 #edit-actions input[type='submit'] {
+    box-shadow: 0 2px 0 1px #7D0000;
+    border: 1px solid #DB3E3E;
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1993 #edit-actions input[type='submit']:hover{
+    background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+    border: 1px solid #00AEEF;
+    box-shadow:0 2px 0 1px #0072BC;
+    padding: 0 45px 0 10px;
+}
+
+.page-node-1993 #edit-actions{
+    background-color: #FFF;
+    border:none;
+}
+.page-node-1993 #content #block-system-main input,.page-node-514 #content #block-system-main select{
+    border-radius: 50px;
+}
+
+
+
+/* Envios SAtisfactorios */
+
+
+.enviook {
+
+    color: #CC1718;
+    font-size: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.form-item-field-interes-und-GBE{
+    display: none;
+}
+
+
+
+
+.page-node-2023 #webform-component-intro h5{
+    font-size: 19px!important;
+    font-weight: 400;
+    color:#FF0000;
+}
+
+.page-node-2023 label{
+    height: 70px;
+    font-size: 17px;
+}
+.page-node-2023 #webform-client-form-2023 #webform-component-intro{
+    width:100%;
+}
+.page-node-2023 #webform-client-form-2023 .webform-component-textarea,.page-node-2023 #webform-client-form-2023 .webform-component-managed_file,.page-node-2023 #webform-client-form-2023 .webform-component-number,
+.page-node-2023 #webform-client-form-2023 .webform-component-email,.page-node-2023 #webform-client-form-2023 .webform-component-textfield{
+    margin:20px;
+}
+.page-node-2023 #webform-client-form-2023 textarea{
+    width: 100%;
+}
+
+.page-node-2023 #webform-client-form-2023 input[type='text'],.page-node-2023 #webform-client-form-2023 input[type='email']{
+    width: 100%;
+}
+
+.page-node-2023 #webform-client-form-2023 .webform-component-textfield label,
+.page-node-2023 #webform-client-form-2023 .webform-component-number label,
+.page-node-2023 #webform-client-form-2023 .webform-component-email label{
+    height: 24px;
+}
+
+
+.page-node-2023 #edit-actions{
+    background: none ;
+    border: none;
+}
+
+
+.page-node-2023 div.imagen{
+    text-align: center;
+}
+.page-node-2023 div.imagen img{
+    width: 100%;
+    height: 300px;
+}
+
+article#node-2023{
+    font-size: 15px;
+}
+
+#webform-component-ver-link span{
+    color: #999999;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 13px;
+    font-size: 15px;
+    text-transform: initial;
+}
+#webform-component-ver-link{
+    height: 200px;
+}
+#webform-component-ver-link label{
+    margin-bottom: 25px;
+}
+
+#webform-component-ver-link img{
+    height: 110px;
+    text-align: center;
+    width: 200px;
+    margin-top: 25px;
+
+}
+#webform-component-ver-link a{
+    text-align: center;
+
+}
+/*Ocultar seccion ares de interes en cambiar contraseña*/
+
+.not-front.logged-in.page-user-edit #user-profile-form .group-interes-colfuturo{
+    display: none;
+}
+
+/*******************************************
+*formulario-concurso-tesis-y-articulos-2017*
+********************************************/
+
+.page-node-2067 .webform-client-form .form-item{
+    width: 48%;
+    margin: 8px;
+}
+.page-node-2067 div#webform-component-nombre{
+    width: 31%;
+    margin: 10px;
+}
+.page-node-2067 div#webform-component-cedula{
+    width: 31%;
+    margin: 10px;
+}
+.page-node-2067 div#webform-component-titulo{
+    width: 31%;
+    margin: 10px;
+}
+.page-node-2067 div#webform-component-tipo-de-documento{
+    clear: both;
+}
+.page-node-2067 #webform-client-form-2067 .form-item > input{
+    width: 96%;
+}
+.page-node-2067 .webform-client-form select{
+    width: 100%;
+}
+.page-node-2067 div#webform-component-ano-de-publicacion-del-documento{
+    height: 66px;
+}
+.page-node-2067 div#webform-component-ano-de-publicacion-del-documento .form-type-select{
+    width: 29%;
+    margin: 0px;
+}
+.page-node-2067 #webform-component-ano-de-publicacion-del-documento .form-type-select select.form-select{
+    width: 80px;
+}
+.page-node-2067 #webform-component-reconocimientos-si-los-obtuvo{
+    width: 98%;
+}
+.page-node-2067 #webform-component-publicado-en-contestar-si-aplica{
+    width: 98%;
+}
+.page-node-2067 .grippie{
+    display: none;
+}
+.page-node-2067 .webform-client-form textarea{
+    width: 100%;
+}
+.page-node-2067 .messages.error{
+    display: block;
+}
+#webform-client-form-2067 .form-item input.error{
+    border: 1px solid #c00;
+}
+@media only screen and (max-width: 500px){
+    .page-node-2067 #webform-client-form-2067 .form-item{
+        width: 92%;
+    }
+}
+/**********************************************
+*formulario-concurso-englishlike-delaware-2017*
+***********************************************/
+.page-node-2069 #webform-component-intro h5{
+    font-size: 19px!important;
+    font-weight: 400;
+    color:#FF0000;
+}
+.page-node-2069 label{
+    height: 70px;
+    font-size: 17px;
+}
+.page-node-2069 #webform-client-form-2069 #webform-component-intro{
+    width:100%;
+}
+.page-node-2069 #webform-client-form-2069 .webform-component-textarea,.page-node-2069 #webform-client-form-2069 .webform-component-managed_file,.page-node-2069 #webform-client-form-2069 .webform-component-number,
+.page-node-2069 #webform-client-form-2069 .webform-component-email,.page-node-2069 #webform-client-form-2069 .webform-component-textfield{
+    margin:20px;
+}
+.page-node-2069 #webform-client-form-2069 textarea{
+    width: 100%;
+}
+
+.page-node-2069 #webform-client-form-2069 input[type='text'],.page-node-2069 #webform-client-form-2069 input[type='email']{
+    width: 100%;
+}
+.page-node-2069 #webform-client-form-2069 .webform-component-textfield label,
+.page-node-2069 #webform-client-form-2069 .webform-component-number label,
+.page-node-2069 #webform-client-form-2069 .webform-component-email label{
+    height: 24px;
+}
+.page-node-2069 #edit-actions{
+    background: none ;
+    border: none;
+}
+.page-node-2069 div.imagen{
+    text-align: center;
+}
+.page-node-2069 div.imagen img{
+    width: 100%;
+    height: 300px;
+}
+
+article#node-2069{
+    font-size: 15px;
+}
+
+
+.page-node-2069 #nav-wrapper{
+    display: none;
+}
+
+.page-node-2069 #breadcrumb-wrapper{
+    display: none;
+}
+.page-node-2069{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/EnglishLikeCabezote.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2069 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-2069 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-2069 .eventos_fixed{
+    display: none;
+}
+.page-node-2069 #content-wrapper h1#page-title{
+    text-align: center;
+}
+
+.page-node-2069 input#edit-submit.form-submit{
+    text-transform: capitalize;
+}
+
+label[for="edit-pass-pass2"]{
+    display: inline-block;
+    margin: 0!important;
+}
+
+
+
+/*Formularios Evento Medellin, Varios*/
+
+.page-node-2077 .form-item,
+.page-node-2082 .form-item,
+.page-node-2085 .form-item,
+.page-node-2086 .form-item,
+.page-node-2099 .form-item,
+.page-node-2106 .form-item,
+.page-node-2107 .form-item,
+.page-node-2138 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-2077 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2082 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2085 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2086 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2099 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2106 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2107 .webform-client-form #webform-component-ciudad-de-residencia input,
+.page-node-2138 .webform-client-form #webform-component-ciudad-de-residencia input{
+    width: 230px;
+}
+
+.page-node-2077 .webform-client-form .form-item input[type='text'],
+.page-node-2077 .webform-client-form .form-item input[type='email'],
+.page-node-2082 .webform-client-form .form-item input[type='text'],
+.page-node-2082 .webform-client-form .form-item input[type='email'],
+.page-node-2085 .webform-client-form .form-item input[type='text'],
+.page-node-2085 .webform-client-form .form-item input[type='email'],
+.page-node-2086 .webform-client-form .form-item input[type='text'],
+.page-node-2086 .webform-client-form .form-item input[type='email'],
+.page-node-2099 .webform-client-form .form-item input[type='text'],
+.page-node-2099 .webform-client-form .form-item input[type='email'],
+.page-node-2106 .webform-client-form .form-item input[type='text'],
+.page-node-2106 .webform-client-form .form-item input[type='email'],
+.page-node-2107 .webform-client-form .form-item input[type='text'],
+.page-node-2107 .webform-client-form .form-item input[type='email'],
+.page-node-2138 .webform-client-form .form-item input[type='text'],
+.page-node-2138 .webform-client-form .form-item input[type='email']{
+    width: 95%;
+}
+
+.page-node-2077 #webform-component-texto-de-terminos,
+.page-node-2082 #webform-component-texto-de-terminos,
+.page-node-2085 #webform-component-texto-de-terminos,
+.page-node-2086 #webform-component-texto-de-terminos,
+.page-node-2099 #webform-component-texto-de-terminos,
+.page-node-2106 #webform-component-texto-de-terminos,
+.page-node-2107 #webform-component-texto-de-terminos,
+.page-node-2138 #webform-component-texto-de-terminos{
+    width: 100%;
+}
+
+.page-node-2077 #webform-component-terminos,
+.page-node-2082 #webform-component-terminos,
+.page-node-2085 #webform-component-terminos,
+.page-node-2086 #webform-component-terminos,
+.page-node-2099 #webform-component-terminos,
+.page-node-2106 #webform-component-terminos,
+.page-node-2107 #webform-component-terminos,
+.page-node-2138 #webform-component-terminos{
+    width: 100%;
+}
+.page-node-2077 .form-item-submitted-terminos-Si,
+.page-node-2082 .form-item-submitted-terminos-Si,
+.page-node-2085 .form-item-submitted-terminos-Si,
+.page-node-2086 .form-item-submitted-terminos-Si,
+.page-node-2099 .form-item-submitted-terminos-Si,
+.page-node-2106 .form-item-submitted-terminos-Si,
+.page-node-2107 .form-item-submitted-terminos-Si,
+.page-node-2138 .form-item-submitted-terminos-Si{
+    width: 100%;
+}
+
+
+/*ADN del Innovador*/
+
+.page-node-2079{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/cabezote-ADN_del_innovador-septiembre.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2079 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+
+.page-node-2079 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2079 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2079 #page-title{
+    display: none;
+}
+
+.page-node-2079 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2079 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-2079 .webform-client-form .form-item input[type='text'],
+.page-node-2079 .webform-client-form .form-item input[type='email']
+{
+    width: 95%;
+    border-radius: 50px;
+}
+
+.page-node-2079 #webform-component-cupo-limitado{
+    margin: 0 0 0 20px;
+}
+
+.page-node-2079 #webform-component-texto-de-terminos,
+.page-node-2079 #webform-component-terminos,
+.page-node-2079 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+
+.page-node-2079 #edit-actions.form-actions{
+    border: none;
+}
+
+
+/*Registro Semana Laboral COLFUTURO*/
+
+
+.page-node-2128 #webform-client-form-2128 .webform-component-textarea,.page-node-2128 #webform-client-form-2128 .webform-component-managed_file,.page-node-2128 #webform-client-form-2128 .webform-component-number,
+.page-node-2128 #webform-client-form-2128 .webform-component-email,.page-node-2128 #webform-client-form-2128 .webform-component-textfield,.page-node-2128 .webform-component-select{
+    margin:20px;
+}
+
+.page-node-2128 .webform-component-select, .page-node-2128 #webform-component-recuerde{
+    width: 100%
+}
+.page-node-2128 .webform-component-select > select{
+    width: 50%;
+}
+
+.page-node-2128 #webform-client-form-2128 input[type='text'],.page-node-2128 #webform-client-form-2128 input[type='email']{
+    width: 100%;
+}
+
+.page-node-2128 #webform-client-form-2128 .webform-component-textfield label,
+.page-node-2128 #webform-client-form-2128 .webform-component-email label,
+.page-node-2128 .webform-component-select label{
+    height: 24px;
+}
+
+
+.page-node-2128 #edit-actions{
+    background: none ;
+    border: none;
+}
+
+article#node-2128{
+    font-size: 15px;
+}
+
+.page-node-2128 #nav-wrapper{
+    display: none;
+}
+
+.page-node-2128 #breadcrumb-wrapper{
+    display: none;
+}
+.page-node-2128{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/cabezote-formulario-semana-laboral.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2128 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+.page-node-2128 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-2128 .eventos_fixed{
+    display: none;
+}
+.page-node-2128 #content-wrapper h1#page-title{
+    text-align: center;
+}
+
+.page-node-2128 input#edit-submit.form-submit{
+    text-transform: capitalize;
+}
+
+/*confirmacion medios*/
+
+.page-confirmacion-medios div.webform-component-textfield > input{
+    width: 90%!important;
+}
+
+
+#user-pass,
+#user-register-form--2,
+#user-login,
+#user-profile-form{
+    float:left;
+    width: 100%;
+}
+
+.page-user-register form#user-register-form--2 label {
+    text-transform: initial;
+}
+
+#user-pass label,
+#user-register-form--2 label,
+#user-login label,
+#user-profile-form label,
+.webform-client-form label{
+    color: #999999;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 13px;
+    font-size: 15px;
+    text-transform: initial;
+}
+
+#user-register-form--2 .form-type-checkboxes #edit-field-interes-und .form-type-checkbox{
+    width: 50%;
+
+}
+#user-register-form--2 .form-item.form-type-checkboxes.form-item-field-interes-und {
+    width: 100%;
+
+}
+#user-register-form--2 .form-item.form-type-checkbox.form-item-field-autorizacion-und{
+    width: 100%;
+}
+#user-register-form--2 .form-item.form-type-password-confirm.form-item-pass{
+    width: 100%;
+}
+
+
+#user-pass .description,
+#user-register-form--2 .description,
+#user-login .description,
+#user-profile-form .description,
+.webform-client-form .description{
+    display: none;
+}
+
+#user-pass .form-item,
+#user-register-form--2 .form-item,
+#user-login .form-item,
+#user-profile-form .form-item,
+.webform-client-form .form-item{
+  width: 100%
+}
+
+#user-register-form--2 .form-item{
+    min-height: 0px;
+}
+.page-node-44 #user-pass .form-item:hover{
+    background: none;
+}
+.page-node-44 #user-pass input#edit-submit--3{
+    margin: 20px auto;
+    top: 0px;
+    display: inline-block;
+}
+.page-node-44 #user-pass .form-item-name > label{
+    color: #DFBD68;
+}
+
+#user-pass .form-item:hover,
+#user-register-form--2 .form-item:hover,
+#user-login .form-item:hover,
+#user-profile-form .form-item:hover,
+.webform-client-form .form-item:hover{
+  background: none repeat scroll 0 0 #E9E9E9;
+}
+
+.page-node-44 #user-register-form--2 .form-item:hover{
+    background: none;
+}
+
+#user-pass .form-item .description,
+#user-register-form--2 .form-item .description,
+#user-login .form-item .description,
+.webform-client-form .description{
+  float: left;
+  margin-top: 5px;
+}
+
+#user-pass .form-item input[type='text'],
+#user-register-form--2 .form-item input[type='text'],
+#user-register-form--2 .form-item input[type='password'],
+#user-login .form-item input[type='text'],
+#user-login .form-item input[type='password'],
+#user-profile-form .form-item input[type='text'],
+#user-profile-form .form-item input[type='password'],
+.webform-client-form .form-item input[type='text'],
+.webform-client-form .form-item input[type='email']{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333;
+    float: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    padding: 0 8px;
+    width: 230px;
+}
+
+#user-pass .form-item input[type='text']:focus,
+#user-register-form--2 .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-profile-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='email']:focus{
+  border-color: #F1771E;
+}
+
+#user-pass #edit-actions,
+#user-register-form--2 #edit-actions,
+#user-login #edit-actions,
+#user-profile-form #edit-actions--2,
+.webform-client-form #edit-actions{
+  float: left;
+  margin-top: 40px;
+}
+
+#user-login #edit-actions{
+    margin-top: 0;
+}
+
+#user-pass #edit-actions input[type='submit'],
+#user-register-form--2 #edit-actions input[type='submit'],
+#user-login #edit-actions input[type='submit'],
+#user-pass-reset #edit-actions input[type='submit'],
+#user-profile-form #edit-actions--2 input[type='submit'],
+.webform-client-form #edit-actions input[type='submit']{
+  background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #EF772E;
+  border: 1px solid #EB8232;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 2px 0 1px #B46628;
+  color: #FFFFFF;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
+  height: 35px;
+  line-height: 36px;
+  padding: 0 35px 0 10px;
+  text-transform: uppercase;
+}
+
+#user-pass #edit-actions input[type='submit']:hover,
+#user-register-form--2 #edit-actions input[type='submit']:hover,
+#user-login #edit-actions input[type='submit']:hover,
+#user-pass-reset #edit-actions input[type='submit']:hover,
+#user-profile-form #edit-actions--2 input[type='submit']:hover,
+.webform-client-form #edit-actions input[type='submit']:hover{
+    background: url("../images/flecha_btn_principal.png") no-repeat scroll right -35px #D30000;
+    border: 1px solid #DB3E3E;
+    box-shadow: 0 2px 0 1px #7D0000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#user-register-form--2 #edit-field-interes{
+    width: 100%;
+    float:left;
+}
+
+
+#user-register-form--2 #edit-actions{
+    float:left;
+    width: 500px;
+}
+
+#user-register-form--2 #edit-field-autorizacion .description{
+    display: block;
+}
+
+
+
+#user-pass .form-item,
+#user-register-form--2 .form-item,
+#user-login .form-item,
+#user-profile-form .form-item,
+.webform-client-form .form-item{
+  width: 45%;
+  float:left;
+}
+
+
+.section-taller-de-hoja-de-vida #user-pass .form-item,
+.section-taller-de-hoja-de-vida #user-register-form--2 .form-item,
+.section-taller-de-hoja-de-vida #user-login .form-item,
+.section-taller-de-hoja-de-vida #user-profile-form .form-item,
+.section-taller-de-hoja-de-vida .webform-client-form .form-item,
+.section-ofertas-laborales #user-pass .form-item,
+.section-ofertas-laborales #user-register-form--2 .form-item,
+.section-ofertas-laborales #user-login .form-item,
+.section-ofertas-laborales #user-profile-form .form-item,
+.section-ofertas-laborales .webform-client-form .form-item{
+  float:none;
+}
+
+.section-ofertas-laborales #user-pass .form-item,
+.section-ofertas-laborales #user-register-form--2 .form-item,
+.section-ofertas-laborales #user-login .form-item,
+.section-ofertas-laborales #user-profile-form .form-item,
+.section-ofertas-laborales .webform-client-form .form-item{
+    width: 95%;
+    float:left;
+}
+#user-login #edit-actions {
+    margin-left: 26px;
+}
+/**/
+
+
+.page-user-edit #user-pass .form-item,
+.page-user-edit #user-register-form--2 .form-item,
+.page-user-edit #user-login .form-item,
+.page-user-edit #user-profile-form .form-item,
+.page-user-edit .webform-client-form .form-item{
+  width: 90%;
+}
+
+
+
+/* Pagina de registro */
+#user-register-form--2{
+
+}
+#user-register-form--2 div .form-item-field-idiomas-de-inter-s-und{
+        float: right;
+    margin-right: 36px;
+}
+
+#user-register-form--2 .form-type-password-confirm .description{
+    display: block;
+}
+#user-register-form--2 .form-type-password-confirm .password-suggestions{
+    display: none !important;
+}
+
+#user-register-form--2  #edit-field-area-de-interes-und,
+#user-profile-form #edit-field-area-de-interes-und{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 0 0 5px;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    width: 250px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#user-register-form--2 .form-item-pass-pass1,
+#user-register-form--2 .form-item-pass-pass2{
+    padding: 0;
+}
+
+#user-register-form--2 .info_header_description p{
+    color: #000000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+#user-register-form--2 .form-item-field-area-de-interes-und{
+    margin-left: 10px;
+}
+
+#user-register-form--2 #edit-field-genero-und .form-item{
+    min-height: 0;
+}
+#user-register-form--2 #edit-field-genero-und {
+    display: inline-block;
+}
+
+#user-register-form--2 #edit-field-genero-und div{
+width: 100%;
+display: block;
+}
+
+#user-register-form--2 .form-type-password-confirm .description{
+   display:none;
+}
+
+/*evento medellin upb*/
+.page-node-2173 #webform-component-texto-de-terminos {
+    width: 100%;
+}
+
+.page-node-2173 #webform-component-terminos{
+    width: 100%;
+}
+
+
+/* Concurso de Idiomas */
+.page-node-2197 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2197 #webform-client-form-2197 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-node-2197 .webform-client-form .form-item input[type='text'],
+.page-node-2197 .webform-client-form .form-item input[type='email'],
+.page-node-2197 .webform-client-form .form-item input[type='number']
+{
+    width: 95%;
+    border-radius: 50px;
+}
+
+.page-node-2197 #webform-client-form-2197 #webform-component-texto-de-terminos,
+.page-node-2197 #webform-client-form-2197 #webform-component-terminos,
+.page-node-2197 #webform-client-form-2197 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+
+.page-node-2197 #edit-actions.form-actions{
+    border: none;
+}
+
+/* Concurso de Idiomas 2017*/
+
+.page-concurso-de-idiomas-2017 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-concurso-de-idiomas-2017 #webform-client-form-2529 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.page-concurso-de-idiomas-2017 .webform-client-form .form-item input[type='text'],
+.page-concurso-de-idiomas-2017 .webform-client-form .form-item input[type='email'],
+.page-concurso-de-idiomas-2017 .webform-client-form .form-item input[type='number']
+{
+    width: 95%;
+    border-radius: 50px;
+}
+
+.page-concurso-de-idiomas-2017 #webform-client-form-2529 #webform-component-texto-de-terminos,
+.page-concurso-de-idiomas-2017 #webform-client-form-2529 #webform-component-terminos,
+.page-concurso-de-idiomas-2017 #webform-client-form-2529 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+
+.page-concurso-de-idiomas-2017 #edit-actions.form-actions{
+    border: none;
+}
+
+/* Emprendimiento Social */
+
+.page-node-2551{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner-emprendimiento.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2551 #page{
+    border:1px solid #FFFFFF;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+}
+
+.page-node-2551 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2551 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2551 #page-title{
+    display: none;
+}
+
+.page-node-2551 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2551 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2551 #webform-component-por-que-le-gustaria-asistir-al-evento{
+    width: 100%;
+}
+.page-node-2551 #webform-component-tiene-alguna-pregunta-o-tema-especifico-que-le-gustaria-escuchar-o-responder{
+    width: 95%;
+}
+.page-node-2551 #webform-component-cupo-limitado{
+    margin: 0 0 0 20px;
+}
+.page-node-2551 #webform-component-texto-de-terminos,
+.page-node-2551 #webform-component-terminos,
+.page-node-2551 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2551 #edit-actions.form-actions{
+    border: none;
+}
+
+/*********************************
+* soy-colfuturo-bucaramanga-2017 *
+**********************************/
+.page-node-2627{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_bucaramanga-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2627 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+.page-node-2627 .eventos_fixed{
+    display: none;
+}
+.page-node-2627 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-2627 #page-title{
+    display: none;
+}
+.page-node-2627 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+.page-node-2627 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2627 #webform-component-texto-de-terminos,
+.page-node-2627 #webform-component-terminos,
+.page-node-2627 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2627 #edit-actions.form-actions{
+    border: none;
+}
+/*********************************
+*Publicación de tesis y artículos*
+**********************************/
+.page-node-2552 .webform-client-form .form-item{
+    width: 45%;
+    margin-left: 48px;   
+}
+.page-node-2552 .webform-client-form .form-item input[type="text"],
+.page-node-2552 .webform-client-form .form-item input[type="number"]{
+    width: 421px;
+}
+.page-node-2552 .webform-client-form textarea{
+    width: 100%;
+}
+/**********************************
+* soy-colfuturo-barranquilla-2017 *
+***********************************/
+.page-node-2649{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_barranquilla-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2649 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2649 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2649 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2649 #page-title{
+    display: none;
+}
+
+.page-node-2649 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2649 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2649 #webform-component-texto-de-terminos,
+.page-node-2649 #webform-component-terminos,
+.page-node-2649 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2649 #edit-actions.form-actions{
+    border: none;
+}
+
+/*********************************
+*  soy-colfuturo-medellin-2017   *
+**********************************/
+.page-node-2653{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_medellin-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2653 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2653 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2653 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2653 #page-title{
+    display: none;
+}
+
+.page-node-2653 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2653 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2653 #webform-component-texto-de-terminos,
+.page-node-2653 #webform-component-terminos,
+.page-node-2653 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2653 #edit-actions.form-actions{
+    border: none;
+}
+
+/*********************************
+*    soy-colfuturo-pasto-2017    *
+**********************************/
+.page-node-2657{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_pasto-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2657 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2657 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2657 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2657 #page-title{
+    display: none;
+}
+
+.page-node-2657 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2657 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2657 #webform-component-texto-de-terminos,
+.page-node-2657 #webform-component-terminos,
+.page-node-2657 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2657 #edit-actions.form-actions{
+    border: none;
+}
+
+/*********************************
+*   soy-colfuturo-popayan-2017   *
+**********************************/
+.page-node-2660{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_popayan-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2660 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2660 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2660 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2660 #page-title{
+    display: none;
+}
+
+.page-node-2660 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2660 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2660 #webform-component-texto-de-terminos,
+.page-node-2660 #webform-component-terminos,
+.page-node-2660 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2660 #edit-actions.form-actions{
+    border: none;
+}
+
+/**********************************
+*     soy-colfuturo-cali-2017     *
+**********************************/
+.page-node-2661{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_cali-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2661 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2661 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2661 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2661 #page-title{
+    display: none;
+}
+
+.page-node-2661 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2661 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2661 #webform-component-texto-de-terminos,
+.page-node-2661 #webform-component-terminos,
+.page-node-2661 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2661 #edit-actions.form-actions{
+    border: none;
+}
+
+/**********************************
+*   soy-colfuturo-manizales-2017  *
+**********************************/
+.page-node-2665{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_formulario_manizales-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2665 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2665 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2665 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2665 #page-title{
+    display: none;
+}
+
+.page-node-2665 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2665 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2665 #webform-component-texto-de-terminos,
+.page-node-2665 #webform-component-terminos,
+.page-node-2665 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2665 #edit-actions.form-actions{
+    border: none;
+}
+/*********************************
+*    soy-colfuturo-ibague-2017   *
+**********************************/
+.page-node-2700{
+    border:1px solid #ffffff;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/soy-colfuturo-ibague-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2700 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+.page-node-2700 .eventos_fixed{
+    display: none;
+}
+.page-node-2700 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-2700 #page-title{
+    display: none;
+}
+.page-node-2700 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+.page-node-2700 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2700 #webform-component-texto-de-terminos,
+.page-node-2700 #webform-component-terminos,
+.page-node-2700 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2700 #edit-actions.form-actions{
+    border: none;
+}
+@media only screen and (max-width: 500px){
+    .page-node-2700 #page #content,
+    .page-node-2700 #page{
+        width: 100%;
+    }
+    .page-node-2700 #webform-component-texto-de-terminos{
+        width: 85%;
+    }
+    .page-node-2700 .form-item{
+        width: 80%;
+    }
+    .page-node-2700 .webform-client-form select{
+        width: 100%;
+    }
+    .page-node-2700 #page{
+        margin-top: 25%;
+    }
+    .page-node-2700{
+        background-size: 100%;
+    }
+    .page-node-2700 .container{
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+/*********************************
+*    soy-colfuturo-neiva-2017    *
+**********************************/
+.page-node-2702{
+    border:1px solid #ffffff;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/soy-colfuturo-neiva-2017.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2702 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+.page-node-2702 .eventos_fixed{
+    display: none;
+}
+.page-node-2702 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+.page-node-2702 #page-title{
+    display: none;
+}
+.page-node-2702 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+.page-node-2702 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2702 #webform-component-texto-de-terminos,
+.page-node-2702 #webform-component-terminos,
+.page-node-2702 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2702 #edit-actions.form-actions{
+    border: none;
+}
+/*****************************************
+* INICIO soy-colfuturo-barranquilla-2018 *
+******************************************/
+.page-node-2954{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/Cabezote-registro-Barranquilla-2018.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2954 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2954 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2954 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2954 #page-title{
+    display: none;
+}
+
+.page-node-2954 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2954 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2954 #webform-component-texto-de-terminos,
+.page-node-2954 #webform-component-terminos,
+.page-node-2954 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2954 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-barranquilla-2018 *
+***************************************/
+
+
+/*****************************************
+* INICIO soy-colfuturo-neiva-2018 *
+******************************************/
+.page-node-2961{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/banner_soy_neiva_2018.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2961 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2961 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2961 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2961 #page-title{
+    display: none;
+}
+
+.page-node-2961 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2961 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2961 #webform-component-texto-de-terminos,
+.page-node-2961 #webform-component-terminos,
+.page-node-2961 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2961 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-neiva-2018 *
+***************************************/
+
+
+/*****************************************
+* INICIO soy-colfuturo-medellin-2018 *
+******************************************/
+.page-node-2962{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/transformando-vidas-medellin-2018-2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2962 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2962 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2962 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2962 #page-title{
+    display: none;
+}
+
+.page-node-2962 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2962 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2962 #webform-component-texto-de-terminos,
+.page-node-2962 #webform-component-terminos,
+.page-node-2962 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2962 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-medellin-2018 *
+***************************************/
+
+/*****************************************
+* INICIO soy-colfuturo-manizales-2018 *
+******************************************/
+.page-node-2971{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/transformando-vidas-manizales-2018.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2971 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2971 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2971 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2971 #page-title{
+    display: none;
+}
+
+.page-node-2971 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2971 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2971 #webform-component-texto-de-terminos,
+.page-node-2971 #webform-component-terminos,
+.page-node-2971 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2971 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-manizales-2018 *
+***************************************/
+
+/*****************************************
+* INICIO soy-colfuturo-tunja-2018 *
+******************************************/
+.page-node-2975{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/transformando-vidas-tunja-2018.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2975 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2975 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2975 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2975 #page-title{
+    display: none;
+}
+
+.page-node-2975 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2975 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2975 #webform-component-texto-de-terminos,
+.page-node-2975 #webform-component-terminos,
+.page-node-2975 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2975 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-tunja-2018 *
+***************************************/
+
+/*****************************************
+* INICIO soy-colfuturo-pasto-2018 *
+******************************************/
+.page-node-2976{
+    border:1px solid #FBB900;
+    background-color: #C4C4C4;
+    background-image: url('../images/form-events/transformando-vidas-pasto-2018-3.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.page-node-2976 #page{
+    border:1px solid #FFFFFF;
+    width: 964px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 250px;
+}
+
+.page-node-2976 .eventos_fixed{
+    display: none;
+}
+
+.page-node-2976 #page #content{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.page-node-2976 #page-title{
+    display: none;
+}
+
+.page-node-2976 .field-name-body h3{
+    color: rgba(158, 32, 32, 0.76);
+    font-size: 29px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-node-2976 .form-item{
+    width: 40%;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.page-node-2976 #webform-component-texto-de-terminos,
+.page-node-2976 #webform-component-terminos,
+.page-node-2976 .form-item-submitted-terminos-Si{
+    width: 94%
+}
+.page-node-2976 #edit-actions.form-actions{
+    border: none;
+}
+/**************************************
+* FIN soy-colfuturo-pasto-2018 *
+***************************************/
+
+@media only screen and (max-width: 500px){
+    .page-node-2702 #page #content,
+    .page-node-2702 #page{
+        width: 100%;
+    }
+    .page-node-2702 #webform-component-texto-de-terminos{
+        width: 85%;
+    }
+    .page-node-2702 .form-item{
+        width: 80%;
+    }
+    .page-node-2702 .webform-client-form select{
+        width: 100%;
+    }
+    .page-node-2702 #page{
+        margin-top: 25%;
+    }
+    .page-node-2702{
+        background-size: 100%;
+    }
+    .page-node-2702 .container{
+        overflow: hidden;
+        position: relative;
+    }
+}

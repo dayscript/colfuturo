@@ -1,0 +1,921 @@
+/* 
+    Document   : global-colfuturo.css
+    Created on : 18/01/2013, 11:51:12 AM
+    Author     : fredy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*************************
+		EVENTOS HOME
+*************************/
+#block-views-destacados-eventos-home-block{
+    background: url("../images/columna_470_icono.png") no-repeat scroll 0 0 #F4E8DF;
+    float: left;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin-top: 7px;
+    min-height: 20px;
+    width: 470px;
+}
+
+#block-views-destacados-eventos-home-block .block-title{
+	color: #D90000;
+	font-family: 'Droid Sans',sans-serif;
+	font-size: 19.2px;
+	font-style: normal;
+	font-weight: 600;
+	margin-top: 6px;
+	text-align: center;
+}
+
+#block-views-destacados-eventos-home-block .block-inner{
+    background: url("../images/icono_eventos.png") no-repeat scroll 100% 0;
+}
+
+#block-views-destacados-eventos-home-block .view-content{
+    width: 430px;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+#block-views-destacados-eventos-home-block .views-row{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+#block-views-destacados-eventos-home-block .views-row .node{
+    margin-bottom: 12px;
+} 
+
+#block-views-destacados-eventos-home-block .views-row-last{
+    border-bottom: 0px solid #CCCCCC;
+}
+
+#block-views-destacados-eventos-home-block .field-name-title h2,
+#block-views-destacados-eventos-home-block .group-right .field-name-titulo-con-link-personalizado h2{
+    line-height:18px;
+}
+
+#block-views-destacados-eventos-home-block .field-name-title h2 a{
+    color: #333333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#block-views-destacados-eventos-home-block .field-name-body p{
+    color: #666666;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#block-views-destacados-eventos-home-block .group-left{
+    width: 35%;
+}
+
+#block-views-destacados-eventos-home-block .group-right{
+    width: 65%; 
+}
+
+#block-views-destacados-eventos-home-block .field-name-titulo-con-link-personalizado h2 a{
+    font-family: "Trebuchet MS",​ Arial,​ Helvetica,​ sans-serif;
+    font-size: 14.4px;
+    font-weight: 700;
+    color: #333333;
+}
+
+#block-views-destacados-eventos-home-block .group-right .field-name-titulo-con-link-personalizado h2 a:hover{
+    color: #DA291C;
+}
+
+#block-views-destacados-eventos-home-block .field-name-field-fecha2{
+    margin: 0.83em 0;
+    color: #DA291C;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 15.2px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#block-views-destacados-eventos-home-block .field-name-field-tipo-evento ul{
+    margin: 0;
+    padding: 0;
+}
+
+#block-views-destacados-eventos-home-block .field-name-field-tipo-evento ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#block-views-destacados-eventos-home-block .field-name-localizacion-grupo,
+#block-views-destacados-eventos-home-block .field-name-field-tipo-evento,
+#block-views-destacados-eventos-home-block .field-name-fecha-hora .field-name-field-fecha2,
+#block-views-destacados-eventos-home-block .field-name-tipo-evento-mod .code-term{
+    background: url("../images/iconos_eventos.png") no-repeat scroll 0 0 transparent;
+    color: #4D4D4D;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 0.1em;
+    padding-left: 21px;
+}
+
+#block-views-destacados-eventos-home-block .field-name-tipo-evento-mod .code-term-11{
+    background-position: 0 -40px;
+}
+
+#block-views-destacados-eventos-home-block .field-name-tipo-evento-mod .code-term-9{
+    background-position: 0 -60px;
+}
+
+#block-views-destacados-eventos-home-block .field-name-tipo-evento-mod .code-term-10{
+   background-position: 0 -80px;
+}
+
+#block-views-destacados-eventos-home-block .field-name-fecha-hora .field-name-field-fecha2{
+    background-position: 0 -20px;
+    margin: 0 0;
+    margin-bottom: 0.1em;
+}
+
+#block-views-destacados-eventos-home-block .field-name-field-tipo-evento{
+    background-position: 0 -40px;
+}
+
+#block-views-destacados-eventos-home-block .view-footer{
+    /*border-top: 3px solid #FFFFFF;
+    height: 20px;
+    padding: 5px 0;*/
+	background: url("../images/bg_eventos_home.png") no-repeat scroll 0 0 transparent;
+    border-top: 3px solid #FFFFFF;
+    display: block;
+    height: 40px;
+    margin-top: -1px;
+    width: 470px;
+}
+#block-views-destacados-eventos-home-block .view-footer:hover{
+    background-position: 0 -40px;
+    color: #333333;
+}
+#block-views-destacados-eventos-home-block .view-footer a{
+    /*margin: 8px 0;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 12px;
+    color: #0AABEA;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 170px;*/
+    
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+#block-views-destacados-eventos-home-block .view-footer a:hover{
+    color: #DA291C;
+}
+
+/******************************
+    ICONO FLOTANTE EVENTOS
+******************************/
+.eventos_fixed {
+    -webkit-transition:all .5s ease-out;  /* Chrome y Safari */
+       -moz-transition:all .5s ease-out;  /* Mozilla Firefox */
+        -ms-transition:all .5s ease-out;  /* Internet Explorer 9+ */
+         -o-transition:all .5s ease-out;  /* Opera */
+            transition:all .5s ease-out;  /* W3C */
+
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+    top: 92px;
+    width: 70px;
+    z-index: 999;
+}
+
+.eventos_fixed:hover {
+    width: 230px;
+}
+
+.eventos_fixed:hover .eventos_fixed_izquierda {
+    display: none;
+}
+
+.eventos_fixed .eventos_fixed_izquierda, 
+.eventos_fixed .eventos_fixed_derecha {
+    background: url("../images/bg_eventos_fixed_01.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 40px;
+    width: 70px;
+}
+
+.eventos_fixed .eventos_fixed_derecha {
+    background: url("../images/bg_eventos_fixed_02.png") no-repeat scroll 0 0 transparent;
+    width: 230px;
+}
+
+.eventos_fixed .eventos_fixed_izquierda h3, 
+.eventos_fixed .eventos_fixed_derecha h3 {
+    color: #000000;
+    display: block;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    left: 26px;
+    position: relative;
+    top: 13px;
+    margin: 0;
+}
+
+.eventos_fixed .eventos_fixed_derecha a {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: 'Open Sans ',sans-serif;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 400;
+    left: 50px;
+    position: relative;
+    text-decoration: none;
+    top: 9px;
+}
+
+/**********************************
+        EVENTOS CALENDARIO
+**********************************/
+.view-calendario-de-eventos{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/*
+ * Header Calendar
+ */
+.view-calendario-de-eventos .date-nav-wrapper .date-nav{
+    margin: 0px;
+    padding: 0px;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-heading{
+    background: url("../images/bg_eventos_top_nav.png") repeat-y scroll 0 0 transparent;
+    height: 38px;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-heading h3{
+    color: #DA291C;
+    font-size: 22.4px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-next,
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-prev{
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    font-size: 0;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-next a,
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-prev a{
+    margin: 0;
+    background: url("../images/flecha_btn_eventos_top_nav.png") no-repeat scroll 0 0 #911C24;
+    height: 37px;
+    width: 20px;
+    float:left;
+    font-size: 0.1px;    
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-next a{
+    background-position: 0 -35px;
+    float:right;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-next a:hover,
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-prev a:hover{
+    background-color: #ff0000;
+}
+
+.view-calendario-de-eventos .date-nav-wrapper .date-nav .date-prev{
+    left:0;
+    right: inherit;
+}
+
+/*
+ * Tabs Calendario
+ */
+#main-content-header ul.primary{
+    border: 0px solid;
+    background: none;
+}
+
+#main-content-header ul.tabs{
+    float:right;
+    padding: 0;
+    margin: 0;
+    height: 21px;
+    border:1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#main-content-header ul.tabs li{
+    margin: 0;
+    border:0px solid;
+    height: 21px;
+}
+
+#main-content-header ul.tabs li a{
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    border:0px solid;
+    background: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #999;
+    height: 21px;
+    line-height: 180%;
+}
+
+#main-content-header ul.tabs li a:hover{
+   background: #DA291C;
+   color:#fff;
+}
+
+#main-content-header ul.tabs li.active a{
+    background: #808080;
+    color:#fff;
+    height: 21px;
+}
+
+.view-calendario-de-eventos table.full th{
+    color: #fff;
+    background-color: #999999;
+    font-weight: 300;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr{
+    border-top: 0px solid;
+}
+
+/* 
+ * Header Número de Dia 
+ */
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box{
+    border-bottom:0px solid;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td{
+    font-size: 18px;
+    color: #999999;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td.empty{
+    color: #E1E1E1;
+    background-color:#fff;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td.Sun{
+    background-color: #E6E6E6;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td.today{
+    background-color: #F4E8DE;
+    border:none;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td div.inner{
+    text-align: left;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td div.inner div.day{
+    float:left;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.date-box td.today div.day{
+    color: #DA291C;
+    font-weight: 600;
+}
+
+.view-calendario-de-eventos .week-view #single-day-container table.full tbody td,
+.view-calendario-de-eventos .week-view #multi-day-container table.full tbody td{
+     background-color: #FFFFFF;
+}
+
+.view-calendario-de-eventos .week-view #single-day-container table.full tbody td.last,
+.view-calendario-de-eventos .week-view #multi-day-container table.full tbody td.last{
+    background-color: #E6E6E6;
+}
+
+/*
+ * Contenidos Calendario
+ */
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td{
+    background-color:#FFFFFF;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td.empty{
+   background-color:#FFFFFF;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td.Sun{
+   background-color: #E6E6E6;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td.today{
+    background-color: #F4E8DE;
+    border:none;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td div.inner,
+.view-calendario-de-eventos .month-view table.full tbody tr.single-day td.no-entry div.inner{
+    height: 80px !important;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody .single-day{
+    background-color: #FFFFFF;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody .date-box{
+    background-color: #FFFFFF;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody .Sun{
+    background-color: #E6E6E6;
+}
+
+.view-calendario-de-eventos .month-view table.full tbody .today,
+.view-calendario-de-eventos .month-view table.full tbody td.single-day.today{
+    background-color: #F4E8DE;
+    border:none;
+}
+
+.view-calendario-de-eventos .day-view{
+    display: none;
+}
+
+/*
+ *  Tabla de resultados eventos - dia
+ */
+.block-destacados-eventos-home-block-2 .views-table{
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-family: 'Open Sans',​sans-serif;
+}
+
+.block-destacados-eventos-home-block-2 .views-table th.views-field{
+    font-size: 12px;
+    font-weight: 300;
+    color: #999999;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    text-transform: uppercase;
+}
+
+.block-destacados-eventos-home-block-2 .views-table td.views-field{
+    font-size: 11.2px;
+    font-weight: 300;
+    color:  #808080;
+    text-align: left;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+
+.block-destacados-eventos-home-block-2 .views-table td.views-field a{
+    font-size: 11px;
+    font-weight: 400;
+    color: #4D4D4D;
+}
+
+.block-destacados-eventos-home-block-2 .views-table td.views-field a:hover{
+    text-decoration: none;
+    color: #DA291C;
+}
+
+.block-destacados-eventos-home-block-2 .view-destacados-eventos-home .view-empty p{
+    text-align: center;
+    font-weight: 600;
+}
+
+/*
+ * Items Eventos
+ */
+.view-calendario-de-eventos{
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.view-calendario-de-eventos .views-field-field-fecha2{
+    float:left;
+}
+
+.view-calendario-de-eventos table.views-table .views-field-field-fecha2{
+    float:none;
+}
+
+span.arrow{
+    color: #DA291C;
+    padding: 0 2px;
+}
+
+.view-calendario-de-eventos .views-field-title a{
+    float:left;
+    color: #4D4D4D;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.view-calendario-de-eventos .views-field-title a:hover{
+    color:#DA291C;
+}
+
+/*
+ * Popup de detalle envento
+ */
+#colorbox{
+    background-image: none;
+    background-color: #E6E6E6;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: auto !important;
+    top:120px !important;
+}
+
+#colorbox #cboxClose{
+    height: 28px;
+    border: none;
+}
+
+#colorbox #cboxContent{
+    background-color: #E6E6E6;
+    height: auto !important;
+    border: 1px solid #999999;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#colorbox #cboxLoadedContent{
+    margin: 20px;
+    height: auto !important;
+}
+
+#colorbox .group-left {
+    width: 35%;
+    float:left;
+}
+
+#colorbox .group-right {
+    margin-left: 10px;
+    width: 62%;
+    float:left;
+}
+
+#colorbox .field-name-title h2{
+    color: #333333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height:17px;
+}
+
+#colorbox .field-name-body p{
+    color: #333333;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 13px;
+    padding: 0;
+    text-align: left;
+}
+
+#colorbox .field-name-field-fecha2{
+    margin: 0.83em 0;
+    color: #DA291C;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 15.2px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#colorbox .field-name-field-tipo-evento ul{
+    margin: 0;
+    padding: 0;
+}
+
+#colorbox .field-name-field-tipo-evento ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#colorbox .field-name-localizacion-grupo,
+#colorbox .field-name-field-tipo-evento,
+#colorbox .field-name-fecha-hora .field-name-field-fecha2,
+#colorbox .field-name-tipo-evento-mod .code-term{
+    background: url("../images/iconos_eventos.png") no-repeat scroll 0 0 transparent;
+    color: #4D4D4D;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 11.2px;
+    font-style: normal;
+    font-weight: 400;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 0.1em;
+    padding-left: 21px;
+}
+
+#colorbox .field-name-tipo-evento-mod .code-term-11{
+    background-position: 0 -40px;
+}
+
+#colorbox .field-name-tipo-evento-mod .code-term-9{
+    background-position: 0 -60px;
+}
+
+#colorbox .field-name-tipo-evento-mod .code-term-10{
+   background-position: 0 -80px;
+}
+
+#colorbox .field-name-fecha-hora .field-name-field-fecha2{
+    background-position: 0 -20px;
+    margin: 0 0;
+    margin-bottom: 0.1em;
+}
+
+#colorbox .field-name-field-tipo-evento{
+    background-position: 0 -40px;
+}
+
+#colorbox span.rojo{
+    float:left;
+    width: 100%;
+    color: #FF0000 !important;
+    font-size: 11px;
+}
+
+#colorbox .group-right .field-name-body{
+	max-height: 250px;
+	overflow: auto;
+}
+
+/*
+ * Tabla de busqueda de eventos 
+ */
+.view-display-id-page_3{
+    color: #808080;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px !important;
+    font-style: normal;
+    font-weight: 300;
+    border-top: medium none;
+}
+
+.view-display-id-page_3 table.views-table thead th{
+    text-transform: uppercase;
+    text-align: center !important;
+    font-weight: 300;
+}
+
+.view-display-id-page_3 table.views-table td,
+.view-display-id-page_3 table.views-table th{
+    border:1px solid #CCCCCC;
+}
+
+.view-display-id-page_3 table.views-table td.views-field-field-fecha2,
+.view-display-id-page_3 table.views-table td.views-field-field-fecha2-1{
+    color:#000000;
+    background-color: #FFFFFF;
+}
+
+.view-display-id-page_3 table.views-table td.views-field-title a{
+    color: #4D4D4D;
+}
+
+.view-display-id-page_3 table.views-table td.views-field-title a:hover{
+    color:#DA291C;
+}
+
+.views-exposed-widgets label{
+    color: #808080;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    border-top: medium none;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.views-exposed-widgets #edit-field-tipo-evento-tid{
+    background-color: #FFFFFF;
+    background-image: none;
+    height: 22px;
+    padding: 0 0 0 6px;
+    width: 200px;
+    border: 1px solid #808080;
+    border-radius: 4px 4px 4px 4px;
+    color: #999999;
+}
+
+.views-exposed-widgets #edit-title{
+    margin-top: 16px;
+    border: 1px solid #808080;
+    padding: 0 0 0 6px;
+    border-radius: 4px 4px 4px 4px;
+    color: #999999;
+    height: 20px;
+    width: 200px;
+}
+
+/* ********************************* */
+.bloq-event-initiated{}
+.bloq-event-initiated-block{
+    width: 470px !important;
+    float:left;
+}
+.bloq-event-initiated-block .view-content{
+    background: none repeat scroll 0 0 #F4E8DF;
+}
+.bloq-event-initiated-small,
+.bloq-event-initiated-small-block{
+    width: 310px !important;
+    margin-bottom: 0 !important;;
+}
+.bloq-event-initiated-block h2.block-title{
+    color: #DA291C;
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+}
+.bloq-event-initiated-block h2.block-title{
+        background: url("../images/icon_modulo2.png") no-repeat scroll 0 -32px #FDE3BF;
+}
+.bloq-event-initiated-small-block h2.block-title{
+        background: url("../images/icon_modulo2.png") no-repeat scroll 0 0 #FDE3BF;
+        margin-top: 0;
+}
+
+.bloq-event-initiated-small-block .view-empty{
+    text-align: center;
+    height: 130px;
+}
+
+.bloq-event-initiated .views-view-grid,
+.bloq-event-initiated .views-view-grid tr.info, 
+.bloq-event-initiated .views-view-grid tr.even,
+.bloq-event-initiated .views-view-grid tr:nth-child(2n+2),
+.bloq-event-initiated .views-view-grid tbody tr{
+    background: none;
+    border:1px solid transparent
+}
+.bloq-event-initiated .views-view-grid{
+    margin: 0;
+    background: none repeat scroll 0 0 #FEF7EC;
+}
+.bloq-event-initiated a,
+.bloq-event-initiated a p{
+    display: block;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 4px;
+    color: #0096C8;
+    cursor: pointer;
+    text-decoration: none;
+}
+.bloq-event-initiated a:hover,
+.bloq-event-initiated a:hover p{
+    color: #DA291C;
+}
+.bloq-event-initiated .views-field-title span{
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    color: #000000;
+    display: block;
+    font-size: 13px;
+}
+
+.bloq-event-initiated .bloq-event-initiated-type1,
+.bloq-event-initiated-block .view-footer{
+    background: url("../images/bg_modulo_footer.jpg") no-repeat scroll right top transparent;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-family: 'Open Sans',sans-serif;
+    height: 25px;
+    line-height: 24px !important;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.bloq-event-initiated-block .view-footer a{
+    color: #FFFFFF !important;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 14px;
+}
+.bloq-event-initiated .bloq-event-initiated-type1:hover,
+.bloq-event-initiated-block .view-footer:hover,
+.bloq-event-initiated-block .view-footer a:hover{
+    background-position: right bottom;
+    color: #000000 !important;
+}
+.bloq-event-initiated-small td,
+.bloq-event-initiated-small th{
+    padding: 5px 12px;
+}
+
+.bloq-event-initiated tr.row-first .views-field-body{
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
+}
+
+.bloq-event-initiated tr.row-last .views-field-body{
+    border-bottom: 0px solid #CCCCCC;
+    padding-bottom: 10px;
+}
+
+.bloq-event-initiated-block .field-name-body p{
+    color: #4D4D4D;
+    font-size: 12px;
+    line-height: 140%; 
+}
+.bloq-event-initiated-block a{
+    font-size: 14px;
+}
+.bloq-event-initiated-block h2{
+    margin: 0px;
+    margin-top: 8px;
+}
+.bloq-event-initiated-block .field-name-tipo-evento-mod,
+.bloq-event-initiated-block .field-name-localizacion-grupo{
+    color: #999999;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0px; 
+}
+.bloq-event-initiated-block .field-name-field-fecha2{
+    color: #000000;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 15px;
+}
+.bloq-event-initiated-block .field-name-fecha-hora .field-name-field-fecha2{
+    color: #4D4D4D;
+    display: block;
+    font-size: 12px;
+}
+
+.bloq-event-initiated-block .group-left{
+    width:140px;
+}
+
+.bloq-event-initiated-block .group-right{
+    width: 280px;
+}
+
+.bloq-event-initiated-block .field-name-localizacion-grupo{
+    margin-left: 5px;
+    border-left: 1px solid red;
+    padding-left: 5px;
+}
+
+.bloq-event-initiated-block .views-row{
+   width: 90%;
+   margin: auto;
+   border-bottom: 1px solid #FFFFFF;
+}
+
+.bloq-event-initiated-block .node-personalizada-2-columnas-v3{
+    margin-bottom: 0px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}

@@ -1,0 +1,332 @@
+ /* Estilos formulario actualizar datos */
+body.page-user-edit,
+body.page-user-change-password,
+body.page-user-reset{
+  background-color: #ffffff00;
+}
+.page-user-edit .header-login,
+.page-user-change-password .header-login,
+.page-user-reset .header-login{
+  position: absolute;
+  left: 15%;
+  margin-top: 16px;
+  width: 70%;
+}
+.page-user-edit .text-departamento,
+.page-user-change-password .text-departamento,
+.page-user-reset .text-departamento{
+  width: 70%;
+  left: 15%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+}
+.page-user-edit .text-departamento > p,
+.page-user-change-password .text-departamento > p,
+.page-user-reset .text-departamento > p{
+  padding: 0px;
+}
+.page-user-edit .container,
+.page-user-change-password .container{
+  background: rgba(49, 195, 217, 0.4);
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  border-radius: 15px 15px 15px 15px;
+  width: 70%;
+  max-width: 100%;
+}
+.page-user-reset .container{
+  background: rgba(49, 195, 217, 0.4);
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  border-radius: 15px 15px 15px 15px;
+  width: 70%;
+  max-width: 100%;
+}
+.page-user-reset .container_dentro{
+  padding: 30px;
+  text-align: center;
+}
+.page-user-reset .container_dentro .form-actions{
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+.page-user-reset .container_dentro #change-pwd-page-user-pass-reset p {
+  color: #ffffff;
+}
+#user-profile-form--2 {
+  color: #FFF;
+}
+
+#user-profile-form--2 label,
+#user-profile-form--2 .fieldset-title {
+  color: #F7E9B7;
+  margin-bottom: 5px;
+}
+
+#user-profile-form--2 > div {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ #user-profile-form--2 .form-wrapper {
+    display: inline-block;
+    width: 40%;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: left;
+ }
+
+ #user-profile-form--2 .form-wrapper input[type="text"],
+ #user-profile-form--2 .form-wrapper input[type="password"] ,
+ #user-profile-form--2 .form-wrapper input[type="email"] {
+     padding: 7px;
+    border-radius: 5px;
+    border: solid 1px #CCC;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#user-profile-form--2 #edit-account--3 {
+  width: 80% !important;
+  padding: 0 !important;
+}
+
+#user-profile-form--2 #edit-account--3 .form-item-mail input.form-text {
+  margin-bottom: 15px;
+}
+
+#user-profile-form--2 #edit-account--3 .password-strength,
+#user-profile-form--2 #edit-account--3 .confirm-parent {
+  margin-top: 0;
+}
+
+#user-profile-form--2 #edit-account--3 .password-confirm {
+  margin-top: 0;
+  float: none;
+  margin-bottom: 10px;
+}
+
+#user-profile-form--2 #edit-account--3 .form-type-password-confirm {
+  position: relative;
+  padding-bottom: 35px;
+}
+
+#user-profile-form--2 #edit-account--3 .password-suggestions {
+  display: none !important;
+}
+
+#user-profile-form--2 #edit-account--3 .password-strength {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+#user-profile-form--2 #edit-account--3 > div {
+    width: 45%;
+    vertical-align: top;
+    display: inline-block;
+    padding: 15px;
+}
+
+#user-profile-form--2 #edit-account--3 > div > div {
+  width: 100%;
+}
+
+#user-profile-form--2 #edit-field-genero-und--2 > div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+#user-profile-form--2 #edit-field-ciudad-de-residencia--2 div {
+  width: 100%;
+}
+
+#user-profile-form--2 #edit-field-ciudad-de-residencia--2 div.form-wrapper {
+  padding: 0;
+}
+
+#user-profile-form--2 .group-interes-colfuturo {
+  width: 80%;
+}
+
+#user-profile-form--2 .group-interes-colfuturo .form-wrapper {
+  width: 33%;
+}
+
+#user-profile-form--2 .group-interes-colfuturo .form-item:hover {
+  background: none !important;
+}
+
+#user-profile-form--2 .group-interes-colfuturo #edit-field-interes-und--2 > div {
+  display: inline-block;
+  margin-right: 30px;
+  width: 100%;
+}
+
+#user-profile-form--2 .group-interes-colfuturo label {
+  display: inline-block !important;
+}
+
+#user-profile-form--2 .group-interes-colfuturo .form-checkboxes label {
+  width: 85%;
+  vertical-align: top;
+}
+
+#user-profile-form--2 #edit-field-idiomas-de-inter-s-und--2 label {
+  color: #F7E9B7 !important;
+}
+
+#user-profile-form--2 #edit-field-idiomas-de-inter-s-und--2 label.option:before {
+  content: "" !important;
+}
+
+#user-profile-form--2 .group-interes-colfuturo .form-item-field-idiomas-de-inter-s-und {
+  float: none !important;
+}
+
+/*#user-profile-form--2 .field-name-field--rea-de-inter,*/
+/*#user-profile-form--2 .field-name-field-idiomas-de-inter-s,*/
+#user-profile-form--2 #edit-locale--2,
+#user-profile-form--2 .field-name-field-porcentaje-fomulario,
+#user-profile-form--2 .field-name-ldap-user-prov-entries,
+#user-profile-form--2 .field-widget-ldap-user-hidden {
+  display: none;
+}
+
+#user-profile-form--2 .field-name-field--rea-de-inter > div,
+#user-profile-form--2 .field-name-field-idiomas-de-inter-s > div {
+  display: block !important;
+}
+
+#user-profile-form--2 .field-name-field-terminos,
+#user-profile-form--2 .field-name-field-autorizacion {
+  width: 80%;
+}
+
+#user-profile-form--2 .field-name-field-autorizacion .form-type-checkbox .description {
+  margin-left: 0;
+}
+
+#user-profile-form--2 .field-name-field-terminos input {
+  display: none;
+}
+
+#user-profile-form--2 .form-actions {
+  width: 100%;
+}
+
+#user-profile-form--2 .form-actions input[type="submit"] {
+  background-color: rgb(253, 214, 123);
+    border: none;
+    color: rgb(42, 140, 150);
+    padding: 5px 52px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Puritan', sans-serif;
+    font-size: 19px;
+    display: block;
+    margin: 0 auto;
+}
+.page-user-edit .pie-departamentos,
+.page-user-change-password .pie-departamentos,
+.page-user-reset .pie-departamentos{
+  margin-bottom: 20px;
+}
+
+.page-user-edit .pie-departamentos > p,
+.page-user-change-password .pie-departamentos > p,
+.page-user-reset .pie-departamentos > p {
+  color: #ffffff;
+}
+ /* Estilos formulario change-password GBE*/
+.page-user-change-password form#change-pwd-page-form--2{
+  width: 90%;
+  margin: auto;
+ }
+.page-user-change-password #change-pwd-page-form--2 .form-item-current-pass div.description > a{
+  color: #DFBD68;
+}
+.page-user-change-password #change-pwd-page-form--2 .form-item-current-pass,
+.page-user-change-password #change-pwd-page-form--2 .confirm-parent{
+  display: inline-block;
+  width: 49%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: left;
+}
+.page-user-change-password #change-pwd-page-form--2 .form-item-pass > label{
+  margin-left: 15px;
+}
+.page-user-change-password #change-pwd-page-form--2 .password-parent{
+  display: inline-block;
+  width: 50%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: left;
+}
+.page-user-change-password #change-pwd-page-form--2 .form-item-current-pass label{
+  color: #F7E9B7;
+  margin-bottom: 5px;
+}
+.page-user-change-password #change-pwd-page-form--2 .form-item input[type="password"]{
+     padding: 7px;
+    border-radius: 5px;
+    border: solid 1px #CCC;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.page-user-change-password #change-pwd-page-form--2 .confirm-parent{
+  margin-top: 24px;
+}
+.page-user-change-password #change-pwd-page-form--2 {
+  color: #FFF;
+}
+.page-user-change-password #change-pwd-page-form--2 input[type="submit"]{
+  background-color: rgb(253, 214, 123);
+    border: none;
+    color: rgb(42, 140, 150);
+    padding: 5px 52px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Puritan', sans-serif;
+    font-size: 19px;
+    display: block;
+    margin: 0 auto;
+}
+.page-user-reset #change-pwd-page-user-pass-reset input[type="submit"]{
+  background-color: rgb(253, 214, 123);
+    border: none;
+    color: rgb(42, 140, 150);
+    padding: 5px 52px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Puritan', sans-serif;
+    font-size: 19px;
+    display: block;
+    margin: 0 auto;
+}
+.eventos_fixed{
+  display: none !important;
+}

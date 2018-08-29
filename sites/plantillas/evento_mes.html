@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Calendario eventos por mes</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+
+<!-- inicio JAVA TOOLTIP -->
+<script type="text/javascript">
+$(document).ready(function() {
+    //Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coodrinates
+        var mousey = e.pageY + 20; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+            mousex = e.pageX - tipWidth - 20;
+        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+            mousey = e.pageY - tipHeight - 20;
+        }
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+<!-- fin JAVA TOOLTIP -->
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a class="current" href="#">Calendario eventos por mes</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    </section><!-- section#bloque_breadcrumb -->
+   
+    
+    <section id="bloque_general">
+    
+    <h2 class="titulo_general_rojo">Calendario <strong>eventos</strong></h2>
+	<form action="evento_resultado_busqueda.html" method="get" name="search">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="top_eventos">
+          <tr>
+            <td width="220">
+            <select name="Lista" class="filtro_evento">
+              <option value="Filtar por tipo de evento">Filtar por tipo de evento</option>
+              <option value="1">Charla informativa</option>
+              <option value="2">Twitcam</option>
+              <option value="3">Feria</option>
+              <option value="4">Open House</option>
+              <option value="5">Conferencia</option>
+              <option value="6">Proclamación</option>
+            </select>
+            </td>
+            <td width="220"><input class="search_evento" name="search" type="text" value="Busque un evento"></td>
+            <td width="350">&nbsp;</td>
+            <td width="200">
+              <a class="btn_evento_mes_active" href="evento_mes.html">MES</a>
+              <a class="btn_evento_semana" href="evento_semana.html">SEMANA</a>
+              <a class="btn_evento_dia" href="evento_dia.html">DÍA</a>
+            </td>
+          </tr>
+          
+          
+        </table>
+      </form>
+    
+    	<!-- Inicio Tabla navegacion eventos -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="top_nav_eventos">
+          <tr>
+            <td width="2%"><a href="#" class="btn_top_nav_eventos_left"></a></td>
+            <td width="96%"><h2 class="titulo_top_nav_eventos">ENERO DE 2013</h2></td>
+            <td width="2%"><a href="#" class="btn_top_nav_eventos_right"></a></td>
+          </tr>
+        </table>
+    	<!-- Fin Tabla navegacion eventos -->
+
+		<!-- Inicio Tabla contenido eventos header -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="wrapper_eventos_mes_header">
+          <tr>
+            <td width="137">Lunes</td>
+            <td width="137">Martes</td>
+            <td width="137">Miércoles</td>
+            <td width="137">Jueves</td>
+            <td width="137">Viernes</td>
+            <td width="137">Sábado</td>
+            <td width="137">Domingo</td>
+          </tr>
+        </table>    
+    	<!-- fin Tabla contenido eventos header-->
+        
+	    <!-- Inicio Tabla contenido eventos ROW -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="wrapper_eventos_mes_row">
+    	  <tr valign="top" class="height_row">
+            <td width="137"><div class="date_off">25</div></td>
+            <td width="137"><div class="date_off">26</div></td>
+            <td width="137"><div class="date_off">27</div></td>
+            <td width="137"><div class="date_off">28</div></td>
+            <td width="137"><div class="date_off">29</div></td>
+            <td width="137"><div class="date_off">30</div></td>
+            <td width="137" class="domingo"><div class="date">1</div></td>
+          </tr>
+    	  <tr valign="top" class="height_row">
+            <td class="inactive"><div class="date">2</div>
+              
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contenido">
+                  <tr valign="top">
+                    <td width="38"><span>08:30</span><span class="arrow">»</span></td>
+                    <td width="87"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2, 3 y 4</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">8:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><br>
+                        Toda la información sobre estudios de posgrado en Heinz College, Carnegie Mellon University - Australia la podrá consultar con Darren Turner, 
+                        Director of Marketing & Recruitment de esta Universidad.<br><br>
+                        <span class="rojo">Este evento requiere inscripción previa.</span></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                                   
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>11:30</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Twitcam
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">11:30 a.m.</p>
+                        <p class="twitcam">Twitcam</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>15:00</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Feria
+                  
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2 y 3</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">15:00 a.m.</p>
+                        <p class="feria">Feria</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><span>18:00</span><span class="arrow">»</span></td>
+                    <td valign="top"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">18:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+
+                    </a></td>
+                  </tr>
+                </table>
+                <a href="#" class="contenido_ver_mas tip_trigger">» Más...</a>
+                          
+            </td>
+            <td><div class="date">3</div></td>
+            <td><div class="date">4</div>
+            
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contenido">
+                  <tr valign="top">
+                    <td width="38"><span>08:30</span><span class="arrow">»</span></td>
+                    <td width="87"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2, 3 y 4</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">8:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><br>
+                        Toda la información sobre estudios de posgrado en Heinz College, Carnegie Mellon University - Australia la podrá consultar con Darren Turner, 
+                        Director of Marketing & Recruitment de esta Universidad.<br><br>
+                        <span class="rojo">Este evento requiere inscripción previa.</span></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                                   
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>11:30</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Twitcam
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">11:30 a.m.</p>
+                        <p class="twitcam">Twitcam</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>15:00</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Feria
+                  
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2 y 3</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">15:00 a.m.</p>
+                        <p class="feria">Feria</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><span>18:00</span><span class="arrow">»</span></td>
+                    <td valign="top"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">18:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+
+                    </a></td>
+                  </tr>
+                </table>
+                <a href="#" class="contenido_ver_mas tip_trigger">» Más...</a>
+            
+            </td>
+            <td><div class="date">5</div></td>
+            <td class="active"><div class="date">6</div>
+            
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contenido">
+                  <tr valign="top">
+                    <td width="38"><span>08:30</span><span class="arrow">»</span></td>
+                    <td width="87"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2, 3 y 4</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">8:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><br>
+                        Toda la información sobre estudios de posgrado en Heinz College, Carnegie Mellon University - Australia la podrá consultar con Darren Turner, 
+                        Director of Marketing & Recruitment de esta Universidad.<br><br>
+                        <span class="rojo">Este evento requiere inscripción previa.</span></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                                   
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>11:30</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Twitcam
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">11:30 a.m.</p>
+                        <p class="twitcam">Twitcam</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td><span>15:00</span><span class="arrow">»</span></td>
+                    <td><a href="evento_detalle.html" class="tip_trigger">Feria
+                  
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2 y 3</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">15:00 a.m.</p>
+                        <p class="feria">Feria</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+                    
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><span>18:00</span><span class="arrow">»</span></td>
+                    <td valign="top"><a href="evento_detalle.html" class="tip_trigger">Charla informativa
+                    
+                    <div class="tip">
+                      <div class="tip_left">
+                        <p class="fecha">Enero 2</p>
+                        <p class="lugar">Bogotá, Colombia</p>
+                        <p class="hora">18:00 a.m.</p>
+                        <p class="charla">Charla informativa</p>
+                      </div><!-- tip_left -->
+                      <div class="tip_right">
+                        <p class="titulo_tip">Encuentre un excelente programa de posgrado en el exterior</p>
+                        <p class="descripcion_tip">A cargo de Diana Patiño<br><em>Coordinadora de Consejería Académica de COLFUTURO</em></p>
+                      </div><!-- tip_right -->
+                    </div><!-- tip -->
+                    <div class="clear"></div> 
+
+                    </a></td>
+                  </tr>
+                </table>
+                <a href="#" class="contenido_ver_mas tip_trigger">» Más...</a>
+            
+            </td>
+            <td><div class="date">7</div></td>
+            <td class="domingo"><div class="date">8</div></td>
+          </tr>
+          <tr valign="top" class="height_row">
+            <td><div class="date">9</div></td>
+            <td><div class="date">10</div></td>
+            <td><div class="date">11</div></td>
+            <td><div class="date">12</div></td>
+            <td><div class="date">13</div></td>
+            <td><div class="date">14</div></td>
+            <td class="domingo"><div class="date">15</div></td>
+          </tr>
+          <tr valign="top" class="height_row">
+            <td><div class="date">16</div></td>
+            <td><div class="date">17</div></td>
+            <td><div class="date">18</div></td>
+            <td><div class="date">19</div></td>
+            <td><div class="date">20</div></td>
+            <td><div class="date">21</div></td>
+            <td class="domingo"><div class="date">22</div></td>
+          </tr>
+          <tr valign="top" class="height_row">
+            <td><div class="date">23</div></td>
+            <td><div class="date">24</div></td>
+            <td><div class="date">25</div></td>
+            <td><div class="date">26</div></td>
+            <td><div class="date">27</div></td>
+            <td><div class="date">28</div></td>
+            <td class="domingo"><div class="date">29</div></td>
+          </tr>
+          <tr valign="top" class="height_row">
+            <td><div class="date">30</div></td>
+            <td><div class="date">31</div></td>
+            <td><div class="date_off">1</div></td>
+            <td><div class="date_off">2</div></td>
+            <td><div class="date_off">3</div></td>
+            <td><div class="date_off">4</div></td>
+            <td class="domingo"><div class="date_off">5</div></td>
+          </tr>
+          
+        </table>     
+    	<!-- fin Tabla contenido eventos ROW -->	
+	
+        <div class="tip_mas">
+          <div class="tip_top">
+            <p>Martes 3 de diciembre<a href="#">X</a></p></div>
+          <div class="tip_bottom">
+          
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top">
+                <td width="46"><span class="arrow">»</span><span>08:30</span></td>
+                <td width="104"><a href="#">Charla informativa</a></td>
+              </tr>
+              <tr valign="top">
+                <td><span class="arrow">»</span><span>11:30</span></td>
+                <td><a href="#">Twitcam</a></td>
+              </tr>
+              <tr valign="top">
+                <td><span class="arrow">»</span><span>13:00</span></td>
+                <td><a href="#">Feria</a></td>
+              </tr>
+              <tr valign="top">
+                <td><span class="arrow">»</span><span>14:00</span></td>
+                <td><a href="#">Charla informativa</a></td>
+              </tr>
+            </table> 
+        
+          </div>
+        </div><!-- tip_mas -->
+
+        <article id="cnt_redes_sociales_evento"><img style="float:right" src="images/TEMP_redes_sociales.png" width="380" height="25" alt="RS"></article>		        
+        
+    <div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+    
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+        
+</body>
+</html>

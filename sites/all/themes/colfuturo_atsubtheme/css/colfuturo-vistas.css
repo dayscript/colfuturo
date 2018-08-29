@@ -1,0 +1,174 @@
+/* 
+    Document   : global-colfuturo.css
+    Created on : 18/01/2013, 11:51:12 AM
+    Author     : fredy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/***************************
+		BUSCADOR SITIO
+****************************/
+.view-b-squedas-generales-del-sitio .views-row,
+.view-taxonomias .views-row{
+	margin-top: 25px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.view-b-squedas-generales-del-sitio .views-row .views-field-title a,
+.view-taxonomias .views-row .views-field-title a{
+	color: #000000;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.view-b-squedas-generales-del-sitio .views-row .views-field-title a:hover,
+.view-taxonomias .views-row .views-field-title a:hover{
+    color: #DA291C;
+}
+
+.view-b-squedas-generales-del-sitio .views-row .views-field-body,
+.view-taxonomias .views-row .views-field-body{
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.view-b-squedas-generales-del-sitio .item-list,
+.view-taxonomias .item-list{
+    margin-top: 30px;
+}
+
+.page-resultados-de-busqueda h1#page-title,
+.view-taxonomias h1#page-title{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.view-b-squedas-generales-del-sitio .views-row .views-field-created,
+.view-taxonomias .views-row .views-field-created{
+    color: #808080;
+    font-size: 11px;
+    margin-top: 16px;
+}
+
+/**
+* SLIDE NUESTROS BENEFICIARIOS
+**/
+.slide-nuestros-beneficiarios{
+} 
+
+.slide-nuestros-beneficiarios .views-slideshow-cycle-main-frame-row{
+    width: 100%;
+}
+
+.slide-nuestros-beneficiarios .views-field-nothing .content-personalized{
+    height: 260px;
+    margin: 20px auto auto;
+    width: 220px;
+}
+
+.slide-nuestros-beneficiarios .views-field-nothing{
+    background: url("../images/bg_panel_dualslider.png") no-repeat scroll right center #000000;
+    height: 300px;
+    width: 250px;
+    float:left;
+}
+.slide-nuestros-beneficiarios .views-field-nothing .content-personalized p{
+   color: #FFFFFF !important;
+   font-size: 12px !important; 
+}
+.slide-nuestros-beneficiarios .views-field-field-imagen-slide-home{
+    float: left;
+}
+.slide-nuestros-beneficiarios .views-field-field-imagen-slide-home img{
+    height: 300px;
+    width: 710px;
+}
+
+.slide-nuestros-beneficiarios .views-slideshow-pager-fields{
+    float:left;
+    left: 50%;
+    position: absolute;
+}
+.slide-nuestros-beneficiarios .views-slideshow-controls-bottom .views-slideshow-pager-field-item{
+    width: 50px;
+    float:left;
+    background: url("../images/bg_paging_numbers.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    font-size: 0;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    cursor: pointer;
+}
+.slide-nuestros-beneficiarios .views-slideshow-controls-bottom .views-slideshow-pager-field-item:hover{
+    background-position: 0 -20px;
+}
+.slide-nuestros-beneficiarios .views-slideshow-controls-bottom .active,
+.slide-nuestros-beneficiarios .views-slideshow-controls-bottom .active:hover{
+    background: url("../images/bg_paging_numbers.png") no-repeat scroll 0 -40px transparent;
+    color: #DA291C; 
+}
+
+/**
+* SLIDE slide-960x345
+**/
+.slide-960x345{
+} 
+
+.slide-960x345 .views-slideshow-cycle-main-frame-row{
+    width: 100%;
+}
+
+.slide-960x345 .views-field-nothing .content-personalized{
+    /*height: 260px;
+    margin: 20px auto auto;
+    width: 220px;*/
+}
+
+.slide-960x345 .views-field-nothing{
+    /*background: url("../images/bg_panel_dualslider.png") no-repeat scroll right center #000000;
+    height: 300px;
+    width: 250px;
+    float:left;*/
+}
+.slide-960x345 .views-field-nothing .content-personalized p{
+   color: #FFFFFF !important;
+   font-size: 12px !important; 
+}
+.slide-960x345 .views-field-field-imagen-slide-home{
+    float: left;
+}
+.slide-960x345 .views-field-field-imagen-slide-home img{
+    height: 345px;
+    width: 960px;
+}
+
+.slide-960x345 .views-slideshow-pager-fields{
+    float:left;
+    left: 50%;
+    position: absolute;
+}
+.slide-960x345 .views-slideshow-controls-bottom .views-slideshow-pager-field-item{
+    width: 50px;
+    float:left;
+    background: url("../images/bg_paging_numbers.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    font-size: 0;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    cursor: pointer;
+}
+.slide-960x345 .views-slideshow-controls-bottom .views-slideshow-pager-field-item:hover{
+    background-position: 0 -20px;
+}
+.slide-960x345 .views-slideshow-controls-bottom .active,
+.slide-960x345 .views-slideshow-controls-bottom .active:hover{
+    background: url("../images/bg_paging_numbers.png") no-repeat scroll 0 -40px transparent;
+    color: #DA291C; 
+}

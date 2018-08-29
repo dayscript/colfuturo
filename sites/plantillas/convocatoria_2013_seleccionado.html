@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Convocatoria 2013 Seleccionado</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+
+<!-- inicio JAVA - Accordion -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//Set default open/close settings
+	$('.acc_container').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});
+	
+	
+	
+	//Set default open/close settings
+	$('.acc_container2').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger2').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger2').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});	
+
+	
+	
+	//Set default open/close settings
+	$('.acc_container3').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger3').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger3').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});		
+	
+		
+});	
+</script>
+<!-- fin JAVA - Accordion  -->  
+ 
+<!-- Inicio JAVA - Countdown  -->   
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery(document).ready(function() {
+		$('#countdown_dashboard').countDown({
+			targetDate: {
+				'day': 		8,
+				'month': 	2,
+				'year': 	2013,
+				'hour': 	0,
+				'min': 		0,
+				'sec': 		0,
+			},
+			omitWeeks: true
+		});
+	});	
+</script>
+<!-- fin JAVA - Countdown  -->
+
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a class="current" href="#">Convocatoria 2013 Seleccionado</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_pasos_intro">
+    
+        <h2 class="titulo_general_negro">Pasos a seguir si es <strong>seleccionado</strong> como beneficiario</h2>
+        <p>Los resultados de la convocatoria 2013 serán <strong class="rojo">publicados el domingo 1 de julio</strong>. En caso de que usted sea seleccionado como beneficiario del programa de Crédito-beca deberá seguir estos pasos:</p>
+    
+    </section><!-- section#bloque_pasos_intro -->    
+    
+    
+    <section id="bloque_pasos_1234">
+    
+        <article id="paso_1"><div id="titulo_pasos_1234"><h2>Aceptación</h2></div>
+          <div class="txt_1234">
+                <h4>Acepte el Crédito-beca</h4>
+                <p>Por medio de un email le damos las instrucciones para aceptar el Crédito-beca.</p>
+                <a href="convocatoria_2013_seleccionados_p1.html">En que consiste la aceptación...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_1 -->
+        
+        
+        <article id="paso_2"><div id="titulo_pasos_1234"><h2>Charla</h2></div>
+          <div class="txt_1234">
+                <h4>Asista a la charla informativa</h4>
+                <p>Esta charla se realiza después de conocer los resultados del proceso de selección.</p>
+                <a href="convocatoria_2013_seleccionados_p2.html">Lugares donde se realiza la charla...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_2 -->
+        
+    
+        <article id="paso_3"><div id="titulo_pasos_1234"><h2>Evento</h2></div>
+          <div class="txt_1234">
+                <h4>Proclamación de becarios</h4>
+                <p>Acompáñenos al evento en Bogotá, Medellín, Cali y Bucaramanga.</p>
+                <a href="convocatoria_2013_seleccionados_p3.html">De qué se trata el evento...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_3 -->
+        
+
+        <article id="paso_4"><div id="titulo_pasos_1234"><h2>Charla</h2></div>
+          <div class="txt_1234">
+                <h4>Cita de presupuesto</h4>
+                <p>Deberá programar una cita con COLFUTURO donde se hablará de su presupuesto de estudios.</p>
+                <a href="convocatoria_2013_seleccionados_p4.html">Cómo programar una cita...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_4 -->
+        
+
+    </section><!-- section#bloque_pasos_1234 -->     
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+            <h2 class="titulo_general_rojo"><strong>Legalización</strong> del Crédito-beca</strong></h2>
+            <p class="texto_corrido"> El proceso de legalización del Crédito-beca son una serie de pasos que se deben cumplir una vez se ha seleccionado al candidato. Estos pasos se deben seguir dentro de los plazos estipulados.</p>
+            
+            
+            <ol>
+            
+                <li><strong>Acepte el Crédito-beca</strong><br>
+                Recibirá un correo electrónico con las instrucciones para aceptarlo y  continuar con el proceso.<br>
+                <a href="convocatoria_2013_seleccionados_p1.html">En que consiste la aceptación...</a></li>
+    
+                <li><strong>Asista a la charla informativa</strong><br>
+                Esta charla se realiza después de conocer los resultados del proceso de selección.<br>
+    			<a href="convocatoria_2013_seleccionados_p2.html">Donde y cuándo se realiza la charla...</a>
+                </li>
+                
+                <li><strong>Evento de proclamación de beneficiarios</strong><br>
+    			Acompáñenos al evento en honor de los beneficiarios seleccionados en Bogotá, Medellín, Cali y Bucaramanga.<br>
+    			<a href="convocatoria_2013_seleccionados_p3.html">De qué se trata el evento...</a></li>
+                
+                <li><strong>Cita de presupuesto</strong><br>
+                Deberá programar una cita con COLFUTURO donde se hablará de su presupuesto de estudios.<br>
+				<a href="convocatoria_2013_seleccionados_p1.html">Cómo se programa la cita...</a></li>
+
+            </ol>
+            
+            <h2 class="titulo_general_rojo">Estudio del crédito</h2>
+            <p class="texto_corrido">Los estudios de crédito son realizados por una entidad independiente a COLFUTURO y normalmente tardan 5 días hábiles. 
+            Se realizan en el mismo orden en que se reciben las solicitudes cuando los candidatos seleccionados dan la opción "enviar" al formulario de estudio de crédito en línea.</p>
+            
+            <h3 class="subtitulo_seccion">Codeudores</h3>
+            
+            <p class="texto_corrido">COLFUTURO exige la presentación de dos codeudores (obligados solidarios). Es recomendable seleccionar dichos codeudores con anticipación e iniciar la recopilación de los documentos para el estudio de crédito de esta manera, será posible  cumplir el proceso de legalización dentro de las fechas establecidas. Al seleccionar los codeudores, tenga en cuenta que deben cumplir los siguientes requisitos:</p>
+            
+            <ul class="lista_disc">
+                <li>Tener domicilio permanente en el país o tener bienes raíces en Colombia si viven en el exterior.</li>
+                <li>Ser mayores de edad y preferiblemente menores de 65 años.</li>
+                <li>Tener alguna actividad económica que genere rentas y que le permita respaldar el crédito del beneficiario. En su defecto, 
+                deben demostrar que poseen bienes raíces no constituidos como patrimonio familiar inembargable.</li>
+                <li>Cada codeudor podrá respaldar solamente a un candidato seleccionado.</li>
+                <li>En ningún caso podrán ser codeudores simultáneamente el padre y la madre del candidato seleccionado, 
+                a menos que tengan sociedad conyugal disuelta o patrimonios separados.</li>
+                <li>No puede ser codeudor el cónyuge del candidato seleccionado. </li>
+                <li>Los codeudores pueden ser personas jurídicas.</li>
+                <li>Es ideal que la propiedad raíz poseída por los dos codeudores tenga un monto declarado que sea 1.5 veces superior al monto del crédito solicitado. </li>
+            </ul>
+            
+            
+            
+            
+            
+            
+          
+            
+            
+            <article class="cnt_accordion">
+            
+                <h2 class="acc_trigger"><a href="#">Documentos</a></h2><div class="acc_container"><div class="block">
+                    <p class="texto_corrido">Los documentos que los dos codeudores deben adjuntar en el formulario de estudio de crédito en línea son:</p>
+                    
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="col_izq_tabla_general">
+                      <tr class="alt">
+                        <td width="33%" valign="top">EMPLEADO / PENSIONADO</td>
+                        <td width="34%" valign="top">INDEPENDIENTE</td>
+                        <td width="33%" valign="top">PERSONA JURÍDICA</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Fotocopia de la cédula.</td>
+                        <td valign="top">Fotocopia de la cédula.</td>
+                        <td valign="top">Fotocopia del NIT.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Certificado laboral y fotocopia de las declaraciones de renta de 2012 y 2011 (si está obligado a declarar)*.</td>
+                        <td valign="top">Fotocopia de las declaraciones de renta de 2012 y 2011 (si está obligado a declarar)*.</td>
+                        <td valign="top">Fotocopia de las declaraciones de renta de 2012 y 2011*.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Fotocopia de los últimos dos desprendibles de pago de nómina.</td>
+                        <td valign="top">Estados financieros de los dos últimos años gravables (2012 y 2011) firmados por contador público.</td>
+                        <td valign="top">Estados financieros a Dic/2012 y Mar/2013, firmados por contador público.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">&nbsp;</td>
+                        <td valign="top">Certificación vigente de matrícula del contador y tarjeta profesional.</td>
+                        <td valign="top">Certificación vigente de matrícula del contador y tarjeta profesional.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">&nbsp;</td>
+                        <td valign="top">Fotocopia de los extractos bancarios de los tres últimos meses.</td>
+                        <td valign="top">Fotocopia de los extractos bancarios de los tres últimos meses.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Certificado de ingresos y retenciones 2012 (original o fotocopia autenticada).</td>
+                        <td valign="top">Certificado de Cámara de Comercio (vigencia no mayor a 30 días si es comerciante).</td>
+                        <td valign="top">Certificado de Cámara de Comercio (vigencia no mayor a 30 días).</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">&nbsp;</td>
+                        <td valign="top">Si es propietario de empresa, autorización para consulta en Centrales de Riesgo.</td>
+                        <td valign="top">Autorización expresa de la junta de socios para comprometer a la empresa como firma codeudora.</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Fotocopia del certificado de tradición y libertad de bienes raíces (vigencia no mayor a 30 días).</td>
+                        <td valign="top">Fotocopia del certificado de tradición y libertad de bienes raíces (vigencia no mayor a 30 días).</td>
+                        <td valign="top">Fotocopia del certificado de tradición y libertad de bienes raíces (vigencia no mayor a 60 días).</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Fotocopia de la tarjeta de propiedad de vehículo(s).</td>
+                        <td valign="top">Fotocopia de la tarjeta de propiedad de vehículo(s).</td>
+                        <td valign="top">Fotocopia de la tarjeta de propiedad de vehículo(s).</td>
+                      </tr>
+                      <tr>
+                        <td valign="top">Firmar el formato, de Autorización la verificación de datos y consulta a la de Central de Riesgo.</td>
+                        <td valign="top">Firmar el formato, de Autorización la verificación de datos y consulta a la de Central de Riesgo.</td>
+                        <td valign="top">Firmar el formato, de Autorización la verificación de datos y consulta a la de Central de Riesgo.</td>
+                      </tr> 
+                    </table>
+                    
+                    
+                  <p class="texto_corrido_sub">* Si a la fecha de envío del formulario de estudio de crédito no ha presentado la declaración de renta de 2012, deberá presentar la de 2010 y la de 2011.</p>
+				</div></div>
+                  
+                  
+                <h2 class="acc_trigger"><a href="#">Firma y autenticación</a></h2><div class="acc_container"><div class="block">
+               <p class="texto_corrido">Para esta etapa del proceso es indispensable haber concluido la cita de presupuesto y tener aprobado el estudio de crédito. Aunque estos dos pasos son independientes, también son complementarios para generar los documentos legales del crédito.<br><br>Una vez COLFUTURO obtenga la aprobación del crédito, el candidato seleccionado debe contactar al área de Convocatoria contactará al candidato seleccionado para  hacerle entrega de los siguientes documentos:</p>
+               
+				<ul class="lista_disc">
+               	  <li>La copia del documento informativo deberá devolverse firmada a COLFUTURO.</li>
+			  	  <li>El pagaré y la carta de instrucciones deberán devolverse a COLFUTURO debidamente firmados con diligencia de presentación personal y reconocimiento de texto ante notario por parte del candidato seleccionado (o su apoderado) y sus codeudores.</li>
+			  	  <li>Si para la fecha de la firma de los documentos el beneficiario no se encuentra en el país, debe dejar un poder y entregarlo en físico a COLFUTURO.</li>
+               </ul>
+               
+               <p class="texto_corrido">Los beneficiarios de COLFUTURO pueden participar nuevamente en la convocatoria siempre y cuando vayan a cursar un estudio superior al anterior y hayan cancelado la totalidad de su primer crédito-beca.</p>
+               
+               
+               
+               
+                </div></div>
+                
+            <div class="clear"></div>
+       		<div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+
+
+		</article><!-- cnt_accordion -->            
+            
+
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        
+        <!-- Inicio countdown-->
+        <article id="countdown">
+            <div class="countdown_01">
+            <!-- Countdown dashboard start -->
+                <div id="countdown_dashboard">
+                    <div class="dash days_dash"><span class="dash_title">DIAS</span><div class="digit">0</div><div class="digit">0</div></div>
+                    <div class="dash hours_dash"><span class="dash_title">HORAS</span><div class="digit">0</div><div class="digit">0</div></div>
+                    <div class="dash minutes_dash"><span class="dash_title">MINUTOS</span><div class="digit">0</div><div class="digit">0</div></div>
+                    <div class="dash seconds_dash"><span class="dash_title">SEGUNDOS</span><div class="digit">0</div><div class="digit">0</div></div>
+                </div>
+            <!-- Countdown dashboard end -->
+            </div><!-- fin countdown_01 -->
+            <div class="countdown_02">
+            
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla_btn">
+                  <tr>
+                    <td align="center" valign="middle"><br><a href="#?w=400" rel="popup_name" class="btn_principal_01 poplight">FORMULARIO EN LÍNEA</a></td>
+                  </tr>
+                </table>
+
+                <div id="popup_name" class="popup_block"><img src="images/TEMP_pop_up.jpg" width="400" height="270" /></div>
+            </div><!-- fin countdown_02 -->
+        </article>
+        <!-- Fin countdown-->
+
+
+            <article id="columna_390_icono">
+                <div id="titulo_columna_390">
+				  <img src="images/icono_calendario.png" width="50" height="45" alt="Eventos">
+           	 	  <h2>CALENDARIO 2013</h2>
+              </div><!-- titulo_columna_320 -->
+                <div class="cnt_columna_390_icono">
+                    
+                    <div class="cnt_evento_calendario_390_off">
+                        <h5 class="fecha_calendario">12 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Apertura</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+                    
+                    <div class="cnt_evento_calendario_390_on">
+                        <h5 class="fecha_calendario">13 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>El segundo idioma</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">20 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>El ensayo requerido</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">3 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Presupuesto</strong> (parte I)</h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">10 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Carta de admisión</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">17 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Presupuesto</strong> (parte II)</h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->                
+                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">30 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Cierre de la convocatoria</strong></h4>
+                        <p>12 de la noche (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->      
+                                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">30 de junio<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Publicación de resultados</strong></h4>
+                        <a href="#">Página web de COLFUTURO</a>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->    
+                
+                </div><!-- cnt_columna_390_icono -->
+            </article><!-- article#columna_390_icono -->            
+        
+
+         <article id="columna_320_linea">
+                
+              <h2 class="subtitulo_general_negro_columna"><strong>Recursos</strong> de COLFUTURO</h2>
+                
+                <p>COLFUTURO cuenta con una serie de recursos que le servirán durante su proceso de aplicación.</p>
+                <br>
+                
+                <h2><a href="#">ReBeca, Consejera Virtual</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Instructivo en línea</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Twitcams</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Boletines electrónicos</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Correo electrónico</a></h2>
+                
+                
+               
+            </article><!-- article#columna_320_linea -->    
+            
+            
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+        
+
+
+
+
+
+        </section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>

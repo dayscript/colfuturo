@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Convocatoria 2013</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+<!-- inicio JAVA Popup-->
+<script type="text/javascript">
+$(document).ready(function() {
+	//When you click on a link with class of poplight and the href starts with a # 
+$('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+    $('#' + popID).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+    return false;
+});
+
+//Close Popups and Fade Layer
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+    $('#fade , .popup_block').fadeOut(function() {
+        $('#fade, a.close').remove();  //fade them both out
+    });
+    return false;
+});
+});
+
+</script>
+<!-- fin JAVA Popup -->
+
+<!-- Inicio JAVA - Countdown  -->   
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery(document).ready(function() {
+		$('#countdown_dashboard').countDown({
+			targetDate: {
+				'day': 		8,
+				'month': 	2,
+				'year': 	2013,
+				'hour': 	0,
+				'min': 		0,
+				'sec': 		0,
+			},
+			omitWeeks: true
+		});
+	});	
+</script>
+<!-- fin JAVA - Countdown  -->
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a class="current" href="#">Convocatoria 2013</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_pasos_intro">
+    
+        <h2 class="titulo_general_negro">Pasos para <strong>participar</strong> en la convocatoria 2013</h2>
+        <p>Usted puede estar entre los <strong>profesionales destacados</strong> que harán realidad su proyecto de adelantar estudios de posgrado en el exterior. Este año, la <strong>convocatoria del Programa Crédito- beca 2013</strong> se <strong class="rojo">abre el 1 de marzo y se cierra el 30 de abril</strong> a las 12:00 p.m., hora de Colombia. Tenga en cuenta estos pasos para realizar una postulación exitosa:</p>        
+    
+    </section><!-- section#bloque_pasos_intro -->    
+    
+    
+    <section id="bloque_pasos_1234">
+    
+    
+        <article id="paso_1"><div id="titulo_pasos_1234"><h2>Charlas</h2></div>
+          <div class="txt_1234">
+                <h4>Charlas informativas</h4>
+                <p>Asista a las charlas informativas del programa Crédito-beca en nuestra sede o por internet.</p>
+                <a href="convocatoria_2013_p1.html">Agenda de eventos...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_1 -->
+        
+        
+        <article id="paso_2"><div id="titulo_pasos_1234"><h2>Instructivo</h2></div>
+          <div class="txt_1234">
+                <h4>Instructivo y reglamento</h4>
+                <p>Lea el instructivo en línea y el reglamento del programa Crédito-beca.</p>
+                <a href="convocatoria_2013_p2.html">Consulte el instructivo en línea....</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_2 -->
+        
+                            
+        <article id="paso_3"><div id="titulo_pasos_1234"><h2>Requisitos</h2></div>
+          <div class="txt_1234">
+                <h4>Requisitos</h4>
+                <p>Cumpla con los requisitos que pide COLFUTURO para participar en la convocatoria.</p>
+                <a href="convocatoria_2013_p3.html">Conózca los requsitos...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_3 -->
+        
+
+        <article id="paso_4"><div id="titulo_pasos_1234"><h2>Formulario</h2></div>
+          <div class="txt_1234">
+                <h4>Formulario en línea</h4>
+                <p>Diligencie el formulario en línea, redacte un ensayo y elabore un presupuesto en dólares.</p>
+                <a href="convocatoria_2013_p4.html">Conózca los requsitos...</a>
+            </div><!-- txt_1234 -->
+        </article><!-- paso_4 -->
+
+
+    </section><!-- section#bloque_pasos_1234 -->     
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+            <h2 class="titulo_general_rojo">Proceso de <strong>selección</strong></h2>
+            
+            
+            <div class="video_columna_izquierda">
+                <iframe width="550" height="309" src="http://www.youtube-nocookie.com/embed/n4CvLt0IFWI" frameborder="0" allowfullscreen></iframe>                
+            </div>
+            
+            <p class="texto_corrido">La selección de los beneficiarios del Programa de Crédito-beca de COLFUTURO es un proceso competitivo ya que se tienen muchos 
+            más candidatos que personas que se pueden apoyar. A través de un <a href="#">formulario en línea</a>, al cual se accede de manera gratuita, usted podrá participar. 
+            Para esto deberá <a href="#">registrarse</a> e ingresar su número de cédula, unos datos básicos.</p>
+
+         	<h3 class="subtitulo_seccion">Recomendaciones para una postulación exitosa</h3>
+            
+          <ul class="lista_disc">
+            <li><strong>No deje todo para última hora!</strong> Tómese el tiempo para conseguir los documentos que necesita, revisar el ensayo, construir su presupuesto y diligenciar el formulario de la mejor manera. Revise varias veces antes de enviar el formulario.</li>
+            <li>R<strong>evise la duración del programa seleccionado</strong>, ested debe durar mínimo un año académico o nueve meses y debe iniciar entre los meses de agosto del año de la convocatoria y mayo del año siguiente.</li>
+            <li><strong>En caso de solicitar apoyo para un posgrado que ya ha iniciado</strong>, este no podrá finalizar antes de un año académico o nueve meses a partir de agosto del año en que se postula.</li>
+            <li><strong>Conozca las condiciones</strong> que <a href="que_ofrecemos_p2.html">exige el Crédito-beca.</a></li>
+            <li>Tenga claro qué se evalúa en el <a href="convocatoria_2013_p1.html">proceso de selección</a> y sáquele el mejor provecho a esta información.</li>
+            <li><strong>El examen de idioma</strong> es muy importante. Prográmelo con tiempo para que pueda prepararse.</li>
+            <li><strong>Lea con mucho cuidado</strong> el <a href="convocatoria_2013_p2.html">instructivo en línea</a> para diligenciar el formulario de forma correcta. </li>
+            <li><strong>Mantenga una comunicación fluida con la universidad </strong>a la que se está postulando para obtener el <a href="convocatoria_2013_p3.html">requisito de admisión </a>y solicitar toda la información que pueda necesitar. </li>
+            <li><strong>Sobre su ensayo</strong>, pídale a amigos y familiares le ayuden a revisarlo.</li>
+            <li><strong>En la sección que solicita información sobre su posgrado</strong>, no use links generales de la universidad, sea específico en direccionar la información al programa y la facultad que seleccionó.</li>
+            <li><strong>El presupuesto es una herramienta que lo ayudará</strong> a tener una idea clara y real de cuánto le costará su proyecto de estudiar un posgrado en el exterior. Aunque no es un requisito determinante en el proceso de selección, diligéncielo de manera honesta.</li>
+            <li><strong>Pregunte todo lo que necesite</strong> saber cuantas veces sea necesario. Si tiene dudas asista a las charlas informativas, participe en las <a href="#">twitcams</a> para resolver sus dudas y pregúntele a nuestra asesora virtual <a href="#">Rebeca</a>.</li>
+          </ul><!-- lista_disc -->        
+            
+         	<h3 class="subtitulo_seccion">Qué hacer si es seleccionado</h3>
+            <p class="texto_corrido">COLFUTURO arranca el <a href="#">proceso de seleccion</a> una vez cerrada la convocatoria, durante este tiempo se evaluarán las aplicaciones enviadas y se verificarán los documentos adjuntos a la misma.</p>
+            <p class="texto_corrido">El domingo 1 de julio de 2013 se darán a conocer los resultados. Si ustes es seleccionado como beneficiario tendrá que seguir una serie de pasos para aceptar el Crédito-beca.<br>
+<br>
+<a href="convocatoria_2013_seleccionado.html">Conozca los pasos para aceptar el Crédito-beca...</a></p>
+
+
+        <div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+            
+            
+            
+            
+            
+            
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        	<!-- Inicio countdown-->
+            <article id="countdown">
+                <div class="countdown_01">
+                <!-- Countdown dashboard start -->
+                    <div id="countdown_dashboard">
+                        <div class="dash days_dash"><span class="dash_title">DIAS</span><div class="digit">0</div><div class="digit">0</div></div>
+                        <div class="dash hours_dash"><span class="dash_title">HORAS</span><div class="digit">0</div><div class="digit">0</div></div>
+                        <div class="dash minutes_dash"><span class="dash_title">MINUTOS</span><div class="digit">0</div><div class="digit">0</div></div>
+                        <div class="dash seconds_dash"><span class="dash_title">SEGUNDOS</span><div class="digit">0</div><div class="digit">0</div></div>
+                    </div>
+                <!-- Countdown dashboard end -->
+                </div><!-- fin countdown_01 -->
+                <div class="countdown_02">
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla_btn">
+                  <tr>
+                    <td align="center" valign="middle"><br><a href="#?w=400" rel="popup_name" class="btn_principal_01 poplight">FORMULARIO EN LÍNEA</a></td>
+                  </tr>
+                </table>
+                    
+					<div id="popup_name" class="popup_block"><img src="images/TEMP_pop_up.jpg" width="400" height="270" /></div>
+                </div><!-- fin countdown_02 -->
+            </article>
+        	<!-- Fin countdown-->
+
+
+            
+            <article id="columna_390_icono">
+                <div id="titulo_columna_390">
+				  <img src="images/icono_calendario.png" width="50" height="45" alt="Eventos">
+           	 	  <h2>CALENDARIO 2013</h2>
+              </div><!-- titulo_columna_320 -->
+                <div class="cnt_columna_390_icono">
+                    
+                    <div class="cnt_evento_calendario_390_off">
+                        <h5 class="fecha_calendario">12 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Apertura</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+                    
+                    <div class="cnt_evento_calendario_390_on">
+                        <h5 class="fecha_calendario">13 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>El segundo idioma</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">20 de marzo<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>El ensayo requerido</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">3 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Presupuesto</strong> (parte I)</h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">10 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Carta de admisión</strong></h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->
+                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">17 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Presupuesto</strong> (parte II)</h4>
+                        <p>Twitcam, 10:00 a.m. (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->                
+                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">30 de abril<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Cierre de la convocatoria</strong></h4>
+                        <p>12 de la noche (hora de Colombia)</p>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->      
+                                                    
+					<div class="linea_col_derecha"></div>
+
+                    <div class="cnt_evento_calendario_390">
+                        <h5 class="fecha_calendario">30 de junio<span class="fin_fecha_calendario"></span></h5>
+                        <h4><strong>Publicación de resultados</strong></h4>
+                        <a href="#">Página web de COLFUTURO</a>
+                        <div class="clear"></div>
+                    </div><!-- cnt_evento_calendario_390 -->    
+                
+                
+                </div><!-- cnt_columna_390_icono -->
+            </article><!-- article#columna_390_icono -->            
+            
+            
+            
+            <article id="columna_320_linea">
+                <h2 class="subtitulo_general_negro_columna"><strong>Recursos</strong> de COLFUTURO</h2>
+                <p>COLFUTURO cuenta con una serie de recursos que le servirán durante su proceso de aplicación.</p><br>
+                <h2><a href="#">ReBeca, Consejera Virtual</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Instructivo en línea</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Twitcams</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Boletines electrónicos</a></h2>
+                <div class="linea_col_derecha_small"></div>
+                <h2><a href="#">Correo electrónico</a></h2>
+            </article><!-- article#columna_320_linea -->    
+            
+            
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+        
+        
+        </section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+    
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+        
+</body>
+</html>

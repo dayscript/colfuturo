@@ -1,0 +1,614 @@
+#user-pass,
+#user-register-form,
+#user-login,
+#user-profile-form{
+    float:left;
+    width: 100%;
+}
+
+#user-pass label,
+#user-register-form label,
+#user-login label,
+#user-profile-form label,
+.webform-client-form label{
+    color: #999999;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 13px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#user-pass .description,
+#user-register-form .description,
+#user-login .description,
+#user-profile-form .description,
+.webform-client-form .description{
+    display: none;
+} 
+
+#user-pass .form-item,
+#user-register-form .form-item,
+#user-login .form-item,
+#user-profile-form .form-item,
+.webform-client-form .form-item{
+  width: 100%
+}
+
+#user-register-form .form-item{
+    min-height: 0px;
+}
+
+#user-login .form-item{
+    min-height: 85px;
+}
+
+#user-pass .form-item:hover,
+#user-register-form .form-item:hover,
+#user-login .form-item:hover,
+#user-profile-form .form-item:hover,
+.webform-client-form .form-item:hover{
+  background: none repeat scroll 0 0 #E9E9E9;
+}
+
+
+#user-pass .form-item .description,
+#user-register-form .form-item .description,
+#user-login .form-item .description,
+.webform-client-form .description{
+  float: left;
+  margin-top: 5px;
+}
+
+#user-pass .form-item input[type='text'],
+#user-register-form .form-item input[type='text'],
+#user-register-form .form-item input[type='password'],
+#user-login .form-item input[type='text'],
+#user-login .form-item input[type='password'],
+#user-profile-form .form-item input[type='text'],
+#user-profile-form .form-item input[type='password'],
+.webform-client-form .form-item input[type='text'],
+.webform-client-form .form-item input[type='email']{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333;
+    float: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    padding: 0 8px;
+    width: 230px;
+}
+
+#user-pass .form-item input[type='text']:focus,
+#user-register-form .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-login .form-item input[type='text']:focus,
+#user-profile-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='text']:focus,
+.webform-client-form .form-item input[type='email']:focus{
+  border-color: #F1771E;
+}
+
+#user-pass #edit-actions,
+#user-register-form #edit-actions,
+#user-login #edit-actions,
+#user-profile-form #edit-actions--2,
+.webform-client-form #edit-actions{
+  float: left;
+  margin-top: 40px;
+}
+
+#user-login #edit-actions{
+    margin-top: 0;
+}
+
+#user-pass #edit-actions input[type='submit'],
+#user-register-form #edit-actions input[type='submit'],
+#user-login #edit-actions input[type='submit'],
+#user-pass-reset #edit-actions input[type='submit'],
+#user-profile-form #edit-actions--2 input[type='submit'],
+.webform-client-form #edit-actions input[type='submit']{
+  background: url("../images/flecha_btn_principal.png") no-repeat scroll right 0 #EF772E;
+  border: 1px solid #EB8232;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 2px 0 1px #B46628;
+  color: #FFFFFF;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
+  height: 35px;
+  line-height: 36px;
+  padding: 0 35px 0 10px;
+  text-transform: uppercase;
+}
+
+#user-pass #edit-actions input[type='submit']:hover,
+#user-register-form #edit-actions input[type='submit']:hover,
+#user-login #edit-actions input[type='submit']:hover,
+#user-pass-reset #edit-actions input[type='submit']:hover,
+#user-profile-form #edit-actions--2 input[type='submit']:hover,
+.webform-client-form #edit-actions input[type='submit']:hover{
+    background: url("../images/flecha_btn_principal.png") no-repeat scroll right -35px #D30000;
+    border: 1px solid #DB3E3E;
+    box-shadow: 0 2px 0 1px #7D0000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#user-register-form #edit-field-interes{
+    width: 350px;
+    float:left;
+}
+
+
+#user-register-form #edit-actions{
+    float:left;
+    width: 500px;
+}
+
+#user-register-form #edit-field-autorizacion .description{
+    display: block;
+}
+
+
+#block-block-48{
+    position: relative;
+}
+
+#block-block-48 p{
+    position: absolute;
+    right: 190px;
+    text-align: center;
+    top: 65px;
+}
+
+#block-block-48 p a{
+    color: #F1771E;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#block-block-48 p a:hover{
+    color: #000000;
+}
+
+.cnt_btn_guardar_cancelar,
+.webform-client-form #edit-actions{
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #D6D6D6;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    margin: 20px 0 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.cnt_btn_guardar_cancelar{
+    padding: 13px 0;
+}
+
+.cnt_btn_guardar_cancelar .content_inner a.boton-principal{
+    margin: 0;
+    margin-right: 15px;
+}
+
+.cnt_btn_guardar_cancelar .content_inner  .cnt_01b{
+    font-size: 12px;
+    color: #4D4D4D;
+}
+
+#user-login .form-item-pass{
+    margin-left: 50px;
+}
+#user-login .form-item-name{
+    margin-left: 20px;
+}
+#user-login #edit-submit{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right 0 #B3B3B3 !important;
+    border: 1px solid #BFBFBF  !important;
+    box-shadow: 0 2px 0 1px #999999 !important;
+    margin-left: 260px;
+}
+#user-login #edit-submit:hover{
+    background: url("../images/flecha_btn_secundario.png") no-repeat scroll right -30px #333333 !important;
+    border: 1px solid #666666 !important;
+    box-shadow: 0 2px 0 1px #000000 !important;
+}
+
+/* Pagina de registro */
+#user-register-form{
+    
+}
+#user-register-form .form-type-password-confirm .description{
+    display: block;
+}
+#user-register-form .form-type-password-confirm .password-suggestions{
+    display: none !important;
+}
+
+#user-register-form  #edit-field-area-de-interes-und,
+#user-profile-form #edit-field-area-de-interes-und{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 0 0 5px;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    width: 250px;
+    margin-top: 5px;
+}
+
+#user-register-form .form-item-pass-pass1,
+#user-register-form .form-item-pass-pass2{
+    padding: 0;
+}
+
+#user-register-form .info_header_description p{
+    color: #000000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+#user-register-form .form-item-field-area-de-interes-und{
+    margin-left: 25px;
+}
+
+#user-register-form #edit-field-genero-und .form-item{
+    min-height: 0;
+}
+
+/* ACTUALIZAR DATOS */
+#user-profile-form #edit-ldap-user-prov-entries,
+#user-profile-form #edit-timezone,
+#user-profile-form #edit-locale{
+    display: none;
+}
+
+div.form-item div.password-suggestions {
+    border: none;
+}
+
+#user-profile-form .form-item-field-area-de-interes-und{
+    margin-left: 50px;
+}
+
+/*****************************
+FORMULARIO DE CONTACTO
+*****************************/
+.webform-client-form select{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px 0 0 5px;
+    color: #333333;
+    float: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    height: 27px;
+    margin-top: 5px;
+    padding: 0 0 0 8px;
+    width: 250px;
+}
+
+.webform-client-form #webform-component-categoria{
+    margin-left: 50px;
+}
+
+.webform-client-form .form-item input[type='text'],
+.webform-client-form .form-item input[type='email']
+{
+    width: 540px;
+} 
+.webform-client-form textarea{
+    width: 560px;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.webform-client-form #edit-actions{
+    padding: 13px 0; 
+}
+
+
+#user-register-form .form-type-password-confirm .description{
+   display:none;	
+}
+
+/* FORMULARIOS PREGUNTAS BENEFICIARIOS */
+.page-node-350 .webform-client-form .form-item{
+}
+.page-node-350 .webform-client-form label{
+    color:#666666;
+}
+.page-node-350 .webform-client-form .webform-component-textfield{
+    width: 420px;
+    margin-right: 45px;
+}
+.page-node-350 .webform-client-form .webform-component-textfield input{
+    width: 95% !important;
+}
+.page-node-350 .webform-client-form .webform-component-textfield input.error{
+    border: 1px solid #CC0000;
+}
+.page-node-350 .webform-client-form #webform-component-persona-influye,
+.page-node-350 .webform-client-form #webform-component-se-destaco-siempre,
+.page-node-350 .webform-client-form .webform-component-textarea{
+    width: 950px;
+}
+
+.page-node-350 .webform-client-form .webform-component-textarea textarea{
+    width: 97%;
+}
+
+
+/* FORMULARIO de Solicitud de Programa de Idiomas */
+.webform-component-markup:hover{
+    background-color: transparent;
+}
+.webform-component-markup .terminos{
+    height: 120px;
+    overflow-y: auto;
+    width: 100%;
+    font-size: 12px;
+}
+
+
+#webform-client-form-424 .webform-layout-box{
+	width: 470px;
+    float:left;
+}
+#webform-client-form-424 .webform-layout-box .form-item input[type="text"],
+#webform-client-form-424 .webform-layout-box .form-item input[type="email"],
+#webform-client-form-424 .webform-layout-box .form-item input[type="password"]{
+    width: 90%;
+}
+
+#webform-client-form-424 .form-item,
+#webform-client-form-426 .form-item{
+    float:left;
+    margin: 0;
+    padding: 10px;
+    width: 90%;
+}
+
+#webform-client-form-424 #edit-actions > input{
+	margin: 0 10px;
+}
+
+#webform-component-col-der--estado-civil-grupo--estado-civil-otro,
+#webform-component-col-izq--como-se-entero-grupo--como-se-entero-otro{
+    margin-top: -20px;
+}
+#webform-component-col-der--estado-civil-grupo--estado-civil-otro label,
+#webform-component-col-izq--como-se-entero-grupo--como-se-entero-otro label{
+    display: none;
+}
+#webform-component-autorizacion .description{
+    display: block;
+}
+#webform-component-igual-que-direccion-de-residencia > label,
+#webform-component-autorizacion > label{
+    display: none;
+}
+#webform-client-form-424 .webform-datepicker .form-item{
+    width: 100px;
+}
+#webform-client-form-424 .webform-datepicker .form-item select{
+    width: 100px;
+}
+#webform-client-form-424 .webform-component-radios .form-item,
+#webform-client-form-426 .webform-component-radios .form-item{
+    min-height: 5px;
+    padding-bottom: 0;
+}
+#webform-client-form-424 fieldset{
+    border:0px solid #CCCCCC;
+    width: 465px;
+    float:left;
+}
+#webform-client-form-424 fieldset .form-item{
+    width: 455px;
+}
+#webform-client-form-424 legend{
+    display: none;
+}
+#webform-component-igual-que-direccion-de-residencia,
+#webform-component-igual-que-direccion-de-residencia .form-item{
+	min-height: 40px;
+}
+
+#webform-client-form-460 .webform-component-textfield,
+#webform-client-form-460 .webform-component-radios,
+#webform-client-form-460 .webform-component-email{
+	width: 100%;
+}
+
+#webform-client-form-460 .webform-component-radios,
+#webform-client-form-460 .webform-component-radios .form-item,
+#webform-client-form-460 .webform-component-checkboxes,
+#webform-client-form-460 .webform-component-checkboxes .form-item{
+	min-height: 0;
+}
+
+#webform-client-form-460 #webform-component-por-que{
+	margin-top: -30px;
+}
+
+#webform-client-form-460 #edit-submitted-no-estamos-interesados label{
+	display: none;
+}
+
+
+/* FORMULARIO AUSTRALIA */
+.page-node-514{
+	border:1px solid #FBB900;
+	background-color: #FBB900;
+	background-image: url('../images/form-events/australia-header.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.page-node-514 #page{
+	border:1px solid #FFFFFF;
+	width: 960px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	margin-top: 300px;
+}
+.page-node-514 #page #content{
+	width: 840px;
+	margin: 0 auto;
+}
+.page-node-514 .eventos_fixed{
+	display: none;
+}
+
+.page-node-514 .form-item{
+	width: 230px;
+	margin-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.page-node-514 #webform-component-cedula,
+.page-node-514 #webform-component-nivel-de-ingles,
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano,
+.page-node-514 #webform-component-otra-institucion{
+	margin-right: 0px;
+}
+.page-node-514 #webform-component-nivel-de-ingles,
+.page-node-514 #webform-component-email{
+	min-height: 100px;
+}
+
+.page-node-514 .form-item .form-text,
+.page-node-514 .form-item select{
+	width: 90% !important;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento{
+
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .form-item{
+	width: 65px;
+	margin-right: 1px;
+	height: 30px;
+	min-height: 30px;
+	padding-left: 0px;
+	padding-right: 0px; 
+	padding:0;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .form-item select{
+	width: 55px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.page-node-514 #webform-component-otra-institucion{
+	width: 520px;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir,
+.page-node-514 #webform-component-terminos{
+	width: 800px;
+}
+
+.page-node-514 #webform-component-terminos .form-item,
+.page-node-514 #webform-component-texto-de-terminos{
+	width: 800px;
+}
+
+.page-node-514 #webform-component-terminos > label{
+	display: none;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir .form-item{
+	width: 97%;
+	min-height: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir .form-item label,
+.page-node-514 #webform-component-terminos .form-item label{
+	text-transform: none;
+	color: #000;
+}
+
+.page-node-514 #webform-component-a-cual-charla-le-gustaria-asistir > label{
+	margin-bottom: 10px;
+}
+
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano label,
+.page-node-514 #page-title{
+	display: none;
+}
+.page-node-514 #webform-component-inicio-de-estudio-en-australia-ano select{
+	margin-top: 35px;
+}
+.page-node-514 #webform-component-terminos .form-item{
+	padding: 0;
+}
+
+.page-node-514 .field-name-body h3{
+	color: #CC1718;
+	font-size: 24px;
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	text-align: center;
+	font-weight: normal;
+}
+
+.page-node-514 .form-item input.error,
+.page-node-514 .form-item textarea.error,
+.page-node-514 .form-item select.error {
+  border: 1px solid #c00 !important;
+}
+
+.page-node-514 #messages p{
+	color:#007700;
+	font-size: 13px;
+	line-height: 135%;
+	font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.page-node-514 #edit-actions input[type='submit'] {
+ 	box-shadow: 0 2px 0 1px #7D0000;
+ 	border: 1px solid #DB3E3E;
+ 	background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #D30000;
+ 	padding: 0 45px 0 10px;
+}
+
+.page-node-514 #edit-actions input[type='submit']:hover{
+ 	background: url("../images/icon_btn_register.png") no-repeat scroll right 0 #199CDF;
+ 	border: 1px solid #00AEEF;
+ 	box-shadow:0 2px 0 1px #0072BC;
+ 	padding: 0 45px 0 10px;
+}
+
+.page-node-514 #edit-actions{
+	background-color: #FFF;
+	border:none;
+}
+
+.page-node-514 #webform-component-fecha-de-nacimiento .webform-calendar{
+	margin-top: 20px;
+}
+
+.section-contacto-programa-de-ingles .form-item {
+    padding: 0 10px;
+    min-height: 0;
+}

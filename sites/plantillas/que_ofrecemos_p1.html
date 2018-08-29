@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Qué ofrecemos en COLFUTURO :: Asesoría y apoyo</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+
+<!-- inicio JAVA - Accordion -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//Set default open/close settings
+	$('.acc_container_small').hide(); //Hide/close all containers
+	//$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+	
+	//On Click
+	$('.acc_trigger_small').click(function(){
+		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+			$('.acc_trigger_small').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+			$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+		}
+		return false; //Prevent the browser jump to the link anchor
+	});		
+	
+});	
+</script>
+<!-- fin JAVA - Accordion  --> 
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+    
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a href="que_ofrecemos.html">Qué ofrecemos en COLFUTURO</a>
+            <span></span>
+            <a class="current" href="#">Asesoría y apoyo</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+        
+            <h2 class="titulo_general_rojo">Asesoría y <strong>apoyo</strong></h2>
+            
+            <img src="images/img_pasos_que_ofrecemos_01.jpg" class="top_img" width="550" height="240" alt="Paso 1">
+         
+         	<h3 class="subtitulo_seccion_rojo" >Asesoría y consejería para planear su posgrado</h3>
+            <p class="texto_corrido">Contamos con un área de consejería académica que ofrece <strong>información sobre educación internacional</strong> por medio citas personalizadas, 
+            en las que brindamos orientación sobre oportunidades de estudios en el exterior. <br><br>
+            Nos encargamos de divulgar la información de COLFUTURO por medio de charlas informativas, participamos en eventos de educación internacional, coordinamos 
+            talleres y conferencias sobre planeación de estudios en el exterior y fomentamos la creación de convenios con universidades extranjeras y nacionales, 
+            lo cual revierte en beneficios para nuestros estudiantes. <br><br>
+            COLFUTURO pone a su disposición los siguientes recursos para la planeación de sus estudios en el exterior:<br><br>
+            
+            <ul class="lista_disc_small">
+              <li><strong>Open-houses/ sesiones informativas específicas</strong><br>
+              Las mejores universidades nos visitan para presentar sus programas de posgrado a los estudiantes colombianos. Todos estos eventos se transmiten en línea 
+              a través de nuestra página web para quienes no pueden asistir a nuestra sede o viven fuera de Bogotá.<br><br><a href="evento_mes.html">Revise todos nuestros eventos...</a></li><br>
+                
+			  <li><strong>Charla informativa sobre el Programa Crédito- beca</strong><br>
+              Queremos que los colombianos conozcan la posibilidad de financiar su maestría o doctorado en el exterior por medio del Programa Crédito- beca. Por tanto, todos los viernes, 
+              a las 8:00 a.m., y el segundo sábado de cada mes, a las 9:30 a.m., presentamos las ventajas y condiciones de este programa. Las charlas se realizan en nuestra sede y se
+              transmiten online.<br><br><a href="evento_mes.html">Inscríbase en nuestros eventos...</a></li><br>
+              
+			  <li><strong>Consejería académica grupal</strong><br>
+              Quienes hayan escuchado nuestras charlas informativas, pueden solicitar una cita de consejería académica llamando al 340 53 94. El objetivo de estas reuniones es brindar 
+              orientación sobre oportunidades de estudios en el exterior. Los horarios de estas citas son de lunes a viernes de 2:00 p.m. a 4:00 p.m. y 4:00 p.m. a 6:00 p.m. Las citas se 
+              asignan dependiendo del área de estudio de interés. Para quienes no viven en Bogotá se realizan por Skype en horarios específicos según disponibilidad.</li><br>
+              
+			  <li><strong>Simulacros y ejercicios gratuitos para exámenes</strong><br>
+              Los interesados en prepararse para los exámenes de inglés TOEFL o IELTS, pueden realizar simulacros gratuitos en nuestra sede. Además contamos con recursos de estudio y
+              preparación para exámenes de otros idiomas como: Francés, Italiano y Alemán. Para los exámenes GRE, GMAT y LSAT ofrecemos diferentes recursos de estudio y ejercicios de 
+              práctica. <br><br>
+              Las personas interesadas en este servicio deben deben disponer de tres horas que dura el simulacro. Este servocio se presta de lunes a viernes de 9:00 a.m. a 12:00 m. 
+              o 2:00 p.m. a 5:00 p.m.<br><br><a href="#">Agendar una cita en línea...</a></li><br>
+              
+			  <li><strong>Catálogo de recursos</strong><br>
+              Contamos con recursos informativos muy específicos para la preparación de estudios de posgrado en el exterior, archivos PDF, Cd´s, videos, libros, fichas informativas, 
+              entre otros.  Algunos de los recursos pueden ser descargados desde nuestra página.
+              <br><br>
+              <div id="apoyo_fuera_de_bogota"></div>
+              <a href="#">Revise todo el catálogo de recursos...</a></li>
+            </ul>
+         	
+            
+        
+          
+        <div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+            
+            
+            
+            
+            
+            
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        
+     		<article id="columna_390_pasos" style="margin-top:0;">
+                <div id="titulo_columna_390"><h2>QUÉ OFRECE COLFUTURO</h2></div><!-- titulo_columna_320 -->
+                <a class="cnt_paso_01_active" href="que_ofrecemos_p1.html">Apoyo</a>
+                <a class="cnt_paso_02" href="que_ofrecemos_p2.html">Financiación</a>
+                <a class="cnt_paso_03" href="que_ofrecemos_p3.html">Inglés</a>
+                <a class="cnt_paso_04" href="que_ofrecemos_p4.html">Talento</a>
+			</article><!-- columna_390_pasos -->                
+        
+          <article id="columna_320_linea">
+            
+                <h2 class="subtitulo_general_negro_columna">COLFUTURO<strong> le ayuda</strong></h2>
+                
+                <p><strong>Eventos en línea</strong>
+                <img src="images/img_colfuturo_le_ayuda_09.jpg" width="85" height="86" alt="COLFUTURO le ayuda">
+                Todos nuestros eventos se transmiten en línea. Solo tiene que acceder el día y hora del evento en el link que aparecerá en nuestra página web.<br><br>
+                <a href="evento_mes.html">Revise todos nuestros eventos...</a></p>
+               
+                
+                <div class="linea_col_derecha"></div>
+                
+                <p><strong>Citas vía Skype</strong>
+                <img src="images/img_colfuturo_le_ayuda_10.jpg" width="85" height="86" alt="COLFUTURO le ayuda">
+              Programe una cita de Consejería Académica por Skype llamando al teléfono 340 5394 en la ciudad de Bogotá.<br><br></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <p><strong>Boletínes informativos</strong>
+                <img src="images/img_colfuturo_le_ayuda_11.jpg" width="85" height="86" alt="COLFUTURO le ayuda">
+                Suscríbase a nuestro boletín virtual y periódicamente le enviaremos información sobre las actividades que se realizan en su ciudad.<br><br></p>
+			  <form name="form1" method="post" action="">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla_boletines_col_der">
+                <tr>
+                  <td align="left" valign="middle"><input name="nombre_boletines" type="text" class="ancho_01" id="ciudad_boletines_col_der" value="Ciudad"></td>
+                  <td align="left" valign="middle">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="middle"><input name="nombre_boletines" type="text" class="ancho_01" id="nombre_boletines_col_der" value="Nombre"></td>
+                  <td align="right" valign="middle"><input name="nombre_boletines" type="text" class="ancho_01" id="apellidos_boletines_col_der" value="Apellidos"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="left" valign="middle"><input name="nombre_boletines" type="text" class="ancho_02" id="email_boletines_col_der" value="Email"></td>
+                </tr>
+              </table>
+              </form>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla_btn" style="margin:1.5em 0 0 !important;">
+                  <tr>
+                    <td align="center" valign="middle"><a href="#" class="btn_principal_01" style="display: inline-block !important;">Suscríbase</a></td>
+                  </tr>
+                </table>
+              
+                                
+            </article><!-- article#columna_320_linea -->
+        
+        
+            <div class="video_columna_derecha">
+                <iframe width="390" height="219" src="http://www.youtube-nocookie.com/embed/801lLkKgoqU" frameborder="0" allowfullscreen></iframe>                
+            </div>        
+            
+            
+            <article id="columna_320_linea">
+                <h2 class="subtitulo_general_negro_columna">Nuestros <strong>beneficiarios</strong></h2>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_02.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania.” - <span class="rojo">Natalia Barón</span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <p><a href="#">Testimonios de nuestros beneficiarios...</a></p>
+                                
+            </article><!-- article#columna_320_linea -->
+            
+                        
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+        
+        
+        </section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>

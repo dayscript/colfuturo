@@ -1,0 +1,440 @@
+<?php
+
+
+/*Impements Hook_Cron*/
+function b_colfuturo_cron(){
+    $time_cron = 60*60;
+        $interval = variable_get('tesis_articulos_json_update_interval', $time_cron);
+        if ( time() >= variable_set('tesis_articulos_json_update_next_execution',0) ) {
+            $rep = tesis_articulos_json_update();
+            watchdog('update_tesis_articulos', 'Respuesta: '.$rep );
+            variable_set('tesis_articulos_json_update_next_execution', time() + $interval);
+        }
+}
+
+/*
+Implements Hool_menu
+*/
+function b_colfuturo_menu() {
+    $items['autocomplete'] = array(
+    'title' => 'autocomplete',
+    'page callback' => '_module_name_autocomplete',
+    'access callback' => TRUE,
+    'chache' => MENU_CALLBACK_CACHE_GLOBAL
+    );
+
+    $items['update_tesis_articulos'] = array(
+    'title' => 'Actualizacion de contenido',
+    'page callback' => 'tesis_articulos_json_update',
+    'access callback' => TRUE,
+    'chache' => MENU_CALLBACK_CACHE_GLOBAL
+    );
+
+
+    $items['simulador_credito'] = array(
+    'title' => 'simulador credito',
+    'page callback' => 'financiacion_beneficiarios',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    );
+
+    return $items;
+  }
+
+/*
+Implements Hool_theme().
+*/
+
+
+function b_colfuturo_theme(){
+
+  $templates = array();
+
+  $templates['block_form_tesis_articulos'] = array(
+        'variables' => array('data' =>array()),
+        'template' => 'templates/form'
+    );
+
+  return $templates;
+}
+
+/*
+Implements Hool_block_info
+*/
+
+function b_colfuturo_block_info() {
+
+  $blocks = array();
+  $blocks ['block_form_tesis_articulos'] = array(
+      'info' => t('Formulario de busqueda tesis y articulos'),
+    );
+  $blocks['guia_de_reglas'] = array(
+    'info' => t('Bloque guia reglas'),
+    );
+
+  $blocks['Buscador_tesis_articulos'] = array(
+    'info' => t('Bloque buscardor tesis y articulos'),
+    'cache'=>DRUPAL_NO_CACHE
+    );
+
+  $blocks['financiacion_beneficiarios'] = array(
+    'info' => t('financiacion_beneficiarios'),
+    );
+return $blocks;
+}
+
+/*
+Implements Hool_block_view
+*/
+
+function b_colfuturo_block_view($delta = '') {
+
+  $block = array();
+  switch ($delta) {
+    case 'block_form_tesis_articulos':
+      $block['subjet'] = '';
+      $block['content']  = theme('block_form_tesis_articulos', array('data' => ''));
+      break;
+
+    case 'guia_de_reglas':
+      $block['subject'] = '';
+      $block['content'] = guia_de_reglas_block_content();
+      break;
+
+    case 'Buscador_tesis_articulos';
+      $block['subject']='';
+      $block['content'] = buscador_tesis_articulos();
+      break;
+
+    case 'financiacion_beneficiarios';
+      $block['subject']='';
+      $block['content'] = financiacion_beneficiarios();
+      break;
+
+  }
+  return $block;
+}
+
+
+
+/***********************************************/
+
+//  Functions for block block_form_tesis_articulos
+
+/***********************************************/
+
+
+  function getContentUrlBanrep(){
+
+    drupal_add_js(drupal_get_path('module', 'b_colfuturo') . '/src/js/b_colfuturo.js');
+    drupal_add_js(drupal_get_path('module', 'b_colfuturo') . '/src/css/modal.css');
+    return 'Test';
+  }
+  function createFormSearch(){
+
+     $form['busqueda-basica'] = array(
+    '#prefix'  =>'<div id="basic-search">Búsqueda Básica<br> <p class="">Introduzca la palabra o palabras claves que definen su búsqueda y luego pulse el botón BUSCAR. Todos los documentos que las contengan (tanto en el título como en su reseña) serán listados. Procure incluir tildes en sus palabras clave.
+      Ejemplo: [economía brasil] </p>',
+    '#suffix' =>'</div>'
+     );
+    $form['busqueda'] = array(
+      '#type' => 'textfield',
+      '#attributes' => array(
+                              'id' =>'gsearch',
+                              'class'=>'box form-text form-autocomplete throbbing'),
+    );
+
+    $form['label'] = array(
+    '#prefix'  =>'<div class = "select-advance"> Búsqueda Avanzada <p class="">
+Si con la búsqueda básica no logra reducir sustancialmente su lista de resultados, o si ya tiene en mente el documento que desea encontrar, puede intentar filtrar la búsqueda usando los campos de selección. Una vez haya utilizado uno o más selectores pulse el botón BUSCAR.</p> ',
+    '#suffix' =>'</div>'
+     );
+
+    $form['autores'] = array(
+    '#prefix'  =>'<div class = "advance-search">',
+    '#type' => 'select',
+    '#options' => '',
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'AUTOR:',
+    '#attributes' => array(
+                            'id' =>'autores',
+                            'class'=>'sel'),
+
+  );
+
+  $form['fecha_publicacion'] = array(
+    '#type' => 'select',
+    '#options' => '',
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'Año publicación:',
+    '#attributes' => array(
+                            'id' =>'fecha_publicacion',
+                            'class'=>'sel'),
+
+  );
+
+  $array_areatematica =array( 'Todos'=>'Todos',
+                              'Administración'=>'Administración',
+                              'Arquitectura, Arte'=>'Arquitectura, Arte',
+                              'Biología'=>'Biología',
+                              'Derecho'=>'Derecho',
+                              'Educación'=>'Educación',
+                              'Humanidades'=>'Humanidades',
+                              'Ingeniería'=>'Ingeniería',
+                              'Matemáticas'=>'Matemáticas');
+  $form['tema'] = array(
+    '#type' => 'select',
+    '#options' =>  $array_areatematica,//,decode_json_tesis_article($identifi='tema'),
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'ÁREA TEMÁTICA:',
+    '#attributes' => array(
+                            'id' =>'tema',
+                            'class'=>'sel'),
+
+   );
+
+  $form['tipo_estudio'] = array(
+    '#type' => 'select',
+    '#options' => '',
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'TIPO DE ESTUDIO:',
+     '#attributes' => array(
+                            'id' =>'tipo_de_estudio',
+                            'class'=>'sel'),
+  );
+
+  $form['beneficiario_estudio'] = array(
+    '#type' => 'select',
+    '#options' => '',
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'BENEFICIARIO COLFUTURO PROMOCIÓN :',
+    '#attributes' => array(
+                            'id' =>'beneficiario_estudio',
+                            'class'=>'sel'),
+
+  );
+  $form['tipo_documento'] = array(
+    '#type' => 'select',
+    '#options' => array('Artículo Colfuturo'=>'Artículo',
+                        'Tesis Colfuturo'=>'Tesis',
+                        'Todos'=>'Todos',
+                        ),
+    '#default_value' => array('Todos'=>'Todos'),
+    '#title' => 'Tipo de Documento :',
+    '#attributes' => array(
+                            'id' =>'parte_de',
+                            'class'=>'sel'),
+    '#suffix' =>'</div>'
+
+  );
+  $form['item'] = array(
+    '#prefix'  =>'<div class = "items-busqueda">',
+
+    '#suffix' =>'</div>'
+     );
+
+
+  $form['submit'] = array(
+    '#prefix'  =>'<div class="buttons"><div class = "button-submit">',
+    '#input' => TRUE,
+    '#is_button' => TRUE,
+    '#button_type' => 'button',
+    '#type'  => 'button',
+    '#value' => 'BUSCAR',
+    '#suffix' =>'</div>'
+  );
+
+
+  $form['reset'] = array(
+      '#prefix'  =>'<div class = "button-reset">',
+      '#type'  => 'button',
+      '#value' => 'CANCELAR',
+      '#button_type' => 'reset',
+      '#suffix' =>'</div></div>'
+      );
+
+    return $form;
+  }
+
+
+/***********************************************/
+
+// end functions for block block_form_tesis_articulos
+
+/***********************************************/
+
+
+//////////////////////////////////////////////////////////////////////
+/**********        FUNTIONS               ***************************/
+//////////////////////////////////////////////////////////////////////
+
+function strToDate( $date ) {
+    setlocale(LC_TIME, "es_CO");
+    return strftime ("%d-%b-%y",strtotime($date) );
+  }
+
+  function getTRM() {
+    $file = fopen('/var/www/html/website/portal/micredito2014/log/trm.log', 'r');
+    $linea = fgets($file);
+    $Data = json_decode($linea);
+    return $Data->{Date("Y-m-d")};
+  }
+
+
+function financiacion_beneficiarios($cedula){
+ //1032414816
+  $cedula = arg(1);
+
+  if(isset($cedula)){
+      //dpm($cedula);
+      $user = "micredito";
+      $pass = "Cre2014Col";
+      $dsn = "AS400MYSQL";
+      $libreria = "colfuturo";
+      $link = odbc_connect ( $dsn, $user, $pass );
+	    mysql_query("set names 'utf8'");
+
+      $data = "SELECT LCA3VC,WMAMCT,W6DTPD,USU02, LMNOACW,CNNOSSQ,LADTCPW,LMRTNMW,CNNAMEW ,CNNOSSW,LMNOACW,LMCDU9W
+              FROM colfuturo.LINTWEB4 a
+              INNER JOIN colfuturo.LINTWEB1 b
+              WHERE trim(CNNOSSQ) = '".$cedula."'
+                    AND LMNOACQ = LMNOACW";
+// AND LIDPLPQ = 'PPM'
+					$result= odbc_exec ($link, $data);
+          $row = odbc_fetch_array ($result);
+          if(count($row) > 1){
+
+                      for ($i = 0;$linWeb4 = odbc_fetch_array($result);$i++) {
+
+                           $json[$i]= array(
+                                              'num' => $i+1,
+                                              'fecha'=> strToDate($linWeb4['W6DTPD']),
+                                              'capital'=> $linWeb4['LCA3VC'],
+                                              'cuotaPagar'=>$linWeb4['WMAMCT']
+                                              );
+                          $saldo = $linWeb4['USU02'];
+                          $fechaCorte = $linWeb4['LADTCPW'];
+                          $tasaInteres = $linWeb4['LMRTNMW'];
+                      		$nombre   = $linWeb4['CNNAMEW'];
+                      		$cedula   = $linWeb4['CNNOSSW'];
+                      		$codigo   = $linWeb4['LMNOACW'];
+                          $estado   = $linWeb4['LMCDU9W'];
+                        }
+                    $json['saldo'] = $saldo;
+                    $json['trm'] = getTRM();
+                    $json['fechaCorte'] = strToDate($fechaCorte);
+                    $json['tasaInteres'] = ( $tasaInteres * 100);
+                  	$json['nombre'] = utf8_encode($nombre) ;
+            		//$json['nombre'] =mb_convert_encoding($nombre, 'UTF-8', 'ISO-8859-1');
+
+                  	$json['cedula'] = trim($cedula) ;
+                  	$json['codigo'] = $codigo ;
+                    $json['estado'] = $estado;
+
+
+                    $json=json_encode($json);
+
+
+                    print '<div class="">
+                                  <form  id="formdata" action="//www.colfuturo.org/financiacion/financiacion2.php" method="post" >
+                                    <br>
+                                    <textarea name="cuotasPagar"  id="jsonview" rows="4" cols="50" >'.$json.'</textarea>
+                                    <br>
+                                    <input id="enviar" id="jsonsubmit" type="submit" name="submit" value="Ir al simulador">
+                                  </form>
+                            </div>';
+        }else{
+
+              print 'No es una cedula valida';
+        }
+  }
+  else{
+    return "No es una cedula valida";
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+/**********        FUNTIONS               ***************************/
+//////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////
+//        inicio del buscador
+///////////////////////////////////////////
+
+
+function _module_name_autocomplete($String) {
+
+  $data =  json_decode(file_get_contents('//www.colfuturo.org/sites/all/modules/b_colfuturo/content.json'));
+  $array = array();
+  $resultnumber = 0;
+  foreach ($data->nodes as $key => $value) {
+    if ( strpos($value->node->cuerpo,$String) !== false  || strpos($value->node->título,$String) !== false ) {
+         $resultnumber += 1;
+          $array[$key]= substr($value->node->título,0,75).'<span style="color:red">...</span>';
+        if($resultnumber >= 7){
+          break;
+        }
+    }else{
+    }
+  }
+  drupal_json_output($array);
+}
+
+
+
+function tesis_articulos_json_update(){
+
+  $RequestTesis = file_get_contents('http://www.banrepcultural.org/services/colfuturo/tesis/Tesis%20Colfuturo');
+  $RequestArticle = file_get_contents('http://www.banrepcultural.org/services/colfuturo/articulos/Art%C3%ADculo%20Colfuturo');
+    if(!empty($RequestTesis )){
+           $nombre_archivo = "sites/all/modules/b_colfuturo/tesis.json";
+          if(file_exists($nombre_archivo))
+              {  dpm($nombre_archivo);
+                 unlink($nombre_archivo);
+                 $archivo = fopen($nombre_archivo, "w");
+                 fwrite($archivo,$RequestTesis );
+                 fclose($archivo);
+             }
+        }
+    if(!empty($RequestArticle )){
+           $nombre_archivo = "sites/all/modules/b_colfuturo/article.json";
+          if(file_exists($nombre_archivo))
+              {  dpm($nombre_archivo);
+                 unlink($nombre_archivo);
+                 $archivo = fopen($nombre_archivo, "w");
+                 fwrite($archivo,$RequestArticle);
+                 fclose($archivo);
+             }
+        }
+  $RequestTesis = drupal_http_request('//www.colfuturo.org/sites/all/modules/b_colfuturo/tesis.json');
+  $RequestArticle = drupal_http_request('//www.colfuturo.org/sites/all/modules/b_colfuturo/article.json');
+
+  dpm(json_decode($RequestTesis->data));
+  dpm(json_decode($RequestArticle->data));
+
+  $JsonTesis = drupal_json_decode($RequestTesis->data);
+  $JsonArticle= drupal_json_decode($RequestArticle->data);
+  $ArrayGlobal = array();
+  $ArrayGlobal  = $JsonTesis;
+  for ($i = 0 ; $i <= count($JsonArticle['nodes'])-1; $i++ ){
+    $ArrayGlobal['nodes'][] = $JsonArticle['nodes'][$i];
+  }
+  if(!empty($ArrayGlobal)){
+    $nombre_archivo = "sites/all/modules/b_colfuturo/content.json";
+        if(file_exists($nombre_archivo)){
+              unlink($nombre_archivo);
+              $archivo = fopen($nombre_archivo, "w");
+              $ArrayGlobal = json_encode($ArrayGlobal);
+              fwrite($archivo,$ArrayGlobal);
+              fclose($archivo);
+          }
+  }
+  dpm($ArrayGlobal);
+  $html="Actualizacion Completa";
+  return $html;
+}
+
+
+///////////////////////////////////////////
+//        inicio del buscador
+///////////////////////////////////////////

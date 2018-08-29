@@ -1,0 +1,709 @@
+<?php
+require_once 'src/lib/nusoap.php';
+/*Imlements hook_block_nemu()*/
+function potentials_menu() {
+    /*$items['potentials/settings'] = array(
+    'title' => 'Logs para potenciales',
+    'page callback' => '_settingsPotentials',
+    );*/
+
+     $items['user_iframe'] = array(
+    'title' => '',
+    'page callback' => '_userIframe',
+    'access callback' => 1,
+    );
+     $items['cita_consejeria'] = array(
+    'title' => 'Cita Consejeria',
+    'page callback' => '_citaConsejeria',
+    'access callback' => 1,
+    'type' => MENU_CALLBACK,
+    );
+
+     $items['consultar_porcentaje'] = array(
+    'title' => '',
+    'page callback' => '_consultarPorcentajeFormulario',
+    'access callback' => 1,
+    'type' => MENU_CALLBACK,
+    );
+
+   $items['get_notifications'] = array(
+    'title' => '',
+    'page callback' => 'GetNotifications',
+    'access callback' => 'user_is_logged_in',
+    'type' => MENU_CALLBACK,
+    );
+
+    $items['marcar_notifications'] = array(
+    'title' => '',
+    'page callback' => '_blockPotentialsNotificacionMarcar',
+    'access callback' => 'user_is_logged_in',
+    'type' => MENU_CALLBACK,
+    );
+    $items['popup_consultar_cita'] = array(
+    'title' => '',
+    'page callback' => 'consultarCita',
+    'access callback' => 'user_is_logged_in',
+    'delivery callback' => 'deliver_plain',
+    'type' => MENU_NORMAL_ITEM,
+    );
+    $items['popup_solicitar_cita'] = array(
+    'title' => '',
+    'page callback' => 'solicitarCita',
+    'delivery callback' => 'deliver_plain',
+    'access callback' => TRUE,//'user_is_logged_in',
+    'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+  }
+
+/*Imlements hook_block_info()*/
+
+function potentials_block_info() {
+
+  $blocks = array();
+  $blocks['potentials'] = array(
+    'info' => t('Potentials'),
+    );
+  $blocks['blockRegistro'] = array(
+    'info' => t('blockRegistro'),
+    'cache' => DRUPAL_NO_CACHE,
+    );
+  $blocks['user-register'] = array(
+    'info' => t('Potentialsiframe'),
+    'cache' => DRUPAL_NO_CACHE,
+    );
+return $blocks;
+}
+
+/*Imlements hook_block_view()*/
+
+function potentials_block_view($delta = '') {
+
+  $block = array();
+  switch ($delta) {
+    case 'potentials':
+    $block[ 'content' ] = theme( 'potentials', array( 'data' => _blockPotentials() ) );
+    break;
+
+    case 'blockRegistro':
+
+    if (!isset($_SESSION['porcentaje'])) {
+      PotentialsRegistro();
+    }
+    $block[ 'content' ] = theme( 'potentials-registro', array( 'data' => $_SESSION['porcentaje'] ) );
+    break;
+
+    case 'user-register':
+    $block[ 'content' ] = _userIframe();
+    break;
+  }
+
+  return $block;
+}
+/*Implemens hook_theme()*/
+
+function potentials_theme()
+{
+    $hooks = array();
+    $hooks[ 'potentials' ] = array(
+        'variables' => array( 'data' => array() ),
+        'template'  => "templates/potentials_block"
+    );
+    $hooks['custom_output'] = array(
+      'variables' => array('var_name'=> NULL),
+      'template' => 'templates/page--InfoUsuario'
+    );
+     $hooks['potentials-registro'] = array(
+      'variables' => array('var_name'=> NULL),
+      'template' => 'templates/portentials-registro'
+    );
+    return $hooks;
+}
+function _consultarPorcentajeFormulario(){
+  unset($_SESSION['porcentaje']);
+  return PotentialsRegistro();
+}
+
+function PotentialsRegistro(){
+  $result = array(0);
+  Global $user;
+  if(isset($user->name)){
+    if(isset($_SESSION['porcentaje'])){
+        $result = $_SESSION['porcentaje'] ;
+      }else{
+        $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+        $client = new nusoap_client($url, true);
+        $client->setCredentials($user->name,encripta1($user->name));
+        $error  = $client->getError();
+        if ($error) {
+          #dpm($error);
+        }
+        $result = $client->call("consultarPorcentajeFormularioPotencial", array("numeroDocumento" => $user->name));
+        if ($client->fault) {
+          #dpm($result);
+        } else {
+          $error = $client->getError();
+          if ($error) {
+          #dpm($error);
+          } else {
+          #dpm($result);
+          }
+        }
+        $_SESSION['porcentaje'] = $result;
+      }
+  }
+  return $result;
+}
+
+function GetNotifications(){
+  Global $user;
+  if(!isset($_SESSION['no_notification'])){
+      $_SESSION['no_notification'] = _blockPotentialsNotificacion($user->name);
+      return drupal_json_output(array('q'=>$_SESSION['no_notification']));
+  }
+  //return drupal_json_output(array('q'=> _blockPotentialsNotificacion($user->name)));
+  return drupal_json_output(array('q'=> $_SESSION['no_notification']));
+
+}
+
+function _blockPotentialsNotificacion($numeroDocumento){
+  $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+  $client = new nusoap_client($url, true);
+  $client->setCredentials($numeroDocumento,encripta1( $numeroDocumento ));
+  $result = $client->call("consultarNotificacionEventosPotencial", array("numeroDocumento" => $numeroDocumento, "fecha" => date("d/m/Y H:i:s")));
+  if ($client->getError()):
+    //dpm($client->getError());
+  else:
+    //dpm($result);
+    return $result;
+  endif;
+}
+
+function _blockPotentialsNotificacionMarcar(){
+  Global $user;
+  $_SESSION['no_notification'] = 0;
+  $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+  $client = new nusoap_client($url, true);
+  $client->setCredentials($user->name,encripta1( $user->name ));
+  $result = $client->call("marcarNotificacionEventosPotencial", array("numeroDocumento" => $user->name));
+  if ($client->getError()):
+    dpm($client->getError());
+  else:
+    return drupal_json_output(array('q'=>$result,'n'=>$user->name));
+  endif;
+}
+
+
+
+function _blockPotentials(){
+  drupal_add_css(drupal_get_path('module', 'potentials').'/src/css/potentials.theme.css');
+  $completation = array();
+  $fields= array();
+  $response =array();
+  global $user;
+  $UserData = entity_metadata_wrapper('user',$user->uid);
+  $entityFields = array_keys($UserData->getPropertyInfo());
+  foreach ($entityFields as $keys => $value) {
+      if(is_array($UserData->$value->value())){
+        foreach ($UserData->$value->value() as $key => $val) {
+         if(!empty($val)){
+            $completation[$keys] = 10;
+         }
+         else{
+          continue;
+         }
+        }
+      }
+      else{
+        if( $UserData->$value->value() !="" ){
+          $completation[$keys] = 10;
+         }
+         else{
+          continue;
+         }
+      }
+  }
+  $total[0] = round(count($completation) / 24 * 100);
+  $names = $UserData->field_nombres->value();
+  $apell = $UserData->field_nombres->value();
+  $total[1] = ( !empty(  $names ) ) ?  $names:'Hace Falta';
+  $total[2] = ( !empty(  $apell ) ) ?  $names:'Completar Registro';
+  //dpm($total);
+  return $total;
+ }
+
+function _settingsPotentials($fileName){
+  $directorioRegistro = drupal_get_path('module', 'potentials').'/logs';
+  $directorioActualizacion = DRUPAL_ROOT.'/webservices/logs';
+  $html='';
+  if( !isset($fileName) ){
+      $ficheros  = scandir($directorioRegistro,1);
+      $html .="<div style='width:50%;  float:left'>";
+      $html.="<h2> Logs Registros </h2>";
+      foreach ($ficheros as $key => $value) {
+        if($value != '..' && $value != '.'){
+          $html .= '<div><a href="/admin/potentials/settings/registro_'.$value.'">'.$value.'</a></div>';
+        }
+      }
+      $html.="</div>";
+      $html .="<div style='width:50%;  float:left'>";
+      $html.="<h2> Logs actualizaciones y consultas </h2>";
+      $ficheros2  = scandir($directorioActualizacion,1);
+      foreach ($ficheros2 as $key => $value) {
+        if($value != '..' && $value != '.'){
+          $html .= '<div><a href="/admin/potentials/settings/actualizacion_'.$value.'">'.$value.'</a></div>';
+        }
+      }
+      $html.="</div>";
+    }
+  else{
+      $function = explode('_',$fileName);
+      switch ($function[0]) {
+        case 'registro':
+          $logContent = file_get_contents($directorioRegistro.'/'.$function[1]);
+          break;
+        case 'actualizacion':
+          $logContent = file_get_contents($directorioActualizacion.'/'.$function[1]);
+        break;
+        default:
+          $html='Se a encontrado un error inesperado' ;
+          break;
+      }
+      dpm($logContent);
+      $html= '';
+  }
+  global $user;
+
+  foreach (array_values($user->roles) as $key => $value) {
+      if ($value == 'administrator')
+        return $html;
+  }
+  if($access != true)
+    drupal_goto('/user');
+}
+
+
+
+function _accionesUsuario_old($type){
+watchdog('potentials', 'Respuesta: entro' );
+  $response =array();
+    $users =  json_decode($type);
+
+    //dpm($users->data);
+    $fields= array();
+    foreach ($users->data as $key => $value) {
+       $fields[$key] = $key;
+    }
+    $account = user_load_by_name($users->data->name);
+    $UserData = entity_metadata_wrapper('user',$account->uid);
+    $fields = array_keys($fields);
+    //dpm($UserData->getPropertyInfo());
+    for($i = 0 ; $i <= count($fields) ; $i++ ){
+      if(array_key_exists($fields[$i],$UserData->getPropertyInfo()) && $fields[$i] != 'name'){
+        try{
+          $UserData->$fields[$i] = $users->data->$fields[$i];
+          $response[$fields[$i]] = 'En campo '.$fields[$i].' se almaceno '. $users->data->$fields[$i] .' correctamente';
+
+        }catch(Exception $e){
+          $response[$fields[$i]] = '<span style="color:red">Error al almacenar el campo '.$fields[$i] .'el Valor : '.$users->data->$fields[$i]."<br>".$e.'</span>';
+        }
+      }else{
+        $response[$fields[$i]] = "<span style='color:orange'>Este campo no existe en drupal</span>";
+      }
+    }
+    $response['return_url'] = $users->data->return_url;
+    $UserData->save();
+    $account = user_load_by_name($users->data->name);
+    //return $type;
+    //dpm($account);
+   return theme('custom_output' , array('response' => $type));
+}
+
+/*Implements hook form alter*/
+
+
+function potentials_form_user_profile_form_alter(&$form,&$form_state,$form_id){
+  $form['#submit'][] = 'potentials_migrate_users' ;
+}
+
+function potentials_form_user_register_form_alter(&$form,&$form_state,$form_id){
+  if( arg(1) == "44" ){
+     $form['field_interes']['und']['#default_value'][] = 'GBE';
+     $form['#validate'][] = 'validate_user_exists';
+  }
+  if( arg(0) == 'user' && arg(1) == 'register'){
+    $form['field_ciudad_de_residencia']['#required'] = TRUE;
+    $form['field_ciudad_de_residencia']['und']['#required'] = 1;
+    $form['field_nombres']['und'][0]['#required'] = TRUE;
+    $form['field_nombres']['und'][0]['value']['#required'] = TRUE;
+
+  }
+
+
+  $form['#validate'][] = 'validate_cedula_user';
+  $form['#validate'][] = 'ds_ldap_roles_extra_user_validation2';
+  $form['#submit'][] = 'potentials_migrate_users' ;
+
+
+}
+
+function validate_cedula_user(&$form, &$form_state,$form_id){
+  if(form_get_errors()){
+    foreach (form_get_errors() as $key => $value) {
+      drupal_set_message($value,'warning',FALSE);
+    }
+  }
+  /*Validacion para usuarios de colcientas por culpa del modulo ds_ldap_roles*/
+  if( arg(0) == 'user' && arg(1) != 'register'){
+    return true;
+  }
+  /**Validacion para el campo de ciudad*/
+  if(arg(0)=='system' && arg(1) =='ajax'){
+    WriteLogValidation(' '.time().' 1. Validando Cedula :'.$form_state['values']['name'].' Intento entrar con ajax',$form_state['values']['name']);
+     form_set_error('error', 'error');
+    return false;
+  }
+
+  $val = array();
+  $return = 'OK';
+  WriteLogValidation(' '.time().' 1. Validando Cedula :'.$form_state['values']['name'],$form_state['values']['name']);
+  WriteLogValidation(' '.time().' - '.$form['#form_id'].' - '.implode('/',arg()),$form_state['values']['name']);
+  foreach( $form_state['values'] as $key => $value ){
+    switch ( $key ) {
+      case 'field_nombres':
+          if( preg_match("/^[aA-zZÑñáéíóúÁÉÍÓÚ]+[aA-zZÑñáéíóúÁÉÍÓÚ\s]+[aA-zZÑñáéíóúÁÉÍÓÚ]$/", trim($form_state['values'][$key]['und'][0]['value'])) ){
+              $val['field_nombres']['val'] = true;
+          }else{
+            $val['field_nombres']['val'] = false;
+            $val['field_nombres']['sms'] = 'El campo nombres debe contener solo letras';
+          }
+        break;
+      case 'field_apellidos':
+        if( preg_match("/^[aA-zZÑñáéíóúÁÉÍÓÚ]+[aA-zZÑñáéíóúÁÉÍÓÚ\s]+[aA-zZÑñáéíóúÁÉÍÓÚ]$/", trim($form_state['values'][$key]['und'][0]['value'])) ){
+            $val['field_apellidos']['val'] = true;
+        }else{
+          $val['field_apellidos']['val'] = false;
+          $val['field_apellidos']['sms'] = 'El campo apellidos debe contener solo letras';
+        }
+      break;
+     case 'name':
+          if(preg_match("/^[0-9]+$/", $form_state['values']['name'] ) ){
+            $val['name']['val'] = true;
+          }else{
+            $val['name']['val'] = false;
+            $val['name']['sms'] = 'El campo cedula solo se permiten numeros';
+          }
+        break;
+
+      case 'pass':
+        if(preg_match("/^(?=.*\d).{8,20}$/", $form_state['values']['pass'] ) ){
+            $val['pass']['val'] = true;
+          }else{
+            $val['pass']['val'] = false;
+            $val['pass']['sms'] = 'El campo contraseña debe ser mayor a 8 digitos';
+          }
+      break;
+
+      // password_confirm
+      case 'mail':
+          if(preg_match("/^[_aA-zZ0-9-]+(.[_aA-zX0-9-]+)*@[aA-zX0-9-]+(.[aA-zX0-9-]+)*(.[aA-zZ]{2,4})$/", $form_state['values']['mail'] ) ){
+            $val['mail']['val'] = true;
+          }else{
+            $val['mail']['val'] = false;
+            $val['mail']['sms'] = 'Dirección de correo electrónico debe ser valida';
+          }
+        break;
+
+      case 'field_ciudad_de_residencia':
+          if( !preg_match('/^\s*$/',$form_state['values']['field_ciudad_de_residencia']['und'][0]['data']) ){
+            $input = $form_state['values']['field_ciudad_de_residencia']['und'][0]['data'];
+            $input = substr($input, strripos($input, ':"')+2, -3);
+            $output = 'json';
+            $api = 'queryautocomplete';
+            $key = 'AIzaSyBxPZFg2j4489TxFmba-dkQRlWu6eRdEdA';
+            if(!preg_match('/[,]{1,}/', $input)){
+              $val['field_ciudad_de_residencia']['val'] = false;
+              $val['field_ciudad_de_residencia']['sms'] = 'Seleccione un lugar de residencia valido.';
+            }else{
+              if(!validate_city($input, $output, $api, $key)){
+                $val['field_ciudad_de_residencia']['val'] = false;
+                $val['field_ciudad_de_residencia']['sms'] = 'Seleccione un lugar de residencia valido.';
+              }else{
+                $val['field_ciudad_de_residencia']['val'] = true;
+              } 
+            }
+
+          }else{
+            $val['field_ciudad_de_residencia']['val'] = false;
+            $val['field_ciudad_de_residencia']['sms'] = 'Seleccione un lugar de residencia.';
+          }
+        break;
+
+      case 'field_interes':
+        if($form_state['values']['field_interes']['und'][0]['value'] == 'Estudios de posgrado en el exterior' && $form_state['values']['field_interes']['und'][1]['value'] == 'Programa de Idiomas'){
+            $val['field_interes']['val'] = true;
+            if( is_null($form_state['values']['field_idiomas_de_inter_s']['und'][0]['value']) || is_null($form_state['values']['field__rea_de_inter']['und'][0]['value']) ){
+                      $val['field_idiomas_de_inter_s']['val'] = false;
+                      $val['field_idiomas_de_inter_s']['sms'] = 'Debe seleccionar al menos un idioma ';
+                      $val['field__rea_de_inter']['val'] = false;
+                      $val['field__rea_de_inter']['sms'] = 'Debe seleccionar al menos un área de interés ';
+                  }else{
+                      $val['field_idiomas_de_inter_s']['val'] = true;
+                      $val['field__rea_de_inter']['val'] = true;
+                  }
+          }
+          elseif($form_state['values']['field_interes']['und'][0]['value'] == 'Estudios de posgrado en el exterior'){
+            $val['field_interes']['val'] = true;
+
+            if( is_null($form_state['values']['field__rea_de_inter']['und'][0]['value']) ){
+
+                    $val['field__rea_de_inter']['val'] = false;
+                    $val['field__rea_de_inter']['sms'] = 'Debe seleccionar al menos un área de interés ';
+                  }else{
+                   $val['field__rea_de_inter']['val'] = true;
+
+                  }
+          }
+          elseif($form_state['values']['field_interes']['und'][0]['value'] == 'Programa de Idiomas'){
+
+            $val['field_interes']['val'] = true;
+             if( is_null($form_state['values']['field_idiomas_de_inter_s']['und'][0]['value']) ){
+
+                      $val['field_idiomas_de_inter_s']['val'] = false;
+                      $val['field_idiomas_de_inter_s']['sms'] = 'Debe seleccionar al menos un idioma ';
+                  }else{
+                      $val['field_idiomas_de_inter_s']['val'] = true;
+                  }
+          }
+
+          else{
+            $val['field_interes']['val'] = false;
+            $val['field_interes']['sms'] = 'Debe seleccionar al menos un interés';
+          }
+
+          if( arg(1) == "44" ){
+            $val['field_interes']['val'] = true;
+            $val['field_idiomas_de_inter_s']['val'] = true;
+            $val['field__rea_de_inter']['val'] = true;
+          }
+      break;
+
+
+              /*case 'Estudios de posgrado en el exterior':
+                $val['field_interes']['val'] = true;
+                  if( !preg_match('/^\s*$/',$form_state['values']['field__rea_de_inter']['und'][0]['value']) ){
+                    $val['field__rea_de_inter']['val'] = true;
+                  }else{
+                   $val['field__rea_de_inter']['val'] = false;
+                   $val['field__rea_de_inter']['sms'] = 'Debe seleccionar al menos un área de interés ';
+                  }
+                break;
+
+              case 'Programa de Idiomas':
+                $val['field_interes']['val'] = true;
+                    if( !preg_match('/^\s*$/',$form_state['values']['field_idiomas_de_inter_s']['und'][0]['value']) ){
+                      $val['field_idiomas_de_inter_s']['val'] = true;
+                    }else{
+                      $val['field_idiomas_de_inter_s']['val'] = false;
+                      $val['field_idiomas_de_inter_s']['sms'] = 'Debe seleccionar al menos un idioma ';
+                    }
+                break;
+                default:
+                $val['field_interes']['val'] = false;
+                $val['field_interes']['sms'] = 'Debe seleccionar al menos un interés';
+
+                break;*/
+
+      case 'field_autorizacion':
+          if( $form_state['values']['field_autorizacion']['und'][0]['value'] == 1){
+              $val['field_autorizacion']['val'] = true;
+          }
+          else{
+            $val['field_autorizacion']['val'] = false;
+            $val['field_autorizacion']['sms'] = 'Debe aceptar los terminos y condiciones';
+          }
+      break;
+    }
+  }
+  foreach( $val as $key => $value ){
+    if(!$value['val']){
+      drupal_set_message($val[$key]['sms'], 'warning', FALSE);
+      form_set_error($key, $val[$key]['sms'] );
+      $return = 'Errores';
+      WriteLogValidation(' '.time().'-'.$form_id.' Errores en : '.$key,$form_state['values']['name']);
+    }
+  }
+  WriteLogValidation(' '.time().' -Termino Validacion Resultado : -'.json_encode($return),$form_state['values']['name']);
+  return;
+}
+
+
+
+function potentials_migrate_users($form,&$form_state){
+
+
+WriteLog('desde:'.arg(0).'/'.arg(1).' preparando para almacenar usuario : '.$form_state['values']['name'],$form_state['values']['name']."\n");
+$genero = $form_state['values']['field_genero']['und'][0]['value'];
+if($genero != "" || $genero != " "){
+  switch ($genero) {
+    case 'Masculino':
+      $genero = "M";
+      break;
+
+    case 'Femenino':
+      $genero = "F";
+      break;
+  }
+}
+  $LugarRecidencia = $form_state['values']['field_ciudad_de_residencia']['und'][0]['data'];
+  // drupal_set_message($LugarRecidencia);
+  $arraryremplace= explode(':',$LugarRecidencia);
+  $LugarRecidencia = str_replace(array('"','}',';'),"",$arraryremplace[18]);
+  $LugarRecidencia = mb_convert_encoding($LugarRecidencia, "ISO-8859-1", "UTF-8");
+  $areaEstudio = "";
+  $idiomas = "";
+  if(is_array($form_state['values']['field__rea_de_inter']['und'])) {
+     foreach ($form_state['values']['field__rea_de_inter']['und']  as $key => $value) {
+        //$data = mb_convert_encoding($value['value'], "ISO-8859-1", "UTF-8");
+        $areaEstudio .= ",\"".$value['value']."\"";
+     }
+  }
+  $areaEstudio = substr($areaEstudio, 1);
+  $areaEstudio = mb_convert_encoding($areaEstudio, "ISO-8859-1", "UTF-8");
+  if(is_array($form_state['values']['field_idiomas_de_inter_s']['und'])) {
+     foreach ($form_state['values']['field_idiomas_de_inter_s']['und']  as $key => $value) {
+        //$data = mb_convert_encoding($value['value'], "ISO-8859-1", "UTF-8");
+        $idiomas .= ",\"".$value['value']."\"";
+     }
+  }
+  $idiomas = substr($idiomas, 1);
+  $idiomas = mb_convert_encoding($idiomas, "ISO-8859-1", "UTF-8");
+
+  $cade = "{\"numeroDocumento\":\"".$form_state['values']['name']."\",
+            \"nombre\":\"".mb_convert_encoding($form_state['values']['field_nombres']['und'][0]['value'],"ISO-8859-1", "UTF-8")."\",
+            \"apellido\":\"".mb_convert_encoding($form_state['values']['field_apellidos']['und'][0]['value'],"ISO-8859-1", "UTF-8")."\",
+            \"email\":\"".$form_state['values']['mail']."\",
+            \"fechaNacimiento\":\"".date("d-m-Y", time())."\",
+            \"ciudadResidencia\":\"".$LugarRecidencia."\",
+            \"genero\":\"".$genero."\",
+            \"celular\":\"\",
+            \"listaInteresAreaEstudio\":[".$areaEstudio."],
+            \"listaInteresIdioma\":[".$idiomas."]}";
+ //dpm($cade);
+ //drupal_set_message($cade);
+
+  $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+  WriteLog(' conectando a : '.$url);
+  WriteLog(' enviando datos : '.$cade);
+  $client = new nusoap_client($url, true);
+  $token = encripta1($form_state['values']['name']);
+  $usuario = $form_state['values']['name'];
+  $client->setCredentials($usuario,$token);
+  $error  = $client->getError();
+  if ($error) {
+    WriteLog(' error inesperado 1: '.$error);;
+  }
+  $result = $client->call("crearFormularioPotencial", array("json" =>$cade));
+  if ($client->fault) {
+    WriteLog(' client->fault: '.$$result);
+  } else {
+    $error = $client->getError();
+    if ($error) {
+    WriteLog(' error inesperado 1: '.$error);
+    }
+  }
+  $respuesta =  htmlspecialchars($client->response, ENT_QUOTES);
+  WriteLog(' respuesta '.$respuesta);
+
+}
+
+function _userIframe(){
+  global $user;
+  
+  $has_role = array_intersect(array('colciencias', 'colcienciasBeneficiario'), array_values($user->roles));
+
+  if(!empty($has_role)) { drupal_goto('/user/'.$user->uid.'/edit'); }
+
+  return '<iframe style="width: 100%;height: 800px;" src="https://jboss2.colfuturo.org/Formulario-Externo/potencial/login.jsp?USERNAME='.$user->name.'&ID='.encripta1($user->name).'"></iframe>';
+}
+ function _citaConsejeria(){
+  global $user;
+  return '<iframe style="width: 100%;height: 800px;" src="https://jboss2.colfuturo.org/Formulario-Externo/potencial/formulario/formInfoFormularios.jsf?USERNAME='.$user->name.'&ID=%25&rutaEnvio=https://www.colfuturo.org/integracion/citas_consejeria2"></iframe>';
+ }
+
+ function solicitarCita(){
+  drupal_add_js(drupal_get_path('module','potenciales').'/src/js.js');
+  Global $user;
+  $rutaEnvio = 'https://app.acuityscheduling.com/schedule.php?owner=13746351&notembedded=1';
+  $data = array( 'USERNAME'=>$user->name, 'ID'=>encripta1($user->name));
+  $resourse  = 'https://jboss2.colfuturo.org/Formulario-Externo/potencial/formulario/formInfoFormularios.jsf?'.drupal_http_build_query($data).'&rutaEnvio='.$rutaEnvio;
+  return '<iframe id="IframeCIta" src="'.$resourse.'" style="height:328px;width:750px;" src=""></iframe>';
+}
+ function consultarCita(){
+  Global $user;
+  $rutaEnvio = 'https://app.acuityscheduling.com/schedule.php?owner=13746351&notembedded=1';
+  $data = array( 'USERNAME'=>$user->name, 'ID'=>encripta1($user->name));
+
+  $resourse  = 'https://jboss2.colfuturo.org/Formulario-Externo/potencial/formulario/formInfoFormularios.jsf?'.drupal_http_build_query($data).'&rutaEnvio='.$rutaEnvio;
+  return '<iframe id="IframeCIta" src="'.$resourse.'" style="height:328px;width:750px;" src=""></iframe>';
+ }
+
+ function deliver_plain($page_callback_result) {
+  print $page_callback_result;
+}
+
+function encripta1 ( $strString )    {
+    $var1 = date ("sHdi");
+    $var2 = sqrt ($var1 . strrev($strString));
+    $link = odbc_connect ("ColfuturoPCB", "pcb", "%Titan1900bene$");
+    $strSQL = "DELETE FROM PCB.SESIONES WHERE login = '" . $strString . "'";
+    odbc_exec ($link, $strSQL);
+    $strSQL = "INSERT INTO PCB.SESIONES (login, sesion) values ( '" . $strString . "', '" . $var2 . "')";
+    odbc_exec ($link, $strSQL);
+    odbc_close ($link);
+    return $var2;
+ }
+function WriteLog( $info,$cedula=NULL ){
+  $date = date('y-m-d');
+  $hour = date('h:m:s');
+  $ip = ($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR']:'0.0.0.0';
+  $text = $hour.' '.$ip.' '.$info."\n";
+  $path = drupal_get_path('module', 'potentials');
+  file_put_contents($path.'/logs/Web services/Web Services '.$date.'.log', $text.PHP_EOL,FILE_APPEND );
+}
+function WriteLogValidation( $info,$cedula=NULL ){
+  $date = date('y-m-d');
+  $hour = date('h:m:s');
+  $ip = ($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR']:'0.0.0.0';
+  $text = $hour.' '.$ip.' '.$info."\n";
+  $path = drupal_get_path('module', 'potentials');
+  file_put_contents($path.'/logs/Validaciones/'.$cedula.'.log', $text.PHP_EOL,FILE_APPEND );
+}
+
+function validate_city($input, $output, $api, $key){
+  $clear_input = rawurlencode($input); 
+  $url = "https://maps.googleapis.com/maps/api/place/$api/$output?input=$clear_input&key=$key";
+  $output_query = false;
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  $response = curl_exec($ch);
+  curl_close($ch);
+  $response = json_decode($response);
+
+  foreach ($response->predictions as $key => $index) {
+    if($index->description == $input || $index->description == remove_accents($input)){
+      return true;
+    } 
+  }
+  return false;
+}
+
+function remove_accents($s){
+    $o = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿ';
+    $n = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyyby';
+    return strtr(utf8_decode($s), utf8_decode($o), $n);
+}

@@ -1,0 +1,838 @@
+12:10:51 18.189.80.225 desde:user/146698 preparando para almacenar usuario : 1010171756
+
+12:10:51 18.189.80.225  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:51 18.189.80.225  enviando datos : {"numeroDocumento":"1010171756",
+            "nombre":"Jorge Luis",
+            "apellido":"Hurtado Guarín",
+            "email":"jorgelhurtado@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Economía"],
+            "listaInteresIdioma":[""]}
+
+12:10:51 18.189.80.225 desde:user/146698 preparando para almacenar usuario : 1010171756
+
+12:10:51 18.189.80.225  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:51 18.189.80.225  enviando datos : {"numeroDocumento":"1010171756",
+            "nombre":"Jorge Luis",
+            "apellido":"Hurtado Guarín",
+            "email":"jorgelhurtado@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Economía"],
+            "listaInteresIdioma":[""]}
+
+12:10:21 18.189.80.225  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000275<br>namelookup_time: 0.001207<br>connect_time: 0.001426<br>pretransfer_time: 0.03166<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 40512<br>
+
+12:10:21 18.189.80.225  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000549<br>namelookup_time: 0.001142<br>connect_time: 0.001307<br>pretransfer_time: 0.030423<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 40514<br>
+
+12:10:21 18.189.80.225  respuesta 
+
+12:10:21 18.189.80.225  respuesta 
+
+12:10:46 186.28.25.237 desde:user/165567 preparando para almacenar usuario : 1015437867
+
+12:10:46 186.28.25.237  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:46 186.28.25.237  enviando datos : {"numeroDocumento":"1015437867",
+            "nombre":"Andrea Elizabeth",
+            "apellido":"Garzón González",
+            "email":"anegarzongo@unal.edu.co",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+12:10:46 186.28.25.237  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=OSDRhZGS+MbKzcpwp6E2sH6h.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Sun, 15 Oct 2017 05:54:46 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+02:10:17 190.251.104.90 desde:user/register preparando para almacenar usuario : 1036961515
+
+02:10:17 190.251.104.90  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:10:17 190.251.104.90  enviando datos : {"numeroDocumento":"1036961515",
+            "nombre":"David Esteban",
+            "apellido":"Zabaleta Franco",
+            "email":"davidzabaletaf@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Rionegro, Antioquia, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["frances"]}
+
+02:10:33 190.251.104.90  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=EjQs6G-rFK3e12yza9Pz7-bw.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Sun, 15 Oct 2017 07:03:33 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+02:10:56 181.234.233.244 desde:user/76422 preparando para almacenar usuario : 1023917592
+
+02:10:56 181.234.233.244  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:10:56 181.234.233.244  enviando datos : {"numeroDocumento":"1023917592",
+            "nombre":"Cristian Camilo",
+            "apellido":"Baquero Vásquez",
+            "email":"cristian.baqke@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+02:10:10 181.234.233.244  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=uxqyEq8bletlyiY4aoWokqfR.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Sun, 15 Oct 2017 07:49:09 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+05:10:30 222.152.172.204 desde:user/116086 preparando para almacenar usuario : 11205186
+
+05:10:30 222.152.172.204  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+05:10:30 222.152.172.204  enviando datos : {"numeroDocumento":"11205186",
+            "nombre":"Daniel Felipe",
+            "apellido":"Troncoso",
+            "email":"daniel.troncoso@outlook.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":[""]}
+
+05:10:44 222.152.172.204  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=8scj+CTW7tt7RFvHoIuTkHsk.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Sun, 15 Oct 2017 10:16:44 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+06:10:18 188.195.106.62 desde:user/147627 preparando para almacenar usuario : 1032388265
+
+06:10:18 188.195.106.62  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+06:10:18 188.195.106.62  enviando datos : {"numeroDocumento":"1032388265",
+            "nombre":"Ivonne Cristina",
+            "apellido":"Briceño Álvarez",
+            "email":"ivonnecristinaba@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":[""]}
+
+06:10:45 188.195.106.62  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=HwBZv9NNbyQc4e9kicp-FSsV.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Sun, 15 Oct 2017 11:01:45 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+06:10:41 188.195.106.62 desde:user/147627 preparando para almacenar usuario : 1032388265
+
+06:10:41 188.195.106.62  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+06:10:41 188.195.106.62  enviando datos : {"numeroDocumento":"1032388265",
+            "nombre":"Ivonne Cristina",
+            "apellido":"Briceño Álvarez",
+            "email":"ivonnecristinaba@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":[""]}
+
+06:10:09 188.195.106.62  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=1O3G2teF+PED5cztH2862mEC.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Sun, 15 Oct 2017 11:03:09 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+08:10:31 190.124.123.75 desde:user/register preparando para almacenar usuario : 1098783235
+
+08:10:31 190.124.123.75  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+08:10:31 190.124.123.75  enviando datos : {"numeroDocumento":"1098783235",
+            "nombre":"Sharitz daniela",
+            "apellido":"Mantilla escobar",
+            "email":"Sharitzmantilla04@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bucaramanga, Santander, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente"],
+            "listaInteresIdioma":["ingles"]}
+
+08:10:01 190.124.123.75  error inesperado 1: HTTP Error: socket read of headers timed out
+
+08:10:01 190.124.123.75  respuesta 
+
+09:10:53 69.165.243.52 desde:user/register preparando para almacenar usuario : 80415013
+
+09:10:53 69.165.243.52  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:10:53 69.165.243.52  enviando datos : {"numeroDocumento":"80415013",
+            "nombre":"Pablo Humberto",
+            "apellido":"Guerrero Buitrago",
+            "email":"p.guerrero68@yahoo.ca",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Toronto, Ontario, Canadá",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente","Ciencias Básicas"],
+            "listaInteresIdioma":[""]}
+
+09:10:23 69.165.243.52  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 232<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000631<br>namelookup_time: 0.001142<br>connect_time: 0.001354<br>pretransfer_time: 0.032624<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 53103<br>
+
+09:10:23 69.165.243.52  respuesta 
+
+09:10:14 186.31.210.189 desde:user/164954 preparando para almacenar usuario : 1030626044
+
+09:10:14 186.31.210.189  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:10:14 186.31.210.189  enviando datos : {"numeroDocumento":"1030626044",
+            "nombre":"Claudia Milena",
+            "apellido":"Cuervo Avila",
+            "email":"clamil_56@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Comoras",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Agropecuarias y del Medio Ambiente","Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+09:10:44 186.31.210.189  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.0004<br>namelookup_time: 0.001081<br>connect_time: 0.001274<br>pretransfer_time: 0.028524<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 54413<br>
+
+09:10:44 186.31.210.189  respuesta 
+
+10:10:28 186.83.5.90 desde:user/141263 preparando para almacenar usuario : 1020737074
+
+10:10:28 186.83.5.90  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:10:28 186.83.5.90  enviando datos : {"numeroDocumento":"1020737074",
+            "nombre":"Angela Patricia",
+            "apellido":"Barrera Mendez",
+            "email":"angela.mendez@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Artes"],
+            "listaInteresIdioma":[""]}
+
+10:10:58 186.83.5.90  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000111<br>namelookup_time: 0.001299<br>connect_time: 0.001474<br>pretransfer_time: 0.031409<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 55978<br>
+
+10:10:58 186.83.5.90  respuesta 
+
+10:10:57 190.157.102.95 desde:user/66406 preparando para almacenar usuario : 1019008184
+
+10:10:57 190.157.102.95  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:10:57 190.157.102.95  enviando datos : {"numeroDocumento":"1019008184",
+            "nombre":"Fabiola",
+            "apellido":"Morales Monje",
+            "email":"fmoramon@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":[""]}
+
+10:10:57 190.157.102.95  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+10:10:57 190.157.102.95  respuesta 
+
+11:10:07 190.159.61.3 desde:user/register preparando para almacenar usuario : 1019077206
+
+11:10:07 190.159.61.3  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:07 190.159.61.3  enviando datos : {"numeroDocumento":"1019077206",
+            "nombre":"ana maria",
+            "apellido":"morales avella",
+            "email":"am.ma25@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias de la Salud"],
+            "listaInteresIdioma":[""]}
+
+11:10:37 190.159.61.3  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000383<br>namelookup_time: 0.001106<br>connect_time: 0.001239<br>pretransfer_time: 0.032444<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 57209<br>
+
+11:10:37 190.159.61.3  respuesta 
+
+11:10:54 190.159.61.3 desde:user/169486 preparando para almacenar usuario : 1019077206
+
+11:10:54 190.159.61.3  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:54 190.159.61.3  enviando datos : {"numeroDocumento":"1019077206",
+            "nombre":"ana maria",
+            "apellido":"morales avella",
+            "email":"am.ma25@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias de la Salud"],
+            "listaInteresIdioma":[""]}
+
+11:10:25 190.159.61.3  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30001 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.001406<br>namelookup_time: 0.001097<br>connect_time: 0.001228<br>pretransfer_time: 0.032721<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 57276<br>
+
+11:10:25 190.159.61.3  respuesta 
+
+11:10:26 190.159.61.3 desde:user/169486 preparando para almacenar usuario : 1019077206
+
+11:10:26 190.159.61.3  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:26 190.159.61.3  enviando datos : {"numeroDocumento":"1019077206",
+            "nombre":"ana maria",
+            "apellido":"morales avella",
+            "email":"am.ma25@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias de la Salud"],
+            "listaInteresIdioma":[""]}
+
+11:10:35 190.26.32.144 desde:user/register preparando para almacenar usuario : 1032476360
+
+11:10:35 190.26.32.144  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:35 190.26.32.144  enviando datos : {"numeroDocumento":"1032476360",
+            "nombre":"maria alejandra",
+            "apellido":"supelano triana",
+            "email":"alejandra.supelano@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Básicas"],
+            "listaInteresIdioma":["ingles","frances"]}
+
+11:10:56 190.159.61.3  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30001 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.001614<br>namelookup_time: 0.001017<br>connect_time: 0.00119<br>pretransfer_time: 0.028569<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 57322<br>
+
+11:10:56 190.159.61.3  respuesta 
+
+11:10:05 190.26.32.144  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: cURL ERROR: 28: Operation timed out after 30000 milliseconds with 0 bytes received<br>url: https://jboss2.colfuturo.org:443/Formulario-Interno/ServicioIntegracionPotencial?wsdl<br>content_type: <br>http_code: 0<br>header_size: 0<br>request_size: 236<br>filetime: -1<br>ssl_verify_result: 0<br>redirect_count: 0<br>total_time: 30.000062<br>namelookup_time: 0.001026<br>connect_time: 0.001219<br>pretransfer_time: 0.032615<br>size_upload: 0<br>size_download: 0<br>speed_download: 0<br>speed_upload: 0<br>download_content_length: -1<br>upload_content_length: 0<br>starttransfer_time: 0<br>redirect_time: 0<br>redirect_url: <br>primary_ip: 173.192.111.232<br>certinfo: Array<br>primary_port: 443<br>local_ip: 10.40.142.6<br>local_port: 57333<br>
+
+11:10:05 190.26.32.144  respuesta 
+
+11:10:30 85.195.198.127 desde:user/32467 preparando para almacenar usuario : 1015420435
+
+11:10:30 85.195.198.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:30 85.195.198.127  enviando datos : {"numeroDocumento":"1015420435",
+            "nombre":"Andrés Camilo",
+            "apellido":"Rodríguez Escallón",
+            "email":"andrescamilor@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+11:10:56 85.195.198.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+11:10:56 85.195.198.127  respuesta 
+
+11:10:24 186.86.15.156 desde:user/161574 preparando para almacenar usuario : 1088327047
+
+11:10:24 186.86.15.156  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:24 186.86.15.156  enviando datos : {"numeroDocumento":"1088327047",
+            "nombre":"Juan Diego",
+            "apellido":"Betancur Grajales",
+            "email":"juandiego9530@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Dosquebradas, Risaralda, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Ciencias Políticas y Relaciones Internacionales","Ciencias Sociales","Economía"],
+            "listaInteresIdioma":["ingles","frances"]}
+
+11:10:24 186.86.15.156  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+11:10:24 186.86.15.156  respuesta 
+
+12:10:31 181.51.196.113 desde:user/168532 preparando para almacenar usuario : 1020761525
+
+12:10:31 181.51.196.113  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:31 181.51.196.113  enviando datos : {"numeroDocumento":"1020761525",
+            "nombre":"Laura Natalia",
+            "apellido":"Macias Lozano",
+            "email":"lmaciaslozano@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Políticas y Relaciones Internacionales","Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+12:10:57 181.51.196.113  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+12:10:57 181.51.196.113  respuesta 
+
+12:10:02 181.51.196.113 desde:user/168532 preparando para almacenar usuario : 1020761525
+
+12:10:02 181.51.196.113  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:02 181.51.196.113  enviando datos : {"numeroDocumento":"1020761525",
+            "nombre":"Laura Natalia",
+            "apellido":"Macias Lozano",
+            "email":"lmaciaslozano@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Políticas y Relaciones Internacionales","Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+12:10:28 181.51.196.113  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+12:10:28 181.51.196.113  respuesta 
+
+12:10:07 190.66.173.143 desde:user/register preparando para almacenar usuario : 1047232530
+
+12:10:07 190.66.173.143  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:07 190.66.173.143  enviando datos : {"numeroDocumento":"1047232530",
+            "nombre":"Laura Andrea",
+            "apellido":"Barrios Quiroz",
+            "email":"lau_barrios94@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Barranquilla, Atlántico, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Sociales"],
+            "listaInteresIdioma":[""]}
+
+12:10:07 190.66.173.143  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+12:10:07 190.66.173.143  respuesta 
+
+12:10:46 181.132.173.240 desde:user/register preparando para almacenar usuario : 1063152684
+
+12:10:46 181.132.173.240  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:10:46 181.132.173.240  enviando datos : {"numeroDocumento":"1063152684",
+            "nombre":"JAIME FRANCISCO",
+            "apellido":"GARCIA BURGOS",
+            "email":"jaimegarciab90@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Cartagena, Bolívar, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios","Arquitectura y Diseño","Ingeniería"],
+            "listaInteresIdioma":["ingles","frances"]}
+
+12:10:11 181.132.173.240  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+12:10:11 181.132.173.240  respuesta 
+
+01:10:01 201.244.47.88 desde:user/register preparando para almacenar usuario : 1019107808
+
+01:10:01 201.244.47.88  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:10:01 201.244.47.88  enviando datos : {"numeroDocumento":"1019107808",
+            "nombre":"Laura Manuela ",
+            "apellido":"Lozano Jiménez",
+            "email":"mlozanojimenez95@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+01:10:01 201.244.47.88  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+01:10:01 201.244.47.88  respuesta 
+
+01:10:29 201.244.47.88 desde:user/169494 preparando para almacenar usuario : 1019107808
+
+01:10:29 201.244.47.88  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:10:29 201.244.47.88  enviando datos : {"numeroDocumento":"1019107808",
+            "nombre":"Laura Manuela ",
+            "apellido":"Lozano Jiménez",
+            "email":"mlozanojimenez95@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Arquitectura y Diseño"],
+            "listaInteresIdioma":[""]}
+
+01:10:55 201.244.47.88  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+01:10:55 201.244.47.88  respuesta 
+
+01:10:56 80.110.80.222 desde:user/63739 preparando para almacenar usuario : 52820974
+
+01:10:56 80.110.80.222  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+01:10:56 80.110.80.222  enviando datos : {"numeroDocumento":"52820974",
+            "nombre":"Dayan Lizzette",
+            "apellido":"Farias Picón",
+            "email":"yan_farias@yahoo.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Derecho"],
+            "listaInteresIdioma":[""]}
+
+01:10:56 80.110.80.222  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+01:10:56 80.110.80.222  respuesta 
+
+02:10:54 134.76.63.66 desde:user/39349 preparando para almacenar usuario : 1136882004
+
+02:10:54 134.76.63.66  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+02:10:54 134.76.63.66  enviando datos : {"numeroDocumento":"1136882004",
+            "nombre":"TATIANA",
+            "apellido":"OROZCO GARCIA",
+            "email":"tog_col@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Economía"],
+            "listaInteresIdioma":[""]}
+
+02:10:20 134.76.63.66  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+02:10:20 134.76.63.66  respuesta 
+
+03:10:26 74.79.80.30 desde:user/register preparando para almacenar usuario : 1019100871
+
+03:10:26 74.79.80.30  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+03:10:26 74.79.80.30  enviando datos : {"numeroDocumento":"1019100871",
+            "nombre":"Paula Andrea",
+            "apellido":"Niño Galvis",
+            "email":"palulis22@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":[""]}
+
+03:10:51 74.79.80.30  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+03:10:51 74.79.80.30  respuesta 
+
+04:10:20 167.0.26.127 desde:user/register preparando para almacenar usuario : 14398677
+
+04:10:20 167.0.26.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:10:20 167.0.26.127  enviando datos : {"numeroDocumento":"14398677",
+            "nombre":"DIEGO ",
+            "apellido":"ZAPATA",
+            "email":"diegoferzapata@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles","frances"]}
+
+04:10:46 167.0.26.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+04:10:46 167.0.26.127  respuesta 
+
+04:10:10 167.0.26.127 desde:user/169505 preparando para almacenar usuario : 14398677
+
+04:10:10 167.0.26.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:10:10 167.0.26.127  enviando datos : {"numeroDocumento":"14398677",
+            "nombre":"DIEGO ",
+            "apellido":"ZAPATA",
+            "email":"diegoferzapata@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles","frances"]}
+
+04:10:36 167.0.26.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+04:10:36 167.0.26.127  respuesta 
+
+04:10:43 167.0.26.127 desde:user/169505 preparando para almacenar usuario : 14398677
+
+04:10:43 167.0.26.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:10:43 167.0.26.127  enviando datos : {"numeroDocumento":"14398677",
+            "nombre":"DIEGO ",
+            "apellido":"ZAPATA",
+            "email":"diegoferzapata@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles","frances"]}
+
+04:10:08 167.0.26.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+04:10:08 167.0.26.127  respuesta 
+
+04:10:47 167.0.26.127 desde:user/169505 preparando para almacenar usuario : 14398677
+
+04:10:47 167.0.26.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:10:47 167.0.26.127  enviando datos : {"numeroDocumento":"14398677",
+            "nombre":"DIEGO ",
+            "apellido":"ZAPATA",
+            "email":"diegoferzapata@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles","frances"]}
+
+04:10:13 167.0.26.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+04:10:13 167.0.26.127  respuesta 
+
+04:10:17 167.0.26.127 desde:user/169505 preparando para almacenar usuario : 14398677
+
+04:10:17 167.0.26.127  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+04:10:17 167.0.26.127  enviando datos : {"numeroDocumento":"14398677",
+            "nombre":"DIEGO ",
+            "apellido":"ZAPATA",
+            "email":"diegoferzapata@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles","frances"]}
+
+04:10:42 167.0.26.127  error inesperado 1: wsdl error: Getting https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl - HTTP ERROR: Unsupported HTTP response status 502 Bad Gateway (soapclient->response has contents of the response)
+
+04:10:42 167.0.26.127  respuesta 
+
+05:10:34 89.114.199.22 desde:user/register preparando para almacenar usuario : 1010192102
+
+05:10:34 89.114.199.22  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+05:10:34 89.114.199.22  enviando datos : {"numeroDocumento":"1010192102",
+            "nombre":"PAULA ANDREA",
+            "apellido":"CORTES LANDAZURI",
+            "email":"PAULANDAZURI@OUTLOOK.COM",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Leiria, Portugal",
+            "genero":"F",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+05:10:36 89.114.199.22  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=GGvTv4QUlRcYDhiTR391cEiL.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Sun, 15 Oct 2017 22:24:36 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+06:10:19 190.90.196.210 desde:user/register preparando para almacenar usuario : 1081912885
+
+06:10:19 190.90.196.210  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+06:10:19 190.90.196.210  enviando datos : {"numeroDocumento":"1081912885",
+            "nombre":"jose miguel",
+            "apellido":"osorio mercado",
+            "email":"osoriomercadojose@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Plato, Magdalena, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":[""],
+            "listaInteresIdioma":["ingles"]}
+
+06:10:20 190.90.196.210  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=qEXzTzb7JSKk7tY2B+9N4USJ.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Sun, 15 Oct 2017 23:36:20 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+08:10:09 191.109.132.169 desde:user/142236 preparando para almacenar usuario : 79738702
+
+08:10:09 191.109.132.169  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+08:10:09 191.109.132.169  enviando datos : {"numeroDocumento":"79738702",
+            "nombre":"ALEXANDER",
+            "apellido":"PEREIRA GARCIA",
+            "email":"alexanderpereiragarcia@gmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Políticas y Relaciones Internacionales","Ciencias Sociales","Educación"],
+            "listaInteresIdioma":["ingles"]}
+
+08:10:10 191.109.132.169  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Ilag0Ex9ygHhguXF90GMCSNn.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Oct 2017 01:06:09 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+09:10:57 190.146.26.167 desde:user/register preparando para almacenar usuario : 1020823652
+
+09:10:57 190.146.26.167  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:10:57 190.146.26.167  enviando datos : {"numeroDocumento":"1020823652",
+            "nombre":"Mateo",
+            "apellido":"Rodriguez",
+            "email":"mateorodri@live.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Barranquilla, Atlántico, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ciencias Políticas y Relaciones Internacionales"],
+            "listaInteresIdioma":[""]}
+
+09:10:58 190.146.26.167  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=XX-SvQcgCk5FLPgcpjK+Vi9H.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Oct 2017 02:11:58 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+09:10:29 181.49.86.225 desde:user/register preparando para almacenar usuario : 10495834
+
+09:10:29 181.49.86.225  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:10:29 181.49.86.225  enviando datos : {"numeroDocumento":"10495834",
+            "nombre":"Javier",
+            "apellido":"Palacios",
+            "email":"info@palacond.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Cali, Valle del Cauca, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+09:10:30 181.49.86.225  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=QU7VVNl0QwmLGbZczYTghs-J.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Oct 2017 02:50:30 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+09:10:23 181.49.86.225 desde:user/169516 preparando para almacenar usuario : 10495834
+
+09:10:23 181.49.86.225  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+09:10:23 181.49.86.225  enviando datos : {"numeroDocumento":"10495834",
+            "nombre":"Javier",
+            "apellido":"Palacios",
+            "email":"info@palacond.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Cali, Valle del Cauca, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+09:10:24 181.49.86.225  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=3sRy8-paCmGGuPRCiTkKLiT-.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 301
+Date: Mon, 16 Oct 2017 02:53:24 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Encontro formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+11:10:11 190.27.155.91 desde:user/register preparando para almacenar usuario : 1018443415
+
+11:10:11 190.27.155.91  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+11:10:11 190.27.155.91  enviando datos : {"numeroDocumento":"1018443415",
+            "nombre":"Fernando Nicolás",
+            "apellido":"Vargas Plazas",
+            "email":"nicolasvargas19@hotmail.com",
+            "fechaNacimiento":"18 ene 1984",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Ingeniería"],
+            "listaInteresIdioma":[""]}
+
+11:10:12 190.27.155.91  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=8ios-5+p7S21tu+O3IxZ66F-.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 297
+Date: Mon, 16 Oct 2017 04:18:12 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Creo formulario&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+

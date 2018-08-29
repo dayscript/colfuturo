@@ -1,0 +1,50 @@
+<?php
+/*MOdule Machine-name: dayscript_users_gbe*/
+module_load_include('inc', 'user', 'user.pages');
+function dayscript_users_gbe_form_alter(&$form, &$form_state, $form_id){
+	global $user;
+	if ($form_id == 'change_pwd_page_form' && $user->uid == 73801){
+			//if (in_array('colciencias', $user->roles)){
+	}
+	if ($form_id == 'user_login_block' && arg(0) == 'node' && arg(1) == '44'){
+		//$form['#validate'][] = '_alter_errors';	
+	}
+}
+function dayscript_users_gbe_form_user_pass_alter(&$form, &$form_state, $form_id){
+	if ( implode(arg(),'/') == 'node/44' ){
+		$form['#submit'][] = '_redirect_user_pass';
+	}
+}
+function dayscript_users_gbe_form_user_profile_form_alter(&$form, &$form_state, $form_id){
+	global $user;
+    $roles = array_intersect(array('colciencias', 'colcienciasBeneficiario'), array_values($user->roles));
+    //if ( $user->uid == 197038 || $user->uid == 127 ){
+    if (empty($roles) ? FALSE : TRUE) {
+		if (isset($form['#fieldgroups']['group_interes_colfuturo']) && isset($form['#group_children'])) {
+			foreach ($form['#group_children'] as $field => $group) {
+				if ($group == 'group_interes_colfuturo') {
+					$form[$field]['#access'] = FALSE;
+				}
+			}
+		}
+		$form['field_terminos']['#access'] = FALSE;
+		$form['field_autorizacion']['#access'] = FALSE;
+	}
+	if (in_array('administrator', $user->roles)) {
+		if (isset($form['#fieldgroups']['group_interes_colfuturo']) && isset($form['#group_children'])) {
+			foreach ($form['#group_children'] as $field => $group) {
+				if ($group == 'group_interes_colfuturo') {
+					$form[$field]['#access'] = TRUE;
+				}
+			}
+		}
+		$form['field_terminos']['#access'] = TRUE;
+		$form['field_autorizacion']['#access'] = TRUE;
+	}
+}
+function _redirect_user_pass(){
+	drupal_goto('http://gbe.colfuturo.org',$options = array(),302);
+}
+function _alter_errors(){
+	drupal_set_message('.');
+}

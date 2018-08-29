@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * 
+ */
+
+function simple_gmap_menu() {
+   $items['admin/config/user-interface/simple_gmap'] = array(
+    'title' => 'Simple Gmap',
+    'description' => 'Configurar las opciones para simple gmap.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('simple_gmap_configuracion'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'simple_gmap.admin.inc',
+  );
+  return $items;
+}
+
+
+function simple_gmap_block_info() {
+  $blocks['simple_gmap'] = array(
+    'info' => 'Simple Gmap',
+  );
+  return $blocks;
+}
+
+
+function simple_gmap_block_view($delta = '') {
+  switch ($delta) {
+    case 'simple_gmap':
+      $block['content'] = generate_map();
+      return $block;
+  }
+  return;
+}
+
+
+function generate_map() {
+  $variables = array(
+    'latitude' => variable_get('latitude_simple_gmap', '4.25'),
+    'longitude' => variable_get('longitude_simple_gmap', '-74.1833333'),
+    'width' => variable_get('width_simple_gmap', '500'),
+    'height' => variable_get('height_simple_gmap', '530'),
+    'zoom' => variable_get('zoom_simple_gmap', '8')
+  );
+  return theme('generate_map', $variables);
+}
+
+
+function simple_gmap_theme() {
+  return array(
+    'generate_map' => array(
+      'template' => 'generate-map',
+    ),
+  );
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>COLFUTURO :: Qué ofrecemos en COLFUTURO :: Financiación de posgrados</title>
+<meta name="description" content="Colfuturo">
+<meta name="keywords" content="Colfuturo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="author" type="text/plain" href="humans.txt" />
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- inicio JAVA (jQuery.twitter) twitter API -->
+<script type="text/javascript" src="js/jquery.twitter.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tweets').tweetable({
+		username: 'colfuturo',
+		time: false,
+		limit: 1,
+		replies: false,
+		position: 'append'
+	});
+});
+</script>
+<!-- fin JAVA twitter API -->
+
+<!-- inicio JAVA Popup-->
+<script type="text/javascript">
+$(document).ready(function() {
+	//When you click on a link with class of poplight and the href starts with a # 
+$('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+    $('#' + popID).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+    return false;
+});
+
+//Close Popups and Fade Layer
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+    $('#fade , .popup_block').fadeOut(function() {
+        $('#fade, a.close').remove();  //fade them both out
+    });
+    return false;
+});
+});
+
+</script>
+<!-- fin JAVA Popup -->
+
+
+        
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+         
+<link rel="author" type="text/plain" href="humans.txt" />
+</head>
+
+<body>
+	<!-- inicio HEADER -->
+	<header>
+    	<section id="bg_barra_fixed">
+			<section id="barra_fixed">
+            
+                <article id="logo_header">
+            		<a href="home.html" class="logo_header"></a>
+				</article><!-- logo_header -->
+                
+				<!-- Redes Sociales -->
+                <article id="redes_sociales">
+            		<a href="#" class="rs_twitter"></a>
+            		<a href="#" class="rs_facebook"></a>
+            		<a href="#" class="rs_youtube"></a>
+            		<a href="#" class="rs_linkedin"></a>
+                </article><!-- fin Redes Sociales -->
+
+				<!-- Buscador -->
+                <article id="buscador">
+                    <form action="#" method="post" name="search">
+                        <input class="search" name="search" type="text" value="">
+					</form>
+                </article>
+				<!-- Buscador -->
+                
+                <article id="ayuda_rebeca"><a href="#" class="ayuda_rebeca"></a></article>
+                
+				<!-- Login -->
+                <article id="login">
+                    <form action="#" method="post" name="login" style="padding-top:.6em;">
+                        <p>Usuario</p>
+                        <input name="user" type="text" value="">
+                        <p>Clave</p>
+                        <input name="pasw" type="text" value="">
+                        <input class="btn_login" name="ingresar" type="button" value="INGRESAR">
+                        <a href="#">¿Ólvidó su clave?</a>
+                    </form>
+                </article>
+				<!--Fin Login -->
+
+			</section><!-- section#barra_fixed -->
+        </section><!-- section#bg_barra_fixed -->
+        
+		<!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><a class="menu_link01" href="home.html"></a></li>
+                <li><span></span></li>
+                <li><a class="menu_link02" href="estudie_un_posgrado.html">ESTUDIE UN POSGRADO EN EL EXTERIOR</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link03" href="convocatoria_2013.html">CONVOCATORIA 2013</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link04" href="nuestros_beneficiarios.html">NUESTROS BENEFICIARIOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link05" href="colfuturo.html">COLFUTURO</a></li>
+                <li><span></span></li>
+                <li class="current"><a class="menu_link06" href="que_ofrecemos.html">QUÉ OFRECEMOS</a></li>
+                <li><span></span></li>
+                <li><a class="menu_link07" href="english.html">ENGLISH</a></li>
+            </ul>
+            <br style="clear:left"/>
+        </nav>
+		<!-- fin Menu -->
+        
+    </header>
+<!-- fin HEADER -->
+
+    
+    <section id="bloque_breadcrumb">
+    
+        <article id="breadcrumb">
+            <a href="home.html">Inicio</a>
+            <span></span>
+            <a href="que_ofrecemos.html">Qué ofrecemos en COLFUTURO</a>
+            <span></span>
+            <a class="current" href="#">Financiación de posgrados</a>
+        </article><!-- fin article#breadcrumb -->
+        
+        <article id="fecha">Enero 04</article><!-- fin article#fecha -->    
+    
+    </section><!-- section#bloque_breadcrumb -->
+    
+    
+    <section id="bloque_general">
+    
+        <section id="columna_izquierda">
+        
+            <h2 class="titulo_general_rojo"><strong>Financiación</strong> de posgrados</h2>
+            
+            <img src="images/img_pasos_que_ofrecemos_02.jpg" class="top_img" width="550" height="240" alt="Paso 2">
+            <p class="texto_corrido">Los profesionales colombianos interesados en estudiar una maestría, doctorado y especializaciones en el exterior, esta última solo en área de la salud, 
+            pueden contar con nuestro Programa Crédito-beca. <br><br>
+            Este es un modelo de apoyo único en Colombia que le permite al estudiante solicitar un préstamo y obtener una condonación del 50% o el 25%, sobre la deuda, 
+            según su área de estudio. Este programa solo financia programas presenciales y de tiempo completo y tiene como criterio único de selección la excelencia académica 
+            del candidato y del programa que va a adelantar.</p>
+
+         	<h3 class="subtitulo_seccion">En qué consiste el crédito</h3>
+            
+         	<ul class="lista_disc_small">
+         	  <li>Los estudiantes pueden solicitar US$ 25.000 por año, máximo dos años, es decir, hasta un tope de US$ 50.000.</li>
+         	  <li>Es un préstamo en dólares americanos</li>
+         	  <li>Las tasas de interés son:
+                <ul class="lista_dentro">
+                  <li>- Durante el periodo de estudios: 6%</li>
+                  <li>- Durante el periodo de amortización: 8%</li>
+                  <li>- Periodo de amortización acelerado: 13%</li>
+                </ul>
+              </li>
+         	  <li>Requiere 2 codeudores</li>
+       	  	</ul>
+          
+         	<h3 class="subtitulo_seccion">En qué consiste la beca</h3>
+            <p class="texto_corrido">Si el estudiante regresa a Colombia, obtiene el título para el cual COLFUTURO le financió sus estudios y permanece en el país de 3 a 5 años, 
+            podrá obtener el siguiente porcentaje de condonación sobre la deuda:</p>
+            <ul class="lista_disc_small">
+              <li>El 50% para los estudios en todas las áreas de estudio.</li>
+              <li>(excepto Administración de Empresas).</li>
+              <li>El 25% de la deuda para estudiantes que adelantan estudios de maestría en administración.</li>
+              <li>El 10% adicional si el beneficiario se  vincula laboralmente tiempo completo a una entidad pública, académica o de investigación.</li>
+            </ul>
+            <p class="texto_corrido">Contamos con más de 50 convenios con entidades y universidades del exterior que aumentan los beneficios económicos para nuestros estudiantes.</p>
+
+
+			<h3 class="subtitulo_seccion">Ventajas del Crédito-beca</h3>
+            <ul class="lista_disc_small">
+              <li>El estudiante tiene la libertdad de escoger el programa de estudios y el país donde desea estudiar.</li>
+              <li>No hay límite de edad.</li>
+              <li>Pueden participar estudiantes que inicien o continúen sus estudios.</li>
+              <li>Pueden participar los estudiantes que ya están en el exterior.</li>
+              <li>Permite cofinanciación.</li>
+              <li>Los estudiantes tiene autonomía para distribuir el monto prestado.</li>
+              <li>Al finalizar sus estudios, los estudiantes cuentan con un año de gracia donde no deben hacer pagos y pueden permanecer en el exterior haciendo una práctica laboral.</li>
+              <li>A su regreso, los estudiantes cuentan con un servicio de <a href="que_ofrecemos_p4.html">Intermediación Laboral</a> que los guiará en su proceso de ubicación laboral.</li>
+              <li>Contamos con más de 50 <a href="que_ofrecemos_p2a.html">convenios</a> que se traducen en beneficios económicos adicionales a los del crédito-beca.</li>
+            </ul>
+            
+            
+            <h3 class="subtitulo_seccion">Requisitos para postularse al programa</h3>
+            
+
+            <ol>            
+                <li><strong>Ser colombiano.</strong></li>
+                <li><strong>Tener un título de pregrado.</strong> Si no se ha graduado, es indispensable una comunicación de la universidad donde se certifique que está cursando 
+                último semestre. Para los programas de doble titulación pregrado-maestría, debe presentar una carta de la universidad en Colombia donde se avala o aprueba la doble
+                titulación. </li>
+                <li><strong>Dominar un  <a href="#?w=550" rel="video_pop_01" class="poplight">segundo idioma</a>.</strong> Incluso para personas que van a estudiar en un país 
+                hispanohablante. estos son los exámenes admitidos:
+
+                <div id="video_pop_01" class="popup_block">
+                    <iframe width="550" height="309" src="http://www.youtube-nocookie.com/embed/OvseSzrfHYY" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+
+
+            
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="col_izq_tabla_general">
+                      <tr>
+                        <td width="21%" valign="middle"><strong>Inglés</strong></td>
+                        <td width="79%" valign="middle">IELTS 6.5 <br>TOEFL IBT 80 <br>TOEIC: Listening 490, Reading 455, Speaking 200, Writing 200</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Francés</strong></td>
+                        <td valign="middle">Diplôme Approfondi de Langue Française C1</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Alemán</strong></td>
+                        <td valign="middle">Goethe-Zertifikat C1 <br> 
+                        Test Deutsch als Fremdsprache (TestDaf)<br> Prüfung Wirtschaftsdeutsch International (PWD)</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Italiano</strong></td>
+                        <td valign="middle">Diploma Commerciale di Lingua Italiana<br>
+                        Certificato di Conoscenza delia Lingua Italiana. CELI 4 - Livello 4</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Portugués</strong></td>
+                        <td valign="middle">CELPE-Bras Avançado</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Mandarín</strong></td>
+                        <td valign="middle">HSK V</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Catalán</strong></td>
+                        <td valign="middle">Nivell de suficiéncia (C)</td>
+                      </tr>
+                      <tr>
+                        <td valign="middle"><strong>Ruso</strong></td>
+                        <td valign="middle">TORFL/ÒÐÊÈ III Test of Russian as a Foreign Language Tercero/Tretii</td>
+                      </tr>
+                  </table>
+          	  </li>
+
+
+                <li><strong>Tener una carta de admisión al posgrado</strong>. O una comunicación por parte de la universidad que certifique que está adelantando el proceso de admisión. <a href="#?w=550" rel="video_pop_02" class="poplight">Estos son los documentos admitidos.</a></li>
+                
+                
+                <div id="video_pop_02" class="popup_block">
+                    <iframe width="550" height="309" src="http://www.youtube-nocookie.com/embed/zgAp6ZZix7E" frameborder="0" allowfullscreen></iframe>
+                </div>
+    
+    
+                <li><strong>Diligenciar el formulario en línea</strong>. Y adjuntar todos los documentos solicitados antes del cierre de la convocatoria.</li>
+                <li><strong>Consignar $50.000.</strong> A nombe de COLFUTURO antes del cierre de la convocatoria, en la cuenta corriente de Bancolombia Nº 039145400-00.</li>
+
+			</ol><!-- lista_disc -->   
+            
+            <p class="texto_corrido">Los beneficiarios de COLFUTURO pueden participar nuevamente en la convocatoria siempre y cuando vayan a cursar un estudio superior al 
+            anterior y hayan cancelado la totalidad de su primer crédito-beca.<br><br>
+            Si su solicitud de apoyo a COLFUTURO no está completa, o no cumple alguno de los anteriores requisitos, no será considerada en el proceso de selección. Por esta razón 
+            le recomendamos aplazar su solicitud un año y subsanar en ese tiempo lo que aún le falte.</p>            
+            
+             
+         	<h3 class="subtitulo_seccion">Convenios establecidos</h3>
+            <p class="texto_corrido">Con el propósito de que cada dólar que COLFUTURO entregue se multiplique para sus beneficiarios, en los últimos años se han firmado una serie 
+            de convenios con instituciones educativas y universidades.<br><br>A la fecha, COLFUTURO tiene 51 convenios en los que se ofrecen descuentos en matrícula que van desde 
+            el 10 hasta el 100%, o que contribuyen a los gastos de sostenimiento mientras el estudiante está en el exterior.<br><br>
+            <a href="que_ofrecemos_p2a.html">Revise la lista completa de convenios...</a></p>
+            
+            
+          
+        <div class="back">
+            <a class="top" href="#" target="_top"></a>
+            <a class="regresar" href="javascript:history.back()" target="_top">REGRESAR</a>
+        </div><!-- back  -->
+            
+            
+            
+            
+            
+            
+        </section><!-- section#columna_izquierda -->
+    
+        <section id="columna_derecha">
+        
+        
+     		<article id="columna_390_pasos" style="margin-top:0;">
+                <div id="titulo_columna_390"><h2>QUÉ OFRECE COLFUTURO</h2></div><!-- titulo_columna_320 -->
+                <a class="cnt_paso_01" href="que_ofrecemos_p1.html">Apoyo</a>
+                <a class="cnt_paso_02_active" href="que_ofrecemos_p2.html">Financiación</a>
+                <a class="cnt_paso_03" href="que_ofrecemos_p3.html">Inglés</a>
+                <a class="cnt_paso_04" href="que_ofrecemos_p4.html">Talento</a>
+			</article><!-- columna_390_pasos -->                
+        
+          <article id="columna_320_linea">
+          
+            <h2 class="subtitulo_general_negro_columna">Así <strong>selecciona</strong> COLFUTURO a los beneficiarios</h2>
+          
+            <a style="margin:20px 0 0" href="que_ofrecemos_p2_infografia.html"><img src="images/colfuturo_Infografia_ProcesoSeleccion_Small.png" width="338" height="220" alt="COLFUTURO Infografia Proceso de Selección"></a>
+          
+            <div style="margin-bottom:0" class="video_columna_derecha">
+                <iframe width="338" height="190" src="http://www.youtube-nocookie.com/embed/n4CvLt0IFWI" frameborder="0" allowfullscreen></iframe>                
+            </div>
+
+            </article><!-- article#columna_320_linea -->
+        
+        
+                
+            <div class="video_columna_derecha">
+                <iframe width="390" height="219" src="http://www.youtube-nocookie.com/embed/OvseSzrfHYY" frameborder="0" allowfullscreen></iframe>                
+            </div>        
+            
+            
+            <article id="columna_320_linea">
+                <h2 class="subtitulo_general_negro_columna">Nuestros <strong>Semilleros</strong> hablan</h2>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_01.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania. 
+                Estuvieron conmigo incondicionalmente de comienzo a fin.” -  <span class="rojo">Nelson Cuevas Valderrama </span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_02.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania.” - <span class="rojo">Natalia Barón</span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                <img class="top_img" src="images/img_que_ofrece_apoyo_01.jpg" width="350" height="170" alt="COLFUTURO">
+                <p>“La ayuda que me brindó COLFUTURO fue indispensable en el proceso que lleve acabo para realizar mis posgrado en Alemania. 
+                Estuvieron conmigo incondicionalmente de comienzo a fin.” -  <span class="rojo">Nelson Cuevas Valderrama </span></p>
+                
+                <div class="linea_col_derecha"></div>
+                
+                
+                
+                <p><a href="#">Testimonios de nuestros beneficiarios...</a></p>
+                                
+            </article><!-- article#columna_320_linea -->
+            
+            
+            <article id="cnt_redes_sociales">
+            <img src="images/TEMP_redes_sociales.png" width="380" height="25" alt="TEMP - COLFUTURO">
+            </article>
+        
+        
+        </section><!-- section#columna_derecha -->
+
+
+	<div class="clear"></div>
+    </section><!-- section#bloque_general -->
+   
+
+<!-- inicio Footer -->
+	<footer>
+    
+    	<section id="footer">
+            <article id="footer_superior">
+            
+                <div class="col_footer_01">
+                    <a href="#" class="titulo_col_footer">ESTUDIE UN POSGRADO EN EL EXTERIOR</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Dónde informarse</a></li>
+                        <li><a href="#">Cómo prepararse</a></li>
+                        <li><a href="#">Formas de financiación</a></li>
+                        <li><a href="#">Programas de COLFUTURO</a></li>
+                    </ul>
+                </div><!-- col_footer_01 -->
+                
+                <div class="col_footer_02">
+                    <a href="#" class="titulo_col_footer">CONVOCATORIA 2013</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Requisitos</a></li>
+                        <li><a href="#">Instructivo</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div><!-- col_footer_02 -->
+                
+                <div class="col_footer_03">
+                    <a href="#" class="titulo_col_footer">NUESTROS BENEFICIARIOS</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Seleccionados 1992-2012</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Tesis y artículos académicos</a></li>
+                        <li><a href="#">El mejor talento</a></li>
+                    </ul>
+                </div><!-- col_footer_03 -->
+                
+                <div class="col_footer_04">
+                    <a href="#" class="titulo_col_footer">QUÉ ES COLFUTURO</a>
+                 	<ul class="lista_footer">
+                        <li><a href="#">Conózcanos</a></li>
+                        <li><a href="#">Qué orecemos</a></li>
+                        <li><a href="#">COLFUTURO en cifras</a></li>
+                        <li><a href="#">Contáctese con nosotros</a></li>
+                    </ul>
+                </div><!-- col_footer_04 -->
+                
+                <div class="col_footer_05">
+                    <h3>CONTÁCTENOS</h3>
+                    <span class="telefono">340 5394 <span>Bogotá</span></span>
+                    <a href="#" class="comentarios">Escríbanos sus comentarios</a>
+
+                </div><!-- col_footer_05 -->
+            
+            </article><!-- footer_superior -->
+            <article id="footer_inferior">
+            
+                <div class="col_footer_06">
+                    <p>COLFUTURO<span> &nbsp;/&nbsp; Fundación para el futuro de Colombia<br>
+                    <span>Carrera 15 No. 37-15 Bogotá, Colombia</span></span></p>
+                    <a href="#">Ubique nuestra sede en Google Maps</a>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_07">
+               	  <ul class="lista_footer_inferior">
+                        <li><a href="#">- Términos de uso</a></li>
+                        <li><a href="#">- Políticas de privacidad</a></li>
+                  </ul>
+                  <p>Powered by:<a class="giro360" href="#">giro360</a> | <a class="dayScript" href="#">DayScript</a></p>
+                </div><!-- col_footer_06 -->
+                
+                <div class="col_footer_08">
+                  <div id="tweets"></div>
+              </div><!-- col_footer_06 -->
+            
+            </article><!-- article#footer_inferior -->
+        </section><!-- section#footer -->
+    
+    </footer>
+	<!-- fin Footer -->
+
+    <div href="#" class="eventos_fixed">
+        <div class="eventos_fixed_izquierda"><h3>04</h3></div><!-- eventos_fixed_izquierda -->
+        <div class="eventos_fixed_derecha"><h3>04</h3><a href="evento_mes.html">Eventos 2013</a></div><!-- eventos_fixed_derecha -->
+    </div><!-- eventos_fixed -->
+    
+</body>
+</html>
