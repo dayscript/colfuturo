@@ -430,7 +430,7 @@ function validate_cedula_user(&$form, &$form_state,$form_id){
                 $val['field_ciudad_de_residencia']['sms'] = 'Seleccione un lugar de residencia valido.';
               }else{
                 $val['field_ciudad_de_residencia']['val'] = true;
-              } 
+              }
             }
 
           }else{
@@ -593,33 +593,38 @@ if($genero != "" || $genero != " "){
  //drupal_set_message($cade);
 
   $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+
   WriteLog(' conectando a : '.$url);
   WriteLog(' enviando datos : '.$cade);
+
   $client = new nusoap_client($url, true);
   $token = encripta1($form_state['values']['name']);
   $usuario = $form_state['values']['name'];
   $client->setCredentials($usuario,$token);
-  $error  = $client->getError();
-  if ($error) {
+
+  if ( $client->getError() ) {
     WriteLog(' error inesperado 1: '.$error);;
   }
-  $result = $client->call("crearFormularioPotencial", array("json" =>$cade));
+
+  $client->call( "crearFormularioPotencial", array("json" =>$cade) );
   if ($client->fault) {
-    WriteLog(' client->fault: '.$$result);
+    WriteLog(' client->fault: '.$client->fault);
   } else {
-    $error = $client->getError();
-    if ($error) {
-    WriteLog(' error inesperado 1: '.$error);
+    if ( $client->getError() ) {
+      WriteLog(' error inesperado 1: ' . $client->getError() );
+    }else{
+      $user = user_load_by_name($form_state['values']['name']);
+      $user_wrapper = entity_metadata_wrapper('user', $user);
+      $user_wrapper->field_manage_potencial_exist->set(1);
+      $user_wrapper->save();
+      WriteLog(' respuesta ' . htmlspecialchars($client->response, ENT_QUOTES) );
     }
   }
-  $respuesta =  htmlspecialchars($client->response, ENT_QUOTES);
-  WriteLog(' respuesta '.$respuesta);
-
 }
 
 function _userIframe(){
   global $user;
-  
+
   $has_role = array_intersect(array('colciencias', 'colcienciasBeneficiario'), array_values($user->roles));
 
   if(!empty($has_role)) { drupal_goto('/user/'.$user->uid.'/edit'); }
@@ -681,7 +686,7 @@ function WriteLogValidation( $info,$cedula=NULL ){
 }
 
 function validate_city($input, $output, $api, $key){
-  $clear_input = rawurlencode($input); 
+  $clear_input = rawurlencode($input);
   $url = "https://maps.googleapis.com/maps/api/place/$api/$output?input=$clear_input&key=$key";
   $output_query = false;
   $ch = curl_init();
@@ -697,7 +702,7 @@ function validate_city($input, $output, $api, $key){
   foreach ($response->predictions as $key => $index) {
     if($index->description == $input || $index->description == remove_accents($input)){
       return true;
-    } 
+    }
   }
   return false;
 }

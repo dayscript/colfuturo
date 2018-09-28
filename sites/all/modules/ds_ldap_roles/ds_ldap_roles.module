@@ -71,7 +71,7 @@ function ds_ldap_roles_extra_user_profile_validation( $form, &$form_state ) {
 		form_set_error( t('fail'), "Debe ingresar su clave actual para autorizar la actualización de datos." . $_REQUEST['current_pass'] );
 	}
 	else if( !in_array( "administrator", $user->roles ) )    {
-		$ds = ldap_connect( "ns6.colfuturo.org" );
+		$ds = ldap_connect( "ns11.colfuturo.org" ,9389);
 
 		// Connection made
 		if ( $ds )  {
@@ -142,7 +142,7 @@ function ds_ldap_roles_user_login( &$edit, $account )    {
 	$staticRoles = array( "authenticated user" );
 
 	$roles = user_roles( );
-	$ds = ldap_connect( "ns6.colfuturo.org" );
+	$ds = ldap_connect( "ns11.colfuturo.org",9389 );
 
 	// Connection made
 	if ( $ds )  {
@@ -216,7 +216,7 @@ function ds_ldap_roles_user_login( &$edit, $account )    {
 
 function addModifyUser($user){
 
-	$ds = ldap_connect("ns6.colfuturo.org");
+	$ds = ldap_connect("ns11.colfuturo.org",9389);
 	ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
 
 	if ($ds) {
