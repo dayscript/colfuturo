@@ -1,0 +1,74 @@
+<?php
+
+ module_load_include('inc', 'apl_integracion', 'includes/common.functions');
+
+
+ /**
+  * Implements hook_init().
+  */
+ function apl_integracion_init() {
+   if (current_path() == 'apl-integracion/beneficiario') {
+     drupal_page_is_cacheable(FALSE);
+   }
+ }
+
+ function apl_integracion_menu() {
+   $items['apl-integracion/beneficiario'] = array(
+     'page callback' => 'apl_integracion_beneficiario_callback',
+     'access callback' => 1,
+     'type' => MENU_CALLBACK
+   );
+
+   return $items;
+ }
+
+
+ function apl_integracion_theme() {
+   return array(
+     'block_apl_beneficiario_theme' => array(
+       'variables' => array('node' => NULL),
+       'template' => 'templates/block.apl.beneficiario'
+     ),
+   );
+ }
+
+function apl_integracion_block_info() {
+
+  $blocks['block_apl_beneficiario'] = array(
+    'info' => t('Apl Beneficiarios'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+function apl_integracion_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'block_apl_beneficiario':
+      $block['content'] = block_apl_beneficiario_callback();
+      break;
+  }
+
+  return $block;
+}
+
+
+function block_apl_beneficiario_callback() {
+  drupal_add_css(drupal_get_path('module', 'apl_integracion') . '/css/apl.colfuturo.css');
+  $token = apl_encriptaPLI($user->name);
+  //$url = 'http://apl.colfuturo.org/PLI-Externo/index.jsf?USERNAME='. $user->name .'&ID=' .$token;
+  //return theme( 'block_apl_beneficiario_theme', array('url' =>$url ));
+
+  return theme( 'block_apl_beneficiario_theme', array('url' =>'apl-integracion/beneficiario?'. $token ));
+}
+
+function apl_integracion_beneficiario_callback(){
+  drupal_page_is_cacheable(false);
+  global $user;
+  $token = 'asd';//apl_encriptaPLI($user->name);
+  $url = 'http://apl.colfuturo.org/PLI-Externo/index.jsf?USERNAME='. $user->name .'&ID=' .$token;
+  //return $url;
+  drupal_goto('<front>');
+}

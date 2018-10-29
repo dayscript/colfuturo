@@ -2955,7 +2955,7 @@ BLOQUE 470 gris rosado
 .tesis-articulos-bloque-paso-1-2-3-4 ul li h2{
   color: #000000;
   font-family: 'Open Sans',sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 300;
   text-align: center;
@@ -3233,7 +3233,18 @@ BARRA DE BANNERS
 }
 
 .section-convocatoria .programa-de-credito-beca-enlaces  a.consulta {
-  background: url("../images/conv_2014_bg_enlace_consulta.png") top left no-repeat;
+  background: url("images/eye-red.png") top left no-repeat;
+  color: #f23f22;
+  display: inline-block;
+  font-weight: 300;
+  line-height: 30px;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.section-convocatoria .programa-de-credito-beca-enlaces  a.consulta:hover {
+  background: url("images/eye.png") top left no-repeat;
+  color: #515151;
   display: inline-block;
   font-weight: 300;
   line-height: 30px;

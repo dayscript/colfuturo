@@ -1,0 +1,25 @@
+10:09:02 186.155.225.98 desde:user/register preparando para almacenar usuario : 985112457
+
+10:09:02 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+10:09:02 186.155.225.98  enviando datos : {"numeroDocumento":"985112457",
+            "nombre":"Contenearipru",
+            "apellido":"Contenearipru",
+            "email":"Contenearipru@dayscript.com",
+            "fechaNacimiento":"25-09-2018",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":["ingles"]}
+
+10:09:04 186.155.225.98  respuesta HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=Y37UbTJtZmMo2HXFuN3q9xXN.undefined; Path=/Formulario-Interno
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 304
+Date: Tue, 25 Sep 2018 15:43:04 GMT
+Connection: close
+
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;ns1:crearFormularioPotencialResponse xmlns:ns1=&quot;http://www.colfuturo.org/potencial/ws/ServicioIntegracionPotencial&quot;&gt;&lt;return&gt;Error en la validacion&lt;/return&gt;&lt;/ns1:crearFormularioPotencialResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+

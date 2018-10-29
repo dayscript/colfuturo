@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Code for the Feature Name feature.
+ */
+
+include_once 'includes/functions.inc';
+require_once drupal_get_path('module', 'potentials') . '/src/lib/nusoap.php';
+
+/**
+* Implements hook_cron().
+*/
+function cron_potenciales_cron(){
+
+  watchdog('cron', 'Cron Potenciales Iniciando');
+
+  $timestamp = time() - (60 * 180);
+
+  $users_id = get_users_id($timestamp);
+  if($users_id){
+    watchdog('cron', 'Se encontraron :'. count($users_id));
+
+    foreach($users_id as $uid){
+      $user = user_load($uid->uid);
+      $cade = create_json($user);
+
+      $url="https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl";
+      WriteLog(' conectando a : '.$url);
+      WriteLog(' enviando datos : '.$cade);
+      $client = new nusoap_client($url, true);
+      $token = encripta1($user->name);
+      $usuario = $user->name;
+      $client->setCredentials($usuario,$token);
+      if ( $client->getError() ) {
+        WriteLog(' error inesperado 1: '.$error);
+      }
+      $client->call( "crearFormularioPotencial", array("json" =>$cade) );
+      if ($client->fault) {
+        WriteLog(' client->fault: '.$client->fault);
+      } else {
+        if ( $client->getError() ) {
+          WriteLog(' error inesperado 1: ' . $client->getError() );
+        }else{
+          $user = user_load_by_name($user->name);
+          $user_wrapper = entity_metadata_wrapper('user', $user);
+          $user_wrapper->field_manage_potencial_exist->set(1);
+          $user_wrapper->save();
+          WriteLog(' respuesta ' . htmlspecialchars($client->response, ENT_QUOTES) );
+        }
+      }
+    }
+  }else{
+    watchdog('cron', 'No se encontraron');
+  }
+
+}

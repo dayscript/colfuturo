@@ -1,0 +1,7 @@
+name = Apl Colfuturo
+description = Sistema de integración con apl.colfuturo.org
+core = 7.x
+package = Dayscript
+configure = admin/config/apl-colfuturo
+version = 1.0
+files[] = includes/common.functions.inc

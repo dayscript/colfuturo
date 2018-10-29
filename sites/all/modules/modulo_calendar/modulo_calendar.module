@@ -39,7 +39,7 @@ function import_google_calendar(){
         $service = new Google_Service_Calendar($client);
         $optParams = array('maxResults' => 3000,
                            'alwaysIncludeEmail'=>'eventos@colfuturo.org',
-                           'timeMin'=>'2012-01-03T10:00:00Z');
+                           'timeMin'=>'2017-01-03T10:00:00Z');
         $events = $service->events->listEvents('eventos@colfuturo.org',$optParams);
         $event_collection = array();
         foreach ($events->getItems() as $event) {

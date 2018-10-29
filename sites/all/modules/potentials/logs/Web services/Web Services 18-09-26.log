@@ -1,0 +1,17 @@
+12:09:43 186.155.225.98 desde:user/register preparando para almacenar usuario : 84521365975
+
+12:09:43 186.155.225.98  conectando a : https://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial?wsdl
+
+12:09:43 186.155.225.98  enviando datos : {"numeroDocumento":"84521365975",
+            "nombre":"PruebaconteDAy",
+            "apellido":"PruebaconteDAy",
+            "email":"PruebaconteDAy@dayscript.com",
+            "fechaNacimiento":"26-09-2018",
+            "ciudadResidencia":"Bogotá, Colombia",
+            "genero":"M",
+            "celular":"",
+            "listaInteresAreaEstudio":["Administración y Negocios"],
+            "listaInteresIdioma":["ingles"]}
+
+12:09:43 186.155.225.98  error inesperado 1: HTTP Error: Couldn't open socket connection to server http://2a4b0e786862:9080/Formulario-Interno/ServicioIntegracionPotencial prior to connect().  This is often a problem looking up the host name.
+

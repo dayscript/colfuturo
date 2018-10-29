@@ -1,0 +1,979 @@
+03:03:26 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|79474378|,|field_nombres|:|Carlos Mauricio|,|field_apellidos|:|Duque Arrubla|,|mail|:|mauricio.duquearrubla@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+03:03:26 50.22.28.117 Verificar permisos para: 
+03:03:26 50.22.28.117 PHP_AUTH_USER : 79474378- PHP_AUTH_PW :4a73ed11-d52f-4da3-9efc-ceeb462b6ef5
+03:03:26 50.22.28.117 Conecion a la base de datos 
+03:03:26 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Carlos Mauricio correctamente --- En campo field_apellidos se almaceno Duque Arrubla correctamente --- En campo mail se almaceno mauricio.duquearrubla@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+05:03:32 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|73577868|,|field_nombres|:|Luis Javier|,|field_apellidos|:|Serrano Tamayo|,|mail|:|javierserranotamayo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+05:03:32 50.22.28.117 Verificar permisos para: 
+05:03:32 50.22.28.117 PHP_AUTH_USER : 73577868- PHP_AUTH_PW :d91e26ee-46ff-4b6e-ad40-ce68a3ea5b4f
+05:03:32 50.22.28.117 Conecion a la base de datos 
+05:03:33 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Luis Javier correctamente --- En campo field_apellidos se almaceno Serrano Tamayo correctamente --- En campo mail se almaceno javierserranotamayo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+06:03:58 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79715695|,|field_nombres|:|Guillermo Andr\\u00E9s|,|field_apellidos|:|Buitrago D\\u00EDaz|,|mail|:|gabudibd@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+06:03:58 10.40.142.8 Verificar permisos para: 
+06:03:58 10.40.142.8 PHP_AUTH_USER : 79715695- PHP_AUTH_PW :5c74d6de-acd1-4483-99b7-733a2e04acad
+06:03:58 10.40.142.8 Conecion a la base de datos 
+06:03:58 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Guillermo Andr\u00E9s correctamente --- En campo field_apellidos se almaceno Buitrago D\u00EDaz correctamente --- En campo mail se almaceno gabudibd@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+06:03:06 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79715695|,|field_nombres|:|Guillermo Andr\\u00E9s|,|field_apellidos|:|Buitrago D\\u00EDaz|,|mail|:|gabudibd@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+06:03:06 10.40.142.8 Verificar permisos para: 
+06:03:06 10.40.142.8 PHP_AUTH_USER : 79715695- PHP_AUTH_PW :c8ed57bf-0dd1-444f-af36-e755ac75fe60
+06:03:06 10.40.142.8 Conecion a la base de datos 
+06:03:09 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Guillermo Andr\u00E9s correctamente --- En campo field_apellidos se almaceno Buitrago D\u00EDaz correctamente --- En campo mail se almaceno gabudibd@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:45 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1076652579|,|field_nombres|:|Adriana Cristina|,|field_apellidos|:|Gordillo Paderi|,|mail|:|crisgordillo46@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:45 10.40.142.8 Verificar permisos para: 
+07:03:45 10.40.142.8 PHP_AUTH_USER : 1076652579- PHP_AUTH_PW :d6736755-e4b8-469d-bbf1-bc97be3a692e
+07:03:45 10.40.142.8 Conecion a la base de datos 
+07:03:46 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Adriana Cristina correctamente --- En campo field_apellidos se almaceno Gordillo Paderi correctamente --- En campo mail se almaceno crisgordillo46@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:12 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|15517825|,|field_nombres|:|Juan Esteban|,|field_apellidos|:|P\\u00E9rez Jaramillo|,|mail|:|biojep@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:12 50.22.28.117 Verificar permisos para: 
+07:03:12 50.22.28.117 PHP_AUTH_USER : 15517825- PHP_AUTH_PW :2765ef98-dd5b-4cc2-8aa0-891809b95980
+07:03:12 50.22.28.117 Conecion a la base de datos 
+07:03:13 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Juan Esteban correctamente --- En campo field_apellidos se almaceno P\u00E9rez Jaramillo correctamente --- En campo mail se almaceno biojep@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:42 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098685117|,|field_nombres|:|Yurley Katherine|,|field_apellidos|:|Rincon Pe\\u00F1a|,|mail|:|di.yurley.rincon@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:42 10.40.142.8 Verificar permisos para: 
+07:03:42 10.40.142.8 PHP_AUTH_USER : 1098685117- PHP_AUTH_PW :0b506511-16f8-46bf-86a0-1de490ec3940
+07:03:42 10.40.142.8 Conecion a la base de datos 
+07:03:56 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1037605333|,|field_nombres|:|Daniel|,|field_apellidos|:|Cede\\u00F1o Piedrahita|,|mail|:|daniel.cedeno.p@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Artes|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:56 50.22.28.117 Verificar permisos para: 
+07:03:56 50.22.28.117 PHP_AUTH_USER : 1037605333- PHP_AUTH_PW :886f62fa-dc7d-4db7-9c2b-131a9c8f3f85
+07:03:56 50.22.28.117 Conecion a la base de datos 
+07:03:57 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Daniel correctamente --- En campo field_apellidos se almaceno Cede\u00F1o Piedrahita correctamente --- En campo mail se almaceno daniel.cedeno.p@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:01 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098685117|,|field_nombres|:|Yurley Katherine|,|field_apellidos|:|Rincon Pe\\u00F1a|,|mail|:|di.yurley.rincon@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:01 10.40.142.8 Verificar permisos para: 
+07:03:01 10.40.142.8 PHP_AUTH_USER : 1098685117- PHP_AUTH_PW :998b2373-476d-42c5-b438-0d70e9380b22
+07:03:01 10.40.142.8 Conecion a la base de datos 
+07:03:02 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Yurley Katherine correctamente --- En campo field_apellidos se almaceno Rincon Pe\u00F1a correctamente --- En campo mail se almaceno di.yurley.rincon@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:09 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1037605333|,|field_nombres|:|Daniel|,|field_apellidos|:|Cede\\u00F1o Piedrahita|,|mail|:|daniel.cedeno.p@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Artes|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:09 50.22.28.117 Verificar permisos para: 
+07:03:09 50.22.28.117 PHP_AUTH_USER : 1037605333- PHP_AUTH_PW :270298b4-8adc-46b4-82e3-8bdfe47473c7
+07:03:09 50.22.28.117 Conecion a la base de datos 
+07:03:12 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Daniel correctamente --- En campo field_apellidos se almaceno Cede\u00F1o Piedrahita correctamente --- En campo mail se almaceno daniel.cedeno.p@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:16 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Yurley Katherine correctamente --- En campo field_apellidos se almaceno Rincon Pe\u00F1a correctamente --- En campo mail se almaceno di.yurley.rincon@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:08 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1152195308|,|field_nombres|:|Edgar Antonio|,|field_apellidos|:|Gamero Fajardo|,|mail|:|gameroedgar@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:08 50.22.28.117 Verificar permisos para: 
+07:03:08 50.22.28.117 PHP_AUTH_USER : 1152195308- PHP_AUTH_PW :601fa5b5-310b-4eb7-988e-e31b5699fba3
+07:03:08 50.22.28.117 Conecion a la base de datos 
+07:03:08 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Edgar Antonio correctamente --- En campo field_apellidos se almaceno Gamero Fajardo correctamente --- En campo mail se almaceno gameroedgar@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:29 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1152195308|,|field_nombres|:|Edgar Antonio|,|field_apellidos|:|Gamero Fajardo|,|mail|:|gameroedgar@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:29 50.22.28.117 Verificar permisos para: 
+07:03:29 50.22.28.117 PHP_AUTH_USER : 1152195308- PHP_AUTH_PW :0c850fce-be06-4159-8247-14da550a9b17
+07:03:29 50.22.28.117 Conecion a la base de datos 
+07:03:35 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Edgar Antonio correctamente --- En campo field_apellidos se almaceno Gamero Fajardo correctamente --- En campo mail se almaceno gameroedgar@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:10 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|field_nombres|:|Isabel|,|field_apellidos|:|Guzman Naranjo|,|mail|:|isaguzn@gmail.com|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:10 10.40.142.8 Verificar permisos para: 
+09:03:10 10.40.142.8 PHP_AUTH_USER : 1144037200- PHP_AUTH_PW :5f7dcea1-2d19-462e-9d41-b149814128fa
+09:03:10 10.40.142.8 Conecion a la base de datos 
+09:03:11 10.40.142.8 Respuesta del servidor  Error al almacenar el campo field_nombresel Valor : Isabel --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_nombres as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_nombres', 'Isabel')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Isabel')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Isabel')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_nombres', 'Isabel')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_apellidosel Valor : Guzman Naranjo --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_apellidos as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_apellidos', 'Guzman Naranjo')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Guzman Naranjo')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Guzman Naranjo')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_apellidos', 'Guzman Naranjo')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo mailel Valor : isaguzn@gmail.com --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property mail as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('mail', 'isaguzn@gmail.c...')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('isaguzn@gmail.c...')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('isaguzn@gmail.c...')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('mail', 'isaguzn@gmail.c...')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- Error al almacenar el campo field__rea_de_interel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field__rea_de_inter as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field__rea_de_i...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field__rea_de_i...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo field_idiomas_de_inter_sel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_idiomas_de_inter_s as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_idiomas_d...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_idiomas_d...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo statusel Valor : 1 --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property status as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('status', '1')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('1')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('1')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('status', '1')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- --- 
+10:03:36 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|79626478|,|field_nombres|:|Dario|,|field_apellidos|:|Vanegas|,|mail|:|dxv937@psu.edu|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:36 50.22.28.117 Verificar permisos para: 
+10:03:36 50.22.28.117 PHP_AUTH_USER : 79626478- PHP_AUTH_PW :435a2c83-edab-445c-a2ba-d050d0fc363b
+10:03:36 50.22.28.117 Conecion a la base de datos 
+10:03:37 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Dario correctamente --- En campo field_apellidos se almaceno Vanegas correctamente --- En campo mail se almaceno dxv937@psu.edu correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:45 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|79626478|,|field_nombres|:|Dario|,|field_apellidos|:|Vanegas|,|mail|:|dxv937@psu.edu|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:45 50.22.28.117 Verificar permisos para: 
+10:03:45 50.22.28.117 PHP_AUTH_USER : 79626478- PHP_AUTH_PW :a72381f0-769a-406c-bb42-4fa2efb993bb
+10:03:45 50.22.28.117 Conecion a la base de datos 
+10:03:46 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Dario correctamente --- En campo field_apellidos se almaceno Vanegas correctamente --- En campo mail se almaceno dxv937@psu.edu correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:46 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|79626478|,|field_nombres|:|Dario|,|field_apellidos|:|Vanegas|,|mail|:|dxv937@psu.edu|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:46 50.22.28.117 Verificar permisos para: 
+10:03:46 50.22.28.117 PHP_AUTH_USER : 79626478- PHP_AUTH_PW :c3a4694d-9b68-446a-9e33-981e5d5d4fd5
+10:03:46 50.22.28.117 Conecion a la base de datos 
+10:03:47 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Dario correctamente --- En campo field_apellidos se almaceno Vanegas correctamente --- En campo mail se almaceno dxv937@psu.edu correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:29 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|80087083|,|field_nombres|:|jose manuel|,|field_apellidos|:|gutierrez salcedo|,|mail|:|manologutierrezsalcedo@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:29 50.22.28.117 Verificar permisos para: 
+10:03:29 50.22.28.117 PHP_AUTH_USER : 80087083- PHP_AUTH_PW :092e2b3d-10d7-4bf4-b1af-e8bcde12a6b9
+10:03:29 50.22.28.117 Conecion a la base de datos 
+10:03:30 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno jose manuel correctamente --- En campo field_apellidos se almaceno gutierrez salcedo correctamente --- En campo mail se almaceno manologutierrezsalcedo@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:35 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1020777364|,|field_nombres|:|Natalia Camila |,|field_apellidos|:|Medina Rodr\\u00EDguez |,|mail|:|natacami17@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:35 10.40.142.8 Verificar permisos para: 
+10:03:35 10.40.142.8 PHP_AUTH_USER : 1020777364- PHP_AUTH_PW :c8ce83d5-f8b4-4f03-84a9-14a71058fec3
+10:03:35 10.40.142.8 Conecion a la base de datos 
+10:03:36 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Natalia Camila  correctamente --- En campo field_apellidos se almaceno Medina Rodr\u00EDguez  correctamente --- En campo mail se almaceno natacami17@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:45 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1020777364|,|field_nombres|:|Natalia Camila |,|field_apellidos|:|Medina Rodr\\u00EDguez |,|mail|:|natacami17@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:45 10.40.142.8 Verificar permisos para: 
+10:03:45 10.40.142.8 PHP_AUTH_USER : 1020777364- PHP_AUTH_PW :bd7eb6c6-f8f0-4e83-b0b0-725b5cedb938
+10:03:45 10.40.142.8 Conecion a la base de datos 
+10:03:46 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Natalia Camila  correctamente --- En campo field_apellidos se almaceno Medina Rodr\u00EDguez  correctamente --- En campo mail se almaceno natacami17@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:58 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010193861|,|field_nombres|:|Camila Andrea|,|field_apellidos|:|Plata Corredor|,|mail|:|camila.platac@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias B\\u00E1sicas|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:58 50.22.28.117 Verificar permisos para: 
+10:03:58 50.22.28.117 PHP_AUTH_USER : 1010193861- PHP_AUTH_PW :b4741515-f8f8-4311-a5b0-6fca6785195a
+10:03:58 50.22.28.117 Conecion a la base de datos 
+10:03:59 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camila Andrea correctamente --- En campo field_apellidos se almaceno Plata Corredor correctamente --- En campo mail se almaceno camila.platac@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+10:03:48 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|31320227|,|field_nombres|:|Isabel Cristina|,|field_apellidos|:|Bola\\u00F1os Portilla|,|mail|:|isabel.cristina@correounivalle.edu.co|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+10:03:48 10.40.142.8 Verificar permisos para: 
+10:03:48 10.40.142.8 PHP_AUTH_USER : 31320227- PHP_AUTH_PW :b6715699-b0b1-403f-8485-1ff195ae3f3e
+10:03:48 10.40.142.8 Conecion a la base de datos 
+10:03:49 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Isabel Cristina correctamente --- En campo field_apellidos se almaceno Bola\u00F1os Portilla correctamente --- En campo mail se almaceno isabel.cristina@correounivalle.edu.co correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:06 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|57465786|,|field_nombres|:|Beatriz Martha|,|field_apellidos|:|Hern\\u00E1ndez Angulo|,|mail|:|beatriz.hernandez@colfuturo.org|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:06 10.40.142.8 Verificar permisos para: 
+11:03:06 10.40.142.8 PHP_AUTH_USER : 57465786- PHP_AUTH_PW :5eeaefad-46c0-4c22-bf1b-63c1046ada53
+11:03:06 10.40.142.8 Conecion a la base de datos 
+11:03:07 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Beatriz Martha correctamente --- En campo field_apellidos se almaceno Hern\u00E1ndez Angulo correctamente --- En campo mail se almaceno beatriz.hernandez@colfuturo.org correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:41 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|87216875|,|field_nombres|:|Manuel Alberto|,|field_apellidos|:|Guzm\\u00E1n S\\u00E1nchez|,|mail|:|manguzmans@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:41 50.22.28.117 Verificar permisos para: 
+11:03:41 50.22.28.117 PHP_AUTH_USER : 87216875- PHP_AUTH_PW :99dcd2c5-bb32-4af1-971d-c83e05aa4809
+11:03:41 50.22.28.117 Conecion a la base de datos 
+11:03:42 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Manuel Alberto correctamente --- En campo field_apellidos se almaceno Guzm\u00E1n S\u00E1nchez correctamente --- En campo mail se almaceno manguzmans@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:30 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1053806060|,|field_nombres|:|JADER MAURICIO|,|field_apellidos|:|PERDOMO MUNOZ|,|mail|:|mauritio99@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+11:03:30 10.40.142.8 Verificar permisos para: 
+11:03:30 10.40.142.8 PHP_AUTH_USER : 1053806060- PHP_AUTH_PW :85519a3e-f2db-4cd2-a5fb-eb21f7d61022
+11:03:30 10.40.142.8 Conecion a la base de datos 
+11:03:31 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno JADER MAURICIO correctamente --- En campo field_apellidos se almaceno PERDOMO MUNOZ correctamente --- En campo mail se almaceno mauritio99@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:11 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1014253008|,|field_nombres|:|Laura|,|field_apellidos|:|Fonseca Bolivar|,|mail|:|laura.v.fonseca@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|,|Franc\\u00E9s|],|status|:|1|}} preparando usuario
+11:03:11 50.22.28.117 Verificar permisos para: 
+11:03:11 50.22.28.117 PHP_AUTH_USER : 1014253008- PHP_AUTH_PW :63030d76-e94a-47d9-9d74-1a59a616bdff
+11:03:11 50.22.28.117 Conecion a la base de datos 
+11:03:11 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Laura correctamente --- En campo field_apellidos se almaceno Fonseca Bolivar correctamente --- En campo mail se almaceno laura.v.fonseca@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:15 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1014253008|,|field_nombres|:|Laura|,|field_apellidos|:|Fonseca Bolivar|,|mail|:|laura.v.fonseca@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|,|Franc\\u00E9s|],|status|:|1|}} preparando usuario
+11:03:15 50.22.28.117 Verificar permisos para: 
+11:03:15 50.22.28.117 PHP_AUTH_USER : 1014253008- PHP_AUTH_PW :5e9bf302-4e68-4185-bbbd-f9ee1e74b296
+11:03:15 50.22.28.117 Conecion a la base de datos 
+11:03:15 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Laura correctamente --- En campo field_apellidos se almaceno Fonseca Bolivar correctamente --- En campo mail se almaceno laura.v.fonseca@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:27 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1014253008|,|field_nombres|:|Laura|,|field_apellidos|:|Fonseca Bolivar|,|mail|:|laura.v.fonseca@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Franc\\u00E9s|,|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+11:03:27 50.22.28.117 Verificar permisos para: 
+11:03:27 50.22.28.117 PHP_AUTH_USER : 1014253008- PHP_AUTH_PW :5929ff7d-6cb8-4817-a6af-481fd5a2d16c
+11:03:27 50.22.28.117 Conecion a la base de datos 
+11:03:28 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Laura correctamente --- En campo field_apellidos se almaceno Fonseca Bolivar correctamente --- En campo mail se almaceno laura.v.fonseca@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:30 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1014253008|,|field_nombres|:|Laura|,|field_apellidos|:|Fonseca Bolivar|,|mail|:|laura.v.fonseca@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Franc\\u00E9s|,|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+11:03:30 50.22.28.117 Verificar permisos para: 
+11:03:30 50.22.28.117 PHP_AUTH_USER : 1014253008- PHP_AUTH_PW :b293e49a-6736-4b05-8842-e66ea17ea0c9
+11:03:30 50.22.28.117 Conecion a la base de datos 
+11:03:31 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Laura correctamente --- En campo field_apellidos se almaceno Fonseca Bolivar correctamente --- En campo mail se almaceno laura.v.fonseca@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:53 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|field_nombres|:|Katherine|,|field_apellidos|:|Cordoba Saavedra|,|mail|:|katerincs@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:53 10.40.142.8 Verificar permisos para: 
+11:03:53 10.40.142.8 PHP_AUTH_USER : 1070596083- PHP_AUTH_PW :97232fd9-3054-4c07-9868-83fd209354d2
+11:03:53 10.40.142.8 Conecion a la base de datos 
+11:03:53 10.40.142.8 Respuesta del servidor  Error al almacenar el campo field_nombresel Valor : Katherine --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_nombres as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_nombres', 'Katherine')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Katherine')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Katherine')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_nombres', 'Katherine')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_apellidosel Valor : Cordoba Saavedra --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_apellidos as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_apellidos', 'Cordoba Saavedr...')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Cordoba Saavedr...')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Cordoba Saavedr...')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_apellidos', 'Cordoba Saavedr...')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo mailel Valor : katerincs@gmail.com --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property mail as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('mail', 'katerincs@gmail...')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('katerincs@gmail...')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('katerincs@gmail...')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('mail', 'katerincs@gmail...')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_generoel Valor : Femenino --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_genero as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_genero', 'Femenino')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Femenino')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Femenino')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_genero', 'Femenino')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- Error al almacenar el campo field__rea_de_interel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field__rea_de_inter as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field__rea_de_i...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field__rea_de_i...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo field_idiomas_de_inter_sel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_idiomas_de_inter_s as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_idiomas_d...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_idiomas_d...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo statusel Valor : 1 --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property status as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('status', '1')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('1')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('1')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('status', '1')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- --- 
+11:03:57 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|10305409|,|field_nombres|:|Carlos Fernando|,|field_apellidos|:|Mu\\u00F1oz Betancourth|,|mail|:|carlosfernandomb@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:57 10.40.142.8 Verificar permisos para: 
+11:03:57 10.40.142.8 PHP_AUTH_USER : 10305409- PHP_AUTH_PW :f7e4903f-6dbb-4c87-9ec1-4b5f1217de8c
+11:03:57 10.40.142.8 Conecion a la base de datos 
+11:03:57 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Carlos Fernando correctamente --- En campo field_apellidos se almaceno Mu\u00F1oz Betancourth correctamente --- En campo mail se almaceno carlosfernandomb@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:30 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|10305409|,|field_nombres|:|Carlos Fernando|,|field_apellidos|:|Mu\\u00F1oz Betancourth|,|mail|:|carlosfernandomb@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:30 10.40.142.8 Verificar permisos para: 
+11:03:30 10.40.142.8 PHP_AUTH_USER : 10305409- PHP_AUTH_PW :77158ed6-e481-4eb8-9286-76b41eb7a1f6
+11:03:30 10.40.142.8 Conecion a la base de datos 
+11:03:31 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Carlos Fernando correctamente --- En campo field_apellidos se almaceno Mu\u00F1oz Betancourth correctamente --- En campo mail se almaceno carlosfernandomb@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:41 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1018407329|,|field_nombres|:|Natalia|,|field_apellidos|:|Su\\u00E1rez Araque|,|mail|:|natalia.suarez99@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:41 10.40.142.8 Verificar permisos para: 
+12:03:41 10.40.142.8 PHP_AUTH_USER : 1018407329- PHP_AUTH_PW :9844cec6-2c10-40a0-8410-50ae4a82c7d2
+12:03:41 10.40.142.8 Conecion a la base de datos 
+12:03:42 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Natalia correctamente --- En campo field_apellidos se almaceno Su\u00E1rez Araque correctamente --- En campo mail se almaceno natalia.suarez99@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:31 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:31 10.40.142.8 Verificar permisos para: 
+12:03:31 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :bfa27b1c-4100-48e0-8e9c-b31083a528c0
+12:03:31 10.40.142.8 Conecion a la base de datos 
+12:03:31 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:37 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:37 10.40.142.8 Verificar permisos para: 
+12:03:37 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :cc668834-1f29-4a4f-9c08-b1845a59a017
+12:03:37 10.40.142.8 Conecion a la base de datos 
+12:03:38 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:17 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:17 10.40.142.8 Verificar permisos para: 
+12:03:17 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :85970f12-d14e-4ccc-ae8f-e2da70aa281b
+12:03:17 10.40.142.8 Conecion a la base de datos 
+12:03:17 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:28 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:28 10.40.142.8 Verificar permisos para: 
+12:03:28 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :01d8fc95-322b-4ceb-bdcc-bd7fbef12b6b
+12:03:28 10.40.142.8 Conecion a la base de datos 
+12:03:28 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:54 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1234567899|,|field_nombres|:|Consejeria|,|field_apellidos|:|Pruebas|,|mail|:|beatahndz@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Arquitectura y Dise\\u00F1o|,|Artes|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:54 10.40.142.8 Verificar permisos para: 
+12:03:54 10.40.142.8 PHP_AUTH_USER : 1234567899- PHP_AUTH_PW :9668ae06-0410-486e-82f8-77b6c3c25cec
+12:03:54 10.40.142.8 Conecion a la base de datos 
+12:03:54 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Consejeria correctamente --- En campo field_apellidos se almaceno Pruebas correctamente --- En campo mail se almaceno beatahndz@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:46 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:46 10.40.142.8 Verificar permisos para: 
+12:03:46 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :0ca65d94-b6b9-40fd-a04b-01e280bd710a
+12:03:46 10.40.142.8 Conecion a la base de datos 
+12:03:47 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:51 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|12345678912|,|field_nombres|:|PruebaMR|,|field_apellidos|:|PruebaMR|,|mail|:|martha.vargas1@colfuturo.org|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:51 10.40.142.8 Verificar permisos para: 
+12:03:51 10.40.142.8 PHP_AUTH_USER : 12345678912- PHP_AUTH_PW :b43af2a0-9d66-465d-aaba-9a3190a81282
+12:03:51 10.40.142.8 Conecion a la base de datos 
+12:03:51 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno PruebaMR correctamente --- En campo field_apellidos se almaceno PruebaMR correctamente --- En campo mail se almaceno martha.vargas1@colfuturo.org correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:16 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|10294788|,|field_nombres|:|Jose Joaquin|,|field_apellidos|:|Repizo Prado|,|mail|:|jota782@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:16 50.22.28.117 Verificar permisos para: 
+12:03:16 50.22.28.117 PHP_AUTH_USER : 10294788- PHP_AUTH_PW :178bac3e-6bdb-433e-9d59-7f59b4162af5
+12:03:16 50.22.28.117 Conecion a la base de datos 
+12:03:17 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Jose Joaquin correctamente --- En campo field_apellidos se almaceno Repizo Prado correctamente --- En campo mail se almaceno jota782@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:57 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1031139593|,|field_nombres|:|Cristhian Eduardo |,|field_apellidos|:|Murcia Galeano |,|mail|:|Cristhianmurcia182@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:57 10.40.142.8 Verificar permisos para: 
+12:03:57 10.40.142.8 PHP_AUTH_USER : 1031139593- PHP_AUTH_PW :d9687e2d-035e-4717-b52c-c059f9c6db5d
+12:03:57 10.40.142.8 Conecion a la base de datos 
+12:03:58 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Cristhian Eduardo  correctamente --- En campo field_apellidos se almaceno Murcia Galeano  correctamente --- En campo mail se almaceno Cristhianmurcia182@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:14 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1031139593|,|field_nombres|:|Cristhian Eduardo |,|field_apellidos|:|Murcia Galeano |,|mail|:|Cristhianmurcia182@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias B\\u00E1sicas|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:14 10.40.142.8 Verificar permisos para: 
+12:03:14 10.40.142.8 PHP_AUTH_USER : 1031139593- PHP_AUTH_PW :df599ff1-1e81-4dfc-8b6e-e7015306aa0c
+12:03:14 10.40.142.8 Conecion a la base de datos 
+12:03:15 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Cristhian Eduardo  correctamente --- En campo field_apellidos se almaceno Murcia Galeano  correctamente --- En campo mail se almaceno Cristhianmurcia182@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:49 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1052790405|,|field_nombres|:|Ana Marcela|,|field_apellidos|:|L\\u00F3pez L\\u00F3pez |,|mail|:|ecomarce88@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:49 10.40.142.8 Verificar permisos para: 
+12:03:49 10.40.142.8 PHP_AUTH_USER : 1052790405- PHP_AUTH_PW :6d007bb9-ab0d-4e9c-8456-24edd7c7830b
+12:03:49 10.40.142.8 Conecion a la base de datos 
+12:03:49 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ana Marcela correctamente --- En campo field_apellidos se almaceno L\u00F3pez L\u00F3pez  correctamente --- En campo mail se almaceno ecomarce88@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+12:03:55 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1052790405|,|field_nombres|:|Ana Marcela|,|field_apellidos|:|L\\u00F3pez L\\u00F3pez |,|mail|:|ecomarce88@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+12:03:55 10.40.142.8 Verificar permisos para: 
+12:03:55 10.40.142.8 PHP_AUTH_USER : 1052790405- PHP_AUTH_PW :7a0a2831-5ba3-479f-9d86-dfb35e080078
+12:03:55 10.40.142.8 Conecion a la base de datos 
+12:03:55 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ana Marcela correctamente --- En campo field_apellidos se almaceno L\u00F3pez L\u00F3pez  correctamente --- En campo mail se almaceno ecomarce88@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:25 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|43221293|,|field_nombres|:|Natalia|,|field_apellidos|:|Rodr\\u00EDguez Salcedo|,|mail|:|nataro@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:25 50.22.28.117 Verificar permisos para: 
+01:03:25 50.22.28.117 PHP_AUTH_USER : 43221293- PHP_AUTH_PW :9a3d78b2-6dcd-48e6-b64e-cf0629839a31
+01:03:25 50.22.28.117 Conecion a la base de datos 
+01:03:25 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Natalia correctamente --- En campo field_apellidos se almaceno Rodr\u00EDguez Salcedo correctamente --- En campo mail se almaceno nataro@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:04 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|85150801|,|field_nombres|:|Luis Othon|,|field_apellidos|:|Gomez Rueda|,|mail|:|lo.gomez10@uniandes.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Programa de Idiomas|],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|,|Franc\\u00E9s|],|status|:|1|}} preparando usuario
+01:03:04 10.40.142.8 Verificar permisos para: 
+01:03:04 10.40.142.8 PHP_AUTH_USER : 85150801- PHP_AUTH_PW :10580721-a45c-4484-b914-cc49671a411b
+01:03:04 10.40.142.8 Conecion a la base de datos 
+01:03:05 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Luis Othon correctamente --- En campo field_apellidos se almaceno Gomez Rueda correctamente --- En campo mail se almaceno lo.gomez10@uniandes.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:13 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|98637805|,|field_nombres|:|Vladimir Stephan|,|field_apellidos|:|Betancur Bedoya|,|mail|:|vladimirbetancur@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:13 50.22.28.117 Verificar permisos para: 
+01:03:13 50.22.28.117 PHP_AUTH_USER : 98637805- PHP_AUTH_PW :fb5abc37-afa9-4d98-8542-0c9ea9155625
+01:03:13 50.22.28.117 Conecion a la base de datos 
+01:03:15 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Vladimir Stephan correctamente --- En campo field_apellidos se almaceno Betancur Bedoya correctamente --- En campo mail se almaceno vladimirbetancur@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:05 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|8801515|,|field_nombres|:|Edwin Fernando|,|field_apellidos|:|Pacheco Figueroa|,|mail|:|edwin.f.pacheco@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:05 10.40.142.8 Verificar permisos para: 
+01:03:05 10.40.142.8 PHP_AUTH_USER : 8801515- PHP_AUTH_PW :9ffd43ad-70fa-46b3-b01d-aad534fbfc86
+01:03:05 10.40.142.8 Conecion a la base de datos 
+01:03:06 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Edwin Fernando correctamente --- En campo field_apellidos se almaceno Pacheco Figueroa correctamente --- En campo mail se almaceno edwin.f.pacheco@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:25 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|8801515|,|field_nombres|:|Edwin Fernando|,|field_apellidos|:|Pacheco Figueroa|,|mail|:|edwin.f.pacheco@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:25 10.40.142.8 Verificar permisos para: 
+01:03:25 10.40.142.8 PHP_AUTH_USER : 8801515- PHP_AUTH_PW :c00b5c56-2659-4474-8369-6503725c621e
+01:03:25 10.40.142.8 Conecion a la base de datos 
+01:03:26 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Edwin Fernando correctamente --- En campo field_apellidos se almaceno Pacheco Figueroa correctamente --- En campo mail se almaceno edwin.f.pacheco@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:53 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098670892|,|field_nombres|:|Mario Andres|,|field_apellidos|:|Camargo Torres|,|mail|:|mario.camargo.torres@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:53 10.40.142.8 Verificar permisos para: 
+01:03:53 10.40.142.8 PHP_AUTH_USER : 1098670892- PHP_AUTH_PW :e9516ecf-3ceb-41c7-b633-9141ddd4b4a2
+01:03:53 10.40.142.8 Conecion a la base de datos 
+01:03:53 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Mario Andres correctamente --- En campo field_apellidos se almaceno Camargo Torres correctamente --- En campo mail se almaceno mario.camargo.torres@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:57 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098670892|,|field_nombres|:|Mario Andres|,|field_apellidos|:|Camargo Torres|,|mail|:|mario.camargo.torres@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:57 10.40.142.8 Verificar permisos para: 
+01:03:57 10.40.142.8 PHP_AUTH_USER : 1098670892- PHP_AUTH_PW :8b9164f6-a893-4f18-b569-46691268dd2c
+01:03:57 10.40.142.8 Conecion a la base de datos 
+01:03:57 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Mario Andres correctamente --- En campo field_apellidos se almaceno Camargo Torres correctamente --- En campo mail se almaceno mario.camargo.torres@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:05 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098670892|,|field_nombres|:|Mario Andres|,|field_apellidos|:|Camargo Torres|,|mail|:|mario.camargo.torres@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:05 10.40.142.8 Verificar permisos para: 
+01:03:05 10.40.142.8 PHP_AUTH_USER : 1098670892- PHP_AUTH_PW :8d3c893a-2936-4aa7-837a-53eb70ce6103
+01:03:05 10.40.142.8 Conecion a la base de datos 
+01:03:06 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Mario Andres correctamente --- En campo field_apellidos se almaceno Camargo Torres correctamente --- En campo mail se almaceno mario.camargo.torres@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:56 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1118831214|,|field_nombres|:|Kelly Natalia|,|field_apellidos|:|Brito Salas|,|mail|:|kelly_b2008@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Sociales|,|Econom\\u00EDa|,|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:56 50.22.28.117 Verificar permisos para: 
+01:03:56 50.22.28.117 PHP_AUTH_USER : 1118831214- PHP_AUTH_PW :70ee587b-13a0-4e6e-a3a3-357e2e2cc1ae
+01:03:56 50.22.28.117 Conecion a la base de datos 
+01:03:57 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Kelly Natalia correctamente --- En campo field_apellidos se almaceno Brito Salas correctamente --- En campo mail se almaceno kelly_b2008@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:35 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:35 50.22.28.117 Verificar permisos para: 
+01:03:35 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :f86b19d5-2c0f-4dab-a177-28d541923db9
+01:03:35 50.22.28.117 Conecion a la base de datos 
+01:03:36 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:41 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+01:03:41 50.22.28.117 Verificar permisos para: 
+01:03:41 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :4b45f479-ecc4-4551-8db6-aa918db160f6
+01:03:41 50.22.28.117 Conecion a la base de datos 
+01:03:42 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:58 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+01:03:58 50.22.28.117 Verificar permisos para: 
+01:03:58 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :0e8541ab-680c-4a99-9746-5410ea4b53cb
+01:03:58 50.22.28.117 Conecion a la base de datos 
+01:03:59 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+01:03:05 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+01:03:05 50.22.28.117 Verificar permisos para: 
+01:03:05 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :6d50664e-01de-4072-bed8-faaf53066e71
+01:03:05 50.22.28.117 Conecion a la base de datos 
+01:03:05 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:42 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:42 50.22.28.117 Verificar permisos para: 
+02:03:42 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :2a63ad87-b7e4-4b5f-8de2-d5a3c2f0b1b4
+02:03:42 50.22.28.117 Conecion a la base de datos 
+02:03:43 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:53 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:53 50.22.28.117 Verificar permisos para: 
+02:03:53 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :cd25cfcc-e7d8-4fc7-8e00-33902f0129f1
+02:03:53 50.22.28.117 Conecion a la base de datos 
+02:03:54 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:04 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:04 50.22.28.117 Verificar permisos para: 
+02:03:04 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :6477fdf4-0f63-490c-a3dc-02863e80ec0d
+02:03:04 50.22.28.117 Conecion a la base de datos 
+02:03:05 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:49 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:49 50.22.28.117 Verificar permisos para: 
+02:03:49 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :ec24d6bb-6c8b-4345-b501-aad6fa164fed
+02:03:49 50.22.28.117 Conecion a la base de datos 
+02:03:50 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:13 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:13 50.22.28.117 Verificar permisos para: 
+02:03:13 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :d0616c8a-f5a1-42e5-9e2e-217ed0534509
+02:03:13 50.22.28.117 Conecion a la base de datos 
+02:03:14 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:08 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1022381718|,|field_nombres|:|Luis Alejandro|,|field_apellidos|:|Basa Benavides|,|mail|:|ingenieroamb.alejandro@outlook.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:08 50.22.28.117 Verificar permisos para: 
+02:03:08 50.22.28.117 PHP_AUTH_USER : 1022381718- PHP_AUTH_PW :0557688d-dd4d-48de-96bc-27b92587e430
+02:03:08 50.22.28.117 Conecion a la base de datos 
+02:03:08 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Luis Alejandro correctamente --- En campo field_apellidos se almaceno Basa Benavides correctamente --- En campo mail se almaceno ingenieroamb.alejandro@outlook.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:13 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1037614563|,|field_nombres|:|Sergio|,|field_apellidos|:|Quintero|,|mail|:|sergioq24@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:13 50.22.28.117 Verificar permisos para: 
+02:03:13 50.22.28.117 PHP_AUTH_USER : 1037614563- PHP_AUTH_PW :6ab7ed16-a14d-4493-988b-2758b746fc57
+02:03:13 50.22.28.117 Conecion a la base de datos 
+02:03:14 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Sergio correctamente --- En campo field_apellidos se almaceno Quintero correctamente --- En campo mail se almaceno sergioq24@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:36 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:36 50.22.28.117 Verificar permisos para: 
+02:03:36 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :bf2e533a-d0ac-4229-a989-a51dd3b58399
+02:03:36 50.22.28.117 Conecion a la base de datos 
+02:03:36 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:39 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:39 50.22.28.117 Verificar permisos para: 
+02:03:39 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :3964f006-7d35-49ab-bed4-31d17a79f05b
+02:03:39 50.22.28.117 Conecion a la base de datos 
+02:03:40 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:47 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:47 50.22.28.117 Verificar permisos para: 
+02:03:47 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :345de891-71a6-4930-8c53-f6baa148126e
+02:03:47 50.22.28.117 Conecion a la base de datos 
+02:03:47 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:26 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:26 50.22.28.117 Verificar permisos para: 
+02:03:26 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :32eec74a-58ea-41f7-8874-68b26badfb3f
+02:03:26 50.22.28.117 Conecion a la base de datos 
+02:03:26 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:30 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:30 50.22.28.117 Verificar permisos para: 
+02:03:30 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :6c2812af-7c20-4562-bab7-8ddef18d6851
+02:03:30 50.22.28.117 Conecion a la base de datos 
+02:03:31 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:36 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|8359433|,|field_nombres|:|Alejandro|,|field_apellidos|:|Restrepo|,|mail|:|restrepoalejo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:36 50.22.28.117 Verificar permisos para: 
+02:03:36 50.22.28.117 PHP_AUTH_USER : 8359433- PHP_AUTH_PW :09650be2-781e-4f2b-8e86-274f0a21279e
+02:03:36 50.22.28.117 Conecion a la base de datos 
+02:03:37 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Alejandro correctamente --- En campo field_apellidos se almaceno Restrepo correctamente --- En campo mail se almaceno restrepoalejo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:22 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1032361382|,|field_nombres|:|Jaime|,|field_apellidos|:|Marquez|,|mail|:|jmd.politologo@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:22 50.22.28.117 Verificar permisos para: 
+02:03:22 50.22.28.117 PHP_AUTH_USER : 1032361382- PHP_AUTH_PW :f6296907-8e23-4613-b7fb-c0f35b0f1526
+02:03:22 50.22.28.117 Conecion a la base de datos 
+02:03:22 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Jaime correctamente --- En campo field_apellidos se almaceno Marquez correctamente --- En campo mail se almaceno jmd.politologo@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:26 192.168.100.174 Verificar permisos para: 
+02:03:26 192.168.100.174 PHP_AUTH_USER : 1095794801- PHP_AUTH_PW :1
+02:03:26 192.168.100.174 Conecion a la base de datos 
+02:03:26 192.168.100.174 _consultarDatosUsuarios 8359433 preparando Usuario
+02:03:26 192.168.100.174 _consultarDatosUsuarios  8359433 respondiendo solicitud
+02:03:26 192.168.100.174 _consultarDatosUsuarios  8359433 proceso completo
+02:03:01 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1024505689|,|field_nombres|:|Andrea Lisseth|,|field_apellidos|:|Duque Anzola|,|mail|:|andreaduque490@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Artes|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:01 50.22.28.117 Verificar permisos para: 
+02:03:01 50.22.28.117 PHP_AUTH_USER : 1024505689- PHP_AUTH_PW :463cdc6c-5c66-435d-bf0c-cb3ca8a7d71a
+02:03:01 50.22.28.117 Conecion a la base de datos 
+02:03:02 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Andrea Lisseth correctamente --- En campo field_apellidos se almaceno Duque Anzola correctamente --- En campo mail se almaceno andreaduque490@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:22 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:22 50.22.28.117 Verificar permisos para: 
+02:03:22 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :efdeb6f2-062a-4740-8165-2e98e94db001
+02:03:22 50.22.28.117 Conecion a la base de datos 
+02:03:22 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:26 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:26 50.22.28.117 Verificar permisos para: 
+02:03:26 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :cf3d76c4-eebf-4249-8e7e-025eafd943fb
+02:03:26 50.22.28.117 Conecion a la base de datos 
+02:03:27 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:49 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:49 50.22.28.117 Verificar permisos para: 
+02:03:49 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :b1e8e16d-bc03-4a77-ab1c-06dcbec95162
+02:03:49 50.22.28.117 Conecion a la base de datos 
+02:03:50 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:52 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:52 50.22.28.117 Verificar permisos para: 
+02:03:52 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :32e2ce8e-a10d-4fec-aeba-c850bb3d22e9
+02:03:52 50.22.28.117 Conecion a la base de datos 
+02:03:53 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1024505689|,|field_nombres|:|Andrea Lisseth|,|field_apellidos|:|Duque Anzola|,|mail|:|andreaduque490@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Artes|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:53 50.22.28.117 Verificar permisos para: 
+02:03:53 50.22.28.117 PHP_AUTH_USER : 1024505689- PHP_AUTH_PW :707ae767-a2f6-49c5-bebd-3897e6676b24
+02:03:53 50.22.28.117 Conecion a la base de datos 
+02:03:53 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:53 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Andrea Lisseth correctamente --- En campo field_apellidos se almaceno Duque Anzola correctamente --- En campo mail se almaceno andreaduque490@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:21 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:21 50.22.28.117 Verificar permisos para: 
+02:03:21 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :d7b72afd-5b07-4a53-9947-0aae934eaf07
+02:03:21 50.22.28.117 Conecion a la base de datos 
+02:03:21 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:24 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1101688111|,|field_nombres|:|Yasdeily|,|field_apellidos|:|Perez Suarez|,|mail|:|yasde90@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:24 50.22.28.117 Verificar permisos para: 
+02:03:24 50.22.28.117 PHP_AUTH_USER : 1101688111- PHP_AUTH_PW :79ea6911-0f43-467d-8741-0ce37b68ad94
+02:03:24 50.22.28.117 Conecion a la base de datos 
+02:03:25 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Yasdeily correctamente --- En campo field_apellidos se almaceno Perez Suarez correctamente --- En campo mail se almaceno yasde90@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:31 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|80180417|,|field_nombres|:|Juan Manuel|,|field_apellidos|:|Correal Fonseca|,|mail|:|jmancorr@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:31 10.40.142.8 Verificar permisos para: 
+02:03:31 10.40.142.8 PHP_AUTH_USER : 80180417- PHP_AUTH_PW :3fa16027-bd04-4585-bc6d-f0ce15ad2ab5
+02:03:31 10.40.142.8 Conecion a la base de datos 
+02:03:32 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Juan Manuel correctamente --- En campo field_apellidos se almaceno Correal Fonseca correctamente --- En campo mail se almaceno jmancorr@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:05 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1053859351|,|field_nombres|:|Diego Alejandro|,|field_apellidos|:|Arango Salazar|,|mail|:|diegoarango2997@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:05 10.40.142.8 Verificar permisos para: 
+02:03:05 10.40.142.8 PHP_AUTH_USER : 1053859351- PHP_AUTH_PW :42a54d43-489f-4b14-b7c0-3fdb6fce9fea
+02:03:05 10.40.142.8 Conecion a la base de datos 
+02:03:05 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Diego Alejandro correctamente --- En campo field_apellidos se almaceno Arango Salazar correctamente --- En campo mail se almaceno diegoarango2997@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:16 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1053859351|,|field_nombres|:|Diego Alejandro|,|field_apellidos|:|Arango Salazar|,|mail|:|diegoarango2997@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:16 10.40.142.8 Verificar permisos para: 
+02:03:16 10.40.142.8 PHP_AUTH_USER : 1053859351- PHP_AUTH_PW :8bc20573-2fa5-43c5-9118-a5c20676177d
+02:03:16 10.40.142.8 Conecion a la base de datos 
+02:03:17 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Diego Alejandro correctamente --- En campo field_apellidos se almaceno Arango Salazar correctamente --- En campo mail se almaceno diegoarango2997@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:37 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1087189635|,|field_nombres|:|melissa|,|field_apellidos|:|claros lombana|,|mail|:|mclaros20@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+02:03:37 50.22.28.117 Verificar permisos para: 
+02:03:37 50.22.28.117 PHP_AUTH_USER : 1087189635- PHP_AUTH_PW :1c225e36-5fb1-480e-ab57-db269a90bb76
+02:03:37 50.22.28.117 Conecion a la base de datos 
+02:03:37 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno melissa correctamente --- En campo field_apellidos se almaceno claros lombana correctamente --- En campo mail se almaceno mclaros20@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:10 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1087189635|,|field_nombres|:|melissa|,|field_apellidos|:|claros lombana|,|mail|:|mclaros20@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|,|Econom\\u00EDa|,|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:10 50.22.28.117 Verificar permisos para: 
+02:03:10 50.22.28.117 PHP_AUTH_USER : 1087189635- PHP_AUTH_PW :3cd536a2-bfdd-44f8-ba5c-9b6109dc59c0
+02:03:10 50.22.28.117 Conecion a la base de datos 
+02:03:11 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno melissa correctamente --- En campo field_apellidos se almaceno claros lombana correctamente --- En campo mail se almaceno mclaros20@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:56 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1087189635|,|field_nombres|:|melissa|,|field_apellidos|:|claros lombana|,|mail|:|mclaros20@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|,|Econom\\u00EDa|,|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[|Franc\\u00E9s|,|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:56 50.22.28.117 Verificar permisos para: 
+02:03:56 50.22.28.117 PHP_AUTH_USER : 1087189635- PHP_AUTH_PW :59503f5c-a721-41d3-8cb0-7d7d2ec8cbc3
+02:03:56 50.22.28.117 Conecion a la base de datos 
+02:03:56 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno melissa correctamente --- En campo field_apellidos se almaceno claros lombana correctamente --- En campo mail se almaceno mclaros20@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:59 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1087189635|,|field_nombres|:|melissa|,|field_apellidos|:|claros lombana|,|mail|:|mclaros20@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|,|Econom\\u00EDa|,|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[|Franc\\u00E9s|,|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:59 50.22.28.117 Verificar permisos para: 
+02:03:59 50.22.28.117 PHP_AUTH_USER : 1087189635- PHP_AUTH_PW :d1f39933-28ec-4aa7-b800-b075a6e2b1d9
+02:03:59 50.22.28.117 Conecion a la base de datos 
+02:03:59 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno melissa correctamente --- En campo field_apellidos se almaceno claros lombana correctamente --- En campo mail se almaceno mclaros20@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+02:03:48 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1053859351|,|field_nombres|:|Diego Alejandro|,|field_apellidos|:|Arango Salazar|,|mail|:|diegoarango2997@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+02:03:48 10.40.142.8 Verificar permisos para: 
+02:03:48 10.40.142.8 PHP_AUTH_USER : 1053859351- PHP_AUTH_PW :8b08ba38-7612-43c3-bfef-8eb4348d85bb
+02:03:48 10.40.142.8 Conecion a la base de datos 
+02:03:48 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Diego Alejandro correctamente --- En campo field_apellidos se almaceno Arango Salazar correctamente --- En campo mail se almaceno diegoarango2997@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+03:03:38 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1022373351|,|field_nombres|:|Lilian Yasmith|,|field_apellidos|:|Rodriguez Benitez|,|mail|:|lilianyrb@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+03:03:38 10.40.142.8 Verificar permisos para: 
+03:03:38 10.40.142.8 PHP_AUTH_USER : 1022373351- PHP_AUTH_PW :7c258c33-dc59-4fcc-8ff3-6f923b0b31a5
+03:03:38 10.40.142.8 Conecion a la base de datos 
+03:03:38 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Lilian Yasmith correctamente --- En campo field_apellidos se almaceno Rodriguez Benitez correctamente --- En campo mail se almaceno lilianyrb@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+03:03:06 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|52995079|,|field_nombres|:|Diana Pilar|,|field_apellidos|:|Diaz Vargas|,|mail|:|larpirica@yahoo.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+03:03:06 50.22.28.117 Verificar permisos para: 
+03:03:06 50.22.28.117 PHP_AUTH_USER : 52995079- PHP_AUTH_PW :30fb88f1-1cd0-4be0-817b-c65c68fe57c6
+03:03:06 50.22.28.117 Conecion a la base de datos 
+03:03:07 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Diana Pilar correctamente --- En campo field_apellidos se almaceno Diaz Vargas correctamente --- En campo mail se almaceno larpirica@yahoo.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+03:03:19 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|52995079|,|field_nombres|:|Diana Pilar|,|field_apellidos|:|Diaz Vargas|,|mail|:|larpirica@yahoo.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+03:03:19 50.22.28.117 Verificar permisos para: 
+03:03:19 50.22.28.117 PHP_AUTH_USER : 52995079- PHP_AUTH_PW :2522b60c-5cd0-4dea-85fd-b80a687785c3
+03:03:19 50.22.28.117 Conecion a la base de datos 
+03:03:20 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Diana Pilar correctamente --- En campo field_apellidos se almaceno Diaz Vargas correctamente --- En campo mail se almaceno larpirica@yahoo.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+03:03:18 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|63560781|,|field_nombres|:|Jenny Roc\\u00EDo|,|field_apellidos|:|R\\u00EDos Mart\\u00EDnez|,|mail|:|jennyrios30@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+03:03:18 50.22.28.117 Verificar permisos para: 
+03:03:18 50.22.28.117 PHP_AUTH_USER : 63560781- PHP_AUTH_PW :dad38142-8725-46bb-869b-dd0a86595035
+03:03:18 50.22.28.117 Conecion a la base de datos 
+03:03:19 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Jenny Roc\u00EDo correctamente --- En campo field_apellidos se almaceno R\u00EDos Mart\u00EDnez correctamente --- En campo mail se almaceno jennyrios30@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:00 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1152198044|,|field_nombres|:|Carolina|,|field_apellidos|:|Bernal Ramirez|,|mail|:|carolinabr@anpara.com.co|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Derecho|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:00 50.22.28.117 Verificar permisos para: 
+04:03:00 50.22.28.117 PHP_AUTH_USER : 1152198044- PHP_AUTH_PW :65fc65eb-1162-4bd7-877b-0fc744a75054
+04:03:00 50.22.28.117 Conecion a la base de datos 
+04:03:00 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Carolina correctamente --- En campo field_apellidos se almaceno Bernal Ramirez correctamente --- En campo mail se almaceno carolinabr@anpara.com.co correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:10 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1152198044|,|field_nombres|:|Carolina|,|field_apellidos|:|Bernal Ramirez|,|mail|:|carolinabr@anpara.com.co|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Derecho|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:10 50.22.28.117 Verificar permisos para: 
+04:03:10 50.22.28.117 PHP_AUTH_USER : 1152198044- PHP_AUTH_PW :985160ac-240a-409b-93bf-a09a6edebebc
+04:03:10 50.22.28.117 Conecion a la base de datos 
+04:03:11 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Carolina correctamente --- En campo field_apellidos se almaceno Bernal Ramirez correctamente --- En campo mail se almaceno carolinabr@anpara.com.co correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:23 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79820544|,|field_nombres|:|Giovanni Alberto|,|field_apellidos|:|G\\u00F3mez Rodr\\u00EDguez|,|mail|:|gioarmy@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:23 10.40.142.8 Verificar permisos para: 
+04:03:23 10.40.142.8 PHP_AUTH_USER : 79820544- PHP_AUTH_PW :0d3d08c3-c11d-4893-a4a7-032c71f5c91b
+04:03:23 10.40.142.8 Conecion a la base de datos 
+04:03:24 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Giovanni Alberto correctamente --- En campo field_apellidos se almaceno G\u00F3mez Rodr\u00EDguez correctamente --- En campo mail se almaceno gioarmy@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:39 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79820544|,|field_nombres|:|Giovanni Alberto|,|field_apellidos|:|G\\u00F3mez Rodr\\u00EDguez|,|mail|:|gioarmy@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:39 10.40.142.8 Verificar permisos para: 
+04:03:39 10.40.142.8 PHP_AUTH_USER : 79820544- PHP_AUTH_PW :53b0b7c2-3091-467a-82be-04f970ef5403
+04:03:39 10.40.142.8 Conecion a la base de datos 
+04:03:39 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Giovanni Alberto correctamente --- En campo field_apellidos se almaceno G\u00F3mez Rodr\u00EDguez correctamente --- En campo mail se almaceno gioarmy@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:32 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79820544|,|field_nombres|:|Giovanni Alberto|,|field_apellidos|:|Gomez rodriguez|,|mail|:|gioarmy@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:32 10.40.142.8 Verificar permisos para: 
+04:03:32 10.40.142.8 PHP_AUTH_USER : 79820544- PHP_AUTH_PW :9e3e57c2-8199-4323-9340-04ccc23db25a
+04:03:32 10.40.142.8 Conecion a la base de datos 
+04:03:33 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Giovanni Alberto correctamente --- En campo field_apellidos se almaceno Gomez rodriguez correctamente --- En campo mail se almaceno gioarmy@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:00 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1144045995|,|field_nombres|:|Sebasti\\u00E1n|,|field_apellidos|:|Montenegro Arana|,|mail|:|sebastian191991@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:00 50.22.28.117 Verificar permisos para: 
+04:03:00 50.22.28.117 PHP_AUTH_USER : 1144045995- PHP_AUTH_PW :d78136c9-11ab-4d12-978f-a84cf79fe08a
+04:03:00 50.22.28.117 Conecion a la base de datos 
+04:03:01 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Sebasti\u00E1n correctamente --- En campo field_apellidos se almaceno Montenegro Arana correctamente --- En campo mail se almaceno sebastian191991@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:32 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79820544|,|field_nombres|:|Giovanni Alberto|,|field_apellidos|:|Gomez rodriguez|,|mail|:|gioarmy@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:32 10.40.142.8 Verificar permisos para: 
+04:03:32 10.40.142.8 PHP_AUTH_USER : 79820544- PHP_AUTH_PW :b5378b71-7e1d-4e61-abf4-9e9d1634c693
+04:03:32 10.40.142.8 Conecion a la base de datos 
+04:03:32 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Giovanni Alberto correctamente --- En campo field_apellidos se almaceno Gomez rodriguez correctamente --- En campo mail se almaceno gioarmy@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:39 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|79820544|,|field_nombres|:|Giovanni Alberto|,|field_apellidos|:|Gomez rodriguez|,|mail|:|gioarmy@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Pol\\u00EDticas y Relaciones Internacionales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:39 10.40.142.8 Verificar permisos para: 
+04:03:39 10.40.142.8 PHP_AUTH_USER : 79820544- PHP_AUTH_PW :7bd65706-3b3f-4742-861d-ac420ff97b52
+04:03:39 10.40.142.8 Conecion a la base de datos 
+04:03:40 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Giovanni Alberto correctamente --- En campo field_apellidos se almaceno Gomez rodriguez correctamente --- En campo mail se almaceno gioarmy@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:01 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098665346|,|field_nombres|:|Karla Dayana|,|field_apellidos|:|Guerrero Granados|,|mail|:|kdguerrerog@unal.edu.co|,|field_genero|:|Femenino|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:01 10.40.142.8 Verificar permisos para: 
+04:03:01 10.40.142.8 PHP_AUTH_USER : 1098665346- PHP_AUTH_PW :32e9cd37-bd34-4644-9e02-255cf21ac21e
+04:03:01 10.40.142.8 Conecion a la base de datos 
+04:03:02 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Karla Dayana correctamente --- En campo field_apellidos se almaceno Guerrero Granados correctamente --- En campo mail se almaceno kdguerrerog@unal.edu.co correctamente --- En campo field_genero se almaceno Femenino correctamente --- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|name|...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:24 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|52967226|,|field_nombres|:|Karen Grace|,|field_apellidos|:|Burbano Burbano|,|mail|:|eddpepelu@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:24 50.22.28.117 Verificar permisos para: 
+04:03:24 50.22.28.117 PHP_AUTH_USER : 52967226- PHP_AUTH_PW :37464075-d5f7-415d-b212-a5d540bc8562
+04:03:24 50.22.28.117 Conecion a la base de datos 
+04:03:24 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Karen Grace correctamente --- En campo field_apellidos se almaceno Burbano Burbano correctamente --- En campo mail se almaceno eddpepelu@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:27 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|52967226|,|field_nombres|:|Karen Grace|,|field_apellidos|:|Burbano Burbano|,|mail|:|eddpepelu@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:27 50.22.28.117 Verificar permisos para: 
+04:03:27 50.22.28.117 PHP_AUTH_USER : 52967226- PHP_AUTH_PW :10e5fa73-3793-4e6b-b88d-62c1fa3ca31e
+04:03:27 50.22.28.117 Conecion a la base de datos 
+04:03:28 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Karen Grace correctamente --- En campo field_apellidos se almaceno Burbano Burbano correctamente --- En campo mail se almaceno eddpepelu@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+04:03:40 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|52967226|,|field_nombres|:|Karen Grace|,|field_apellidos|:|Burbano Burbano|,|mail|:|eddpepelu@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Arquitectura y Dise\\u00F1o|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+04:03:40 50.22.28.117 Verificar permisos para: 
+04:03:40 50.22.28.117 PHP_AUTH_USER : 52967226- PHP_AUTH_PW :58cbe586-7287-403e-b3bc-d2af6d0d8fa7
+04:03:40 50.22.28.117 Conecion a la base de datos 
+04:03:41 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Karen Grace correctamente --- En campo field_apellidos se almaceno Burbano Burbano correctamente --- En campo mail se almaceno eddpepelu@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:46 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1016044317|,|field_nombres|:|Andres Felipe|,|field_apellidos|:|Ruiz Cely|,|mail|:|andresingruiz@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:46 50.22.28.117 Verificar permisos para: 
+07:03:46 50.22.28.117 PHP_AUTH_USER : 1016044317- PHP_AUTH_PW :fdc4dd83-290d-4dc5-bb40-f4e8aff5532d
+07:03:46 50.22.28.117 Conecion a la base de datos 
+07:03:47 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Andres Felipe correctamente --- En campo field_apellidos se almaceno Ruiz Cely correctamente --- En campo mail se almaceno andresingruiz@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:59 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1016044317|,|field_nombres|:|Andres Felipe|,|field_apellidos|:|Ruiz Cely|,|mail|:|andresingruiz@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:59 50.22.28.117 Verificar permisos para: 
+07:03:59 50.22.28.117 PHP_AUTH_USER : 1016044317- PHP_AUTH_PW :c3a47f13-4f20-4d9a-bba5-ea1a8b4045e7
+07:03:59 50.22.28.117 Conecion a la base de datos 
+07:03:00 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Andres Felipe correctamente --- En campo field_apellidos se almaceno Ruiz Cely correctamente --- En campo mail se almaceno andresingruiz@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+07:03:49 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|80094973|,|field_nombres|:|Javier|,|field_apellidos|:|Velasquez|,|mail|:|ing.javier.velasquez@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|,|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+07:03:49 10.40.142.8 Verificar permisos para: 
+07:03:49 10.40.142.8 PHP_AUTH_USER : 80094973- PHP_AUTH_PW :dcc98fe1-4c1d-402d-a4d4-06fc335fb333
+07:03:49 10.40.142.8 Conecion a la base de datos 
+07:03:50 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Javier correctamente --- En campo field_apellidos se almaceno Velasquez correctamente --- En campo mail se almaceno ing.javier.velasquez@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:51 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1116252833|,|field_nombres|:|Ferr\\u00E1n Gustavo|,|field_apellidos|:|Arango \\u00C1ngel|,|mail|:|fergus1821@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:51 10.40.142.8 Verificar permisos para: 
+08:03:51 10.40.142.8 PHP_AUTH_USER : 1116252833- PHP_AUTH_PW :9161ba13-d070-4896-ad2e-02bfcb4cff58
+08:03:51 10.40.142.8 Conecion a la base de datos 
+08:03:51 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ferr\u00E1n Gustavo correctamente --- En campo field_apellidos se almaceno Arango \u00C1ngel correctamente --- En campo mail se almaceno fergus1821@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:23 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1116252833|,|field_nombres|:|Ferr\\u00E1n Gustavo|,|field_apellidos|:|Arango \\u00C1ngel|,|mail|:|fergus1821@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:23 10.40.142.8 Verificar permisos para: 
+08:03:23 10.40.142.8 PHP_AUTH_USER : 1116252833- PHP_AUTH_PW :affd5092-3d8c-49b3-9ec8-370dfee309b2
+08:03:23 10.40.142.8 Conecion a la base de datos 
+08:03:23 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ferr\u00E1n Gustavo correctamente --- En campo field_apellidos se almaceno Arango \u00C1ngel correctamente --- En campo mail se almaceno fergus1821@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:30 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1116252833|,|field_nombres|:|Ferr\\u00E1n Gustavo|,|field_apellidos|:|Arango \\u00C1ngel|,|mail|:|fergus1821@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:30 10.40.142.8 Verificar permisos para: 
+08:03:30 10.40.142.8 PHP_AUTH_USER : 1116252833- PHP_AUTH_PW :daa872ce-d5ef-4e49-9ae8-c1f8a49f3551
+08:03:30 10.40.142.8 Conecion a la base de datos 
+08:03:31 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ferr\u00E1n Gustavo correctamente --- En campo field_apellidos se almaceno Arango \u00C1ngel correctamente --- En campo mail se almaceno fergus1821@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:29 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098706344|,|field_nombres|:|Carlos Augusto|,|field_apellidos|:|Chavez Orejarena|,|mail|:|ca.chavez969@uniandes.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:29 10.40.142.8 Verificar permisos para: 
+08:03:29 10.40.142.8 PHP_AUTH_USER : 1098706344- PHP_AUTH_PW :d3750958-7297-4a2f-99f5-fae15f3a84c2
+08:03:29 10.40.142.8 Conecion a la base de datos 
+08:03:30 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Carlos Augusto correctamente --- En campo field_apellidos se almaceno Chavez Orejarena correctamente --- En campo mail se almaceno ca.chavez969@uniandes.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:36 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1098706344|,|field_nombres|:|Carlos Augusto|,|field_apellidos|:|Chavez Orejarena|,|mail|:|ca.chavez969@uniandes.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:36 10.40.142.8 Verificar permisos para: 
+08:03:36 10.40.142.8 PHP_AUTH_USER : 1098706344- PHP_AUTH_PW :d96343ef-e933-4653-b490-384aa85376ca
+08:03:36 10.40.142.8 Conecion a la base de datos 
+08:03:36 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Carlos Augusto correctamente --- En campo field_apellidos se almaceno Chavez Orejarena correctamente --- En campo mail se almaceno ca.chavez969@uniandes.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:32 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1116252833|,|field_nombres|:|Ferr\\u00E1n Gustavo|,|field_apellidos|:|Arango \\u00C1ngel|,|mail|:|fergus1821@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|,|Programa de Idiomas|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+08:03:32 10.40.142.8 Verificar permisos para: 
+08:03:32 10.40.142.8 PHP_AUTH_USER : 1116252833- PHP_AUTH_PW :4cb9216b-45db-48fa-8826-7f513165bbd3
+08:03:32 10.40.142.8 Conecion a la base de datos 
+08:03:33 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ferr\u00E1n Gustavo correctamente --- En campo field_apellidos se almaceno Arango \u00C1ngel correctamente --- En campo mail se almaceno fergus1821@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:11 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010181954|,|field_nombres|:|Camilo Andres|,|field_apellidos|:|Enciso Pe\\u00F1a|,|mail|:|camilo_enciso80@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:11 50.22.28.117 Verificar permisos para: 
+08:03:11 50.22.28.117 PHP_AUTH_USER : 1010181954- PHP_AUTH_PW :82b6cc6a-2d79-46d7-928f-96d4941db7bf
+08:03:11 50.22.28.117 Conecion a la base de datos 
+08:03:12 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camilo Andres correctamente --- En campo field_apellidos se almaceno Enciso Pe\u00F1a correctamente --- En campo mail se almaceno camilo_enciso80@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:15 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010181954|,|field_nombres|:|Camilo Andres|,|field_apellidos|:|Enciso Pe\\u00F1a|,|mail|:|camilo_enciso80@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:15 50.22.28.117 Verificar permisos para: 
+08:03:15 50.22.28.117 PHP_AUTH_USER : 1010181954- PHP_AUTH_PW :9e66723b-c1f7-441d-9b2a-5bd429ea8c71
+08:03:15 50.22.28.117 Conecion a la base de datos 
+08:03:15 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camilo Andres correctamente --- En campo field_apellidos se almaceno Enciso Pe\u00F1a correctamente --- En campo mail se almaceno camilo_enciso80@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:20 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010181954|,|field_nombres|:|Camilo Andres|,|field_apellidos|:|Enciso Pe\\u00F1a|,|mail|:|camilo_enciso80@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:20 50.22.28.117 Verificar permisos para: 
+08:03:20 50.22.28.117 PHP_AUTH_USER : 1010181954- PHP_AUTH_PW :420b1e7a-84fa-4569-b6f4-33d1dd14b76d
+08:03:20 50.22.28.117 Conecion a la base de datos 
+08:03:21 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camilo Andres correctamente --- En campo field_apellidos se almaceno Enciso Pe\u00F1a correctamente --- En campo mail se almaceno camilo_enciso80@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:01 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010181954|,|field_nombres|:|Camilo Andres|,|field_apellidos|:|Enciso Pe\\u00F1a|,|mail|:|camilo_enciso80@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:01 50.22.28.117 Verificar permisos para: 
+08:03:01 50.22.28.117 PHP_AUTH_USER : 1010181954- PHP_AUTH_PW :cf7f840b-7abe-4ff8-a1a7-ef48d7552da9
+08:03:01 50.22.28.117 Conecion a la base de datos 
+08:03:02 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camilo Andres correctamente --- En campo field_apellidos se almaceno Enciso Pe\u00F1a correctamente --- En campo mail se almaceno camilo_enciso80@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+08:03:14 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1010181954|,|field_nombres|:|Camilo Andres|,|field_apellidos|:|Enciso Pe\\u00F1a|,|mail|:|camilo_enciso80@hotmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ingenier\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+08:03:14 50.22.28.117 Verificar permisos para: 
+08:03:14 50.22.28.117 PHP_AUTH_USER : 1010181954- PHP_AUTH_PW :469265fc-8b8b-48c0-b7d4-345fe49c2efe
+08:03:14 50.22.28.117 Conecion a la base de datos 
+08:03:14 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Camilo Andres correctamente --- En campo field_apellidos se almaceno Enciso Pe\u00F1a correctamente --- En campo mail se almaceno camilo_enciso80@hotmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:15 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|10484154|,|field_nombres|:|Fabio Cesar|,|field_apellidos|:|Casta\\u00F1o Gonzalez|,|mail|:|fabio.castano@ucc.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Programa de Idiomas|],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+09:03:15 50.22.28.117 Verificar permisos para: 
+09:03:15 50.22.28.117 PHP_AUTH_USER : 10484154- PHP_AUTH_PW :ec47cd6e-a4f7-4b2b-9c56-3bcf33427814
+09:03:15 50.22.28.117 Conecion a la base de datos 
+09:03:16 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Fabio Cesar correctamente --- En campo field_apellidos se almaceno Casta\u00F1o Gonzalez correctamente --- En campo mail se almaceno fabio.castano@ucc.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:25 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|10484154|,|field_nombres|:|Fabio Cesar|,|field_apellidos|:|Casta\\u00F1o Gonzalez|,|mail|:|fabio.castano@ucc.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Programa de Idiomas|],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+09:03:25 50.22.28.117 Verificar permisos para: 
+09:03:25 50.22.28.117 PHP_AUTH_USER : 10484154- PHP_AUTH_PW :52dc06ae-1f64-4d1c-a694-5de3cfe76fe2
+09:03:25 50.22.28.117 Conecion a la base de datos 
+09:03:26 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Fabio Cesar correctamente --- En campo field_apellidos se almaceno Casta\u00F1o Gonzalez correctamente --- En campo mail se almaceno fabio.castano@ucc.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:38 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1032429597|,|field_nombres|:|Javier Eliecer|,|field_apellidos|:|Pirateque Ni\\u00F1o|,|mail|:|cjepn26@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:38 10.40.142.8 Verificar permisos para: 
+09:03:38 10.40.142.8 PHP_AUTH_USER : 1032429597- PHP_AUTH_PW :00590ce1-7826-48b3-9667-442db1bc0b02
+09:03:38 10.40.142.8 Conecion a la base de datos 
+09:03:39 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Javier Eliecer correctamente --- En campo field_apellidos se almaceno Pirateque Ni\u00F1o correctamente --- En campo mail se almaceno cjepn26@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:12 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1032429597|,|field_nombres|:|Javier Eliecer|,|field_apellidos|:|Pirateque Ni\\u00F1o|,|mail|:|cjepn26@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:12 10.40.142.8 Verificar permisos para: 
+09:03:12 10.40.142.8 PHP_AUTH_USER : 1032429597- PHP_AUTH_PW :b647cb16-1781-4536-9b1c-59a3316d1a32
+09:03:12 10.40.142.8 Conecion a la base de datos 
+09:03:13 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Javier Eliecer correctamente --- En campo field_apellidos se almaceno Pirateque Ni\u00F1o correctamente --- En campo mail se almaceno cjepn26@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:16 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1032429597|,|field_nombres|:|Javier Eliecer|,|field_apellidos|:|Pirateque Ni\\u00F1o|,|mail|:|cjepn26@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:16 10.40.142.8 Verificar permisos para: 
+09:03:16 10.40.142.8 PHP_AUTH_USER : 1032429597- PHP_AUTH_PW :6ff137a9-9904-465a-94c1-098d68e3479a
+09:03:16 10.40.142.8 Conecion a la base de datos 
+09:03:17 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Javier Eliecer correctamente --- En campo field_apellidos se almaceno Pirateque Ni\u00F1o correctamente --- En campo mail se almaceno cjepn26@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:29 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1032429597|,|field_nombres|:|Javier Eliecer|,|field_apellidos|:|Pirateque Ni\\u00F1o|,|mail|:|cjepn26@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Administraci\\u00F3n y Negocios|,|Econom\\u00EDa|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:29 10.40.142.8 Verificar permisos para: 
+09:03:29 10.40.142.8 PHP_AUTH_USER : 1032429597- PHP_AUTH_PW :62ecc2e6-68d5-43c9-b928-b3640c434e47
+09:03:29 10.40.142.8 Conecion a la base de datos 
+09:03:30 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Javier Eliecer correctamente --- En campo field_apellidos se almaceno Pirateque Ni\u00F1o correctamente --- En campo mail se almaceno cjepn26@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:18 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|10484154|,|field_nombres|:|Fabio Cesar|,|field_apellidos|:|Casta\\u00F1o Gonzalez|,|mail|:|fabio.castano@ucc.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Programa de Idiomas|],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+09:03:18 50.22.28.117 Verificar permisos para: 
+09:03:18 50.22.28.117 PHP_AUTH_USER : 10484154- PHP_AUTH_PW :f948c0c2-f129-44ec-802f-f89a4a6ee4e0
+09:03:18 50.22.28.117 Conecion a la base de datos 
+09:03:19 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Fabio Cesar correctamente --- En campo field_apellidos se almaceno Casta\u00F1o Gonzalez correctamente --- En campo mail se almaceno fabio.castano@ucc.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:18 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|1020719938|,|field_nombres|:|Andrea Viviana|,|field_apellidos|:|G\\u00F3mez Nieto|,|mail|:|nietoandrea@gmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Sociales|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:18 10.40.142.8 Verificar permisos para: 
+09:03:18 10.40.142.8 PHP_AUTH_USER : 1020719938- PHP_AUTH_PW :e4006ad5-a206-4324-881d-dc72aa86e9e3
+09:03:18 10.40.142.8 Conecion a la base de datos 
+09:03:19 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Andrea Viviana correctamente --- En campo field_apellidos se almaceno G\u00F3mez Nieto correctamente --- En campo mail se almaceno nietoandrea@gmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:50 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|10484154|,|field_nombres|:|Fabio Cesar|,|field_apellidos|:|Casta\\u00F1o Gonzalez|,|mail|:|fabio.castano@ucc.edu.co|,|field_genero|:|Masculino|,|field_interes|:[|Programa de Idiomas|],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[|Ingl\\u00E9s|],|status|:|1|}} preparando usuario
+09:03:50 10.40.142.8 Verificar permisos para: 
+09:03:50 10.40.142.8 PHP_AUTH_USER : 10484154- PHP_AUTH_PW :1d2d9027-53bb-4913-943e-d6a1b1b598dd
+09:03:50 10.40.142.8 Conecion a la base de datos 
+09:03:51 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Fabio Cesar correctamente --- En campo field_apellidos se almaceno Casta\u00F1o Gonzalez correctamente --- En campo mail se almaceno fabio.castano@ucc.edu.co correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:49 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|52709553|,|field_nombres|:|Ana Esperanza|,|field_apellidos|:|Ragonesi Mu\\u00F1oz|,|mail|:|anaragonesi@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias de la Salud|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:49 10.40.142.8 Verificar permisos para: 
+09:03:49 10.40.142.8 PHP_AUTH_USER : 52709553- PHP_AUTH_PW :6f8b8525-0fe7-48d2-9739-28be13937f4f
+09:03:49 10.40.142.8 Conecion a la base de datos 
+09:03:49 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Ana Esperanza correctamente --- En campo field_apellidos se almaceno Ragonesi Mu\u00F1oz correctamente --- En campo mail se almaceno anaragonesi@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:13 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|field_nombres|:|Efrain Andres |,|field_apellidos|:|Lopez Calderon|,|mail|:|ealc19@gmail.com|,|field_interes|:[],|field__rea_de_inter|:[],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:13 50.22.28.117 Verificar permisos para: 
+09:03:13 50.22.28.117 PHP_AUTH_USER : 1144068076- PHP_AUTH_PW :0faa3611-0f51-442a-afa6-572bf56a1cbb
+09:03:13 50.22.28.117 Conecion a la base de datos 
+09:03:14 50.22.28.117 Respuesta del servidor  Error al almacenar el campo field_nombresel Valor : Efrain Andres  --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_nombres as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_nombres', 'Efrain Andres ')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Efrain Andres ')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Efrain Andres ')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_nombres', 'Efrain Andres ')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_apellidosel Valor : Lopez Calderon --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_apellidos as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_apellidos', 'Lopez Calderon')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('Lopez Calderon')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('Lopez Calderon')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_apellidos', 'Lopez Calderon')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo mailel Valor : ealc19@gmail.com --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property mail as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('mail', 'ealc19@gmail.co...')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('ealc19@gmail.co...')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('ealc19@gmail.co...')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('mail', 'ealc19@gmail.co...')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- Error al almacenar el campo field_interesel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Invalid data value given. Be sure it matches the required data type and format.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:122
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#2 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_interes', Array)
+#3 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#4 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#6 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#7 {main}--- Error al almacenar el campo field__rea_de_interel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field__rea_de_inter as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field__rea_de_i...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field__rea_de_i...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo field_idiomas_de_inter_sel Valor : Array --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property field_idiomas_de_inter_s as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('field_idiomas_d...', Array)
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent(Array)
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(1062): EntityMetadataWrapper->set(Array)
+#3 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityListWrapper->set(Array)
+#4 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('field_idiomas_d...', Array)
+#5 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#7 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#8 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#9 {main}--- Error al almacenar el campo statusel Valor : 1 --- exception 'EntityMetadataWrapperException' with message 'Unable to set the data property status as the parent data structure is not set.' in /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc:473
+Stack trace:
+#0 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(135): EntityStructureWrapper->setProperty('status', '1')
+#1 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(126): EntityMetadataWrapper->updateParent('1')
+#2 /var/www/html/website/portal/sites/all/modules/entity/includes/entity.wrapper.inc(427): EntityMetadataWrapper->set('1')
+#3 /var/www/html/website/portal/webservices/functions.php(41): EntityStructureWrapper->__set('status', '1')
+#4 [internal function]: _accionesUsuarioWebServices('{|data|:{|field...')
+#5 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(4087): call_user_func_array('_accionesUsuari...', Array)
+#6 /var/www/html/website/portal/sites/all/modules/potentials/src/lib/nusoap.php(3718): nusoap_server->invoke_method()
+#7 /var/www/html/website/portal/webservices/users.php(29): nusoap_server->service('<?xml version="...')
+#8 {main}--- --- 
+09:03:57 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|53056593|,|field_nombres|:|Luisa Paulina|,|field_apellidos|:|Mej\\u00EDa Velilla|,|mail|:|luisam10@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:57 10.40.142.8 Verificar permisos para: 
+09:03:57 10.40.142.8 PHP_AUTH_USER : 53056593- PHP_AUTH_PW :5c7b1c29-60a4-41ec-af04-2bab18f64dcf
+09:03:57 10.40.142.8 Conecion a la base de datos 
+09:03:58 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Luisa Paulina correctamente --- En campo field_apellidos se almaceno Mej\u00EDa Velilla correctamente --- En campo mail se almaceno luisam10@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+09:03:10 10.40.142.8 _accionesUsuarioWebServices  {|data|:{|name|:|53056593|,|field_nombres|:|Luisa Paulina|,|field_apellidos|:|Mej\\u00EDa Velilla|,|mail|:|luisam10@hotmail.com|,|field_genero|:|Femenino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Educaci\\u00F3n|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+09:03:10 10.40.142.8 Verificar permisos para: 
+09:03:10 10.40.142.8 PHP_AUTH_USER : 53056593- PHP_AUTH_PW :734e5114-bb72-43aa-86f5-978cfeb38426
+09:03:10 10.40.142.8 Conecion a la base de datos 
+09:03:11 10.40.142.8 Respuesta del servidor  name--- En campo field_nombres se almaceno Luisa Paulina correctamente --- En campo field_apellidos se almaceno Mej\u00EDa Velilla correctamente --- En campo mail se almaceno luisam10@hotmail.com correctamente --- En campo field_genero se almaceno Femenino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:10 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1020715458|,|field_nombres|:|Juan Fernando|,|field_apellidos|:|Mill\\u00E1n Villaneda|,|mail|:|juanmillan1986@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:10 50.22.28.117 Verificar permisos para: 
+11:03:10 50.22.28.117 PHP_AUTH_USER : 1020715458- PHP_AUTH_PW :21c3f4fe-dcb1-498a-a573-1cb6b468d764
+11:03:10 50.22.28.117 Conecion a la base de datos 
+11:03:10 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Juan Fernando correctamente --- En campo field_apellidos se almaceno Mill\u00E1n Villaneda correctamente --- En campo mail se almaceno juanmillan1986@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 
+11:03:26 50.22.28.117 _accionesUsuarioWebServices  {|data|:{|name|:|1020715458|,|field_nombres|:|Juan Fernando|,|field_apellidos|:|Mill\\u00E1n Villaneda|,|mail|:|juanmillan1986@gmail.com|,|field_genero|:|Masculino|,|field_interes|:[|Estudios de posgrado en el exterior|],|field__rea_de_inter|:[|Ciencias Agropecuarias y del Medio Ambiente|],|field_idiomas_de_inter_s|:[],|status|:|1|}} preparando usuario
+11:03:26 50.22.28.117 Verificar permisos para: 
+11:03:26 50.22.28.117 PHP_AUTH_USER : 1020715458- PHP_AUTH_PW :97c966d4-935d-4b92-bf92-ff5b53bfd7d5
+11:03:26 50.22.28.117 Conecion a la base de datos 
+11:03:27 50.22.28.117 Respuesta del servidor  name--- En campo field_nombres se almaceno Juan Fernando correctamente --- En campo field_apellidos se almaceno Mill\u00E1n Villaneda correctamente --- En campo mail se almaceno juanmillan1986@gmail.com correctamente --- En campo field_genero se almaceno Masculino correctamente --- En campo field_interes se almaceno Array correctamente --- En campo field__rea_de_inter se almaceno Array correctamente --- En campo field_idiomas_de_inter_s se almaceno Array correctamente --- En campo status se almaceno 1 correctamente --- --- 

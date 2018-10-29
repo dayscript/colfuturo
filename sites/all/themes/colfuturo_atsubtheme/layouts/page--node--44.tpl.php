@@ -303,18 +303,12 @@ elseif( $Patrocinador  =="Departamento del Atlántico" ||
                         <img src="<?php print $UrlImagen;?>">
                       </div>
                       <div class="header-login">
-                        <div style="max-width: 460px;min-width: 320px;float: left;display: block; margin: 0 auto;">
-                          <span style="margin-left: 10px;display: block;margin: 0 auto;width: 100px;">
-                            <?php print $user->name; print $Patrocinador1; ?></span></div>
-                        <span style="border-right: 1px solid #fff;
-                        margin-right: 4px;
-                        padding-right: 7px;
-                        color:#F9CA6B"><a href="user/<?php print $user->uid?>/edit">Actualizar datos</a> </span>
-                        <span style="margin-left: 10px;
-                        border-right: 1px solid #fff;
-                        padding-right: 6px;
-                        color:#F9CA6B"><a href="user/<?php print $user->uid?>/edit">Cambiar clave</a></span>
-                        <span style="margin-left: 10px;"><a href="user/logout"><img src="sites/all/themes/colfuturo_atsubtheme/src/images/logout.png"></a></span>
+                        <div class="menu-user">
+                          <div class="cedula"><?php print $user->name; print $Patrocinador1; ?></div>
+                          <div class="update-data"><a href="user/<?php print $user->uid?>/edit">Actualizar datos</a></div>
+                          <div class="password"><a href="user/<?php print $user->uid?>/edit">Cambiar clave</a></div>
+                          <div class="icon"><a href="user/logout"><img src="sites/all/themes/colfuturo_atsubtheme/src/images/logout.png"></a></div>
+                        </div>
                       </div>
                       <div class="text-departamento">
                         <p> Esta plataforma le servirá para contactarse con el equipo administrativo, descargar documentos y
@@ -324,7 +318,9 @@ elseif( $Patrocinador  =="Departamento del Atlántico" ||
                         <div class="departamento-footer">
                         </div>
                       </div>
-                      <hr class="hr-head" style="background:<?php print $fila->color;?>">
+                      <hr class="hr-head" style="width: 100%; background:<?php print $fila->color;?>">
+
+                      <!--Correcto-->
                       <div class="departamentos-content">
                         <div class="departamentos-fechas columnas fondo-columnas">
                           <h3 class="titulohr" style="color:<?php print $fila->color;?>">FECHAS A TENER EN CUENTA</h3>
@@ -449,6 +445,11 @@ elseif( $Patrocinador  =="Departamento del Atlántico" ||
                         </div>
 
                       </div>
+                      <!--Correcto-->
+
+
+                     
+
                       <div class="pie-departamentos">
                         <p> Gestión de Becas Externas es administrado por COLFUTURO</p>
                         <div>
