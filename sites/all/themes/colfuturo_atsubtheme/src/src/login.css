@@ -33,12 +33,6 @@ body {
   margin: 2px 0;
 }
 
-.columnas{
-  width: 330px;
-  float: left;
-  margin: 14px 17px;
-  padding: 13px;
-}
 
 .fondo-columnas{
   background-color: #F3F7DB;
@@ -160,7 +154,7 @@ div.departamentos-fechas p {
   width: 340px;
   height: 55px;
   float: right;
-  top: -3px;
+  /* top: 120px; */
   /*top: -5px;*/
   position: relative;
 }
@@ -233,40 +227,11 @@ div.departamentos-fechas p {
   }
 }
 
-
-
-.row-mayor{
-  width: 100%;
-  /* float: top; */
-  margin:0;
-  padding: 0px;
-  background-color: #fff;
-  display: none;
-}
-
-.caja-one {
-  width: 780px;
-  display: inline;
-  /* float: left !important; */
-  padding: 0;
-  margin:0;
-}
-
-.caja-two {
-  width: 390px;
-
-  display: inline-flex !important;
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  /* float: right !important; */
-}
-
-.row {
-  width: 100%;
-  /* float: top; */
-  margin: 14px 0px;
-  padding: 0px;
+.columnas{
+  width: 330px;
+  float: left;
+  margin: 14px 17px;
+  padding: 13px;
 }
 
 .departamentos-content{
@@ -274,15 +239,34 @@ div.departamentos-fechas p {
   background-color: #fff;
 }
 
-.columnas-copy{
-  width: 280px;
-  float: left;
-  margin: 14px 17px;
-  padding: 13px;
+.caja-mayor{
+  display: -webkit-inline-flex;
 }
 
-html{
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box; 
+@media (max-width: 800px) {
+  .caja-mayor{
+    display: block;
+  }
 }
+
+
+/* <!------------Estilos creados para optimizar el slider de scolciencias---------> */
+.page-node-44 #views_slideshow_cycle_div_slide_principal-block_9_0 {
+width: 780px !important;
+}
+
+.page-node-44 #views_slideshow_cycle_div_slide_principal-block_9_1{
+  width: 780px !important;
+}
+
+@media (max-width: 800px) {
+  .page-node-44 #views_slideshow_cycle_div_slide_principal-block_9_0 {
+  width: auto !important;
+  }
+  .page-node-44 #views_slideshow_cycle_div_slide_principal-block_9_1{
+  width: auto !important;
+  }
+}
+
+
+

@@ -582,7 +582,7 @@ if($genero != "" || $genero != " "){
   $cade = "{\"numeroDocumento\":\"".$form_state['values']['name']."\",
             \"nombre\":\"".mb_convert_encoding($form_state['values']['field_nombres']['und'][0]['value'],"ISO-8859-1", "UTF-8")."\",
             \"apellido\":\"".mb_convert_encoding($form_state['values']['field_apellidos']['und'][0]['value'],"ISO-8859-1", "UTF-8")."\",
-            \"email\":\"".$form_state['values']['mail']."\",
+            \"email\":\"".mb_convert_encoding($form_state['values']['mail'],"ISO-8859-1", "UTF-8")."\",
             \"fechaNacimiento\":\"".date("d-m-Y", time())."\",
             \"ciudadResidencia\":\"".$LugarRecidencia."\",
             \"genero\":\"".$genero."\",
@@ -598,12 +598,14 @@ if($genero != "" || $genero != " "){
   WriteLog(' enviando datos : '.$cade);
 
   $client = new nusoap_client($url, true);
+  $client->forceEndpoint = 'http://jboss2.colfuturo.org/Formulario-Interno/ServicioIntegracionPotencial';
   $token = encripta1($form_state['values']['name']);
   $usuario = $form_state['values']['name'];
   $client->setCredentials($usuario,$token);
+  $client->response_timeout = 60;
 
   if ( $client->getError() ) {
-    WriteLog(' error inesperado 1: '.$error);;
+    WriteLog(' error inesperado 1: '.$error);
   }
 
   $client->call( "crearFormularioPotencial", array("json" =>$cade) );
@@ -700,7 +702,7 @@ function validate_city($input, $output, $api, $key){
   $response = json_decode($response);
 
   foreach ($response->predictions as $key => $index) {
-    if($index->description == $input || $index->description == remove_accents($input)){
+    if($index->description == $input || remove_accents($index->description) == remove_accents($input)){
       return true;
     }
   }

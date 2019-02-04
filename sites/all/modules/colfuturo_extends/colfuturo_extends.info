@@ -1,0 +1,6 @@
+name = Colfuturo Extends
+description = Provide integrations and redirections with others colfuturo's applications
+core = 7.x
+package = colfuturo
+files[] = includes/functions.inc
+configure = admin/config/colfuturo/extends

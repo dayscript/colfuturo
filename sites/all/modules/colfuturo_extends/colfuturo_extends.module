@@ -1,0 +1,25 @@
+<?php
+
+module_load_include('inc', 'colfuturo_extends', '/includes/functions');
+
+function colfuturo_extends_menu(){
+    $items = array();
+
+    $items['admin/config/colfuturo/extends'] = array(
+        'page callback' => 'colfuturo_extends_admin_page',
+        'title' => 'Colfuturo Extends',
+        'type' => MENU_NORMAL_ITEM,
+
+    );
+
+    $items['integracion/semillero_externo2'] = array(
+        'page callback' => 'colfuturo_extends_admin_page',
+        'title' => 'Colfuturo Extends',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+
+    );
+
+    return $items;
+
+}
+

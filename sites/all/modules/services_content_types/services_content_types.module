@@ -1,0 +1,231 @@
+<?php
+
+/**
+ * @file
+ * Implements services_content_types functionality.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function services_content_types_help($path, $arg) {
+  switch ($path) {
+    // Main module help for the services_content_types.
+    case 'admin/help#services_content_types':
+      $output = file_get_contents(drupal_get_path('module', 'services_content_types') . '/README.txt');
+      return module_exists('markdown')
+        ? module_invoke('markdown', 'filter', 'process', 0, -1, $output)
+        : '<pre>' . check_plain($output) . '</pre>';
+  }
+}
+
+/**
+ * Implements hook_menu()
+ */
+function services_content_types_menu() {
+  $items = array();
+
+  $items['admin/config/services/services-content-types'] = array(
+    'title' => 'Services Content Type settings',
+    'description' => 'Configure content type resources provided by Services.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('services_content_types_settings_form'),
+    'access arguments' => array('administer services'),
+  );
+
+  return $items;
+}
+
+/**
+ * Admin settings form for picking the class for entity resources.
+ */
+function services_content_types_settings_form($form, $form_state) {
+  if (module_exists('services_entity')) {
+    $resources = services_entity_get_resource_info();
+    $options = array();
+
+    foreach ($resources as $id => $resource) {
+      $options[$resource['class']] = '<strong>' . $resource['title'] . '</strong><div>' . $resource['description'] . '</div>';
+    }
+
+    $form['services_content_types_resource_class'] = array(
+      '#title' => 'Default Entity Resource Class',
+      '#description' => 'Select which Resource Controller to use to process the entities where the entity type does not define one.',
+      '#type' => 'radios',
+      '#options' => $options,
+      '#default_value' => variable_get('services_content_types_resource_class', 'ServicesEntityResourceController'),
+    );
+  }
+  else {
+    $form['services_content_types_resource_class'] = array(
+      '#markup' => t('Install and enable the <a href="@url">Services Entity API</a> module to select a Resource Controller.', array(
+        '@url' => url('https://www.drupal.org/project/services_entity'),
+      )),
+    );
+
+    return $form;
+  }
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_uninstall()
+ **/
+function services_content_types_uninstall() {
+  variable_del('services_content_types_resource_class');
+}
+
+/**
+ * Implements hook_services_resources_alter()
+ **/
+function services_content_types_services_resources() {
+  $resources = array();
+
+  $operations = array(
+    'retrieve' => '_services_content_types_retrieve',
+    'create' => '_services_content_types_create',
+    'update' => '_services_content_types_update',
+    'delete' => '_services_content_types_delete',
+  );
+
+  // Create resource for each content type.
+  $content_types = node_type_get_types();
+  foreach ($content_types as $content_type) {
+    $resource = _node_resource_definition();
+
+    // Retrieve, create, update, delete.
+    foreach ($operations as $operation => $callback) {
+      $resource['node']['operations'][$operation]['help'] .= ": $content_type->name";
+      $resource['node']['operations'][$operation]['access callback'] = '_services_content_types_access';
+      $resource['node']['operations'][$operation]['access arguments'][] = $content_type->type;
+      $resource['node']['operations'][$operation]['file'] = _services_content_types_file();
+      $resource['node']['operations'][$operation]['callback'] = $callback;
+      $resource['node']['operations'][$operation]['args'][] = _services_content_types_content_type_arg($content_type->type);
+    }
+
+    // Index.
+    $resource['node']['operations']['index']['help'] = "List all nodes of type $content_type->name";
+    $resource['node']['operations']['index']['file'] = _services_content_types_file();
+    $resource['node']['operations']['index']['callback'] = '_services_content_types_index';
+    $resource['node']['operations']['index']['args'][] = _services_content_types_content_type_arg($content_type->type);
+
+    // Attach file.
+    $resource['node']['targeted_actions']['attach_file']['help'] = "Upload and attach file(s) to a node of type $content_type->name. POST multipart/form-data to node_$content_type->type/123/attach_file";
+    $resource['node']['targeted_actions']['attach_file']['access callback'] = '_services_content_types_access';
+    $resource['node']['targeted_actions']['attach_file']['access arguments'][] = $content_type->type;
+
+    // Relationships.
+    $resource['node']['relationships']['files']['help'] = "This method returns files associated with a $content_type->name node.";
+    $resource['node']['relationships']['files']['access callback'] = '_services_content_types_access';
+    $resource['node']['relationships']['files']['access arguments'][] = $content_type->type;
+
+    // Comments.
+    if (module_exists('comment')) {
+      $resource['node']['relationships']['comments']['help'] = "This method returns the number of new comments on a given $content_type->name node.";
+      $resource['node']['relationships']['index']['file'] = _services_content_types_file();
+      $resource['node']['relationships']['index']['callback'] = '_services_content_types_load_node_comments';
+      $resource['node']['relationships']['comments']['args'][] = _services_content_types_content_type_arg($content_type->type);
+    }
+
+    $resources['node_' . $content_type->type] = $resource['node'];
+  }
+
+  return $resources;
+}
+
+/**
+ * Helper function to generate content type argument for resource.
+ *
+ * @param string $content_type
+ *   Machine name of content type.
+ *
+ * @return array
+ */
+function _services_content_types_content_type_arg($content_type) {
+  return array(
+    'name' => 'content_type',
+    'optional' => TRUE,
+    'default value' => $content_type,
+    'type' => 'string',
+    'description' => 'Internal use only: the content type.',
+  );
+}
+
+/**
+ * Helper function to generate file location for resource.
+ *
+ * @return array
+ */
+function _services_content_types_file() {
+  return array('type' => 'inc', 'module' => 'services_content_types', 'name' => 'services_content_types.resources');
+}
+
+/**
+ * Determine whether the current user can access a node resource.
+ *
+ * @param $op
+ *   One of view, update, create, delete per node_access().
+ * @param string $content_type
+ *   Machine name of content type.
+ * @param $args
+ *   Resource arguments passed through from the original request.
+ * @return bool
+ *
+ * @see node_access()
+ */
+function _services_content_types_access($op = 'view', $content_type, $args = array()) {
+  // Adds backwards compatibility with regression fixed in #1083242
+  if (isset($args[0])) {
+    $args[0] = _services_access_value($args[0], 'node');
+  }
+
+  // Make sure we have an object or this all fails, some servers can
+  // mess up the types.
+  if (is_array($args[0])) {
+    $args[0] = (object) $args[0];
+  }
+  elseif (!is_array($args[0]) && !is_object($args[0])) {
+    $args[0] = (object)array('nid' => $args[0]);
+  }
+
+  if ($op != 'create' && !empty($args)) {
+    $node = node_load($args[0]->nid);
+  }
+  elseif ($op == 'create') {
+    $node = $content_type;
+    return node_access($op, $node);
+  }
+  if (isset($node->nid) && $node->nid) {
+    if ($node->type != $content_type) {
+      return services_error(t('Content type does not match resource'), 406);
+    }
+    else {
+      return node_access($op, $node);
+    }
+  }
+  else {
+    return services_error(t('Node @nid could not be found', array('@nid' => $args[0]->nid)), 404);
+  }
+}
+
+/**
+ * Gets an instance of the resource controller for an entity type
+ * Copied from Services Entity module.
+ *
+ * @param string $entity_type
+ *   The entity type.
+ *
+ * @return ServicesEntityResourceControllerInterface
+ *   A resource controller object.
+ */
+function _services_content_types_get_controller($entity_type) {
+  $info = entity_get_info($entity_type);
+  if (isset($info['resource controller']) && class_exists($info['resource controller'])) {
+    $class = $info['resource controller'];
+  }
+  else {
+    $class = variable_get('services_content_types_resource_class', 'ServicesEntityResourceController');
+  }
+  return new $class();
+}

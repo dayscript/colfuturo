@@ -1,0 +1,14 @@
+name = Services Content Types
+description = Provides granular control for content types that can be accessed using the Service API.
+package = Services
+core = 7.x
+dependencies[] = services
+
+configure = admin/config/services/services-content-types
+
+; Information added by Drupal.org packaging script on 2017-08-12
+version = "7.x-1.0"
+core = "7.x"
+project = "services_content_types"
+datestamp = "1502524145"
+

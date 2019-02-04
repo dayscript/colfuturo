@@ -3,6 +3,12 @@
 
 
 function get_users_id($timestamp){
+/*  $uid = array( 242074 );
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'user')
+  ->propertyCondition('created', $timestamp, '>')
+  ->propertyCondition('uid', $uid);
+  $results = $query->execute();*/
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'user')
     ->propertyCondition('created', $timestamp, '>')
@@ -18,6 +24,18 @@ function get_users_id($timestamp){
 
 function create_json($user){
   watchdog('cron', json_encode($user));
+  $genero = $user->field_genero['und'][0]['value'];
+  if($genero != "" || $genero != " "){
+    switch ($genero) {
+      case 'Masculino':
+        $genero = "M";
+        break;
+
+      case 'Femenino':
+        $genero = "F";
+        break;
+    }
+  }
 
   if(isset($user->field__rea_de_inter['und'])){
     foreach($user->field__rea_de_inter['und'] as $key => $value){
@@ -39,11 +57,12 @@ function create_json($user){
             \"email\":\"".$user->mail."\",
             \"fechaNacimiento\":\"".date("d-m-Y", time())."\",
             \"ciudadResidencia\":\"".unserialize($user->field_ciudad_de_residencia['und'][0]['data'])['formatted_address']."\",
-            \"genero\":\"".$user->field_genero['und'][0]['value']."\",
+            \"genero\":\"".$genero."\",
             \"celular\":\"\",
             \"listaInteresAreaEstudio\":".$areas.",
             \"listaInteresIdioma\":".$idiomas."}";
 
+  drupal_set_message($string);
   return $string;
 }
 

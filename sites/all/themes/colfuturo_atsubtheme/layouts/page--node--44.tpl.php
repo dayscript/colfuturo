@@ -320,132 +320,288 @@ elseif( $Patrocinador  =="Departamento del Atlántico" ||
                       </div>
                       <hr class="hr-head" style="width: 100%; background:<?php print $fila->color;?>">
 
-                      <!--Correcto-->
-                      <div class="departamentos-content">
-                        <div class="departamentos-fechas columnas fondo-columnas">
-                          <h3 class="titulohr" style="color:<?php print $fila->color;?>">FECHAS A TENER EN CUENTA</h3>
-                          <?php
-                          switch ($Patrocinador) {
-                            case 'Departamento del Atlántico':
-                                $block = block_load('block','116');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Cesár':
-                            $block = block_load('block','119');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Chocó':
-                              $block = block_load('block','120');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Huila':
-                            $block = block_load('block','121');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Magdalena':
-                              $block = block_load('block','118');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Sucre':
-                              $block = block_load('block','122');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Universidad del Cauca':
-                              $block = block_load('block','130');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              break;
+                      
+                      <!--Scolciencias-Antes-->
+                          <!-- <div class="departamentos-content" display:none>
+                          <div class="departamentos-fechas columnas fondo-columnas">
+                              <h3 class="titulohr" style="color:</*?php print $fila->color;?>">FECHAS A TENER EN CUENTA</h3>
+                              </*?php
+                              switch ($Patrocinador) {
+                              case 'Departamento del Atlántico':
+                                  $block = block_load('block','116');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Cesár':
+                              $block = block_load('block','119');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Chocó':
+                                  $block = block_load('block','120');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Huila':
+                              $block = block_load('block','121');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Magdalena':
+                                  $block = block_load('block','118');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Sucre':
+                                  $block = block_load('block','122');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Universidad del Cauca':
+                                  $block = block_load('block','130');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  break;
 
-                            default:
-                              //$block = block_load('block','130');
-                              //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              break;
-                          }?>
-                        </div>
-                        <div class="departamentos-documentos columnas fondo-columnas">
-                          <h3 class="titulohr" style="color:<?php print $fila->color;?>">DOCUMENTOS DISPONIBLES</h3>
-                        <?php
-                         switch ($Patrocinador) {
-                            case 'Departamento del Atlántico':
-                            $block = block_load('block','115');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Cesár':
-                             $block = block_load('block','123');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Chocó':
-                            $block = block_load('block','124');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Huila':
-                            $block = block_load('block','125');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Magdalena':
-                            $block = block_load('block','126');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Departamento del Sucre':
-                             $block = block_load('block','127');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              # code...
-                              break;
-                            case 'Universidad del Cauca':
-                              $block = block_load('block','131');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              break;
+                              default:
+                                  //$block = block_load('block','130');
+                                  //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  break;
+                              }?>
+                          </div>
+                          <div class="departamentos-documentos columnas fondo-columnas">
+                              <h3 class="titulohr" style="color:</*?php print $fila->color;?>">DOCUMENTOS DISPONIBLES</h3>
+                          </*?php
+                              switch ($Patrocinador) {
+                              case 'Departamento del Atlántico':
+                              $block = block_load('block','115');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Cesár':
+                                  $block = block_load('block','123');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Chocó':
+                              $block = block_load('block','124');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Huila':
+                              $block = block_load('block','125');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Magdalena':
+                              $block = block_load('block','126');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Departamento del Sucre':
+                                  $block = block_load('block','127');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  # code...
+                                  break;
+                              case 'Universidad del Cauca':
+                                  $block = block_load('block','131');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  break;
 
-                            default:
-                              //$block = block_load('block','131');
-                              //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              break;
-                            }
-
-                        ?>
-
-                        </div>
-
-                        <div class="departamentos-contacto columnas" style="text-align">
-
-                          <?php
-
-                           /*
-                            Bloques ID
-                            colciencias = 103
-                            colcienciasBeneficiario = 110 109
-                            pcbColci = 112 111
-                           */
-
-                           print render($page['sidebar_second']);
+                              default:
+                                  //$block = block_load('block','131');
+                                  //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  break;
+                              }
 
                           ?>
 
-                          <h3 class="titulohr" style="color:<?php print $fila->color;?>">CONTÁCTENOS</h3>
-                          <?php
+                          </div>
 
-                          switch ($Patrocinador) {
-                              default:
-                              $block = block_load('block','117');
-                              print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                              break;
-                              }
-                            ?>
+                          <div class="departamentos-contacto columnas" style="text-align">
 
-                        </div>
+                              </*?php
 
+                              /*
+                              Bloques ID
+                              colciencias = 103
+                              colcienciasBeneficiario = 110 109
+                              pcbColci = 112 111
+                              */
+
+                              print render($page['sidebar_second']);
+
+                              ?>
+
+                              <h3 class="titulohr" style="color:</*?php print $fila->color;?>">CONTÁCTENOS</h3>
+                              </*?php
+
+                              switch ($Patrocinador) {
+                                  default:
+                                  $block = block_load('block','117');
+                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                  break;
+                                  }
+                              ?>
+
+                          </div>
+
+                      </div> -->
+                      <!--Scolciencias-Antes-->
+
+
+                      <!--Scolciencias-Después-->
+                      <div class="departamentos-content">
+                          <!--Caja mayor-->
+                          <div class="caja-mayor">
+
+                              <!--Caja-uno-->
+                              <div class="caja-uno" >
+
+                                  <!--top-->
+                                  <div class="top" >
+                                      <?php
+                                          print views_embed_view('slide_principal', 'block_9', $arg1);
+                                      ?>
+                                  </div>
+                                  <!--top-->
+
+                                  <!--bottom-->
+                                  <div class="bottom">
+                                      <div class="c1">
+                                          <!--Columna 1-->
+                                          <div class="departamentos-fechas columnas fondo-columnas">
+                                              <h3 class="titulohr" style="color:<?php print $fila->color;?>">FECHAS A TENER EN CUENTA</h3>
+                                              <?php
+                                              switch ($Patrocinador) {
+                                              case 'Departamento del Atlántico':
+                                                  $block = block_load('block','116');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Departamento del Cesár':
+                                              $block = block_load('block','119');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Departamento del Chocó':
+                                                  $block = block_load('block','120');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Departamento del Huila':
+                                              $block = block_load('block','121');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Departamento del Magdalena':
+                                                  $block = block_load('block','118');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Departamento del Sucre':
+                                                  $block = block_load('block','122');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  # code...
+                                                  break;
+                                              case 'Universidad del Cauca':
+                                                  $block = block_load('block','130');
+                                                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  break;
+
+                                              default:
+                                                  //$block = block_load('block','130');
+                                                  //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                  break;
+                                              }?>
+                                          </div>
+                                          <!--Columna 1-->
+                                      </div>
+
+                                      <div class="c2">
+                                          <!--Columna 2-->
+                                          <div class="departamentos-documentos columnas fondo-columnas">
+                                              <h3 class="titulohr" style="color:<?php print $fila->color;?>">DOCUMENTOS DISPONIBLES</h3>
+                                              <?php
+                                                  switch ($Patrocinador) {
+                                                  case 'Departamento del Atlántico':
+                                                  $block = block_load('block','115');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Departamento del Cesár':
+                                                      $block = block_load('block','123');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Departamento del Chocó':
+                                                  $block = block_load('block','124');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Departamento del Huila':
+                                                  $block = block_load('block','125');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Departamento del Magdalena':
+                                                  $block = block_load('block','126');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Departamento del Sucre':
+                                                      $block = block_load('block','127');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      # code...
+                                                      break;
+                                                  case 'Universidad del Cauca':
+                                                      $block = block_load('block','131');
+                                                      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      break;
+
+                                                  default:
+                                                      //$block = block_load('block','131');
+                                                      //print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                                      break;
+                                                  }
+                                              ?>
+                                          </div>
+                                          <!--Columna 2-->
+                                      </div>          
+                                  </div>
+                                  <!--bottom-->
+                              </div>
+                              <!--Caja uno-->
+
+                              <!--Caja dos-->
+                              <div class="caja-dos" >
+                                  <div class="departamentos-contacto columnas" style="text-align" >
+                                      <?php
+                                      /*
+                                      Bloques ID
+                                      colciencias = 103
+                                      colcienciasBeneficiario = 110 109
+                                      pcbColci = 112 111
+                                      */
+                                      print render($page['sidebar_second']);
+                                      ?>
+
+                                      <h3 class="titulohr" style="color:<?php print $fila->color;?>">CONTÁCTENOS</h3>
+                                      <?php
+
+                                      switch ($Patrocinador) {
+                                          default:
+                                          $block = block_load('block','117');
+                                          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                          break;
+                                          }
+                                      ?>
+                                  </div>
+                              </div>
+                              <!--Caja dos-->
+                          </div>
+                          <!--Caja mayor-->
                       </div>
-                      <!--Correcto-->
+                      <!--Scolciencias-Después-->
 
 
                      
